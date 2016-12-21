@@ -1,37 +1,36 @@
-## Welcome to GitHub Pages
+# Willkommen
 
-You can use the [editor on GitHub](https://github.com/GE-Kempten/Wiki/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Auf diesem Wiki werden Notizen zu Modulen des Studiengangs.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## So funktioniert's
+
+Die Website ist aus Markdown-Dateien aufgebaut wird kann über [GitHub](https://github.com/GE-Kempten/Wiki/edit/master/index.md) bearbeitet werden.
+
+Immer wenn ein neuer Commit in diesem Repository erscheint, wird diese Seite duch [Jekyll](https://jekyllrb.com/) aktualisiert.
 
 ### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Markdown ist eine Markup-Language mit einer sehr einfachen Syntax. Funktionen sind unter anderem:
 
 ```markdown
-Syntax highlighted code block
+Code Blocks mit Syntax Highlighting
 
-# Header 1
-## Header 2
-### Header 3
+# Überschrift 1
+## Überschrift 2
+### Überschrift 3
 
-- Bulleted
-- List
+1. Nummerierte
+2. Liste
 
-1. Numbered
-2. List
+- Liste
+- mit
+- Aufzählungszeichen
 
-**Bold** and _Italic_ and `Code` text
+**Fett**, _Kursiv_, `Code`
 
-[Link](url) and ![Image](src)
+[Link](url)
+
+![Bild](src)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/GE-Kempten/Wiki/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Hier gibt's noch mehr Informationen zu [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
