@@ -1,6 +1,17 @@
 # Willkommen
 
-Auf diesem Wiki werden Notizen zu Modulen des Studiengangs Informatik Game Engineering an der Hochschule Kempten gesammelt. Alle Beiträge stehen unter der [Creative Commons BY-NC-SA 4.0 International Lizenz](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de)
+Auf diesem Wiki werden Notizen zu Modulen des Studiengangs Informatik Game Engineering an der Hochschule Kempten gesammelt.
+
+|:--------------:|:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
+| Algebra        | IT Systeme    | Informatik    | Modellierung  | Prog. 1       |               |
+| Analysis       | Theo. Info.   | Game Design   | Zeichnen      | Prog. 2       | Algorithmen   |
+| Diskrete M.    | Datenbanken   | Betriebssys.  | Comp.-Grafik  | Softwaret. 1  | Softwaret. 2  |
+| Numerik        | Rechennetze   | G. Engineer.  | virt. Char.   | Vert. Syst.   | P-Management  |
+| Praxis-Sem.    |               |               |               |               | Begl. Veran.  |
+| Projektarbeit  |               |               | Seminar       | WP-Fach       | WP-Fach       |
+| Bachelorarbeit |               |               | WP-Fach       | WP-Fach       | WP-Fach       |
+
+Alle Beiträge stehen unter der [Creative Commons BY-NC-SA 4.0 International Lizenz](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de).
 
 ## So funktioniert's
 
