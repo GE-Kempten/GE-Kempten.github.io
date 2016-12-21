@@ -1,6 +1,6 @@
 # Willkommen
 
-Auf diesem Wiki werden Notizen zu Modulen des Studiengangs Informatik Game Engineering an der Hochschule Kempten gesammelt. Alle Beiträge stehen unter der [Creative Commons BY-NC-SA 4.0 International Lizenz](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de]
+Auf diesem Wiki werden Notizen zu Modulen des Studiengangs Informatik Game Engineering an der Hochschule Kempten gesammelt. Alle Beiträge stehen unter der [Creative Commons BY-NC-SA 4.0 International Lizenz](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de)
 
 ## So funktioniert's
 
