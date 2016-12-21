@@ -36,7 +36,13 @@ Code Blocks mit Syntax Highlighting
 - mit
 - Aufzählungszeichen
 
-**Fett**, _Kursiv_, `Code`
+**Fett**
+_Kursiv_
+`Code`
+
+| Das      | ist      | eine    |
+|:--------:|---------:|---------|
+| wirklich | tolle    | Tabelle |
 
 [Link](url)
 
