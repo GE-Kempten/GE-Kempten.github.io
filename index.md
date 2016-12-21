@@ -2,13 +2,13 @@
 
 Auf diesem Wiki werden Notizen zu Modulen des Studiengangs Informatik Game Engineering an der Hochschule Kempten gesammelt.
 
-| 1. Semester                          |
-|:------------------------------------:|
-| Lin. Algebra & Analytische Geometrie |
-| IT Systeme                           |
-| Einführung in die Informatik         |
-| Modellierung und Animation           |
-| Programmieren 1 (für Games)          |
+|1. Semester                         |
+|------------------------------------|
+|Lin. Algebra & Analytische Geometrie|
+|IT Systeme                          |
+|Einführung in die Informatik        |
+|Modellierung und Animation          |
+|Programmieren 1 (für Games)         |
 
 Alle Beiträge stehen unter der [Creative Commons BY-NC-SA 4.0 International Lizenz](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de).
 
