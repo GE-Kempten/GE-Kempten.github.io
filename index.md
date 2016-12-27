@@ -5,10 +5,10 @@ Auf diesem Wiki werden Notizen zu Modulen des Studiengangs Informatik Game Engin
 |1. Semester                            |
 |---------------------------------------|
 |[Lineare Algebra & Analytische Geometrie](/1/lineare-algebra-und-analytische-geometrie)|
-|[IT Systeme](/1/it-systeme))|
+|[IT Systeme](/1/it-systeme)|
 |[Einführung in die Informatik](/1/einfuehrung-in-die-informatik)|
 |[Modellierung und Animation](/1/modellierung-und-animation)|
-|[Programmieren 1 (für Games)](/programmieren-1-fuer-games)            |
+|[Programmieren 1 (für Games)](/1/programmieren-1-fuer-games)|
 
 Alle Beiträge stehen unter der [Creative Commons BY-NC-SA 4.0 International Lizenz](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de).
 
