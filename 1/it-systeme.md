@@ -70,11 +70,59 @@ Diese Funktion kann auch verschiedene Arten dargestellt werden. Üblich sind:
 
 ### Funktionstabellen
 
-sind *Auflistung aller möglichen Funktionswerte*.
+sind **Auflistung aller möglichen Funktionswerte**.
 
-Bsp: Die Funktion V
+Bsp: Die Funktion V² -> V (V = {0,1}, V² = V x V)
 
-**Todo**: Finish this
+|a|b|f(a,b)|
+|-|-|:----:|
+|0|0|0|
+|0|1|0|
+|1|0|0|
+|1|1|1|
+
+### Einstellige Schaltfunktionen
+
+|a|f0|f1|f2|f3|
+|:-:|:-:|:-:|:-:|:-:|
+|0|0|1|0|1|
+|1|0|0|1|1|
+
+||Schreibweise|Bezeichnung|
+|:-:|:-:|:-:|
+|f0|0|Konstante 0|
+|f1|¬a|Negation|
+|f2|a|Identität|
+|f3|1|Konstante 1|
+
+### Zweistellige Schaltfunktionen
+
+|a|b||f0|f1|f2|f3|f4|f5|f6|f7|f8|f9|f10|f11|f12|f13|f14|f15|
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+|0|0||0|0|0|0|0|0|0|0|0|1|1|1|1|1|1|1|
+|0|1||0|0|0|0|1|1|1|1|0|0|0|0|1|1|1|1|
+|1|0||0|0|1|1|0|0|1|1|0|0|1|1|0|0|1|1|
+|1|1||0|1|0|1|0|1|0|1|0|1|0|1|0|1|0|1|
+
+||Schreibweise|Bezeichnung|
+|:-:|:-:|:-:|
+|f0|0|_Konstante 0_|
+|f1||Konjunktion (AND)|
+|f2||Negation der Implikation|
+|f3||_Identität a_|
+|f4||Negation der Implikation|
+|f5||Identität b|
+|f6||Antivalenz (XOR)|
+|f7||Oder(OR)|
+|f8||Nicht-Oder (NOR)|
+|f9||Äquivalenz|
+|f10||Negation b|
+|f11||Implikation|
+|f12||_Negation a_|
+|f13||Implikation|
+|f14||Nicht-Und (NAND)|
+|f15||_Konstante 1_|
+
 
 # Logische Bausteine
 
