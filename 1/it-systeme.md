@@ -12,7 +12,7 @@
 #Digitale Schaltungen
 
 ##Einführung
-#Schaltnetze und Schaltwerk
+###Schaltnetze und Schaltwerk
 
 Ein Rechner enthält viele digitale Schalter, welche jeweils den Zustand 0 = Off oder 1 = On haben. 
 **Digitale Schaltungen**: Je nach _Spannungspegel_ fließt 0 oder 5 Volt. Eine Digitale Schaltungen mir 2 Spannungspegel wird auch Binäre Schaltung genannt.
@@ -24,7 +24,7 @@ Man unterscheidet digitale Schaltungen zwischen Schaltnetzen und Schaltwerken:
 |Formal auch: |Schaltfunktion|endlicher Automat|
 Der Rechner ist ein Schaltwerk, welcher aber durch Schaltnetze realisiert wird.
 
-#Synchronisation
+###Synchronisation
 
 Jeder Schalter benötigt Zeit zum Umschalten (=**Schaltzeit**), so auch digitale Schalter. D.h.
 dass das Ausgangssignal erst betrachtet werden darf, wenn der _Umschaltvorgang fertig_ ist. => Nutzen von **Synchronisation** -> *Taktsignale*
@@ -33,7 +33,7 @@ Das **Eingangssignal** wird zu einem bestimmten _Taktzeitpunkt_ angelegt und die
 ![Synchronisation](https://puu.sh/t2oUW/81acca0e05.png)
 
 ##Schaltfunktionen
-#Defintion und Begriffe
+###Defintion und Begriffe
 
 **Defintion Schaltfunktion**:
 >Sei V={0, 1} die Menge der beiden Signale 0, 1. Die Funktion
@@ -49,7 +49,7 @@ Diese Funktion kann auch verschiedene Arten dargestellt werden. Üblich sind:
 - Mathematische Beschreibung mit Boole'schen Termen (Schaltalgebra)
 - Schaltbilder, Schaltungsdiagramma
 
-#Funktionstabellen
+###Funktionstabellen
 sind *Auflistung aller möglichen Funktionswerte*.
 
 Bsp: Die Funktion V
