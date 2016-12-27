@@ -18,7 +18,7 @@
 
 Ein Rechner enthält viele digitale Schalter, welche jeweils den Zustand 0 = Off oder 1 = On haben. 
 
-**Digitale Schaltungen**: Je nach _Spannungspegel_ fließt 0 oder 5 Volt. Eine Digitale Schaltungen mir 2 Spannungspegel wird auch Binäre Schaltung genannt.
+**Digitale Schaltungen**: Je nach _Spannungspegel_ fließt 0 oder 5 Volt. Eine Digitale Schaltungen mir 2 Spannungspegel wird auch Binäre Schaltung genannt, d.h. man könnte auch Schalter mit 3 Zuständen erstellen.
 
 Man unterscheidet digitale Schaltungen zwischen Schaltnetzen und Schaltwerken:
 
@@ -53,7 +53,7 @@ Das **Eingangssignal** wird zu einem bestimmten _Taktzeitpunkt_ angelegt und die
 
 >![Funktion](https://puu.sh/t2oU3/803a519966.png)
 
->mit m,n ≥ heißen *Boole'sche Funktionen* oder auch *Schaltfunktionen*.
+>mit m,n ≥ 1 heißen *Boole'sche Funktionen* oder auch *Schaltfunktionen*.
 
 Anmerkung:
 
@@ -68,9 +68,26 @@ Diese Funktion kann auch verschiedene Arten dargestellt werden. Üblich sind:
 - Schaltbilder, Schaltungsdiagramma
 
 
-###Funktionstabellen
+### Funktionstabellen
 
 sind *Auflistung aller möglichen Funktionswerte*.
 
 Bsp: Die Funktion V
 
+**Todo**: Finish this
+
+# Logische Bausteine
+
+**Todo**
+
+# Programmierbare Systeme
+
+**Todo**
+
+# Assemblerprogammierung
+
+**Todo**
+
+# Peripherie
+
+**Todo**
