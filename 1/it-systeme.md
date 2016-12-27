@@ -30,15 +30,15 @@ Der Rechner ist ein Schaltwerk, welcher aber durch Schaltnetze realisiert wird.
 
 ###Synchronisation
 
-Jeder Schalter benötigt Zeit zum Umschalten (=**Schaltzeit**), so auch digitale Schalter. D.h.
+Jeder Schalter benötigt Zeit zum Umschalten (=**Schaltzeit**), so auch digitale Schalter. D.h. dass das Ausgangssignal erst betrachtet werden darf, wenn der _Umschaltvorgang fertig_ ist. 
 
-dass das Ausgangssignal erst betrachtet werden darf, wenn der _Umschaltvorgang fertig_ ist. => Nutzen von **Synchronisation** -> *Taktsignale*
-
-Das **Eingangssignal** wird zu einem bestimmten _Taktzeitpunkt_ angelegt und die
-
-**Ausgangssignale** erst nach einer _festgelegten Anzahl von Takten_ gelesen.
+=> Nutzen von **Synchronisation** 
+-> *Taktsignale*
 
 ![Synchronisation](https://puu.sh/t2oUW/81acca0e05.png)
+
+Das **Eingangssignal** wird zu einem bestimmten _Taktzeitpunkt_ angelegt und die
+**Ausgangssignale** erst nach einer _festgelegten Anzahl von Takten_ gelesen.
 
 ##Schaltfunktionen
 ###Defintion und Begriffe
