@@ -93,7 +93,7 @@ a ist ein Schalzustand.
 ||Schreibweise|Bezeichnung|
 |:-:|:-:|:-:|
 |f0|0|Konstante 0|
-|f1|\lor a|Negation|
+|f1|\lnot a|Negation|
 |f2|a|Identität|
 |f3|1|Konstante 1|
 
