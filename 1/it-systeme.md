@@ -1,6 +1,6 @@
-#IT-Systeme
+# IT-Systeme
 
-###Kompetenzen
+### Kompetenzen
 
 - Bauen eines funktionsfähigen Rechners, dazu werden
 - Digitale Schaltungen, also die Boole'sche Algebra gebraucht um
@@ -9,10 +9,10 @@
 - Assemblerprogammierung in Kraft tretet. Anschließend sollen noch
 - Peripherie(-Geräte) mit dem Rechner kommunizieren.
 
-#Digitale Schaltungen
+# Digitale Schaltungen
 
-##Einführung
-###Schaltnetze und Schaltwerk
+## Einführung
+### Schaltnetze und Schaltwerk
 
 Ein Rechner enthält viele digitale Schalter, welche jeweils den Zustand 0 = Off oder 1 = On haben. 
 
@@ -28,27 +28,28 @@ Man unterscheidet digitale Schaltungen zwischen Schaltnetzen und Schaltwerken:
 
 Der Rechner ist ein Schaltwerk, welcher aber durch Schaltnetze realisiert wird.
 
-###Synchronisation
+### Synchronisation
 
 Jeder Schalter benötigt Zeit zum Umschalten (=**Schaltzeit**), so auch digitale Schalter. D.h. dass das Ausgangssignal erst betrachtet werden darf, wenn der _Umschaltvorgang fertig_ ist. 
 
-=> Nutzen von **Synchronisation** 
--> *Taktsignale*
+=> Nutzen von **Synchronisation** -> *Taktsignale*
 
 ![Synchronisation](https://puu.sh/t2oUW/81acca0e05.png)
 
 Das **Eingangssignal** wird zu einem bestimmten _Taktzeitpunkt_ angelegt und die
 **Ausgangssignale** erst nach einer _festgelegten Anzahl von Takten_ gelesen.
 
-##Schaltfunktionen
-###Defintion und Begriffe
+## Schaltfunktionen
+### Defintion und Begriffe
 
 **Defintion Schaltfunktion**:
+
 >Sei V={0, 1} die Menge der beiden Signale 0, 1. Die Funktion
 
 >![Funktion](https://puu.sh/t2oU3/803a519966.png)
 
 >mit m,n ≥ heißen *Boole'sche Funktionen* oder auch *Schaltfunktionen*.
+
 Anmerkung:
 - bei _m = 1_ spricht man von *echten* _Boole'schen Funktionen_.
 - n heißt *Stelligkeit*.
