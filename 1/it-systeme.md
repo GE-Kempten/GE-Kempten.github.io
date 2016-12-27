@@ -127,6 +127,16 @@ a und b sind Schaltzustände.
 |f14|\lnot (a \land b)|Nicht-Und (NAND)|
 |f15|1|_Konstante 1_|
 
+**Todo**: Hinzufügen von mathematischen Symbolen
+
+- \lnot
+- \land
+- \lor
+- \Rightarrow
+- \Leftrightarrow
+
+
+
 
 # Logische Bausteine
 
