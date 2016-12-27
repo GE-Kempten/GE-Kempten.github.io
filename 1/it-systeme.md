@@ -83,6 +83,8 @@ Bsp: Die Funktion V² -> V (V = {0,1}, V² = V x V)
 
 ### Einstellige Schaltfunktionen
 
+a ist ein Schalzustand.
+
 |a|f0|f1|f2|f3|
 |:-:|:-:|:-:|:-:|:-:|
 |0|0|1|0|1|
@@ -91,11 +93,13 @@ Bsp: Die Funktion V² -> V (V = {0,1}, V² = V x V)
 ||Schreibweise|Bezeichnung|
 |:-:|:-:|:-:|
 |f0|0|Konstante 0|
-|f1|¬a|Negation|
+|f1|\lor a|Negation|
 |f2|a|Identität|
 |f3|1|Konstante 1|
 
 ### Zweistellige Schaltfunktionen
+
+a und b sind Schaltzustände.
 
 |a|b||f0|f1|f2|f3|f4|f5|f6|f7|f8|f9|f10|f11|f12|f13|f14|f15|
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -107,21 +111,21 @@ Bsp: Die Funktion V² -> V (V = {0,1}, V² = V x V)
 ||Schreibweise|Bezeichnung|
 |:-:|:-:|:-:|
 |f0|0|_Konstante 0_|
-|f1||Konjunktion (AND)|
-|f2||Negation der Implikation|
-|f3||_Identität a_|
-|f4||Negation der Implikation|
-|f5||Identität b|
-|f6||Antivalenz (XOR)|
-|f7||Oder(OR)|
-|f8||Nicht-Oder (NOR)|
-|f9||Äquivalenz|
-|f10||Negation b|
-|f11||Implikation|
-|f12||_Negation a_|
-|f13||Implikation|
-|f14||Nicht-Und (NAND)|
-|f15||_Konstante 1_|
+|f1|a \land b|Konjunktion (AND)|
+|f2|\lnot (a \Rightarrow b)|Negation der Implikation|
+|f3|a|_Identität a_|
+|f4|\lnot (b \Rightarrow a)|Negation der Implikation|
+|f5|b|Identität b|
+|f6|\lnot (a\Leftrightarrow b)|Antivalenz (XOR)|
+|f7|a \lor b|Oder(OR)|
+|f8|\lnot (a\lor b)|Nicht-Oder (NOR)|
+|f9|a \Leftrightarrow b|Äquivalenz|
+|f10|\lnot b|Negation b|
+|f11|b \Rightarrow a|Implikation|
+|f12|\lnot a|_Negation a_|
+|f13|a \Rightarrow b|Implikation|
+|f14|\lnot (a \land b)|Nicht-Und (NAND)|
+|f15|1|_Konstante 1_|
 
 
 # Logische Bausteine
