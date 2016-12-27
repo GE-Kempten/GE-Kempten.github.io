@@ -135,8 +135,11 @@ a und b sind Schaltzustände.
 - \Rightarrow
 - \Leftrightarrow
 
+### Sätze der Boole'schen Funktionen 
 
+![Sätze](https://puu.sh/t2NEW/3b5c50a19a.png)
 
+### Boole'sche Algebra
 
 # Logische Bausteine
 
