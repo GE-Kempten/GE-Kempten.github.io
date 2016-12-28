@@ -174,9 +174,11 @@ a und b sind Schaltzustände.
 **Definiton**:
 
 > Boole'sche Terme sind **induktiv** wie folgt definiert:
-> - 0 und 1 sind Boole'sche Terme
-> - Jede Variable (a,b,c...) ist ein Boole'scher Term
-> - sind t1 und t2 Boole'sche Terme, so auch:
+
+- 0 und 1 sind Boole'sche Terme
+- Jede Variable (a,b,c...) ist ein Boole'scher Term
+- sind t1 und t2 Boole'sche Terme, so auch:
+
 > 1. t1 \lor t2
 > 2. t1 \land t2
 > 3. \lnot t1
