@@ -163,6 +163,29 @@ a und b sind Schaltzustände.
 
 > Ein _komplementärer, distributiver Verband_ wird **Boole'scher Verband** oder auch **Boole'sche Algebra** genannt.
 
+**Anmerkung**: Die **Schaltalgebra** ist eine spezielle Form einer Boole'schen Algebra.
+
+- Menge V = {0,1}
+- \lor = logisches ODER
+- \land = logisches UND
+
+### Boole'sche Terme
+
+**Definiton**:
+
+> Boole'sche Terme sind **induktiv** wie folgt definiert:
+> - 0 und 1 sind Boole'sche Terme
+> - Jede Variable (a,b,c...) ist ein Boole'scher Term
+> - sind t1 und t2 Boole'sche Terme, so auch:
+> 1. t1 \lor t2
+> 2. t1 \land t2
+> 3. \lnot t1
+> 4. (t1)
+
+**Beispiele für Beweise**:
+
+![Beweise](https://puu.sh/t3tCk/56274bda77.png)
+
 # Logische Bausteine
 
 **Todo**
