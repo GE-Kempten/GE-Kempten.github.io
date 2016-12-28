@@ -147,10 +147,10 @@ a und b sind Schaltzustände.
 
 |Axiom|Gesetz|Formel 1| Formel 2|
 |:-:|:-:|---|---|
-|Axiom 1|**Kommutativgesetz**|a \land b = b \land a| a \lor b = b \lor a|
-|Axiom 2|**Assoziativgesetz**|(a \land b) \land c = a \land (b \land c)| (a \lor b) \lor c = a \lor (b \lor c)|
-|Axiom 3|**Asorptionsgesetz**|a \land (a \lor b) = a| a \lor (a \land b) = a|
-|Axiom 4|**Existenz neutraler Elemente**|a \land 1 = a| a \lor 0 = a|
+|1|**Kommutativgesetz**|a \land b = b \land a| a \lor b = b \lor a|
+|2|**Assoziativgesetz**|(a \land b) \land c = a \land (b \land c)| (a \lor b) \lor c = a \lor (b \lor c)|
+|3|**Asorptionsgesetz**|a \land (a \lor b) = a| a \lor (a \land b) = a|
+|4|**Existenz neutraler Elemente**|a \land 1 = a| a \lor 0 = a|
 
 > Ein Verband heißt **distributiver Verband**, wenn zusätzlich noch das _Axiom 5_ gilt.
 
@@ -158,8 +158,8 @@ a und b sind Schaltzustände.
 
 |Axiom|Gesetz|Formel 1| Formel 2|
 |:-:|:-:|---|---|
-|Axiom 5|**Distributivgesetz**|a \land (b \lor c) = (a \land b) \lor (a \land c)| a \lor (b \land c) = (a \lor b) \lor (a \lor c)|
-|Axiom 6|**Definition des komplementären Elements**|a \land \lnot a = 0| a \lor \lnot a = 1|
+|5|**Distributivgesetz**|a \land (b \lor c) = (a \land b) \lor (a \land c)| a \lor (b \land c) = (a \lor b) \lor (a \lor c)|
+|6|**Definition des komplementären Elements**|a \land \lnot a = 0| a \lor \lnot a = 1|
 
 > Ein _komplementärer, distributiver Verband_ wird **Boole'scher Verband** oder auch **Boole'sche Algebra** genannt.
 
