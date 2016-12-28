@@ -188,6 +188,58 @@ a und b sind Schaltzustände.
 
 ![Beweise](https://puu.sh/t3tCk/56274bda77.png)
 
+### Dualität
+
+**Defintion**:
+
+> Zu jedem Boole'schen Term t ergält man den dualen Term t^d, indem man \lor und \land, sowie 1 und 0 vertauscht.
+
+Der Boole'sche Term und der duale Term haben nicht unbedingt den gleichen Wert!
+
+=> Satz: Für jeden beliebigen Boole'schen Term gilt:
+
+![Satz](https://puu.sh/t3tXP/b82c874b9b.png)
+
+Anwendung: Negation bilden und Zeichen austauschen
+
+![Anwendung](https://puu.sh/t3u7R/0446433100.png)
+
+### Rechengesetze
+
+Aus den Axiomen der Boole'schen Algebra lassen sich eine Reihe von Sätzen ableiten:
+
+|Name|Satz||
+|--:|---|---|
+|Idempotenz|a \lor a = a|a \land a = a|
+|deMorgan|\lnot (a \lor b) = \lnot a \land \lnot b|\lnot (a \land b) = \lnot a \lor \lnot b|
+|Operation mit 0 bzw. 1|a \lor 1 = 1|a \land 0 = 0|
+|Doppeltes Kompliment|\lnot \lnot a = a||
+|Negation|\lnot 0 = 1|\lnot 1 = 0|
+
+**Bemerkung**:
+
+1. Schaltfunktionen lassen sich durch Boole'sche Terme beschreiben.
+
+2. Zwei Boole'sche Terme sind gleich, wenn sie identische Schaltfunktionen beschreiben.
+
+3. Durch Anwenden der Rechengesetze der Boole'schen Algebra lassen sich Schaltungen vereinfachen.
+
+### Disjunktive und Konjunktive Normalform
+
+Vereinfachung der Schreibweise durch folgende Notation:
+
+![Notation](https://puu.sh/t3vd7/a9b00cc781.png)
+
+Jede echte Boole'sche Funktion f lässt sich in einer der beiden folgenden eindeutigen Normalformen schreiben:
+
+Disjunktive Normalform (DNF):
+
+![DNF](https://puu.sh/t3vvQ/4cd4cea76d.png)
+
+Konjunktive Normalform (KNF):
+
+![KNF](https://puu.sh/t3vwa/6f5c629351.png)
+
 # Logische Bausteine
 
 **Todo**
