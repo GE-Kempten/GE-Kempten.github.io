@@ -9,7 +9,6 @@
 - **Assemblerprogammierung** in Kraft tretet. Anschließend sollen noch
 - **Peripherie**(-Geräte) mit dem Rechner kommunizieren.
 
-
 # Digitale Schaltungen
 
 ## Einführung
@@ -232,13 +231,42 @@ Vereinfachung der Schreibweise durch folgende Notation:
 
 Jede echte Boole'sche Funktion f lässt sich in einer der beiden folgenden eindeutigen Normalformen schreiben:
 
-Disjunktive Normalform (DNF):
+**Disjunktive Normalform (DNF)**:
 
 ![DNF](https://puu.sh/t3vvQ/4cd4cea76d.png)
 
-Konjunktive Normalform (KNF):
+**Konjunktive Normalform (KNF)**:
 
 ![KNF](https://puu.sh/t3vwa/6f5c629351.png)
+
+**Anmerkung**:
+
+- Die durch _Konjunktion verknüpfte Terme_ der _DNF_ heißen **Minterme**,
+- die _entsprechenden Disjunktionen_ der _KNF_ heißen **Maxterme**.
+- Aus jeder Schaltfunktion (als Tabelle) kann mit den Normalformen ein äquivalenter Boole'scher Term konstruiert werden.
+- *Umsetzung*: DNF -> wegen der Konjunktion muss man nur die Terme f(x1,...xn) = 1 betrachten | KNF -> wegen der Disjunktion kann man die Terme f(x1,...xn) = 1 ignoriert werden.
+
+Zur Darstellung von Schaltfunktionen durch Boole'sche Terme genügen neben den Variablen xi die folgenden alternativen Operatormengen: {\lor, \lnot}, {\land \lnot}, {NAND}, {NOR}.
+
+### Karnaugh-Veitch-Diagramme (KV-Diagramm)
+
+Prinzip:
+- Graphische Darstellung der Minterme
+- Zusammenfassung von Termen in Beziehungen -> Minimierung der Schaltfunktion (siehe Axiome und Rechengesetze)
+
+Vorgehensweise:
+
+1. Bestimmung der DNF
+
+2. Konstruktion des KV-Diagramms
+
+3. Eintragen der Minterme in das KV-Diagramm
+
+4. Verschmelzung benachbarter Minterme 
+
+Beispiel (Übung 1 Aufgabe 8):
+
+![1.8](https://puu.sh/t4y8x/349b4f1d27.png)
 
 # Logische Bausteine
 
