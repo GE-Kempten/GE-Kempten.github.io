@@ -16,6 +16,8 @@ Am Ende des Semesters sollen die Stunden in der Lage sein mit der **IDE** zu arb
 
 # Einführung
 
+**TODO**: Verlinkung zu Themen
+
 Programmierung ist nötig, da der Computer bzw. der Prozessor nur exakt formulierte Aufgabenstellungen ausführen kann. Dieser ist im Resultat aber weitaus effizierter als der Mensch z.B. Ausrechnen von komplizierten Formeln.
 
 Das Schreiben des Programms muss trotzdem der Mensch unternehmen, auch wenn sog. KIs (Künstliche Intelligenz) immer besser werden, wodurch sie das immer stärker übernehmen.
@@ -135,7 +137,7 @@ Durch die eigenen Programmierkenntnisse können so spezielle Grafikeffekte, Inte
 
 Außerdem werden neue Spielansätze und Anforderungen von herkömmlichen Engines noch gar nicht unterstützt. z.B. Kompatibilität zu VR, AR, ...
 
-# C und C++
+## C und C++
 
 ### C
 
@@ -177,35 +179,139 @@ Eigenschaften von C++:
 - Neuste C Version: C11
 - Neuste C++ Version: C++14
 
+## Erstes Programm 
 
+Zunächst wird eine **Integrated Development Environment** (**IDE**) benötigt, da viele Funktionen für den Entwickler bereitstellt und somit die Arbeit an den Code angenehmer macht.
+Wichtige Funktionen sind **Projekte aufsetzen**, **Quellcodeeditor**, **Fehlersuche**, **Kompilieren und Linken**, etc.
 
+Das Programm wird aus **mehreren Dateien** zusammengesetzt**:
 
+- Erstellen einer **Quelldatei** _.cpp_, indem der **Quellcode** geschrieben ist. Dabei werden **Header**-Dateien _.h_ hinzugefügt.
+- Es entsteht eine **Objektdatei** _.obj_, welche durch **Bibliotheken** _.lib/.dll_ erweitert wird. Die Standardbibliothek zählt auch dazu. 
+- Am Ende steht eine **ausführbare Datei** _.exe_ bereit.
 
+Ein simples Programm für den Einstieg ist das sog. **Hello World!**-Projekt.
 
+### Hello World
 
+"Hello World" gibt einen kurzen Einblick in viele Funktionen einer Programmiersprache, da viele simple, aber allgemein wichtige Anweisungen aufgeführt werden.
 
+´´´c++
 
+#include <iostream>
 
+using namespace std;
 
+int main(){
+	std::cout << "Hello World!" << endl; //endl gehört auch zu std
+	cout << "Oder auch: Hallo Welt!\n";
 
+	return 0;
+}
 
+´´´
+**Präprozessordirektive**: z.B. _#include <header>_ oder _#include "header"
 
+Diese wird eingeleitet durch ein **#** und wird ausgeführt am **Anfang der Kompilierphase**  erzeugt noch **keine Objektdatei**, sondern bündelt **Informationen** und bereitet diese vor. 
 
+Das **include*+ gibt an, dass Dateien in das Projekt bzw. den Quellcode ingebunden werden. Allgemein gesagt: <header> bindet Standardbibliotheken ein und "header" eigen erstelle Dateien. Mehr dazu (sehr viel) später.
 
+**iostream**: Ist zuständig für die Ein und Ausgabe auf der Konsole.
 
+**int main**: Aufruf der Hauptfunktion.
 
+Die **Hauptfunktion** ist Pflicht für jedes Programm, da diese Funktionen und Anweisung aufruft. Man könnte sie auch einen **roten Pfad** nennen, da hier alles zusammenführt und nach der Reihe ausgeführt werden. Das **return 0;** zeigt, dass das Programm den Exit-Code zurückgibt und ist ebenfalls Notwendigfür alle Funktionen mit einem Rückgabewert. Mehr dazu unter "Funktionen".
 
+**Funktionsblock**: { inhalt }
 
+In dem Funktionblock befindet sich alles, was das Programm berechnen/ausführen soll.
 
+**Kommentare** //Inhalt oder /* Inhalt */
 
+Kommentare werden vom Compiler **ignoriert** und können dadurch benutzt werden, den **Code übersichtlicher** zu machen. Dies ist besonders praktisch für das Verständnis anderer Personen, da diese den Code dadurch schneller verstehen. Den es gilt: Teamwork OP!
 
+ // wird alles ignoriert -> Einzeiler-Kommentar
 
+ /* -> Beginn eines Kommentarblocks
+ */ -> Ende eines Kommentarblocks
 
+**Anweisungen** enden immer mit einem Semicolon/Strichpunkt **;**
 
+**Konsolenausgabe**:
 
+Da wir _iostream_ eingebunden haben, können wir auf der Konsole des Computers schreiben und auslesen.
 
+**std::** kennzeichnet den **Namensbereich**, indem _cout_ und _endl_ definiert sind. Da wir **using namespace std;** angegeben haben, muss std:: nicht benutzt werden.
 
+**cout** (console output) ist eine Funktion der Standardbibliothek, die die _Ausgabe_ auf der Konsole ermöglicht.
 
+**" Inhalt "** ist ein String und dessen Inhalt wird nach cout << ausgegeben.
+
+**<<** ist ein Operator, der die Zeichen in den sogg. _outputstream_ schiebt.
+
+**endl** (end of line) ist ebenfalls eine Funktion der Standardbibltiothek und ruft einen Zeilenvorschub hervor. Alternativ kann in dem String "**\n**" eingefügt werden, welcher den gleichen Effekt erzeugt.
+
+# Elementare Datentypen - Integer und Strings
+
+Ein wichtiger Bestandteil jedes Programmes sind **Variablen**. In diesen können verschiedene Werte gespeichert und wieder benutzt werden. Um Variablen zu speichern, müssen wir davor noch angeben, wie viel Speicher sie brauchen. Das ist abhängig von der Art des Wertes - also Zahl oder Buchstabe/n - und dem Wertebereich.
+
+### Deklaration und Defintion
+
+**Deklaration**: Wir legen **Datentyp** und **Name** fest, dadurch kann der Compiler Speicher reservieren, aber die Variable hat zurzeit noch keinen festgelegten Wert. 
+
+**Syntax**: _Datentyp_ **Variablenname**;
+
+**Namensregeln**:
+
+- Anfang mit a-z, A-Z oder _
+- Danach darf a-z, A-Z, _ und Zahlen benutzt werden
+- Bereits reservierte Wörter wie _continue_ können nicht benutzt werden
+
+_Anmerkung_: Benutzen wir die Variable jetzt, dann wird ein zufälliger Wert ausgegeben, falls der Compiler das überhaupt zulässt.
+
+**Defintion**: Nun wird der Variablen ein Wert zugewiesen. Natürlich muss davor aber erstmal ein Datentyp festgelegt sein.
+
+**Syntax**: **Variablenname** = _einWert_;
+
+Es ist möglich Defintion und Deklaration zu kombinieren.
+
+´´´c++
+
+int eineZahl = 44; //Definition und Deklaration
+int eineAndereZahl(21);
+
+int x_pos, y_pos, z_pos; //Deklaration von drei Variablen
+
+x_pos, y_pos, z_pos = 5; //Defintion durch verkettete Wertezuweisung.
+
+//Aber:
+
+int Zahl1, Zahl2, Zahl3 = 3; //Nur Zahl3 wird 3 zugewiesen
+
+int nochEineAndereZahl(22), eineGanzAndereZahl(42);
+´´´
+
+**Fehlerquellen**:
+
+Beschäftigen wir doch als nächstes mit Zahlen -> Integer und Float.
+
+## Integer
+
+I.d.R. hat ein Integer 4 Byte (16 Bits) Speicherplatz. Integer können aber verschiedene Formen annehmen, welche diese Tabelle darstellen soll:
+
+|Datentyp|Speicherplatz (Byte)|Wertebereich|Notiz|
+|--:|:-:|:--|:--|
+|bool|1|1,0 bzw. true, false|Sehr viel Speicher für 2 Ziffern|
+|char|1|-128, +127|Benutzung für ASCII|
+|short|2|-32.768, +32.767|Hälfte von Integer|
+|integer|4|-2.147.483.648, +2.147.483.647|Alternativer Name: long|
+|long long|8|-9.223.372.036.854.775.808, +9.223.372.036.854.775.807|Doppeltes von Integer|
+
+Mit Ausnahme von bool kann an jeden Datentyp noch ein **unsigned** (ohne Vorzeichen) angehängt werden, um den Wertebereich auf 0 zu verschieben. z.B. unsigned short -> 0, 65.535
+
+Für die Umrechnung von Dezimalzahlen in Binärzahlen solle ein Blick in die Vorlesung ["Einführung in die Informatik"](/1/einfuehrung-in-die-informatik) gemacht werden.
+
+### Overflow
 
 
 
