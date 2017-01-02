@@ -196,8 +196,7 @@ Ein simples Programm für den Einstieg ist das sog. **Hello World!**-Projekt.
 
 "Hello World" gibt einen kurzen Einblick in viele Funktionen einer Programmiersprache, da viele simple, aber allgemein wichtige Anweisungen aufgeführt werden.
 
-´´´c++
-
+```c++
 #include <iostream>
 
 using namespace std;
@@ -208,8 +207,8 @@ int main(){
 
 	return 0;
 }
+```
 
-´´´
 **Präprozessordirektive**: z.B. _#include <header>_ oder _#include "header"
 
 Diese wird eingeleitet durch ein **#** und wird ausgeführt am **Anfang der Kompilierphase**  erzeugt noch **keine Objektdatei**, sondern bündelt **Informationen** und bereitet diese vor. 
@@ -275,8 +274,7 @@ _Anmerkung_: Benutzen wir die Variable jetzt, dann wird ein zufälliger Wert aus
 
 Es ist möglich Defintion und Deklaration zu kombinieren.
 
-´´´c++
-
+```c++
 int eineZahl = 44; //Definition und Deklaration
 int eineAndereZahl(21);
 
@@ -289,7 +287,7 @@ x_pos, y_pos, z_pos = 5; //Defintion durch verkettete Wertezuweisung.
 int Zahl1, Zahl2, Zahl3 = 3; //Nur Zahl3 wird 3 zugewiesen
 
 int nochEineAndereZahl(22), eineGanzAndereZahl(42);
-´´´
+```
 
 **Fehlerquellen**:
 
