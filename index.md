@@ -69,6 +69,11 @@ $$ 5 + 5 = 10 $$
 
 $$ 5 + 5 = 10 $$
 
+```markdown
+$$ \forall x \in X, \quad \exists y \leq \epsilon $$
+```
+
+$$ \forall x \in X, \quad \exists y \leq \epsilon $$
 Alternativ kann der Code auch inline mit dem restlichen Text gerendert werden:
 
 ```markdown
@@ -76,12 +81,5 @@ Alternativ kann der Code auch inline mit dem restlichen Text gerendert werden:
 ```
 
 \$$ 1 + 1 = 2 $$
-
-```markdown
-$$ \forall x \in X, \quad \exists y \leq \epsilon $$
-```
-
-$$ \forall x \in X, \quad \exists y \leq \epsilon $$
-
 
 Hier gibt's die komplette Dokumenatation zu [MathJax und Latex](http://docs.mathjax.org/en/latest/tex.html) und hier ein [Wikibook zur Syntax](https://en.wikibooks.org/wiki/LaTeX/Mathematics).
