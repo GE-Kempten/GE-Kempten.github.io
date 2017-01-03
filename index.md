@@ -74,6 +74,7 @@ $$ \forall x \in X, \quad \exists y \leq \epsilon $$
 ```
 
 $$ \forall x \in X, \quad \exists y \leq \epsilon $$
+
 Alternativ kann der Code auch inline mit dem restlichen Text gerendert werden:
 
 ```markdown
