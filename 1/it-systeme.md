@@ -23,8 +23,8 @@ Man unterscheidet digitale Schaltungen zwischen Schaltnetzen und Schaltwerken:
 
 |             |Schaltnetze   |Schaltwerken     |
 |------------:|--------------|-----------------|
-|Gedächtnis   |nein          |ja			   |
-|Rückkoppelung|nein          |ja			   |
+|Gedächtnis   |nein          |ja	       |
+|Rückkoppelung|nein          |ja       	       |
 |Formal auch: |Schaltfunktion|endlicher Automat|
 
 Der Rechner ist ein Schaltwerk, welcher aber durch Schaltnetze realisiert wird.
