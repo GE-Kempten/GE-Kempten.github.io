@@ -53,14 +53,13 @@ Hier gibt's noch mehr Informationen zu [GitHub Flavored Markdown](https://guides
 
 ### MathJax
 
-MathJax ist eine JavaScript display engine, die die Verwendung von _LaTex_, _MathML_ und _AsciiMath_ zur Darstellung kompexer mathematischer Formeln ermöglicht.
+MathJax ist eine JavaScript display engine, die die Verwendung von $$ \LaTeX $$ zur Darstellung kompexer mathematischer Formeln ermöglicht.
+
+$$ \LaTeX $$
 
 ```markdown
-Here is an example MathJax inline rendering \\\\( 1/x^{2} \\\\), and here is a block rendering: 
-\\\\[ \frac{1}{n^{2}} \\\\]
+TODO
 ```
 
-Here is an example MathJax inline rendering \\\\( 1/x^{2} \\\\), and here is a block rendering: 
-\\\\[ \frac{1}{n^{2}} \\\\]
 
 Hier gibt's die komplette Dokumenatation zu [MathJax](http://docs.mathjax.org/en/latest/start.html).
