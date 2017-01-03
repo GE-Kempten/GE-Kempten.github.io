@@ -23,7 +23,7 @@ Immer wenn ein neuer Commit in diesem Repository erscheint, wird diese Seite duc
 Markdown ist eine Markup-Language mit einer sehr einfachen Syntax. Funktionen sind unter anderem:
 
 ```markdown
-Code Blocks mit Syntax Highlighting
+Code Blocks mit Syntax Highlighting beginnen und enden mit drei Backticks (`)
 
 # Überschrift 1
 ## Überschrift 2
