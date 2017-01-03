@@ -14,7 +14,7 @@
 
 ## Mengen
 
-Eine **Menge** M ist jede Zusammenfassung von bestimmten wohlunterschiedenen Objekten, welche die Elemente von M genannt werden, zu einem Ganzen. Gehört eine Element $$ e $$ nicht zur Menge $$ M $$, so schreibt man $$ x \notin M $$.
+Eine **Menge** M ist jede Zusammenfassung von bestimmten wohlunterschiedenen Objekten, welche die Elemente von M genannt werden, zu einem Ganzen. Gehört eine Element $$ x $$ nicht zur Menge $$ M $$, so schreibt man $$ x \notin M $$.
 
 Mengen können endlich oder unendlich viele Elemente enthalten (jedoch keines doppelt) und auf folgende Weise Definiert werden:
 
