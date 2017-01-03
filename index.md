@@ -77,6 +77,11 @@ Alternativ kann der Code auch inline mit dem restlichen Text gerendert werden:
 
 \$$ 1 + 1 = 2 $$
 
-Mehr Beispiele folgen in Kürze...
+```markdown
+$$ \forall x \in X, \quad \exists y \leq \epsilon $$
+```
 
-Hier gibt's die komplette Dokumenatation zu [MathJax](http://docs.mathjax.org/en/latest/start.html).
+$$ \forall x \in X, \quad \exists y \leq \epsilon $$
+
+
+Hier gibt's die komplette Dokumenatation zu [MathJax und Latex](http://docs.mathjax.org/en/latest/tex.html) und hier ein [Wikibook zur Syntax](https://en.wikibooks.org/wiki/LaTeX/Mathematics).
