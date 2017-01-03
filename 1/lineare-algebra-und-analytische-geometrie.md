@@ -20,7 +20,7 @@ Mengen können endlich oder unendlich viele Elemente enthalten (jedoch keines do
 
 - Aufzählung aller Elemente einer Menge: $$ M = \{ 1, 2, 3, 4 \} $$
 - Verbale Angabe der Menge: Die Menge $$ M $$ enthält alle natürlichen Zahlen von $$ 1 $$ bis $$ 4 $$, also $$ \{ 1, 2, 3, 4 \} $$
-- Durch Auswahl mit Eigenschaften: $$ M = \{ x \in \mathbb{N} \mid 1 \leq x \geq 4 \} $$
+- Durch Auswahl mit Eigenschaften: $$ M = \{ x \in \mathbb{N} \mid 1 \geq x \leq 4 \} $$
 
 ## Abbildungen
 
