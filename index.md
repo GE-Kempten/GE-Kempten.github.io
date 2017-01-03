@@ -55,10 +55,14 @@ Hier gibt's noch mehr Informationen zu [GitHub Flavored Markdown](https://guides
 
 ### MathJax
 
-MathJax ist eine JavaScript display engine, die die Verwendung von _LaTeX_ zur Darstellung kompexer mathematischer Formeln ermöglicht.
+MathJax ist eine JavaScript display engine, die die Verwendung von _LaTeX_ zur Darstellung kompexer mathematischer Formeln ermöglicht. Am Anfang einer Seite, die MathJax verwendet, muss dieser Code Javascript eingefügt werden:
 
 ```markdown
-TODO
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+```
+
+```markdown
+a
 ```
 
 The following is a math block:
@@ -68,5 +72,7 @@ $$ 5 + 5 $$
 But next comes a paragraph with an inline math statement:
 
 \$$ 5 + 5 $$
+
+Hallo Hallo Hallo
 
 Hier gibt's die komplette Dokumenatation zu [MathJax](http://docs.mathjax.org/en/latest/start.html).
