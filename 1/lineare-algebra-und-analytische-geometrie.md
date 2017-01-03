@@ -14,8 +14,13 @@
 
 ## Mengen
 
-**Definition**
-Eine Menge M ist jede Zusammenfassung von bestimmten wohlunterschiedenen Objekten, welche die Elemente von M genannt werden, zu einem Ganzen. Gehört eine Element _e_ zur Menge _M_, so schreibt man $$ x \notin M $$.
+Eine **Menge** M ist jede Zusammenfassung von bestimmten wohlunterschiedenen Objekten, welche die Elemente von M genannt werden, zu einem Ganzen. Gehört eine Element $$ e $$ nicht zur Menge $$ M $$, so schreibt man $$ x \notin M $$.
+
+Mengen können endlich oder unendlich viele Elemente enthalten (jedoch keines doppelt) und auf folgende Weise Definiert werden:
+
+- Aufzählung aller Elemente einer Menge: $$ M = {1, 2, 3, 4} $$
+- Verbale Angabe der Menge: Die Menge $$ M $$ enthält alle natürlichen Zahlen von $$ 1 $$ bis $$ 4 $$, also $$ {1, 2, 3, 4} $$
+- Durch Auswahl mit Eigenschaften: $$ M = { x \in \mathbb{N} \mid 1 \leq x \geq 4 } $$
 
 ## Abbildungen
 
