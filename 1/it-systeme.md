@@ -1,6 +1,6 @@
 # IT-Systeme
 
-### Kompetenzen
+## Kompetenzen
 
 - Bauen eines funktionsfähigen Rechners, dazu werden
 - **Digitale Schaltungen**, also die Boole'sche Algebra gebraucht um
@@ -8,6 +8,8 @@
 - **Programmierbare System** liefert. Dem nun funktionsfähigen Rechner möchten wir einfacher Befehle zuordnen können, wodurch die
 - **Assemblerprogammierung** in Kraft tretet. Anschließend sollen noch
 - **Peripherie**(-Geräte) mit dem Rechner kommunizieren.
+
+---
 
 # Digitale Schaltungen
 
