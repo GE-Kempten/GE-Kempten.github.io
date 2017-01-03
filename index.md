@@ -57,6 +57,8 @@ MathJax ist eine JavaScript display engine, die die Verwendung von $$ \LaTeX $$ 
 
 $$ \LaTeX $$
 
+$$x_1$$
+
 ```markdown
 TODO
 ```
