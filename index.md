@@ -51,4 +51,12 @@ _Kursiv_
 
 Hier gibt's noch mehr Informationen zu [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-Ich bin sinnvoll!
+### MathJax
+
+MathJax ist eine JavaScript display engine, die LaTex, MathML und AsciiMath zur Darstellung kompexer mathematischer Formeln ermöglicht.
+
+```markdown
+TODO
+```
+
+Hier gibt's die komplette Dokumenatation zu [MathJax](http://docs.mathjax.org/en/latest/start.html).
