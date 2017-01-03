@@ -15,7 +15,7 @@
 ## Mengen
 
 **Definition**
-Eine Menge M ist jede Zusammenfassung von bestimmten wohlunterschiedenen Objekten, welche die Elemente von M genannt werden, zu einem Ganzen. Gehört eine Element _e_ zur Menge _M_, so schreibt man \$$ x \notin M $$.
+Eine Menge M ist jede Zusammenfassung von bestimmten wohlunterschiedenen Objekten, welche die Elemente von M genannt werden, zu einem Ganzen. Gehört eine Element _e_ zur Menge _M_, so schreibt man $$ x \notin M $$.
 
 ## Abbildungen
 
