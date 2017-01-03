@@ -61,18 +61,22 @@ MathJax ist eine JavaScript display engine, die die Verwendung von _LaTeX_ zur D
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 ```
 
+So sieht ein Mathematik-Block aus:
+
 ```markdown
-a
+$$ 5 + 5 = 10 $$
 ```
 
-The following is a math block:
+$$ 5 + 5 = 10 $$
 
-$$ 5 + 5 $$
+Alternativ kann der Code auch inline mit dem restlichen Text gerendert werden:
 
-But next comes a paragraph with an inline math statement:
+```markdown
+\$$ 1 + 1 = 2 $$
+```
 
-\$$ 5 + 5 $$
+\$$ 1 + 1 = 2 $$
 
-Hallo Hallo Hallo
+Mehr Beispiele folgen in Kürze...
 
 Hier gibt's die komplette Dokumenatation zu [MathJax](http://docs.mathjax.org/en/latest/start.html).
