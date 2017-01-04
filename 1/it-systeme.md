@@ -138,7 +138,7 @@ a und b sind Schaltzustände.
 
 **Definition**:
 
-> Eine _nichtleere Menge V_ auf der _zwei zweistellige Verknüpfungen \land und \lor definiert sind_, heißt **Verband**, wenn die nachfolgende aufgeführten _Axiome 1-4_ gelten
+> Eine _nichtleere Menge V_ auf der _zwei zweistellige Verknüpfungen $$ \land $$ und $$ \lor $$ definiert sind_, heißt **Verband**, wenn die nachfolgende aufgeführten _Axiome 1-4_ gelten
 
 |Axiom|Gesetz|Formel 1| Formel 2|
 |:-:|:-:|---|---|
