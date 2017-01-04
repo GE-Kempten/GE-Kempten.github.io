@@ -159,9 +159,9 @@ Ein gesamten Objekt soll verändert werden können, z.B. Verschiebung, Skalierun
 - Richtung (_direction_) definiert im Raum 
 - Grafische Darstellung als Pfeil -> Länge und Richtung
 
-**Komponentenform**: $$ {\overrightarrow {v}} = \begin{pmatrix} v_0, v_1, \ldots , v_n-1 \end{pmatrix} $$
+**Komponentenform**: $$ {\overrightarrow {v}} = \begin{pmatrix} v_0, v_1, \ldots , v_{n-1} \end{pmatrix} $$
 
-**Betrag** ähnl. Notation des Absolutwert: $$ \| {\overrightarrow {v}} \| = \sum_{i=0}^n-1 v_i^2 $$
+**Betrag** ähnl. Notation des Absolutwert: $$ \| {\overrightarrow {v}} \| = \sqrt{\sum_{i=0}^{n-1} v_i^2} $$
 
 
 
