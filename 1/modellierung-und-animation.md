@@ -21,7 +21,7 @@ Diese Aspekte sind nicht Ziel dieses Faches:
 ### Themen
 
 - [x] Einführung
-- [ ] Grundbegriffe
+- [x] Grundbegriffe
 - [ ] Modellieren
 	- [ ] Mathematische Grundlage
 	- [ ] Modellierungstechnik
@@ -49,6 +49,12 @@ Diese Aspekte sind nicht Ziel dieses Faches:
 
 
 
+
+
+
+
+
+
 # Einführung
 
 ## Geschichte
@@ -71,8 +77,6 @@ Diese Aspekte sind nicht Ziel dieses Faches:
 			* Tiefeneindruck
 
 ![multiplane camera](https://msmnam.files.wordpress.com/2011/01/multiplane_camera.jpg)
-
-
 
 ### Computeranimation (CA)
 
@@ -125,6 +129,14 @@ Bringt Nachteile mit:
 
 
 
+# Grundbegriffe
+
+- Ein Objekt einer 3D-Szene ist i.d.R. letztendlich ein Polygon-Netzmodell - **Mesh**
+- Oberfläche eines Objekts -> Verbindung aus mehreren planare Polygone
+- Ein Polygon - **Face** besteht aus einer List miteinander verbundener Punkte - **Vertices**
+- Ein Vertex ist ein Punkt im **R3** (3D-Kooridnatensystem)
+- Unterscheidung zwischen exakter Darstellung - z.B. ein Quader - und einer Näherung - z.B. Kugel
+- Anzahl der Polygone = Genauigkeit der Näherung => Speicherplatz, Redering, evtl. Erstellungszeit der Artist
 
 
 
@@ -135,14 +147,11 @@ Bringt Nachteile mit:
 
 
 
+# Mathematische Grundlage
 
+Ein **Polygon** ist definiert durch eine **Menge an Punkten**, i.d.R. besteht ein Polygon aus 3 Punkten.
 
-
-
-
-
-
-
+Ein gesamten Objekt soll verändert werden können, z.B. Verschiebung, Skalierung und Rotation. Das sind **Affine Transformationen** einer Punktmenge in eine andere Punktmenge. Diese werden dargestellt durch **Vektoren und Matrizen**.
 
 
 
