@@ -1,7 +1,30 @@
 # Programmieren 1 für Games
 
 [] Verlinkung zu einzelnen Themen
-
+[x] Einführung ("Programmieren", "C und C++", "Das erste Programm")
+[x] Elementare Datentypen ("int", "float", "bool", "char", "string")
+[] Arithmetische Operatoren
+[x] Tipps und Tricks mit der IDE -> unwichtig, da Visual Studio spezifisch
+[] Ein- und Ausgabe aus der Konsole
+[] Kontrollstrukturen
+[] Arrays
+[] Funktionen
+[] Zufallszahlen
+[] Zeiger und Referenzen
+[] Namensbereiche
+[] OOP
+[] Dynamische Speicherreservierung
+[] Aufzählungstyp
+[] Makros und Konstanten
+[] Zeit
+[] OOP - Konstante Objekte und Standardmethoden
+[] OOP - Vererbung
+[] Datensätze mit struct
+[] Arbeiten mit Dateien
+[] Bibliotheken
+[] Container - Vektor
+[] Polymorphie
+[] Typumwandlung (Datentypen und Klassen)
 
 
 ### Kompetenzen
@@ -30,8 +53,6 @@ Am Ende des Semesters sollen die Stunden in der Lage sein mit der **IDE** zu arb
 
 
 # Einführung
-
-**TODO**: Verlinkung zu Themen
 
 Programmierung ist nötig, da der Computer bzw. der Prozessor nur exakt formulierte Aufgabenstellungen ausführen kann. Dieser ist im Resultat aber weitaus effizierter als der Mensch z.B. Ausrechnen von komplizierten Formeln.
 
