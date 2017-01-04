@@ -19,3 +19,7 @@ Alle Beiträge stehen unter der [Creative Commons BY-NC-SA 4.0 International Liz
 Die Website ist aus Markdown-Dateien aufgebaut wird kann über [GitHub](https://github.com/GE-Kempten/Wiki/edit/master/index.md) bearbeitet werden.
 
 Immer wenn ein neuer Commit in diesem Repository erscheint, wird diese Seite duch [Jekyll](https://jekyllrb.com/) aktualisiert.
+
+# Hilfe
+
+|[Git](/help/git)|[Markdown](/help/markdown)|[MathJax](/help/mathjax)|
