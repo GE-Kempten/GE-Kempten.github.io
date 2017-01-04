@@ -18,11 +18,33 @@ Diese Aspekte sind nicht Ziel dieses Faches:
 - Software-Umsetzung genannter Konzepte
 - Programmspezifische Kenntnisse
 
+### Themen
 
-
-
-
-
+- [x] Einführung
+- [ ] Grundbegriffe
+- [ ] Modellieren
+	- [ ] Mathematische Grundlage
+	- [ ] Modellierungstechnik
+		- [ ] Basics
+		- [ ] Tools
+		- [ ] Modifiers
+	- [ ] Kamera
+	- [ ] Polygonale Netze
+	- [ ] Parametrische Patches
+	- [ ] Einschub: Prozedurales Modellieren
+- [ ] Material und Licht
+	- [ ] Physikalische Grundlagen
+	- [ ] Begriffe für Licht
+	- [ ] Licht (Lokale Beleichtung, etc.)
+	- [ ] Schatten
+	- [ ] Beleuchtung
+	- [ ] Shading
+	- [ ] Spiegelung
+	- [ ] Transparenz
+	- [ ] Transluzenz
+	- [ ] Dispersion
+	- [ ] Coating
+	- [ ] Texture Mapping
 
 
 
