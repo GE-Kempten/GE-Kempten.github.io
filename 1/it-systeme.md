@@ -27,7 +27,7 @@ Man unterscheidet digitale Schaltungen zwischen Schaltnetzen und Schaltwerken:
 
 |             |Schaltnetze   |Schaltwerken     |
 |------------:|--------------|-----------------|
-|Gedächtnis   |nein          |ja	       |
+|Gedächtnis   |nein          |ja               |
 |Rückkoppelung|nein          |ja       	       |
 |Formal auch: |Schaltfunktion|endlicher Automat|
 
@@ -174,9 +174,9 @@ a und b sind Schaltzustände.
 - Jede Variable (a,b,c...) ist ein Boole'scher Term
 - sind t1 und t2 Boole'sche Terme, so auch:
 
-> 1. t1 \lor t2
-> 2. t1 \land t2
-> 3. \lnot t1
+> 1. t1 $$ \lor $$ t2
+> 2. t1 $$ \land $$ t2
+> 3. $$ \lnot $$ t1
 > 4. (t1)
 
 **Beispiele für Beweise**:
@@ -187,7 +187,7 @@ a und b sind Schaltzustände.
 
 **Defintion**:
 
-> Zu jedem Boole'schen Term t ergält man den dualen Term t^d, indem man \lor und \land, sowie 1 und 0 vertauscht.
+> Zu jedem Boole'schen Term t ergält man den dualen Term t^d, indem man $$ \lor $$ und $$ \land $$, sowie 1 und 0 vertauscht.
 
 Der Boole'sche Term und der duale Term haben nicht unbedingt den gleichen Wert!
 
