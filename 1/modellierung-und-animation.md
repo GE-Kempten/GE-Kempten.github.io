@@ -98,8 +98,6 @@ Diese Aspekte sind nicht Ziel dieses Faches:
 
 
 
-
-
 ## CA in Games
 
 Bringt Nachteile mit:
@@ -152,6 +150,48 @@ Bringt Nachteile mit:
 Ein **Polygon** ist definiert durch eine **Menge an Punkten**, i.d.R. besteht ein Polygon aus 3 Punkten.
 
 Ein gesamten Objekt soll verändert werden können, z.B. Verschiebung, Skalierung und Rotation. Das sind **Affine Transformationen** einer Punktmenge in eine andere Punktmenge. Diese werden dargestellt durch **Vektoren und Matrizen**.
+
+## Vektoren
+
+**Notation**:
+
+- Größe definiert durch einen Betrag (_magnitude_) 
+- Richtung (_direction_) definiert im Raum 
+- Grafische Darstellung als Pfeil -> Länge und Richtung
+
+**Komponentenform**: $$ {\overrightarrow {v}} = \begin{pmatrix} v_0, v_1, \ldots , v_n-1 \end{pmatrix} $$
+
+**Betrag** ähnl. Notation des Absolutwert: $$ \| {\overrightarrow {v}} \| = \sum_{i=0}^n-1 v_i^2 $$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
