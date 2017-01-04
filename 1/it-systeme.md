@@ -170,14 +170,14 @@ a und b sind Schaltzustände.
 
 > Boole'sche Terme sind **induktiv** wie folgt definiert:
 
-- 0 und 1 sind Boole'sche Terme
-- Jede Variable (a,b,c...) ist ein Boole'scher Term
-- sind t1 und t2 Boole'sche Terme, so auch:
+- $$0$$ und $$1$$ sind Boole'sche Terme
+- Jede Variable (a, b, c, ...) ist ein Boole'scher Term
+- sind $$t1$$ und $$t2$$ Boole'sche Terme, so auch:
 
-> 1. t1 \lor t2
-> 2. t1 \land t2
-> 3. \lnot t1
-> 4. (t1)
+> 1. $$t1 \lor t2$$
+> 2. $$t1 \land t2$$
+> 3. $$\lnot t1$$
+> 4. $$(t1)$$
 
 **Beispiele für Beweise**:
 
@@ -187,7 +187,7 @@ a und b sind Schaltzustände.
 
 **Defintion**:
 
-> Zu jedem Boole'schen Term t ergält man den dualen Term t^d, indem man \lor und \land, sowie 1 und 0 vertauscht.
+> Zu jedem Boole'schen Term $$ t $$ erhält man den dualen Term $$ t^d $$, indem man $$ \lor $$ durch $$ \land $$, sowie $$1$$ duch $$0$$ ersetzt.
 
 Der Boole'sche Term und der duale Term haben nicht unbedingt den gleichen Wert!
 
@@ -240,9 +240,9 @@ Jede echte Boole'sche Funktion f lässt sich in einer der beiden folgenden einde
 - Die durch _Konjunktion verknüpfte Terme_ der _DNF_ heißen **Minterme**,
 - die _entsprechenden Disjunktionen_ der _KNF_ heißen **Maxterme**.
 - Aus jeder Schaltfunktion (als Tabelle) kann mit den Normalformen ein äquivalenter Boole'scher Term konstruiert werden.
-- *Umsetzung*: DNF -> wegen der Konjunktion muss man nur die Terme f(x1,...xn) = 1 betrachten | KNF -> wegen der Disjunktion können die Terme f(x1,...xn) = 1 ignoriert werden.
+- *Umsetzung*: DNF -> wegen der Konjunktion muss man nur die Terme $$f(x1,...xn) = 1$$ betrachten | KNF -> wegen der Disjunktion können die Terme $$f(x1,...xn) = 1$$ ignoriert werden.
 
-Zur Darstellung von Schaltfunktionen durch Boole'sche Terme genügen neben den Variablen xi die folgenden alternativen Operatormengen: {\lor, \lnot}, {\land \lnot}, {NAND}, {NOR}.
+Zur Darstellung von Schaltfunktionen durch Boole'sche Terme genügen neben den Variablen xi die folgenden alternativen Operatormengen: {$$\lor$$, $$\lnot$$}, {$$\land$$, $$\lnot$$}, {$$NAND$$}, {$$NOR$$}.
 
 ### Karnaugh-Veitch-Diagramme (KV-Diagramm)
 
