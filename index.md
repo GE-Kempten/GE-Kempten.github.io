@@ -20,6 +20,6 @@ Die Website ist aus Markdown-Dateien aufgebaut wird kann über [GitHub](https://
 
 Immer wenn ein neuer Commit in diesem Repository erscheint, wird diese Seite duch [Jekyll](https://jekyllrb.com/) aktualisiert.
 
-# Hilfe
-
+|Hilfe||
+|---------------|---------------|---------------|
 |[Git](/help/git)|[Markdown](/help/markdown)|[MathJax](/help/mathjax)|
