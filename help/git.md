@@ -22,17 +22,17 @@ Hier sind die einfachsten Commands für die Navigation im Terminal und die Verwe
 
 Real pros use Linux, also sind funktionieren einige Commands eventuell nicht auf Window$ oder macO$. Aber da hilft das Internet... ;)
 
-|Command           |Effekt                                            |
-|------------------|--------------------------------------------------|
-|cd [ORDNER]       |Navigiere in einen Ordner                         |
-|cd ..             |Übergeordneter Ordner                             |
-|ls                |Liste den Inhalt des Ordners auf                  |
-|cat [Datei]       |Gib den Inhalt eier Textdatei aus                 |
-|touch [Datei]     |Erstelle neue Datei oder aktualisiere das Datum   |
-|rm [Datei]        |Datei löschen                                     |
-|rm -rf [Ordner]   |Ordner samt Inhalt löschen (Achtung!)             |
-|mv [Quelle] [Ziel]|Datei bewegen oder umbenennen (Vorsicht in Git!)  |
-|mkdir [Ordner]    |Erstelle einen Ordner                             |
+|Command                    |Effekt                                            |
+|---------------------------|--------------------------------------------------|
+|cd [ORDNER]                |Navigiere in einen Ordner                         |
+|cd ..                      |Übergeordneter Ordner                             |
+|ls                         |Liste den Inhalt des Ordners auf                  |
+|cat [Datei]                |Gib den Inhalt eier Textdatei aus                 |
+|touch [Datei]              |Erstelle neue Datei oder aktualisiere das Datum   |
+|rm [Datei]                 |Datei löschen                                     |
+|rm -rf [Ordner]            |Ordner samt Inhalt löschen (Achtung!)             |
+|mv [Quelle] [Ziel]         |Datei bewegen oder umbenennen (Vorsicht in Git!)  |
+|mkdir [Ordner]             |Erstelle einen Ordner                             |
 
 ### Grundlegende Commands
 
