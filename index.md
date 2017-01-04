@@ -2,7 +2,7 @@
 
 # Willkommen
 
-Auf diesem Wiki werden Notizen zu Modulen des Studiengangs Informatik Game Engineering an der Hochschule Kempten gesammelt. Käsebrot
+Auf diesem Wiki werden Notizen zu Modulen des Studiengangs Informatik Game Engineering an der Hochschule Kempten gesammelt.
 
 |1. Semester                            |
 |---------------------------------------|
