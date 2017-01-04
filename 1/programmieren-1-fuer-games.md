@@ -1,30 +1,30 @@
 # Programmieren 1 für Games
 
-[] Verlinkung zu einzelnen Themen
-[x] Einführung ("Programmieren", "C und C++", "Das erste Programm")
-[x] Elementare Datentypen ("int", "float", "bool", "char", "string")
-[] Arithmetische Operatoren
-[x] Tipps und Tricks mit der IDE -> unwichtig, da Visual Studio spezifisch
-[] Ein- und Ausgabe aus der Konsole
-[] Kontrollstrukturen
-[] Arrays
-[] Funktionen
-[] Zufallszahlen
-[] Zeiger und Referenzen
-[] Namensbereiche
-[] OOP
-[] Dynamische Speicherreservierung
-[] Aufzählungstyp
-[] Makros und Konstanten
-[] Zeit
-[] OOP - Konstante Objekte und Standardmethoden
-[] OOP - Vererbung
-[] Datensätze mit struct
-[] Arbeiten mit Dateien
-[] Bibliotheken
-[] Container - Vektor
-[] Polymorphie
-[] Typumwandlung (Datentypen und Klassen)
+- [ ] Verlinkung zu einzelnen Themen
+- [x] Einführung ("Programmieren", "C und C++", "Das erste Programm")
+- [x] Elementare Datentypen ("int", "float", "bool", "char", "string")
+- [ ] Arithmetische Operatoren
+- [x] Tipps und Tricks mit der IDE -> unwichtig, da Visual Studio spezifisch
+- [ ] Ein- und Ausgabe aus der Konsole
+- [ ] Kontrollstrukturen
+- [ ] Arrays
+- [ ] Funktionen
+- [ ] Zufallszahlen
+- [ ] Zeiger und Referenzen
+- [ ] Namensbereiche
+- [ ] OOP
+- [ ] Dynamische Speicherreservierung
+- [ ] Aufzählungstyp
+- [ ] Makros und Konstanten
+- [ ] Zeit
+- [ ] OOP - Konstante Objekte und Standardmethoden
+- [ ] OOP - Vererbung
+- [ ] Datensätze mit struct
+- [ ] Arbeiten mit Dateien
+- [ ] Bibliotheken
+- [ ] Container - Vektor
+- [ ] Polymorphie
+- [ ] Typumwandlung (Datentypen und Klassen)
 
 
 ### Kompetenzen
