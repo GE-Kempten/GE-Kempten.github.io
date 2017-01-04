@@ -1,6 +1,8 @@
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-
 # Programmieren 1 für Games
+
+[] Verlinkung zu einzelnen Themen
+
+
 
 ### Kompetenzen
 
@@ -12,9 +14,20 @@
 - **Objektorientierte Programmieren** mit den Grundlegenden Konzepten aus C++ gekannt und angewendet werden.
 - Modulare Programme schreiben und die "toolchain" der Entwicklung von C/C++ Programmen und Biblioheken verstehen und anwenden.
 
+
+
 ### Lernergebnis
 
 Am Ende des Semesters sollen die Stunden in der Lage sein mit der **IDE** zu arbeiten, d.h. sie **programmieren**, **übersetzen** den Code und **Fehler** werden behoben. Durch ständiges Üben ist es ihnen möglich Abhilfe für **kleine Probleme** der realen Welt mit strukturierten, modularen **Programmen** zu lösen.
+
+
+
+
+
+
+
+
+
 
 # Einführung
 
@@ -34,6 +47,8 @@ Dadurch entsteht folgendes **Vorgehen**:
 - Speziele Übersetzungsprogramme wandeln diese in eine verständliche Maschinensprache um
 - Der Computer kann nun die Anweisungen ausführen
 
+
+
 ## Anweisungen / Befehle
 
 Anweisungen und Befehle sind unterschiedlich von Programmiersprache zu Programmiersprache, aber grundlegende Konzepte beliben identisch.
@@ -52,6 +67,8 @@ Anweisungen und Befehle sind unterschiedlich von Programmiersprache zu Programmi
 
 - _SpieleMusik(Titelnummer)_
 - Unterschied zwischen **Prozedur** und **Funktion** (geminersamer Begruff in der OOP ist **Methode**) nicht klar definiert, aber eine mögliche Unterscheidung ist, ob ein **Rückgabewert** vorliegt (Funktion) oder nicht (Prozedur).
+
+
 
 ## Programmiersprachen
 
@@ -90,6 +107,7 @@ Just-in-Time kompilierte Sprachen (**Zwischensprache**):
 - Portabilität beschreibt die Eigenschaft eines Programms auf **vielen verschiedenen Zielsystemen** eingesetzt werden zu können.
 
 
+
 ### High vs. Low Level Sprachen
 
 Das **Level** beschreibt die Nähe/Ähnlichkeit zur Maschinensprache des Systems:
@@ -109,13 +127,19 @@ Je abstrakter/universeller/für den Menschen besser lesbarer, desto "higher":
 - Ein **Computerspiel** wird eher in einer _high-level Sprache_ geschrieben, während aber
 - der **Gamecontroller** für das Spiel eher in ein einer _low-level Sprache_ geschreiben wird.
 
+
+
 ### Assembler
 
 ist die **erste Programmiersprache** und ähnelt der Maschinensprache, ist aber für den Menschen noch lesbar. Ein Veranschaulichung des Codes bietet dieser [Übersetzer](http://gcc.godbolt.org/) von C++ in Assembler. Dies ist auch Thema in der Vorlesung [IT-Systeme - Assemblerprgrammierung](/1/it-systeme).
 
+
+
 ### Kommunikationsprotokolle
 
 Auch wenn der Mensch mit dem Computer mit Programmiersprachen kommuniziert, heißt das nicht das **Computer gegenseitig** das Gleiche machen. Sie benutzen **Kommunikationsprotokolle**, wie z.B. TCP, IP, HTTP, FTP, SMTP, ...
+
+
 
 ### Syntax und Semantik
 
@@ -129,6 +153,8 @@ Auch wenn der Mensch mit dem Computer mit Programmiersprachen kommuniziert, hei�
 - Definiert die Bedeutung von Zeichen-/Wortfolgen 
 - Aufgabe: Was bedeuten die Wörter und Wortfolgen bzw. welche Wirkung haben Sie in meinem Quellcode?
 
+
+
 ### Game-Engineering
 
 Mit Game-Engine kommt man alleine schon recht weit, indem man "Featuren zusammenklickt", aber: die **eigene Innovation** wird dadurch eingeschränkt durch die Fähigkeit der Engine.
@@ -139,11 +165,17 @@ Durch die eigenen Programmierkenntnisse können so spezielle Grafikeffekte, Inte
 
 Außerdem werden neue Spielansätze und Anforderungen von herkömmlichen Engines noch gar nicht unterstützt. z.B. Kompatibilität zu VR, AR, ...
 
+
+
+
+
 ## C und C++
 
 ### C
 
 wurde von **Dennis Ritchie** zwischen **1969-1973** in den Bell Laboratories, NJ, USA entwickelt, um das neue Betriebsystem UNIX zu programmieren und diente als Vorbild für andere von C insperierte Sprachen. C ist eine prozedurale Sprache.
+
+
 
 ### C++
 
@@ -161,6 +193,8 @@ Eigenschaften von C++:
 
 - OOP: Objektorientierte Programmierung
 
+
+
 ### Warum C und C++
 
 - beinhaltet **alle wichtigen Programmierkonzepte** (insbesondere **OOP**) und ist eine gute Basis für den Einstueg in weitere Programmiersprachen
@@ -174,12 +208,18 @@ Eigenschaften von C++:
 - Weite Verbreitung in anderen Anwendungsbereiechen z.B. Medizintechnik
 - Schnittstelle zu den Grafik-APIs für die 3D Computergrafik, zB. OpenGL, DirectX
 
+
+
 ### Versionen und Standardisierung
 
 - Gegen das "Wildwuchs" von Sprachdialekten -> Anmerkung: Deutsche Sprache ist nicht standardisiert z.B. Brötchen vs. Semmel
 - Beteiligte Organisationen zu Entwicklung des Standard ist **ANSI** (American National Standard Institute) und ISO (Internationale Ordnung für Normung)
 - Neuste C Version: C11
 - Neuste C++ Version: C++14
+
+
+
+
 
 ## Erstes Programm 
 
@@ -252,9 +292,21 @@ Da wir _iostream_ eingebunden haben, können wir auf der Konsole des Computers s
 
 **endl** (end of line) ist ebenfalls eine Funktion der Standardbibltiothek und ruft einen Zeilenvorschub hervor. Alternativ kann in dem String "**\n**" eingefügt werden, welcher den gleichen Effekt erzeugt.
 
+
+
+
+
+
+
+
+
+
+
 # Elementare Datentypen - Integer und Strings
 
 Ein wichtiger Bestandteil jedes Programmes sind **Variablen**. In diesen können verschiedene Werte gespeichert und wieder benutzt werden. Um Variablen zu speichern, müssen wir davor noch angeben, wie viel Speicher sie brauchen. Das ist abhängig von der Art des Wertes - also Zahl oder Buchstabe/n - und dem Wertebereich.
+
+
 
 ### Deklaration und Defintion
 
@@ -267,8 +319,27 @@ Ein wichtiger Bestandteil jedes Programmes sind **Variablen**. In diesen können
 - Anfang mit a-z, A-Z oder _
 - Danach darf a-z, A-Z, _ und Zahlen benutzt werden
 - Bereits reservierte Wörter wie _continue_ können nicht benutzt werden
+- Unterscheidung von Groß- und Kleinschreibung
+
+**Empfehlung für Namensregeln**:
+
+Allgemein sollte man darauf achten, dass man Variablen **schnell verständliche Namen** gibt. Am Besten auch gleich einen **Kommentar** anhängen, um zu erklären, was die Aufgabe der Variable ist. Es haben sich im Laufe der Zeit verschiedene Regeln zur Namensgebung entwickelt:
+
+* __Ungarische Notatiion__: 
+	* Datentyp wird in den Namen übernommen, z.B. int iNumberOfPlayers oder int i_NumberOfPlayer
+	* Trennung von Wörter in den Variablen über Großschreibung des Ersten Buchstaben des Wortes
+* __Teamarbeit__:
+	* am besten in Englisch
+	* Programming Guidelines festlegen -> Format der Namesgebung, Formatierung des Codes, Kommentarregeln, etc.
+* __lokale Codebereiche__:
+	* i oder j für Schleifenindizien
+	* r, g, b, a für Farben und Transparenz
+	* x, y, z für 2D/3D-Koordinaten
 
 _Anmerkung_: Benutzen wir die Variable jetzt, dann wird ein zufälliger Wert ausgegeben, falls der Compiler das überhaupt zulässt.
+
+
+
 
 **Defintion**: Nun wird der Variablen ein Wert zugewiesen. Natürlich muss davor aber erstmal ein Datentyp festgelegt sein.
 
@@ -291,11 +362,11 @@ int Zahl1, Zahl2, Zahl3 = 3; //Nur Zahl3 wird 3 zugewiesen
 int nochEineAndereZahl(22), eineGanzAndereZahl(42);
 ```
 
-**Fehlerquellen**:
 
-Beschäftigen wir doch als nächstes mit Zahlen -> Integer und Float.
 
-## Integer
+
+
+## Integer - Ganze Zahlen
 
 I.d.R. hat ein Integer 4 Byte (16 Bits) Speicherplatz. Integer können aber verschiedene Formen annehmen, welche diese Tabelle darstellen soll:
 
@@ -311,7 +382,485 @@ Mit Ausnahme von bool kann an jeden Datentyp noch ein **unsigned** (ohne Vorzeic
 
 Für die Umrechnung von Dezimalzahlen in Binärzahlen solle ein Blick in die Vorlesung ["Einführung in die Informatik"](/1/einfuehrung-in-die-informatik) gemacht werden.
 
+
+
 ### Overflow
+
+**Definition**: Der Absolutbetrag des Ergebnisses einer Berechnung oder des Wertes einer Wertzuweisung ist außerhalb des Wertebereichs des Zieldatentyps.
+
+_Problem_: char hat nur einen Byte zur Verfügung und kann dadurch nicht mehr Zahlen außerhalb des Wertebereichs (z.B. -129) anzeigen.
+
+**Lösungsansätze**: **Modifizierer** _unsigned_ und _signed_
+
+z.B. _signed_ char:
+
+127 -> 0111 1111
+128 -> 1000 0000, aber: 1st bit gibt Vorzeichen an: also = -128
+129 -> 1000 0001, aber: ...								 = -127
+...
+
+_unsigned_ char:
+
+127 ->   0111 1111
+128 ->   1000 0000
+...
+255 ->   1111 1111
+256 -> 1 0000 0000 -> Nicht mehr Anzeigbar mit char
+
+Ohne Angabe eines Modifizierers ist der Datentyp mit Vorzeichen.
+Man sollte allgemein als Entwickler überblick über die Werte seiner Variablen behalten.
+
+Mögliche Overflow-Gefahren sind:
+
+- Eine Variable wird ständig verändert z.B. Spielzeit, gefahrene Schüsse
+- Externe Daten werden nicht korrekt/sauber gelesen, wenn z.B. Farbtiefe falsch gelesen wird
+
+_Ein weiteres Problem_: Der Integer-Wertebereich ist System-individuell:
+
+- abhängig von dem Datenmodell des Prozessors und
+- Prozessorarchitektur des jeweiligen Betriebsystems
+
+**Hilfestellung 1**: Die Funktion **sizeof()** gibt die Anzahl der Bytes aus
+
+```c++
+cout << "long: " << sizeof(long) << "Bytes" << endl;
+```
+
+**Hilfestellung 2**: Die Konstanten in _climits_ geben Wertebereiche zurück
+
+```c++
+cout << "Wertebereich - long long: " << LLONG_MIN << ", " << LLONG_MAX << endl;
+```
+
+
+
+
+
+## Float - Gleichkommazahlen
+
+|Datentyp|Speicherplatz (Byte)|Wertebereich|Genauigkeit(Stellen)|
+|--:|:-:|:--|:--|
+|Float|4|±3.4E+38|6|
+|Double|8|±1.7E+308|15|
+|Long Double|10|±1.1E+4932|19|
+
+Anmerkung zu **Genauigkeit**: D.h. das insgesamt so viele Stellen angezeigt werden können
+
+```c++
+float eineZahl = 20.0001f; 
+cout << eineZahl << endl; //20.0001
+eineZahl = 20.00009f; 
+cout << eineZahl << endl; //20.0001, 7 Stellen, aber es werden nur 6 angezeigt
+```
+
+
+
+### Underflow
+
+Bei Gleitkommazahlen kann es vorkommen, dass der wahre Wert einer Berechnung zu klein ist (zu viele Nachkommastellen) um durch Datentypen dargestellt zu werden.
+
+Praktischerweise können wir ebenfalls sizeof() und climits benutzen, um Speicherplatz und Wertebereich zu überprüfen.
+
+```c++
+#include <climits> //oder <cfloat>
+
+float fUnderflow = DBL_MIN; //Kleinster double Wert wird einem Float zugewiesen
+
+cout << "DBL_MIN: " << DBL_MIN << endl; //2.22507e-308
+cout << "fUnderflow: " << fUnderflow << endl; //0 -> Underflow
+```
+
+
+
+
+
+
+## Konstanten
+
+Eine Konstante ist eine Zahl, ein boolesches Schlüsselwort, ein zeichen oder eine Zeichenkette/String.
+
+
+
+### Ganzzzahlige nummerische Konstanten
+
+sind i.d.R. von Typ _int_. Sollte der Wert zu groß für den Datentyp sein, so wird diese erweitert, d.h. sie wird zu long, und dann zu long long.
+
+Den Datentyp ist auch erkennbar durch die Schreibweise. Beispiele:
+
+- 12UL/12ul -> unsigned long
+- 19L/19l -> long
+- 15U/15u -> unsigned int
+- ...
+
+Zahlen können auch in verschiedenen Zahlensystemen angezeigt werden:
+
+- Dezimal -> beginnt mit Ziffern von 1 bis 9 z.B. 120
+- Octal -> beginnt mit einer 0 z.B. 0120
+- Hexadezimal -> beginnt mit 0x oder 0X z.B. 0x120
+
+Möchte man Konstanten in andere Zahlensysteme umwandeln, so kann man die Operatoren **oct**, **hex** und **dec** in Kombination mit dem Outputstream **<<** benutzen.
+
+```c++
+cout << "16 in Hexadezimal: " << hex << 16 << endl;
+```
+
+
+
+### Gleitpunktkonstanten
+
+sind Standardmäßig von Typ **double** können aber mit als
+
+- float mit dem postfix f/F (1.2f) oder
+- long mit dem postfix l/L (1.2l) angegeben werden.
+
+
+
+
+
+## Konstante Objekte
+
+### Konstanter Datentyp
+
+```c++
+const int eineZahl = 44;
+```
+
+Durch das Schlüsselwort **const** vor dem Datentyp wird diese als Konstante deklariert. Folglich ist diese **nicht überschreibar**, da der Compiler sie schützt. Anwendung finden sie z.B. bei der maximalen Anzahl von Spielern.
+
+
+
+### Präprozessor
+
+Syntax: #define TEXZERSETZUNG Inhalt
+
+```c++
+#define EINE_ZAHL 44
+```
+
+Durch das Schlüsselwort **define** hinter der Präprossessordirektive, werden alle Textstellen 
+hinter dem #define mit dem Inhalt ausgetauscht. GROSSSCHREIBUNG hat sich als Erkennungsmerkmal eingebürgert.
+
+
+
+
+
+## Datentyp bool
+
+* **0 bzw. false** und **1 bzw. true**
+* Wichtigster Datentyp zur
+	* Kontrolle des **Programmflusses**
+	* Implementierung von **Logik**
+* Kann in Kombination mit **Boole'schen Operatoren** benutzt werden
+
+```c++
+bool updateReady = true;
+```	
+
+
+
+
+
+## Datentyp char
+
+Zwar können char Variablen auch benutzt werden, um Zahlen zu speichern, ist es eigt. gedacht diese für **einzelne Zeichen** zu benutzen. Um diese Darzustellen, gibt es verschiedene **Zeichensätze**:
+
+* __ASCII__: 7-bit Datensatz, 128 Zeichen
+* __ANSI__: 8-bit Datensatz, 256 Zeichen (enthält ASCII)
+* __UNICODE__: ≈130.000 Zeichen
+
+Möchte man nun ein Buchstabe in einer Variable speichern, so muss dieser in **' '** gesetzt werden.
+
+```c++
+char BuchstabeA = 'A';
+```
+
+Letztendlich ist die **Zielausgabeeinheit** - i.d.R. der Bildschirm - zuständig für die korrekte Ausgabe.
+
+
+
+### ASCII
+
+- American Standard Code for Information Interchange
+- Zeichenkodierung im englischsprachigen Raum
+- [0, 31] -> 32 Steuerzeichen
+- [32, 127] -> 96 druckbare Zeichen, also das lateinische Alphabet in Groß- und Kleinschreibung, zehn arabische Ziffern, Interpunktionszeichen und Sonderzeichen
+
+![ASCII](http://www.jimprice.com/ascii-0-127.gif)
+
+
+
+### ANSI
+
+Erweiterung der ASCII-Tabelle um einen Bit. Nun sind z.B. deutsche Umlaute darstellbar.
+
+![ANSI](http://www.jimprice.com/ascii-128-255.gif)
+
+```c++
+char einCoolesZeichen = 0xCE;gm
+
+
+
+### Unicode
+
+Da char nur 8 Bit hat, kann der Unicode nicht mehr dargestellt werden. Deswegen müssen alternative Datentypen her: **char16_t** (2 Byte), **char32_t** (4 Byte) (*wchar_t* ist veraltet). 
+
+
+
+
+
+## Datentyp string
+
+Strings sind **Zeichenketten**, welche das Arbeiten viel einfacher machen als mit chars. Um diese anzugeben, werden **" "** benutzt.
+
+Die Zeichenkette endet inter immer mit dem **Stringendezeichen \0**, welches 1 Byte benötigt. Folglich ergibt dies für den **Speicherbedarf**: **Anzahl der Zeichen + 1**.
+
+I.d.R. sind strings im **iostream** integriert, aber es kann alternativ **<string>** eingebunden werden.
+
+```c++
+#include <iostream> //<string>
+unsing namespace std;
+string einName = "Hans"; //std::string
+cout << "Hallo ich bin " << einName << "." << endl;
+```
+
+
+
+### Umlaute
+
+Umlaue müssen aus dem ANSI Zeichesatz entnommen werden, dies kann entweder über einer Zuweisung des Zeichencodes an einem char passieren, oder als hex code an einer Stringkonstante
+
+Zeichen|Hex
+--:|:--
+ä|84
+Ä|8E
+ö|94
+Ö|99
+ü|81
+Ü|9A
+ß|E1
+
+```c++
+//cout << Üben << endl; //geht nicht
+cout << \x9aben << endl; //Üben
+
+char UE = 9a;
+cout << UE << "ben" << endl; //Üben
+```
+
+
+
+### Funktionen mit Strings
+
+Ein string ist eine Klasse, in welcher verschiedene Funktionen integriert wurden. Mehr über Klassen in der [OOP](). 
+
+**TODO**: Verlinkung OOP
+
+
+
+**Suchen**: string.find() -> Gibt (Start-)Position einer gesuchten Zeichens/-kette zurück.
+
+Vier Varianten:
+
+```c++
+size_t find (const string& str, size_t pos = 0) const; //2 Parameter, wovon nur der erste angegeben werden muss
+size_t find (const char* s, size_t pos = 0) const; //Same here
+size_t find (const c, size_t pos = 0) const; //Again, same here
+size_t find (const char* s, size_t pos, size_t n) const; //3 Parameter
+```
+
+- **str** -> gesuchter String
+- **char** -> Suche ein Array von char
+- **c** -> einzelnder char
+- **pos** -> Start der Suchposition
+- **n** -> Länge der gesuchten Zeichenkette
+
+```c++
+string stringA = "Ich bin ein String!";
+string stringB = "String";
+
+size_t SucheString = stringA.find(stringB); //Suche "String" ab 0ter Stelle -> Zahl als Ergebnis
+```
+
+
+
+**string::npos**: npos ist eine Konstante für den höchsten Wert von size_t. Nutzbarkeit findet diese für die Abfrage einer erfolgreichen Suche.
+
+```c++
+if(SucheString != string::npos){ //Verzweigung nur wenn StringB in StringA gefunden wurde
+	cout << stringB << " wurde an der " << SucheString << "ten Stelle gefunden." << endl; 
+}
+```
+
+
+
+**Erweiterung von Strings**: Anhängen weiterer Zeichen an einen String
+
+- **+** Operator
+- .append()
+- .push_back()
+
+```c++
+stringC = "Zeichenkette";
+
+stringA += "Ich ";
+stringA.append("bin ");
+stringA.push_back("eine ");
+stringA.append(stringC);
+stringA += "! Liebe ";
+stringA.push_back("mich!!!");
+
+cout << stringA << endl; //Ich bin ein String! Ich bin eine Zeichenkette! Liebe mich!!!
+```
+
+
+
+**Länge**: string.length() -> gibt Länge des Strings als Zahl zurück.
+
+```c++
+stringA.length; //60
+```
+
+
+
+**Ersetzen**: string.replace() -> ersetze eine Anzahl von Zeichen mit anderen
+
+- 1. Parameter -> Startposition
+- 2. Parameter -> Anzahl der zu ersetzenden Zeichen
+- 3. Parameter -> ein neuer String
+
+```c++
+stringA.replace(stringA.find(stringC) + stringC.length() + 2, 13, "Ich bin praktisch!");
+
+cout << stringA << endl; //Ich bin ein String! Ich bin eine Zeichenkette! Ich bin praktisch!
+```
+
+
+
+**Einfügen**: string.insert() -> Füge einen String an einer bestimmten Position ein.
+
+- 1. Parameter: Startposition
+- 2. Parameter: Einzufügender String
+
+```c++
+stringA.insert(stringA.find(stringB) + stringB.length() + 2, "D.h. ");
+
+cout << stringA << endl; //Ich bin ein String! D.h. Ich bin eine Zeichenkette! Ich bin praktisch!
+```
+
+**Teilstring**: string.substr() -> Nimm ein Teil von einem String
+
+- 1. Parameter: Startposition
+- 2. Parameter: Endposition
+
+```c++
+string stringD = stringA.substr(stringA.find(stringB) + stringB.length() + 2, stringA.find(StringC));
+
+cout << stringD << endl; //D.h. Ich bin eine Zeichenkette!
+```
+
+
+
+Natürlich gibt es noch viele weitere Funktionen von strings. Mehr dazu auf [cplusplus](http://www.cplusplus.com/reference/string/string/).
+
+
+
+**Umwandlung: Zahlen <-> String**:
+
+_string_ to:
+
+- stoi -> int
+- stoul -> unsigned int
+- stol -> long
+- stoll -> long long
+- stoull -> unsigned long long
+- stod -> double
+- stof -> float
+- stold -> long double
+
+Parameter: ein String
+
+Alternative Möglichkeit: atoi, etc. aber diese möchten ein char-Array
+
+_number_ to string: to_string(val), val = number
+
+```c++
+int eineZahl = 42;
+
+string einString = to_string(eineZahl); //42
+
+int eineAndereZahl = stoi(einString); //42
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
