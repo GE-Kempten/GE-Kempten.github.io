@@ -142,10 +142,10 @@ a und b sind Schaltzustände.
 
 |Axiom|Gesetz|Formel 1| Formel 2|
 |:-:|:-:|---|---|
-|1|**Kommutativgesetz**|a \land b = b \land a| a \lor b = b \lor a|
-|2|**Assoziativgesetz**|(a \land b) \land c = a \land (b \land c)| (a \lor b) \lor c = a \lor (b \lor c)|
-|3|**Asorptionsgesetz**|a \land (a \lor b) = a| a \lor (a \land b) = a|
-|4|**Existenz neutraler Elemente**|a \land 1 = a| a \lor 0 = a|
+|1|**Kommutativgesetz**|$$ a \land b = b \land a $$|$$ a \lor b = b \lor a $$|
+|2|**Assoziativgesetz**|$$ (a \land b) \land c = a \land (b \land c) $$|$$ (a \lor b) \lor c = a \lor (b \lor c) $$|
+|3|**Asorptionsgesetz**|$$ a \land (a \lor b) = a $$|$$ a \lor (a \land b) = a $$|
+|4|**Existenz neutraler Elemente**|$$ a \land 1 = a $$|$$ a \lor 0 = a $$|
 
 > Ein Verband heißt **distributiver Verband**, wenn zusätzlich noch das _Axiom 5_ gilt.
 
@@ -153,16 +153,16 @@ a und b sind Schaltzustände.
 
 |Axiom|Gesetz|Formel 1| Formel 2|
 |:-:|:-:|---|---|
-|5|**Distributivgesetz**|a \land (b \lor c) = (a \land b) \lor (a \land c)| a \lor (b \land c) = (a \lor b) \lor (a \lor c)|
-|6|**Definition des komplementären Elements**|a \land \lnot a = 0| a \lor \lnot a = 1|
+|5|**Distributivgesetz**|$$ a \land (b \lor c) = (a \land b) \lor (a \land c) $$|$$ a \lor (b \land c) = (a \lor b) \lor (a \lor c) $$|
+|6|**Definition des komplementären Elements**|$$ a \land \lnot a = 0 $$|$$ a \lor \lnot a = 1 $$|
 
 > Ein _komplementärer, distributiver Verband_ wird **Boole'scher Verband** oder auch **Boole'sche Algebra** genannt.
 
 **Anmerkung**: Die **Schaltalgebra** ist eine spezielle Form einer Boole'schen Algebra.
 
-- Menge V = {0,1}
-- \lor = logisches ODER
-- \land = logisches UND
+- Menge $$ V = \{0,1\} $$
+- $$ \lor = $$ logisches ODER
+- $$ \land = $$ logisches UND
 
 ### Boole'sche Terme
 
@@ -205,11 +205,11 @@ Aus den Axiomen der Boole'schen Algebra lassen sich eine Reihe von Sätzen ablei
 
 |Name|Satz||
 |--:|---|---|
-|Idempotenz|a \lor a = a|a \land a = a|
-|deMorgan|\lnot (a \lor b) = \lnot a \land \lnot b|\lnot (a \land b) = \lnot a \lor \lnot b|
-|Operation mit 0 bzw. 1|a \lor 1 = 1|a \land 0 = 0|
-|Doppeltes Kompliment|\lnot \lnot a = a||
-|Negation|\lnot 0 = 1|\lnot 1 = 0|
+|Idempotenz|$$ a \lor a = a $$|$$ a \land a = a$$|
+|deMorgan|$$ \lnot (a \lor b) = \lnot a \land \lnot b $$|$$ \lnot (a \land b) = \lnot a \lor \lnot b $$|
+|$$ Operation mit 0 bzw. 1 $$|$$ a \lor 1 = 1 $$|$$ a \land 0 = 0 $$|
+|Doppeltes Kompliment|$$ \lnot \lnot a = a $$||
+|Negation|$$ \lnot 0 = 1 $$|$$ \lnot 1 = 0 $$|
 
 **Bemerkung**:
 
