@@ -169,7 +169,7 @@ Ein gesamten Objekt soll verändert werden können, z.B. Verschiebung, Skalierun
 - Multiplikation mit einem reelen Skalar (positiv und negativ)
 - Addition, Subtraktion und Vektoren
 - -> siehe Vorlesung [Lineare Algebra und Analytische Geometrie](https://ge-kempten.github.io/1/lineare-algebra-und-analytische-geometrie)
-- Skalarprodukt: $$ {\overrightarrow {a}} \cdot {\overrightarrow {b}} = \| {\overrightarrow {a}} \| \| {\overrightarrow {b}} \| cos(𝜃) = sum_{i=0}^{n-1} v_{i^2} a_i b_i $$
+- Skalarprodukt: $$ {\overrightarrow {a}} \cdot {\overrightarrow {b}} = \| {\overrightarrow {a}} \| \| {\overrightarrow {b}} \| \cos(\theta) = \sum_{i=0}^{n-1}  a_i b_i $$
 - Vektorprodukt: $$ {\overrightarrow {a}} \times {\overrightarrow {b}} = \begin{pmatrix} a_y b_z & - & a_z b_y \\ a_z b_x  & - & a_x b_z \\ a_x b_y & - & a_y b_x \end{pmatrix} $$
 
 ## Matrizen 
@@ -177,20 +177,48 @@ Ein gesamten Objekt soll verändert werden können, z.B. Verschiebung, Skalierun
 - Multiplikation zweier Matrizen: "Zeile mal Spalte"
 - Vektoren transformieren durch Matrizen: $$ {\overrightarrow {v^{\prime}}} = M {\overrightarrow {v^{\prime}}}  = \begin{pmatrix} a_y b_z & - & a_z b_y \\ a_z b_x  & - & a_x b_z \\ a_x b_y & - & a_y b_x \end{pmatrix} \begin{pmatrix} v_0 \\ \vdots \\ v_{n-1} \end{pmatrix} = \begin{pmatrix} v_0^{\prime} \\ \vdots \\ v_{n-1}^{\prime} \end{pmatrix} $$
 
+## Umsetzung
+
+Mit diesen Grundlagen möchten wir nun Translation, Skalierung und Rotation kombinieren und umsetzen. Allerdings existiert _keine 3x3-Matrix_ für die Translation eines 3D-Vektors.
+
+Dieses Problem kann aber gelöst werden, indem wir eine **neue Dimension** hinzufügen -> **homogene Koordinaten**:
+
+$$ \begin{pmatrix} x \\ y \\ z \end{pmatrix} $$ -> $$ \begin{pmatrix} x \cdot \omega \\ y \cdot \omega \\ z \cdot \omega \\ \omega \end{pmatrix} $$ mit Skalierungsfaktor $$ \omega \neq 0 $$
+
+Darstellung im Koordinatensystem: $$ x_k = x/\omega, y_k = y/\omega $$ und §§ z_k = z/\omega $$
+
+### Translation
+
+Eine Translation $$ T(t) = T(t_x, t_y, t_z) $$ versetzt jeden Punkt eines Objektes um einen bestimmten Wert in einer Dimension:
+
+$$ x^{\prime} = x + t_x $$
+
+$$ y^{\prime} = y + t_y $$
+
+$$ z^{\prime} = z + t_z $$
+
+Veranschaulichung: ![Ein cooles Beispiel](https://puu.sh/tcboR/ae226ca5b2.png)
+
+Kombiniert mit **homogenen Koordinaten** können wir die Translation nun als einzige **Matrizenmultiplikation** darstellen:
+
+$$ V^{prime} = T V $$
+
+$$ \begin{pmatrix} x^{\prime} \\ y^{\prime} \\ z^{\prime} \\ 1 \end{pmatrix} = \begin{pmatrix} 1 & 0 & 0 & t_x \\ 0 & 1 & 0 & t_y \\ 0 & 0 & 1 & t_z \\ 0 & 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} x \\ y \\ z \\ 1 \end{pmatrix} $$
 
 
+Veranschaulichung: 
 
+$$ V' = T V $$
 
+$$ V = (2, 5, 3, 1) $$
 
+$$ T = (3, -2, 0) $$
 
+$$ \begin{pmatrix} x^{\prime} \\ y^{\prime} \\ z^{\prime} \\ 1 \end{pmatrix} = \begin{pmatrix} 1 & 0 & 0 & 3 \\ 0 & 1 & 0 & -2 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} 2 \\ 5 \\ 3 \\ 1 \end{pmatrix} $$
 
+![Noch ein cooles Bild](https://puu.sh/tcf9k/837d537ae5.png)
 
-
-
-
-
-
-
+$$ V' = (5, 3, 3, 1) $$
 
 
 
