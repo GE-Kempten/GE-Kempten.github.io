@@ -152,6 +152,10 @@ Ein **Polygon** ist definiert durch eine **Menge an Punkten**, i.d.R. besteht ei
 
 Ein gesamten Objekt soll verändert werden können, z.B. Verschiebung, Skalierung und Rotation. Das sind **Affine Transformationen** einer Punktmenge in eine andere Punktmenge. Diese werden dargestellt durch **Vektoren und Matrizen**.
 
+
+
+
+
 ## Vektoren
 
 **Notation**:
@@ -172,10 +176,18 @@ Ein gesamten Objekt soll verändert werden können, z.B. Verschiebung, Skalierun
 - Skalarprodukt: $$ {\overrightarrow {a}} \cdot {\overrightarrow {b}} = \| {\overrightarrow {a}} \| \| {\overrightarrow {b}} \| \cos(\theta) = \sum_{i=0}^{n-1}  a_i b_i $$
 - Vektorprodukt: $$ {\overrightarrow {a}} \times {\overrightarrow {b}} = \begin{pmatrix} a_y b_z & - & a_z b_y \\ a_z b_x  & - & a_x b_z \\ a_x b_y & - & a_y b_x \end{pmatrix} $$
 
+
+
+
+
 ## Matrizen 
 - Matrixnotation: $$ A = \begin{pmatrix} a_{00} & \!\ldots\! & a_{0,n-1} \\ \vdots & \!\ddots\! & \vdots \\ a_{m-1,0} & \!\ldots\! & a_{m-1,n-1} \end{pmatrix} $$
 - Multiplikation zweier Matrizen: "Zeile mal Spalte"
 - Vektoren transformieren durch Matrizen: $$ {\overrightarrow {v'} = M {\overrightarrow {v'}}  = \begin{pmatrix} a_y b_z & - & a_z b_y \\ a_z b_x  & - & a_x b_z \\ a_x b_y & - & a_y b_x \end{pmatrix} \begin{pmatrix} v_0 \\ \vdots \\ v_{n-1} \end{pmatrix} = \begin{pmatrix} v_0^{\prime} \\ \vdots \\ v_{n-1}^{\prime} \end{pmatrix} $$
+
+
+
+
 
 ## Umsetzung
 
@@ -186,6 +198,10 @@ Dieses Problem kann aber gelöst werden, indem wir eine **neue Dimension** hinzu
 $$ \begin{pmatrix} x \\ y \\ z \end{pmatrix} $$ -> $$ \begin{pmatrix} x \cdot \omega \\ y \cdot \omega \\ z \cdot \omega \\ \omega \end{pmatrix} $$ mit Skalierungsfaktor $$ \omega \neq 0 $$
 
 Darstellung im Koordinatensystem: $$ x_k = x/\omega, y_k = y/\omega $$ und §§ z_k = z/\omega $$
+
+
+
+
 
 ### Translation
 
@@ -205,7 +221,6 @@ $$ V' = T V $$
 
 $$ \begin{pmatrix} x' \\ y' \\ z' \\ 1 \end{pmatrix} = \begin{pmatrix} 1 & 0 & 0 & t_x \\ 0 & 1 & 0 & t_y \\ 0 & 0 & 1 & t_z \\ 0 & 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} x \\ y \\ z \\ 1 \end{pmatrix} $$
 
-
 Veranschaulichung: 
 
 $$ V' = T V $$
@@ -219,6 +234,84 @@ $$ \begin{pmatrix} x' \\ y' \\ z' \\ 1 \end{pmatrix} = \begin{pmatrix} 1 & 0 & 0
 ![Noch ein cooles Bild](https://puu.sh/tcf9k/837d537ae5.png)
 
 $$ V' = (5, 3, 3, 1) $$
+
+
+
+
+
+### Skalierung
+
+Eine Skalierung $$ S(s) = S(s_x, s_y, s_z) $$, streckt das Objekt entlang der Achsen. Für jeden Punkt wird die neue Position mit den Skalierungsfaktoren ermittelt:
+
+$$ x' = x \cdot s_x $$
+
+$$ y' = x \cdot s_y $$
+
+$$ z' = x \cdot s_z $$
+
+Veranschaulichung: ![Mega cooles Bild](https://puu.sh/tcrbe/891212728d.png)
+
+Darstellung als Matrixmultiplikation:
+
+$$ V' = S V $$
+
+$$ \begin{pmatrix} x' \\ y' \\ z' \\ 1 \end{pmatrix} = \begin{pmatrix} s_x & 0 & 0 & 0 \\ 0 & s_y & 0 & 0 \\ 0 & 0 & s_z & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} x \\ y \\ z \\ 1 \end{pmatrix} $$
+
+Veranschaulichung: 
+
+$$ V' = S V $$
+
+$$ V = (-1, 1, 0 1) $$
+
+$$ S = (2, 3, 1) $$
+
+$$ \begin{pmatrix} x' \\ y' \\ z' \\ 1 \end{pmatrix} = begin{pmatrix} 2 & 0 & 0 & 0 \\ 0 & 3 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} -1 \\ 1 \\ 0 \\ 1 \end{pmatrix} $$
+
+$$ V' = (-2, 3, 0 1)
+
+Man unterscheidet zwischen **isotropischer** $$ (s_x = s_y = s_z) $$ und **anisotropischer** Skalierung. Das Bsp grade eben ist eine anisotropische Skalierung.
+
+Die Skalierung wird auf jeden Vertex angewendet und daher kann diese auf eine beliebige Punktmenge eines Objektes angewandt werden. Allerdings ist dann die Wahl des **Bezugspunktes** wichtig => **Ursprungspunkt der Skalierung**. I.d.R. ist der Standard-Bezugspunkt der **Objektmittelpunkt**. Abweichende Bezugspunkte sind z.B. Median und Fixpunkt, Individueller Ursprungspunkt, Ursprungspunkt des aktiven Elements, etc.
+
+**Skalierungsfaktor**:
+
+| > 1.0 | < 1.0 |
+|:-:|:-:|
+|höhere Entfernung vom Pivotpunkt|verringerte Entfernung vom Pivotpunkt|
+
+Veranschaulichung - negativer Wert der Skalierungsfunktion:
+
+Gegeben: $$ O_1 = (0, 0), O_2 = (6, 4), S = 0.5, Pivot: Median $$
+
+1. Schritt - Mittelpunkt berechnen: $$ P = (O_1 + O_2)/2 = (3, 2) $$
+2. Schritt - Rand berechnen: $$ D = S \cdot (O_2 - P) = S \cdot (3, 2) = (1.5, 1) $$
+3. Schritt - Skalierte Punkte berechnen: $$ O'_1 = P - D = (1.5, 1), O'_2 = P + D = (4.5, 3) $$  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
