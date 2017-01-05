@@ -175,7 +175,7 @@ Ein gesamten Objekt soll verändert werden können, z.B. Verschiebung, Skalierun
 ## Matrizen 
 - Matrixnotation: $$ A = \begin{pmatrix} a_{00} & \!\ldots\! & a_{0,n-1} \\ \vdots & \!\ddots\! & \vdots \\ a_{m-1,0} & \!\ldots\! & a_{m-1,n-1} \end{pmatrix} $$
 - Multiplikation zweier Matrizen: "Zeile mal Spalte"
-- Vektoren transformieren durch Matrizen: $$ {\overrightarrow {v^{\prime}}} = M {\overrightarrow {v^{\prime}}}  = \begin{pmatrix} a_y b_z & - & a_z b_y \\ a_z b_x  & - & a_x b_z \\ a_x b_y & - & a_y b_x \end{pmatrix} \begin{pmatrix} v_0 \\ \vdots \\ v_{n-1} \end{pmatrix} = \begin{pmatrix} v_0^{\prime} \\ \vdots \\ v_{n-1}^{\prime} \end{pmatrix} $$
+- Vektoren transformieren durch Matrizen: $$ {\overrightarrow {v'} = M {\overrightarrow {v'}}  = \begin{pmatrix} a_y b_z & - & a_z b_y \\ a_z b_x  & - & a_x b_z \\ a_x b_y & - & a_y b_x \end{pmatrix} \begin{pmatrix} v_0 \\ \vdots \\ v_{n-1} \end{pmatrix} = \begin{pmatrix} v_0^{\prime} \\ \vdots \\ v_{n-1}^{\prime} \end{pmatrix} $$
 
 ## Umsetzung
 
@@ -191,19 +191,19 @@ Darstellung im Koordinatensystem: $$ x_k = x/\omega, y_k = y/\omega $$ und §§ 
 
 Eine Translation $$ T(t) = T(t_x, t_y, t_z) $$ versetzt jeden Punkt eines Objektes um einen bestimmten Wert in einer Dimension:
 
-$$ x^{\prime} = x + t_x $$
+$$ x' = x + t_x $$
 
-$$ y^{\prime} = y + t_y $$
+$$ y' = y + t_y $$
 
-$$ z^{\prime} = z + t_z $$
+$$ z' = z + t_z $$
 
 Veranschaulichung: ![Ein cooles Beispiel](https://puu.sh/tcboR/ae226ca5b2.png)
 
 Kombiniert mit **homogenen Koordinaten** können wir die Translation nun als einzige **Matrizenmultiplikation** darstellen:
 
-$$ V^{prime} = T V $$
+$$ V' = T V $$
 
-$$ \begin{pmatrix} x^{\prime} \\ y^{\prime} \\ z^{\prime} \\ 1 \end{pmatrix} = \begin{pmatrix} 1 & 0 & 0 & t_x \\ 0 & 1 & 0 & t_y \\ 0 & 0 & 1 & t_z \\ 0 & 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} x \\ y \\ z \\ 1 \end{pmatrix} $$
+$$ \begin{pmatrix} x' \\ y' \\ z' \\ 1 \end{pmatrix} = \begin{pmatrix} 1 & 0 & 0 & t_x \\ 0 & 1 & 0 & t_y \\ 0 & 0 & 1 & t_z \\ 0 & 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} x \\ y \\ z \\ 1 \end{pmatrix} $$
 
 
 Veranschaulichung: 
@@ -214,7 +214,7 @@ $$ V = (2, 5, 3, 1) $$
 
 $$ T = (3, -2, 0) $$
 
-$$ \begin{pmatrix} x^{\prime} \\ y^{\prime} \\ z^{\prime} \\ 1 \end{pmatrix} = \begin{pmatrix} 1 & 0 & 0 & 3 \\ 0 & 1 & 0 & -2 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} 2 \\ 5 \\ 3 \\ 1 \end{pmatrix} $$
+$$ \begin{pmatrix} x' \\ y' \\ z' \\ 1 \end{pmatrix} = \begin{pmatrix} 1 & 0 & 0 & 3 \\ 0 & 1 & 0 & -2 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} 2 \\ 5 \\ 3 \\ 1 \end{pmatrix} $$
 
 ![Noch ein cooles Bild](https://puu.sh/tcf9k/837d537ae5.png)
 
