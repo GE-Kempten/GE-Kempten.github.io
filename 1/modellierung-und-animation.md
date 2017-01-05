@@ -22,6 +22,7 @@ Diese Aspekte sind nicht Ziel dieses Faches:
 
 - [x] Einführung
 - [x] Grundbegriffe
+- [ ] Mathematische Grundlagen
 - [ ] Modellieren
 	- [ ] Mathematische Grundlage
 	- [ ] Modellierungstechnik
@@ -168,13 +169,13 @@ Ein gesamten Objekt soll verändert werden können, z.B. Verschiebung, Skalierun
 - Multiplikation mit einem reelen Skalar (positiv und negativ)
 - Addition, Subtraktion und Vektoren
 - -> siehe Vorlesung [Lineare Algebra und Analytische Geometrie](https://ge-kempten.github.io/1/lineare-algebra-und-analytische-geometrie)
-- Skalarprodukt: $$ {\overrightarrow {a}} \cdot {\overrightarrow {b}} = \| {\overrightarrow {a}} \| \| {\overrightarrow {b}} \| cos(𝜃) = sum_{i=0}^{n-1} v_i^2} a_i b_i $$
+- Skalarprodukt: $$ {\overrightarrow {a}} \cdot {\overrightarrow {b}} = \| {\overrightarrow {a}} \| \| {\overrightarrow {b}} \| cos(𝜃) = sum_{i=0}^{n-1} v_{i^2} a_i b_i $$
 - Vektorprodukt: $$ {\overrightarrow {a}} \times {\overrightarrow {b}} = \begin{pmatrix} a_y b_z & - & a_z b_y \\ a_z b_x  & - & a_x b_z \\ a_x b_y & - & a_y b_x \end{pmatrix} $$
 
 ## Matrizen 
 - Matrixnotation: $$ A = \begin{pmatrix} a_{00} & \!\ldots\! & a_{0,n-1} \\ \vdots & \!\ddots\! & \vdots \\ a_{m-1,0} & \!\ldots\! & a_{m-1,n-1} \end{pmatrix} $$
 - Multiplikation zweier Matrizen: "Zeile mal Spalte"
-- Vektoren transformieren durch Matrizen: $$ {\overrightarrow {v^'}} = M{\overrightarrow {v^'}}  = \begin{pmatrix} a_y b_z & - & a_z b_y \\ a_z b_x  & - & a_x b_z \\ a_x b_y & - & a_y b_x \end{pmatrix} \begin{pmatrix} v_0 \\ \vdots \\ v_{n-1} \end{pmatrix} = \begin{pmatrix} v_0^' \\ \vdots \\ v_{n-1}^' \end{pmatrix}
+- Vektoren transformieren durch Matrizen: $$ {\overrightarrow {v^'}} = M{\overrightarrow {v^'}}  = \begin{pmatrix} a_y b_z & - & a_z b_y \\ a_z b_x  & - & a_x b_z \\ a_x b_y & - & a_y b_x \end{pmatrix} \begin{pmatrix} v_0 \\ \vdots \\ v_{n-1} \end{pmatrix} = \begin{pmatrix} v_0^' \\ \vdots \\ v_{n-1}^' \end{pmatrix} $$
 
 
 
