@@ -213,7 +213,9 @@ $$ y' = y + t_y $$
 
 $$ z' = z + t_z $$
 
-Veranschaulichung: ![Ein cooles Beispiel](https://puu.sh/tcboR/ae226ca5b2.png)
+Veranschaulichung: 
+
+![Ein cooles Beispiel](https://puu.sh/tcboR/ae226ca5b2.png)
 
 Kombiniert mit **homogenen Koordinaten** können wir die Translation nun als einzige **Matrizenmultiplikation** darstellen:
 
@@ -249,7 +251,9 @@ $$ y' = x \cdot s_y $$
 
 $$ z' = x \cdot s_z $$
 
-Veranschaulichung: ![Mega cooles Bild](https://puu.sh/tcrbe/891212728d.png)
+Veranschaulichung: 
+
+![Mega cooles Bild](https://puu.sh/tcrbe/891212728d.png)
 
 Darstellung als Matrixmultiplikation:
 
@@ -267,7 +271,7 @@ $$ S = (2, 3, 1) $$
 
 $$ \begin{pmatrix} x' \\ y' \\ z' \\ 1 \end{pmatrix} = \begin{pmatrix} 2 & 0 & 0 & 0 \\ 0 & 3 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} -1 \\ 1 \\ 0 \\ 1 \end{pmatrix} $$
 
-$$ V' = (-2, 3, 0 1) $$
+$$ V' = (-2, 3, 0 ,1) $$
 
 Man unterscheidet zwischen **isotropischer** $$ (s_x = s_y = s_z) $$ und **anisotropischer** Skalierung. Das Bsp grade eben ist eine anisotropische Skalierung.
 
@@ -281,7 +285,7 @@ Die Skalierung wird auf jeden Vertex angewendet und daher kann diese auf eine be
 
 **Veranschaulichung** - negativer Wert der Skalierungsfunktion:
 
-Gegeben: $$ O_1 = (0, 0), O_2 = (6, 4), S = 0.5, Pivot: Median $$
+Gegeben: $$ O_1 = (0, 0), O_2 = (6, 4), S = 0.5 $$ , Pivot: Median
 
 1. Schritt - Mittelpunkt berechnen: $$ P = (O_1 + O_2)/2 = (3, 2) $$
 2. Schritt - Rand berechnen: $$ D = S \cdot (O_2 - P) = S \cdot (3, 2) = (1.5, 1) $$
