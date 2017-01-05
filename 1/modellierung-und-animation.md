@@ -183,7 +183,7 @@ Ein gesamten Objekt soll verändert werden können, z.B. Verschiebung, Skalierun
 ## Matrizen 
 - Matrixnotation: $$ A = \begin{pmatrix} a_{00} & \!\ldots\! & a_{0,n-1} \\ \vdots & \!\ddots\! & \vdots \\ a_{m-1,0} & \!\ldots\! & a_{m-1,n-1} \end{pmatrix} $$
 - Multiplikation zweier Matrizen: "Zeile mal Spalte"
-- Vektoren transformieren durch Matrizen: $$ {\overrightarrow {v'} = M {\overrightarrow {v'}}  = \begin{pmatrix} a_y b_z & - & a_z b_y \\ a_z b_x  & - & a_x b_z \\ a_x b_y & - & a_y b_x \end{pmatrix} \begin{pmatrix} v_0 \\ \vdots \\ v_{n-1} \end{pmatrix} = \begin{pmatrix} v_0^{\prime} \\ \vdots \\ v_{n-1}^{\prime} \end{pmatrix} $$
+- Vektoren transformieren durch Matrizen: $$ {\overrightarrow {v^{\prime}} = M {\overrightarrow {v^{\prime}}}  = \begin{pmatrix} a_y b_z & - & a_z b_y \\ a_z b_x  & - & a_x b_z \\ a_x b_y & - & a_y b_x \end{pmatrix} \begin{pmatrix} v_0 \\ \vdots \\ v_{n-1} \end{pmatrix} = \begin{pmatrix} v_0^{\prime} \\ \vdots \\ v_{n-1}^{\prime} \end{pmatrix} $$
 
 
 
@@ -265,9 +265,9 @@ $$ V = (-1, 1, 0 1) $$
 
 $$ S = (2, 3, 1) $$
 
-$$ \begin{pmatrix} x' \\ y' \\ z' \\ 1 \end{pmatrix} = begin{pmatrix} 2 & 0 & 0 & 0 \\ 0 & 3 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} -1 \\ 1 \\ 0 \\ 1 \end{pmatrix} $$
+$$ \begin{pmatrix} x' \\ y' \\ z' \\ 1 \end{pmatrix} = \begin{pmatrix} 2 & 0 & 0 & 0 \\ 0 & 3 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} -1 \\ 1 \\ 0 \\ 1 \end{pmatrix} $$
 
-$$ V' = (-2, 3, 0 1)
+$$ V' = (-2, 3, 0 1) $$
 
 Man unterscheidet zwischen **isotropischer** $$ (s_x = s_y = s_z) $$ und **anisotropischer** Skalierung. Das Bsp grade eben ist eine anisotropische Skalierung.
 
@@ -279,7 +279,7 @@ Die Skalierung wird auf jeden Vertex angewendet und daher kann diese auf eine be
 |:-:|:-:|
 |höhere Entfernung vom Pivotpunkt|verringerte Entfernung vom Pivotpunkt|
 
-Veranschaulichung - negativer Wert der Skalierungsfunktion:
+**Veranschaulichung** - negativer Wert der Skalierungsfunktion:
 
 Gegeben: $$ O_1 = (0, 0), O_2 = (6, 4), S = 0.5, Pivot: Median $$
 
