@@ -184,7 +184,11 @@ Ein gesamten Objekt soll verändert werden können, z.B. Verschiebung, Skalierun
 - Matrixnotation: $$ A = \begin{pmatrix} a_{00} & \!\ldots\! & a_{0,n-1} \\ \vdots & \!\ddots\! & \vdots \\ a_{m-1,0} & \!\ldots\! & a_{m-1,n-1} \end{pmatrix} $$
 - Multiplikation zweier Matrizen: "Zeile mal Spalte"
 - Vektoren transformieren durch Matrizen: 
-$$ {\overrightarrow {v^{\prime}} = M {\overrightarrow {v}  = \begin{pmatrix} a_y b_z & - & a_z b_y \\ a_z b_x  & - & a_x b_z \\ a_x b_y & - & a_y b_x \end{pmatrix} \begin{pmatrix} v_0 \\ \vdots \\ v_{n-1} \end{pmatrix} = \begin{pmatrix} v_0^{\prime} \\ \vdots \\ v_{n-1}^{\prime} \end{pmatrix} $$
+$$ {\overrightarrow {v^{\prime}} = 
+M {\overrightarrow {v}} = 
+\begin{pmatrix} a_y b_z & - & a_z b_y \\ a_z b_x  & - & a_x b_z \\ a_x b_y & - & a_y b_x \end{pmatrix} 
+\begin{pmatrix} v_0 \\ \vdots \\ v_{n-1} \end{pmatrix} = 
+\begin{pmatrix} v_0^{\prime} \\ \vdots \\ v_{n-1}^{\prime} \end{pmatrix} $$
 
 
 
