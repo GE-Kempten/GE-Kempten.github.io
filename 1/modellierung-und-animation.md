@@ -22,7 +22,7 @@ Diese Aspekte sind nicht Ziel dieses Faches:
 
 - [x] Einführung
 - [x] Grundbegriffe
-- [ ] Mathematische Grundlagen
+- [x] Mathematische Grundlagen
 - [ ] Modellieren
 	- [ ] Mathematische Grundlage
 	- [ ] Modellierungstechnik
@@ -334,6 +334,98 @@ $$ \begin{pmatrix} x' \\ y' \\ z' \\ 1 \end{pmatrix} = \begin{pmatrix} \cos(\var
 $$ V' = (0, \sqrt{2}, 0, 1)^T $$
 
 Bei der Rotation kann auch ein Pivotpunkt definiert werden, welcher dann die Rotationsachse(n) bestimmt.
+
+
+### Kombination aus Matrizen
+
+Und ist es nun möglich einen Punkt bzw. ein Objekt im $$ R^3 $$ zu verschieben (Translation), vergrößern bzw. verkleiern (Skalierung) und zu drehen (Rotation). Diese können nun kombiniert werden, da wir diese als homogene Koordinaten (4x4 Matrix) mit Multiplikationen darstellbar gemacht haben.
+
+Eine Gesamttransformation besteht aus einzelnen Transformationen:
+
+$$ V' = M_1 V $$
+
+$$ V'' = M_2 V' $$
+
+$$ M_3 = M_2 M_1 $$
+
+$$ V'' = M_3 V $$
+
+* Matrixmultiplikationen sind nicht kommutativ -> $$ M_2 M_1 \neq M_1 M_2 $$
+* Bei dem Produkt $$ M_2 M_1 $$ wird zuerst $$ M_1 $$ angewendet werden.
+* Insgesamt sollte man darauf achten, die richtige Reihenfolge zu benutzen
+
+
+![Cooles Picture](https://puu.sh/tdlrI/628ae1a950.png) (Bild von André Kettner)
+
+**Todo**: Veranschaulichung selbst malen
+
+
+
+
+
+## Koordinatensysteme
+
+Alle unsere Transformationen beziehen sich auf einen **Ursprung**. Welcher ist aber festgelegt? Dazu schauen wir auf das **Weltkoordinatensystem**, in dem alle Objekt untergebracht sind.
+
+Im $$ R^3 $$ gibt es zwei Möglichkeiten die Achse zu definieren:
+
+- **Rechtssystem (RHS)**
+- **Linkssystem (LHS)**
+ 
+Dazu nehmen wir unseren beide Hände zeigen sie **offen nach oben** und **winkeln** sie an. Das soll nun die **horizontale und vertikale Achse** darstellen. Nun schauen wir uns die letze Achse an. Zeigt sie nach links (also da wo der Daumen ist), dann bezeichnen wir sie als LHS, oder RHS, wenn die Achse nach rechts zeigt.
+
+Zudem muss angemerkt werden, dass die **Gesamtorientierung nicht einheitlich** ist. Es haben sich einfach im Laufe der Zeit unterschiedliche Repräsentationen der Achsen eingebürgert. 
+
+Für unsere Transformationen benötigen wir aber **unterschiedliche Bezugspunkte**, weswegen wir auch verschiedene Koordinatensysteme brauchen.
+
+**Überblick** - Koordinatensysteme (KS):
+
+|Deutsch|Englisch|
+|:-:|:-:|
+|Welt-KS|world space|
+|Objekt.KS|objekt space|
+|Kamera-KS|eye space|
+|Licht-KS|light space|
+|Bild-KS|image space, texture space|
+|Geräte-KS|screen space|
+
+Momentan interessiert uns nur der Welt-KS und Objekt-KS.
+
+Möchten wir nun eine Transformation durchführen, erwarten wir, dass sich unser Objekt um seine eigene Achse dreht, also umdie Objekt-KS. Umgesetzt wird diese aber anders:
+
+1. Verschiebung des Objektes in den Ursprung des Welt-KS.
+2. Rotation (oder andere Transformationen)
+4. Verschiebung des Objektes zu seiner ursprünglichen Position. 
+
+Veranschaulichung:
+
+Problem: ![Bild 1](https://puu.sh/tdoo0/22337ab93b.png)
+
+Lösung: ![Bild 2](https://puu.sh/tdoo0/22337ab93b.png)
+
+**Todo**: Ebenfalls selbst malen - Bilder von André Kettner
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
