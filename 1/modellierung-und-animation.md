@@ -214,9 +214,9 @@ $$ y' = y + t_y $$
 
 $$ z' = z + t_z $$
 
-Veranschaulichung: 
-
 ![Ein cooles Beispiel](https://puu.sh/tcboR/ae226ca5b2.png)
+
+
 
 Kombiniert mit **homogenen Koordinaten** können wir die Translation nun als einzige **Matrizenmultiplikation** darstellen:
 
@@ -252,9 +252,9 @@ $$ y' = x \cdot s_y $$
 
 $$ z' = x \cdot s_z $$
 
-Veranschaulichung: 
-
 ![Mega cooles Bild](https://puu.sh/tcrbe/891212728d.png)
+
+
 
 Darstellung als Matrixmultiplikation:
 
@@ -296,28 +296,44 @@ Gegeben: $$ O_1 = (0, 0), O_2 = (6, 4), S = 0.5 $$ , Pivot: Median
 
 
 
+### Rotation
+
+Um eine Rotation ausführbar zu machen, muss zunächst eine **Rotationsachse** definiert werden.
+Im Folgenden Beispiel ist es einer der drei Hauptachsen.
+
+Rotation um die z-Achse - $$ R_z(\varphi) $$:
+
+$$ x' = x \cos(\varphi) - y \sin(\varphi) $$
+
+$$ y' = x \cos(\varphi) + y \sin(\varphi) $$
+
+$$ z' = z $$
+
+![Super Mega cooles Bild]()
 
 
 
+Darstellung als Matrizenmultiplikation:
 
+$$ V' = R V $$
 
+$$ R_x(\varphi) = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & \cos(\varphi) & -\sin(\varphi) & 0 \\ 0 & \sin(\varphi) & \cos(\varphi) & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix} $$
 
+$$ R_y(\varphi) = \begin{pmatrix} \cos(\varphi) & 0 & \sin(\varphi) & 0 \\ 0 & 1 & 0 & 0 \\ -\sin(\varphi) & 0 & \cos(\varphi) & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix} $$
 
+$$ R_z(\varphi) = \begin{pmatrix} \cos(\varphi) & -\sin(\varphi) & 0 & 0 \\ \sin(\varphi) & \cos(\varphi) & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix} $$
 
+**Veranschaulichung**:
 
+$$ V' = R V $$, $$ V = (1, 1, 0, 1) $$, $$ R = R_z(45\circ) $$
 
+$$ \begin{pmatrix} x' \\ y' \\ z' \\ 1 \end{pmatrix} = \begin{pmatrix} \cos(\varphi) & -\sin(\varphi) & 0 & 0 \\ \sin(\varphi) & \cos(\varphi) & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} 1 \\ 1 \\ 0 \\ 1 \end{pmatrix} $$
 
+![1 cooles Bild]()
 
+$$ V' = (0, \sqrt{2}, 0, 1)^T $$
 
-
-
-
-
-
-
-
-
-
+Bei der Rotation kann auch ein Pivotpunkt definiert werden, welcher dann die Rotationsachse(n) bestimmt.
 
 
 
