@@ -309,7 +309,7 @@ $$ y' = x \cos(\varphi) + y \sin(\varphi) $$
 
 $$ z' = z $$
 
-![Super Mega cooles Bild]()
+![Super Mega cooles Bild](https://puu.sh/tdhOo/41a2a55671.png)
 
 
 
@@ -329,7 +329,7 @@ $$ V' = R V $$, $$ V = (1, 1, 0, 1) $$, $$ R = R_z(45\circ) $$
 
 $$ \begin{pmatrix} x' \\ y' \\ z' \\ 1 \end{pmatrix} = \begin{pmatrix} \cos(\varphi) & -\sin(\varphi) & 0 & 0 \\ \sin(\varphi) & \cos(\varphi) & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} 1 \\ 1 \\ 0 \\ 1 \end{pmatrix} $$
 
-![1 cooles Bild]()
+![1 cooles Bild](https://puu.sh/tdiw3/2378417066.png)
 
 $$ V' = (0, \sqrt{2}, 0, 1)^T $$
 
