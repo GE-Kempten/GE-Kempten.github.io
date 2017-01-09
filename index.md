@@ -4,13 +4,13 @@
 
 Auf diesem Wiki werden Notizen zu Modulen des Studiengangs Informatik Game Engineering an der Hochschule Kempten gesammelt.
 
-|1. Semester                            |Prüfungstermin|
-|---------------------------------------|--------------|
-|[Lineare Algebra & Analytische Geometrie](/1/lineare-algebra-und-analytische-geometrie)|26.01.2017|
-|[IT Systeme](/1/it-systeme)|02.02.2017|
-|[Einführung in die Informatik](/1/einfuehrung-in-die-informatik)|27.01.2017|
-|[Modellierung und Animation](/1/modellierung-und-animation)|31.01.2017|
-|[Programmieren 1 (für Games)](/1/programmieren-1-fuer-games)|06.02.2017|
+|1. Semester                            |Prüfungstermin|-zeit|-raum|
+|---------------------------------------|--------------|-----|-----|
+|[Lineare Algebra & Analytische Geometrie](/1/lineare-algebra-und-analytische-geometrie)|26.01.2017|15:00 - 16:30|V307/V308|
+|[IT Systeme](/1/it-systeme)|02.02.2017|10:00 - 11:30|S0.12/20.13/S0.18|
+|[Einführung in die Informatik](/1/einfuehrung-in-die-informatik)|27.01.2017|10:00 - 11:30|S0.12/S0.13|
+|[Modellierung und Animation](/1/modellierung-und-animation)|31.01.2017|10:00 - 11:30|S0.12|
+|[Programmieren 1 (für Games)](/1/programmieren-1-fuer-games)|06.02.2017|12:00 - 14:00|S0.12|
 
 Alle Beiträge stehen unter der [Creative Commons BY-NC-SA 4.0 International Lizenz](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de).
 
