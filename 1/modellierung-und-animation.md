@@ -536,10 +536,10 @@ Ein paar Generate und Deform Modifier werden in den nächsten Zeilen erklärt.
 
 Folgende Basics und Tools sind auch als Modifier einsetzbar:
 
-- Glättung: Reduzierung der Winkel benachbarter Polygone
-- Bevel: Bearbeitung aller Kanten
-- Solidify: Aus flachen Objekt -> 3D-Körper
-- Triangulate: n-Gons -> Dreiecke
+- **Glättung**: Reduzierung der Winkel benachbarter Polygone
+- **Bevel**: Bearbeitung aller Kanten
+- **Solidify**: Aus flachen Objekt -> 3D-Körper
+- **Triangulate**: n-Gons -> Dreiecke
 
 
 
@@ -554,6 +554,7 @@ erstellt eine **beliebige Anzahl an Kopien eines Objektes**. Dazu können versch
 Nutzung von **Boole'schen Operationen** auf die gewünschte Geometrie.
 
 Operationen:
+
 - Subtraktion / Difference
 - Vereinigung / Union
 - Schnittmenge / Intersect
@@ -603,6 +604,8 @@ Der weiteste Verbreitester Algorithmus ist der **Catmull-Clark** (1978) (Namen d
 3. Neuberechnug der alten Punkten - kleine Priorität auf die neuen Facettenpunkte, in denen $$ v $$ als Ecke enthalten ist und Kanten die $$ v $$ enthalten. 
 4. Verbinden der neuen Kantenpunkte mit den zugehörigen Facettenpunkten und der "alten" Eckpunkte mit den zugehörigen Kantenpunkten.
 
+**Todo**: Step-by-Step Referenzbilder hinzufügen
+
 Zusätzlich werden **n-Gons in n-Quads unterteilt**, wodurch am Ende ein reines Quad-Mesh übrig bleibt.
 
 **Berechnung der Anzahl von Polygone**:
@@ -610,7 +613,9 @@ Zusätzlich werden **n-Gons in n-Quads unterteilt**, wodurch am Ende ein reines 
 **Kubus**:
 
 $$ c_v = 6 * 4^{n+2} $$
+
 $$ c_e = 3 * 4^{n+1} $$
+
 $$ c_f = c_v - 2 $$
 
 **Todo**: Graphen einfügen
@@ -618,7 +623,9 @@ $$ c_f = c_v - 2 $$
 **Quadrilateral*:
 
 $$ c_v = (2^n + 1)^2 $$
+
 $$ c_e = 2^{2n+1} + 2^{n+1} $$
+
 $$ c_f = 4^n $$
 
 **Todo**: Graphen hinzufügen
@@ -642,7 +649,7 @@ $$ c_f = 4^n $$
 
 ### Lattice
 
-**Deformation eines Objektes** anhand der Form eines "virtuellen" Lattice-Objekts, welches das gesamte Zielobjekt umfasst.
+**Deformation eines Objektes** anhand der Form eines _"virtuellen" Lattice-Objekts_, welches das gesamte Zielobjekt umfasst.
 
 Vorteile:
 
