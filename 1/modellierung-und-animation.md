@@ -22,13 +22,12 @@ Diese Aspekte sind nicht Ziel dieses Faches:
 
 - [x] Einführung
 - [x] Grundbegriffe
-- [x] Mathematische Grundlagen
+- [x] Mathematische Grundlagen (*)
 - [ ] Modellieren
-	- [ ] Mathematische Grundlage
-	- [ ] Modellierungstechnik
-		- [ ] Basics
-		- [ ] Tools
-		- [ ] Modifiers
+	- [x] Modellierungstechnik (*)
+		- [x] Basics
+		- [x] Tools
+		- [x] Modifiers
 	- [ ] Kamera
 	- [ ] Polygonale Netze
 	- [ ] Parametrische Patches
@@ -46,6 +45,12 @@ Diese Aspekte sind nicht Ziel dieses Faches:
 	- [ ] Dispersion
 	- [ ] Coating
 	- [ ] Texture Mapping
+
+
+(*) -> Todo's 
+
+
+
 
 
 
@@ -414,25 +419,244 @@ Lösung: ![Bild 2](https://puu.sh/tdoo0/22337ab93b.png)
 
 
 
+# Modellierungstechnik
+
+Beim Beginn eines Projekts sollte man sich überlegen, welches typische Grundobjekt - **Primitive** - man wählt. Diese sind bereits parametrisiert, d.h. sie haben eine einheitliche Größe.
+
+Anschließend kann die Bearbeitung des Modells beginnen - Transformation von Faces, Edges und Vertices.
+
+## Basics 
+
+sind Standard-Operationen auf bestimmte Elemente des Meshes.
+
+### Origins
+
+Jedes Objekt hat einen virtuellen **Center Point** - **Origin** - welcher i.d.R. der Mittelpunkt der Geometrie ist.
+
+Die Geometrie bezieht sich auf das Objektkoordinatensystem (z.B. beim Abspeichern), aber Transformationen werden trotzdem am Weltkoordinatensystem ausgeführt (siehe Mathematische Grundlagen - Koordinatensysteme).
+
+Origins sind außerdem auch der Ursprung - **Pivot Points** - für Rotationen und Skalierung, d.h. eine Translation vom Origin auf den Ursprung des Weltkoordinatensystems stattfindet.
+
+
+
+### Duplikationen
+
+Erstellt einen Klon, dbaei wird zwischen einer normalen Duplikation, Links - also Verknüpfungen bzw. Referenzen -, Prozedurale Duplikation - Erstellung von Klonen nach bestimmten Regeln - und Externe Duplikation - Einfügen von externen Objekten - unterschieden.
 
 
 
 
 
+## Tools
+
+sind spezielle Modellierungswerkzeuge.
+
+### Glättung
+
+ist eine **Sukzessive Angleichtung der Winkel benachbarter Flächen**, wodurch das Objekt runder und glatter wird, da die harten Kanten verändert werden.
+
+Die Gemeotrie wird transformiert, d.h. sie wird nicht unterteilt, woduch die Anzahl der Elemente nicht verändert werden.
+
+**Todo**: Beispiel hinzufügen
+
+
+
+### Extrusion
+
+Durch **parallele Verschiebung** wird ein **höherdimensionales Elementes+* erzeugt. Anwendung auf:
+
+- Punkt => neue Kante
+- Kante => neuer Polygon
+- Polygon => neuer Körper
+
+Im Regelfall findet die Extrusion **parallel zur Normalen** statt.
+
+**Todo**: Beispiel hinzufügen
+
+
+
+### Inset
+
+In ein bereits existierenden Polygon werden **Subpolygone nach innen eingefüt**.
+
+**Todo**: Beispiel hinzufügen
+
+
+
+### Unterteilung
+
+Verfeinerung des Meshes, in dem **Kanten in der Mitte geteilt** werden und dadurch neue Vertices, Edges und Faces entstehen. Die Form bleibt gleich, aber die _Topologie ändert sich_.
+
+**Todo**: Beispiel hinzufügen
+
+
+
+### Knife
+
+**Teilung eines Meshes** entlang einer Linie nach Angabe des Artists.
+
+**Todo**: Beispiel hinzufügen
+
+
+
+### Bevel
+
+Bearbeitung von harten Kanten, indem der Artist die Tiefe (**Offset**) und **Anzahl der Segmente** angibt und damit dem Objekt einen natürlicheren Look verleiht.
+
+**Todo**: Beispiel hinzufügen
 
 
 
 
 
+## Modifiers 
+
+Im Gegensatz zu Basics und Tools, ändern Modifier das Mesh nicht permanent, d.h. der originelle Zustand geht nicht verloren.
+
+Unterscheidung von Modifier:
+
+- Modify: keine Änderung der Geometrie - Änderung an Meshdaten
+- Generate: Erzeugung von Geometrie
+- Deform: Veränderung der Geometrie
+- Simulate: Simulationsoperationen
+
+Modifier sind wie eine Art **Funktion**, d.h. dass das Mesh als Eingabeparameter dient, welches durch ein spezifisch verändertes Mesh ersetzt wird. Die Änderungen sind beeinflussbar durch viele **Parameter**.
+
+An einem Objekt können **mehrere Modifier gleichzeitig wirken**, aber nur in einer festgelegten Reihenfolge. Zusätzlich können die bereits **eingerichteten Modifier zu jedem Zeitpunkt** geändert werden.
+
+Modifier können aber auch wie Tools/Basics verwendet werden, indem man die Änderungen "backt", heißt die Parameter sind anschließend nicht mehr veränderbar und das Basismesh endgültig ersetzt.
+
+Anwendungsbeispiele ist z.B. die sukzessive Erstellung eines Modelles oder Objekte zu verformen, ohne den Ausgangszustand zu überscheiben, welches nützlich für Animationen ist. Auch die Parameter der Modifier können bei Animationen verändert werden.
+
+Ein paar Generate und Deform Modifier werden in den nächsten Zeilen erklärt.
 
 
 
+### Basics und Tools als Modifier
+
+Folgende Basics und Tools sind auch als Modifier einsetzbar:
+
+- Glättung: Reduzierung der Winkel benachbarter Polygone
+- Bevel: Bearbeitung aller Kanten
+- Solidify: Aus flachen Objekt -> 3D-Körper
+- Triangulate: n-Gons -> Dreiecke
 
 
 
+### Array
+
+erstellt eine **beliebige Anzahl an Kopien eines Objektes**. Dazu können verschiedene Regeln bestimmt werden. Die _Topologie des Basismeshes bleiben unverändert__, werden aber referenziert, was dazu führt, dass Änderungen am Basismesh auf die Kopien übertragen werden. Unter anderem können Fraktale Strukturen durch mehrdimensionale Arrays abgebildet werden.
 
 
 
+### Boolean
+
+Nutzung von **Boole'schen Operationen** auf die gewünschte Geometrie.
+
+Operationen:
+- Subtraktion / Difference
+- Vereinigung / Union
+- Schnittmenge / Intersect
+
+Es muss ein **zweites Objekt als Parameter** angegeben werden.
+
+Das Objekt wird durch das Ergebnis der Modification ersetzt.
+
+
+
+### Decimate
+
+**Reduktion der Polygon-Anzahl** des Meshes. Ggf. werden n-Gons davor _trianguliert_.
+
+Verschiedene Reduktionsmethoden:
+
+- Edge Collapse
+- Un-Subdivide
+- Planar
+
+Anwendungsbeispiele sind die Bereinigung der Auflösung importierter Objekte und die Erstellung von verschiedenen Level-of-Detail(LOD)-Meshes. Zu LOD gibt es später mehr.
+
+
+
+### Mirror
+
+**Automatische Spiegelung** der Geometrie anhand einer _Ebene_.
+
+Die Ebene ist frei wählbar, überlicherweise wird die **Hauptebene des lokalen Objektkoordinatessystems** gewählt. Optional können Punkte auf der Spiegelungsachse verbunden werden.
+
+Symmetrische Objekte sind das idealle Beispiel für diesen Modifier.
+
+
+
+### Subdivision Surfaces
+
+ist eine **Formverändernde Unterteilung**, d.h. die _Kanten werden gleichmäßig geglättet_. Je öfter diese **wiederholt** wird, desto runder und stärker unterteilt ist die Geometrie.
+
+Die Wiederholungszahl kann **seperat** für das **Modeling** (View) und **Rendering** angepasst werden, d.h. dass man an einem vereinfachtem Mesh effizienter arbeiten kann und trotzdem das Rendering hübsch aussieht. Dadurch eignet sich dieser Modifier auch für **LOD**.
+
+Der weiteste Verbreitester Algorithmus ist der **Catmull-Clark** (1978) (Namen der Entwickler).
+
+**Catmull-Clark Subdivion Surface Algorithmus**:
+
+1. Ein neuer Punkt $$ f $$ wird für jedes Polygon in der Mitte erzeugt.
+2. Für jede Kante werden neue Kantenpunkte $$ e $$ als Mittel der Endpunkte und der neuen Facettenpunkte $$ f $$ erzeugt.
+3. Neuberechnug der alten Punkten - kleine Priorität auf die neuen Facettenpunkte, in denen $$ v $$ als Ecke enthalten ist und Kanten die $$ v $$ enthalten. 
+4. Verbinden der neuen Kantenpunkte mit den zugehörigen Facettenpunkten und der "alten" Eckpunkte mit den zugehörigen Kantenpunkten.
+
+Zusätzlich werden **n-Gons in n-Quads unterteilt**, wodurch am Ende ein reines Quad-Mesh übrig bleibt.
+
+**Berechnung der Anzahl von Polygone**:
+
+**Kubus**:
+
+$$ c_v = 6 * 4^{n+2} $$
+$$ c_e = 3 * 4^{n+1} $$
+$$ c_f = c_v - 2 $$
+
+**Todo**: Graphen einfügen
+
+**Quadrilateral*:
+
+$$ c_v = (2^n + 1)^2 $$
+$$ c_e = 2^{2n+1} + 2^{n+1} $$
+$$ c_f = 4^n $$
+
+**Todo**: Graphen hinzufügen
+
+**Todo**: Vergleich hinzufügen
+
+
+
+### Deform
+
+**Deformation eines Objektes** anhand _verschiedener Optionen_:
+
+- **Twist**: Rotation um eine Achse
+- **Bend**: Verbiegung um eine Achse
+- **Taper**: Verjüngung entlang einer Achse
+- **Stretch**: Streckung entlang einer Achse
+
+**Todo**: Einfügen von Referenzbildern
+
+
+
+### Lattice
+
+**Deformation eines Objektes** anhand der Form eines "virtuellen" Lattice-Objekts, welches das gesamte Zielobjekt umfasst.
+
+Vorteile:
+
+- Deformation des gesammten Objektes -> Unabhängigkeit von Auflösung und Geometrie
+- Entsprechend "glatte" und saubere Deformation
+- Da die Deformation in ein seperates Objekt - also der Lattice - ausgelagert wird, kann diese mehrfach verwendet werden -> mehr Effizienz und weniger Aufwand
+
+
+
+### Shrinkwarp
+
+**Abbildung des Meshes eines Objektes auf die Oberfläche eines Andern**. Man "umwickelt" das Objekt, wie ein _Kleidungsstück_.
+
+Anwendung bei Kleidung, Beschiftung von Oberflächen und der Verteilung von Objekt auf Oberflächen.
 
 
 
