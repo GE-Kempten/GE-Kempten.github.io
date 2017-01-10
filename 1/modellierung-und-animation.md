@@ -754,19 +754,16 @@ q_x = -d \frac{p_x}{p_z} $$
 
 $$ \frac{q_x}{p_x} = \frac{-d}{p_z} \Rightarrow
 q_y = -d \frac{p_y}{p_z} $$
-
-d.h. $$ q = \begin{matrix} -d \frac{p_x}{p_z} \\ -d \frac{p_y}{p_z} \\ -d \\ 1 \end{matrix} $$
+d.h. $$ q = \begin{pmatrix} -d \frac{p_x}{p_z} \\ -d \frac{p_y}{p_z} \\ -d \\ 1 \end{pmatrix} $$
 
 Matrix, die die oben genannte Projektion abbildet:
-
 $$ M_{persp}p = q $$, also: $$ M_{persp} \begin{matrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & -\frac{1}{d} & 0 \end{matrix} $$
 
-Probe: $$ M_{persp} \begin{matrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & -\frac{1}{d} & 0 \end{matrix} \begin{matrix} p_x \\ p_y \\ p_z \\ 1 \end{matrix} = \begin{matrix} p_x \\ p_y \\ p_z \\ -\frac{p_z}{d} \end{matrix}
+Probe: $$ M_{persp} \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & -\frac{1}{d} & 0 \end{pmatrix} \begin{pmatrix} p_x \\ p_y \\ p_z \\ 1 \end{pmatrix} = \begin{pmatrix} p_x \\ p_y \\ p_z \\ -\frac{p_z}{d} \end{pmatrix} $$
 
 
 Transformationen von homogenen zu kartesischen Koordinaten: 
-
-$$ \begin{matrix} p_x \\ p_y \\ p_z \\ -\frac{p_z}{d} \end{matrix} = \begin{matrix} -d\frac{p_x}{p_z} \\ -d\frac{p_y}{p_z} \\ -d\frac{p_z}{p_z} \\ 1 \end{matrix} = \begin{matrix} -d\frac{p_x}{p_z} \\ -d\frac{p_y}{p_z} \\ -d \\ 1 \end{matrix} $$
+$$ \begin{pmatrix} p_x \\ p_y \\ p_z \\ -\frac{p_z}{d} \end{pmatrix} = \begin{pmatrix} -d\frac{p_x}{p_z} \\ -d\frac{p_y}{p_z} \\ -d\frac{p_z}{p_z} \\ 1 \end{pmatrix} = \begin{pmatrix} -d\frac{p_x}{p_z} \\ -d\frac{p_y}{p_z} \\ -d \\ 1 \end{pmatrix} = q $$
 
 Die Projektion ist nicht invertierbar, d.h. z-Werte gehen verloren $$\rightarrow$$ geringe Erweiterung von $$M_{persp}$$ um die Clipping Planes des Hüllvolumens
 
