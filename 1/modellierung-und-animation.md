@@ -673,3 +673,181 @@ Anwendung bei Kleidung, Beschiftung von Oberflächen und der Verteilung von Obje
 
 
 
+
+## Kamera
+
+Die Kamera befindet sich auf einem Punkt im §§ R_3 $$ (**eye**), dabei ist die Blickrichtung - **Orientierung** - abhängig vom sog. "look-at"-**Vektor**. 
+
+Alternativ kann anstatt dem "look-at"-Vektor ein "Point-Of-Interest" (aka Coi, "Center-...") benutzt werden, dieser Punkt beeinflusst dann den "look-at"-Vektor: $$ \overrightarrow {v} = POI - EYE $$. 
+
+Die Rotation ist abhängig von der "look at"-**Achse**, diese steht im Lot auf den "look-at"-Vektor und zeigt immer nach oben.
+
+Zusätzlich zur Richtung der Kamera müssen noch weitere Eigenschaften geklärt werden.
+
+
+
+### Eigenschaften
+
+- Auflösung (**resolution**)
+- Auflösungsverhältnis (**aspect ratio**)
+
+![Auflösung und Auflösungsverhältnis]()
+
+Linieneigenschaften:
+
+- Brennweite (**focal length**)
+- Field of View (**FOV): $$ focal length \alpha FOV^{-1}
+- etc.
+
+![FOV]()
+
+Eigenschaften für Render-Effekte:
+
+- Tiefenschärfe (Depth of Field - **DOF**)
+- Bewegungsunschärfe (Motion Blur)
+
+
+
+### Projektion
+
+Vor der Projektion rechnen wir ins Kamera-Koordinatensystem um (**view transform**). Anschließend kann man Multiplikationen mit der Projektionsmatrix ausführen.
+
+#### Orthogonale Projektion
+
+![Ortho]()
+
+**Proportionen und Abstände** sind besser abschätzbar, wodurch diese zur Modellierung besser geeignet ist. So können auch 2D-Darstellungen simuliert werden.
+
+$$ M_{ortho} = \begin{pmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 \end{pmatrix} \Rightarrow M_{ortho}
+\begin{pmatrix} p_x \\ p_y \\ p_z \\ 1 \end{pmatrix} = 
+\begin{pmatrix} p_x \\ p_y \\ 0 \\ 1 \end{pmatrix} $$
+
+![Vor- und Hinterprojektion]()
+
+Wie man an der Formel erkennt, wird die Z-Koordinate anders behandelt. Dadurch entstehen verschiedene Probleme:
+
+- Punkt mit ± Werten für z werden projiziert $$\rightarrow$$ Objekte "hinter" der Kamera werden gerendert
+- Die Projektion it irreversibel (z-Tiefeninformation geht verloren) $$\rightarrow$$ insuffizient für Z-Buffering
+
+Aufgrund der Probleme werden i.d.R. der durch die **Clipping Planes** (top, bottom, right, left, near, far) definierte Quader in den **Ursprung transformiert** und auf die **Größe des Einheitswürfel skaliert**.
+
+![Clipping Planes]()
+
+
+
+#### Perspektivische Projektion
+
+![Persp]()
+
+**Gewohnte Sichtweise** des Menschen. Wird benutzt in der Renderingvorschau.
+
+Beispiel: Projektionsebene entland der __negativen z-Achse_ -> Position $$ z = -d, d > 0 $$
+
+![Beispielprojektion]()
+
+Gesucht: Punkt $$ q $$ als Projektion von Punkt $$ p $$ auf die Projektionsebene.
+
+Punkt $$ q = (q_x, q_y, -d, q)^T $$ gegeben durch:
+
+$$ \frac{q_x}{p_x} = \frac{-d}{p_z} \Rightarrow
+q_x = -d \frac{p_x}{p_z} $$
+
+$$ \frac{q_x}{p_x} = \frac{-d}{p_z} \Rightarrow
+q_y = -d \frac{p_y}{p_z} $$
+
+d.h. $$ q = \begin{matrix} -d \frac{p_x}{p_z} \\ -d \frac{p_y}{p_z} \\ -d \\ 1 \end{matrix} $$
+
+Matrix, die die oben genannte Projektion abbildet:
+
+$$ M_{persp}p = q $$, also: $$ M_{persp} \begin{matrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & -\frac{1}{d} & 0 \end{matrix} $$
+
+Probe: $$ M_{persp} \begin{matrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & -\frac{1}{d} & 0 \end{matrix} \begin{matrix} p_x \\ p_y \\ p_z \\ 1 \end{matrix} = \begin{matrix} p_x \\ p_y \\ p_z \\ -\frac{p_z}{d} \end{matrix}
+
+
+Transformationen von homogenen zu kartesischen Koordinaten: 
+
+$$ \begin{matrix} p_x \\ p_y \\ p_z \\ -\frac{p_z}{d} \end{matrix} = \begin{matrix} -d\frac{p_x}{p_z} \\ -d\frac{p_y}{p_z} \\ -d\frac{p_z}{p_z} \\ 1 \end{matrix} = \begin{matrix} -d\frac{p_x}{p_z} \\ -d\frac{p_y}{p_z} \\ -d \\ 1 \end{matrix} $$
+
+Die Projektion ist nicht invertierbar, d.h. z-Werte gehen verloren $$\rightarrow$$ geringe Erweiterung von $$M_{persp}$$ um die Clipping Planes des Hüllvolumens
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
