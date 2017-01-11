@@ -12,6 +12,46 @@ Auf diesem Wiki werden Notizen zu Modulen des Studiengangs Informatik Game Engin
 |[Modellierung und Animation](/1/modellierung-und-animation)|31.01.2017|10:00 - 11:30|S0.12|
 |[Programmieren 1 (für Games)](/1/programmieren-1-fuer-games)|06.02.2017|12:00 - 14:00|S0.12|
 
+|2. Semester                            |Prüfungstermin|-zeit|-raum|
+|---------------------------------------|--------------|-----|-----|
+|Analysis|_TBA_|_TBA_|_TBA_|
+|Programmieren 2|_TBA_|_TBA_|_TBA_|
+|Theoretische Informatik|_TBA_|_TBA_|_TBA_|
+|Algorithmen und Datenstrukturen|_TBA_|_TBA_|_TBA_|
+|Game Design|_TBA_|_TBA_|_TBA_|
+|Gestaltung und Zeichnen|_TBA_|_TBA_|_TBA_|
+
+|3. Semester                            |Prüfungstermin|-zeit|-raum|
+|---------------------------------------|--------------|-----|-----|
+|Diskrete Mathematik|_TBA_|_TBA_|_TBA_|
+|Datenbanken|_TBA_|_TBA_|_TBA_|
+|Softwaretechnik 1|_TBA_|_TBA_|_TBA_|
+|Softwaretechnik 2|_TBA_|_TBA_|_TBA_|
+|Betriebssysteme|_TBA_|_TBA_|_TBA_|
+|Computergrafik|_TBA_|_TBA_|_TBA_|
+
+|4. Semester                            |Prüfungstermin|-zeit|-raum|
+|---------------------------------------|--------------|-----|-----|
+|Wahrscheinlichkeitsrechnung & Numerik|_TBA_|_TBA_|_TBA_|
+|Verteilte Softwaresysteme|_TBA_|_TBA_|_TBA_|
+|Rechnernetze|_TBA_|_TBA_|_TBA_|
+|Ansteuerung virtueller Charaktere|_TBA_|_TBA_|_TBA_|
+|Game Engineering|_TBA_|_TBA_|_TBA_|
+|Projektmanagement|_TBA_|_TBA_|_TBA_|
+
+|5. Semester (Praxissemester)           |Prüfungstermin|-zeit|-raum|
+|---------------------------------------|--------------|-----|-----|
+|Praxisbegrleitende Lehrveranstaltung|_TBA_|_TBA_|_TBA_|
+
+|6. Semester                            |Prüfungstermin|-zeit|-raum|
+|---------------------------------------|--------------|-----|-----|
+|DV-Projektarbeit|_TBA_|_TBA_|_TBA_|
+|Game-Seminar|_TBA_|_TBA_|_TBA_|
+
+|7. Semester                            |Prüfungstermin|-zeit|-raum|
+|---------------------------------------|--------------|-----|-----|
+|Bachelorarbeit|_TBA_|_TBA_|_TBA_|
+
 Alle Beiträge stehen unter der [Creative Commons BY-NC-SA 4.0 International Lizenz](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de).
 
 ## So funktioniert's
