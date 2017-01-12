@@ -57,6 +57,8 @@ Vektoren werden als kleine lateinische Buschtaben mit einem Pfeil $$\overrightar
 
 Duch Hintereinanderausführung bestimmter Translationen werden alle Punkte der Ebene in eine bestimmte Richtung um einen bestimmten Betrag verschoben: \$$\overrightarrow{a} \begin{pmatrix}a_1\\\\a_2\end{pmatrix} + \overrightarrow{b}\begin{pmatrix}b_1\\\\b_2\end{pmatrix} = \overrightarrow{c}\begin{pmatrix}a_1+b_1\\\\a_2+b_2\end{pmatrix}$$
 
+Die Vektoraddition ist kommutativ, assoziativ und wird komponentenweise ausgeführt. Das Ergebniss wird Summenvektor genannt. Das Neutrale Element ist im Falle der Vektoraddition der sog. Nullvektor $$\begin{pmatrix}a_1+b_1\\a_2+b_2\end{pmatrix}$$. Diesen Erhält man durch die Addition eines Vektors mit seinem inversen Element.
+
 ## Elementare geometrische Objekte
 
 ### der Ebene
