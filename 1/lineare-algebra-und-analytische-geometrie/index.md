@@ -55,7 +55,7 @@ Vektoren werden als kleine lateinische Buschtaben mit einem Pfeil $$\overrightar
 
 ### Vektoraddition
 
-Duch Hintereinanderausführung bestimmter Translationen werden alle Punkte der Ebene in eine bestimmte Richtung um einen bestimmten Betrag verschoben: \$$\overrightarrow{a} (\begin{pmatrix}a_1\\\\a_2\end{pmatrix}) + \overrightarrow{b}(\begin{pmatrix}b_1\\\\b_2\end{pmatrix}) = \overrightarrow{c}(\begin{pmatrix}a_1+b_1\\\\a_2+b_2\end{pmatrix})$$
+Duch Hintereinanderausführung bestimmter Translationen werden alle Punkte der Ebene in eine bestimmte Richtung um einen bestimmten Betrag verschoben: \$$\overrightarrow{a} \begin{pmatrix}a_1\\\\a_2\end{pmatrix} + \overrightarrow{b}\begin{pmatrix}b_1\\\\b_2\end{pmatrix} = \overrightarrow{c}\begin{pmatrix}a_1+b_1\\\\a_2+b_2\end{pmatrix}$$
 
 ## Elementare geometrische Objekte
 
