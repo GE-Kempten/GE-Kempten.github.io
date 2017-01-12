@@ -63,6 +63,10 @@ Die Vektoraddition ist kommutativ, assoziativ und wird komponentenweise ausgefü
 
 Analog zum Summenvektor wird das Ergebnis einer Vektorsubrtaktion Differenzvektor genannt. Die Vektorsubtraktion ist nicht kommutativ oder assoziativ und wird komponentenweise ausgeführt: \$$\overrightarrow{a} \begin{pmatrix}a_1\\\\a_2\end{pmatrix} - \overrightarrow{b}\begin{pmatrix}b_1\\\\b_2\end{pmatrix} = \overrightarrow{c}\begin{pmatrix}a_1-b_1\\\\a_2-b_2\end{pmatrix}$$
 
+### Skalarmultiplikation: Strecken und Stauchen von Vektoren
+
+Durch Strecken und Stauchen von Vektoren wird aus einem Skalar $$\lambda$$ und einem Vektor $$\overrightarrow{a}$$ ein neuer Vektor: \$$\lambda\overrightarrow{a} = \begin{pmatrix}\lambda a_1\\\\\lambda a_2\end{pmatrix}
+
 ## Elementare geometrische Objekte
 
 ### der Ebene
@@ -72,8 +76,6 @@ Analog zum Summenvektor wird das Ergebnis einer Vektorsubrtaktion Differenzvekto
 ## Einfache Kurven
 
 ## Einfache Flächen
-
-## Skalarprodukt
 
 ## Orthogonalität
 
