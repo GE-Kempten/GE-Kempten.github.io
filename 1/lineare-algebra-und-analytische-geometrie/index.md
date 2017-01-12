@@ -28,9 +28,11 @@ Mengen können endlich oder unendlich viele Elemente enthalten (jedoch keines do
 
 ## Kartesisches Koordinatensystem
 
-Ein Punkt in der Ebene in einem Koordinatensystem wird als Ursprung $$O$$ ausgezeichnet. Zwei aufeinander senkrecht stehend Zahlengeraden (die $$x_1$$- und $$x_2$$-Achse) mit dem Schnittpunkt $$O$$ bilden die Koordinatenachsen. Jedem Punkt $$P$$ wird genau ein Zahlenpaar ($$p_1$$, $$p_2$$) zugeordnet, welches die Koordinaten als senkrechte Projektion auf den entsprechenden Achsen repräsentiert: \$$ R \times R \{ (x_1, x_2) \mid x_1, x_2 \in \mathbb{R} \} $$
+Ein Punkt in der Ebene in einem **Koordinatensystem** wird als Ursprung $$O$$ ausgezeichnet. Zwei aufeinander senkrecht stehend Zahlengeraden (die $$x_1$$- und $$x_2$$-Achse) mit dem Schnittpunkt $$O$$ bilden die Koordinatenachsen. Jedem Punkt $$P$$ wird genau ein Zahlenpaar ($$p_1$$, $$p_2$$) zugeordnet, welches die Koordinaten als senkrechte Projektion auf den entsprechenden Achsen repräsentiert: \$$ R \times R \{ (x_1, x_2) \mid x_1, x_2 \in \mathbb{R} \} $$
 
 ## Punkte
+
+Jeden **Punkt** $$P$$ in der Ebene können wir durch genau einen Pfeil (gerichtete strecke) $$p = \overrightarrwo{OP}§§ vom Ursprung $$O$$ zum Punkt $$P$$ beschreiben. Diese Strecke wird auch **Ortsvektor** genannt.
 
 ## Vektoren
 
