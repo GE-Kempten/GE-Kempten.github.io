@@ -32,7 +32,7 @@ Ein Punkt in der Ebene in einem **Koordinatensystem** wird als Ursprung $$O$$ au
 
 ## Punkte
 
-Jeden **Punkt** $$P$$ in der Ebene können wir durch genau einen Pfeil (gerichtete strecke) $$p = \overrightarrwo{OP}§§ vom Ursprung $$O$$ zum Punkt $$P$$ beschreiben. Diese Strecke wird auch **Ortsvektor** genannt.
+Jeden **Punkt** $$P$$ in der Ebene können wir durch genau einen Pfeil (gerichtete strecke) $$p = \overrightarrwo{OP}$$ vom Ursprung $$O$$ zum Punkt $$P$$ beschreiben. Diese Strecke wird auch **Ortsvektor** genannt.
 
 ## Vektoren
 
@@ -44,7 +44,7 @@ Durch eine Verschiebung wird jeder Punkt in einer Ebene um den gleichen Betrag v
 
 Beschreiben wir die Punkte der Ebene durch Koordinatenpaare und die Verschiebungspfeile durch Punktepaare, können wir die Verschiebung mittels einer Relation algebraisch erklären:
 - Die Verschiebungen (_Translationen_) definieren auf der Menge der Punktepaare der Ebene eine Relation, die **Translationsrelation** genannt wird.
-- Zwei Punktepaare $$A, B$$ und $$C; D$$ stehen in Relation zueinander, wenn sie Verschiebungspfeile in der gleichen Klasse definieren: $$(A, B) \sim (C; D) \iff a_1 - b_1 = c_1 - d_1, a_2 - b_2 = c_2 - d_2$$
+- Zwei Punktepaare $$A, B$$ und $$C; D$$ stehen in Relation zueinander, wenn sie Verschiebungspfeile in der gleichen Klasse definieren: $$(A, B) \sim (C, D) \iff a_1 - b_1 = c_1 - d_1, a_2 - b_2 = c_2 - d_2$$
 
 ## Elementare geometrische Objekte
 
