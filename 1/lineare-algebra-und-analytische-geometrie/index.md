@@ -65,7 +65,7 @@ Analog zum Summenvektor wird das Ergebnis einer Vektorsubrtaktion Differenzvekto
 
 ### Skalarmultiplikation: Strecken und Stauchen von Vektoren
 
-Durch Strecken und Stauchen von Vektoren wird aus einem Skalar $$\lambda$$ und einem Vektor $$\overrightarrow{a}$$ ein neuer Vektor: \$$\lambda\overrightarrow{a} = \begin{pmatrix}\lambda a_1\\\\\lambda a_2\end{pmatrix}
+Durch Strecken und Stauchen von Vektoren wird aus einem Skalar $$\lambda$$ und einem Vektor $$\overrightarrow{a}$$ ein neuer Vektor: \$$\lambda\overrightarrow{a} = \begin{pmatrix}\lambda a_1\\\\\lambda a_2\end{pmatrix}$$
 
 ## Elementare geometrische Objekte
 
