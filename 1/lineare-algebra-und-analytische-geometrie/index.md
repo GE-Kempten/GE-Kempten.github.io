@@ -28,7 +28,7 @@ Mengen können endlich oder unendlich viele Elemente enthalten (jedoch keines do
 
 ## Kartesisches Koordinatensystem
 
-Ein Punkt in der Ebene in einem **Koordinatensystem** wird als Ursprung $$O$$ ausgezeichnet. Zwei aufeinander senkrecht stehend Zahlengeraden (die $$x_1$$- und $$x_2$$-Achse) mit dem Schnittpunkt $$O$$ bilden die Koordinatenachsen. Jedem Punkt $$P$$ wird genau ein Zahlenpaar ($$p_1$$, $$p_2$$) zugeordnet, welches die Koordinaten als senkrechte Projektion auf den entsprechenden Achsen repräsentiert: \$$ R \times R \{ (x_1, x_2) \mid x_1, x_2 \in \mathbb{R} \} $$
+Ein Punkt in der Ebene in einem **Koordinatensystem** wird als Ursprung $$O$$ ausgezeichnet. Zwei aufeinander senkrecht stehend Zahlengeraden (die $$x_1$$- und $$x_2$$-Achse) mit dem Schnittpunkt $$O$$ bilden die Koordinatenachsen. Jedem Punkt $$P$$ wird genau ein Zahlenpaar ($$p_1$$, $$p_2$$) zugeordnet, welches die Koordinaten als senkrechte Projektion auf den entsprechenden Achsen repräsentiert: \$$ \mathbb{R} \times \mathbb{R} \{ (x_1, x_2) \mid x_1, x_2 \in \mathbb{R} \} $$
 
 ## Punkte
 
@@ -43,8 +43,15 @@ Durch eine Verschiebung wird jeder Punkt in einer Ebene um den gleichen Betrag v
 **Translationsrelation**
 
 Beschreiben wir die Punkte der Ebene durch Koordinatenpaare und die Verschiebungspfeile durch Punktepaare, können wir die Verschiebung mittels einer Relation algebraisch erklären:
+
 - Die Verschiebungen (_Translationen_) definieren auf der Menge der Punktepaare der Ebene eine Relation, die **Translationsrelation** genannt wird.
 - Zwei Punktepaare $$A, B$$ und $$C; D$$ stehen in Relation zueinander, wenn sie Verschiebungspfeile in der gleichen Klasse definieren: $$(A, B) \sim (C, D) \iff a_1 - b_1 = c_1 - d_1, a_2 - b_2 = c_2 - d_2$$
+
+Verschiebungspfeile gleicher Richtung und gleicher Länge bilden die **Äquivalenzklasse einer Translationsrelation** oder **Äquivalenzrelationen**. Sie werden auch als **Translationsvektoren** bezeichnet. Der Einfachheit halber wird normalerweise der **Standardvertreter**, also die äquivalente Verschiebung eines Translationsvektors an den Ursprung angegeben: $$(0, 0), (p_1, p_2))$$
+
+**Vektornotation**
+
+Vektoren werden als kleine lateinische Buschtaben mit einem Pfeil $$\overrightarrow{a}$$ oder als fettgedruckte Buchstaben **a** notiert. Wird der Vektor als Pfeil dargestellt, bezeichnen wir die Punkte als **Fußpunkt** und **Spitze**. Im Koordinatensystem sprechen wir in diesem Fall von einem Vektorpfeil.
 
 ## Elementare geometrische Objekte
 
