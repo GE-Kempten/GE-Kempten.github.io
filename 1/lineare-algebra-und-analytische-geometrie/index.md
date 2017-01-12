@@ -51,7 +51,7 @@ Verschiebungspfeile gleicher Richtung und gleicher Länge bilden die **Äquivale
 
 **Vektornotation**
 
-Vektoren werden als kleine lateinische Buschtaben mit einem Pfeil $$\overrightarrow{a}$$ oder als fettgedruckte Buchstaben **a** notiert. Wird der Vektor als Pfeil dargestellt, bezeichnen wir die Punkte als **Fußpunkt** und **Spitze**. Im Fall des Standartvertreters eines Vektorpfeils werden nur die beiden Koordinaten der Spitze angegeben und übereinander geschrieben: \$$\overrightarrow{a} = \begin{pmatrix}a_1\\a_2\end{pmatrix}$$
+Vektoren werden als kleine lateinische Buschtaben mit einem Pfeil $$\overrightarrow{a}$$ oder als fettgedruckte Buchstaben **a** notiert. Wird der Vektor als Pfeil dargestellt, bezeichnen wir die Punkte als **Fußpunkt** und **Spitze**. Im Fall des Standartvertreters eines Vektorpfeils werden nur die beiden Koordinaten der Spitze angegeben und übereinander geschrieben: \$$\overrightarrow{a} = \begin{pmatrix}a_1\\\\a_2\end{pmatrix}$$
 
 ### Vektoraddition
 
