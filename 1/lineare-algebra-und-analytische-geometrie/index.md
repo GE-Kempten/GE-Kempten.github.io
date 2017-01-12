@@ -57,7 +57,11 @@ Vektoren werden als kleine lateinische Buschtaben mit einem Pfeil $$\overrightar
 
 Duch Hintereinanderausführung bestimmter Translationen werden alle Punkte der Ebene in eine bestimmte Richtung um einen bestimmten Betrag verschoben: \$$\overrightarrow{a} \begin{pmatrix}a_1\\\\a_2\end{pmatrix} + \overrightarrow{b}\begin{pmatrix}b_1\\\\b_2\end{pmatrix} = \overrightarrow{c}\begin{pmatrix}a_1+b_1\\\\a_2+b_2\end{pmatrix}$$
 
-Die Vektoraddition ist kommutativ, assoziativ und wird komponentenweise ausgeführt. Das Ergebniss wird Summenvektor genannt. Das Neutrale Element ist im Falle der Vektoraddition der sog. Nullvektor $$\begin{pmatrix}a_1+b_1\\a_2+b_2\end{pmatrix}$$. Diesen Erhält man durch die Addition eines Vektors mit seinem inversen Element.
+Die Vektoraddition ist kommutativ, assoziativ und wird komponentenweise ausgeführt. Das Ergebniss wird Summenvektor genannt. Das Neutrale Element ist im Falle der Vektoraddition der sog. Nullvektor $$\begin{pmatrix}a_1-a_1\\a_a+a_2\end{pmatrix} = \begin{pmatrix}0\\0\end{pmatrix}$$. Diesen Erhält man durch die Addition eines Vektors mit seinem inversen Element.
+
+### Vektorsubtraktion
+
+Analog zum Summenvektor wird das Ergebnis einer Vektorsubrtaktion Differenzvektor genannt. Die Vektorsubtraktion ist nicht kommutativ oder assoziativ und wird komponentenweise ausgeführt: \$$\overrightarrow{a} \begin{pmatrix}a_1\\\\a_2\end{pmatrix} - \overrightarrow{b}\begin{pmatrix}b_1\\\\b_2\end{pmatrix} = \overrightarrow{c}\begin{pmatrix}a_1-b_1\\\\a_2-b_2\end{pmatrix}$$
 
 ## Elementare geometrische Objekte
 
