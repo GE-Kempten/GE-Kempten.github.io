@@ -32,7 +32,7 @@ Ein Punkt in der Ebene in einem **Koordinatensystem** wird als Ursprung $$O$$ au
 
 ## Punkte
 
-Jeden **Punkt** $$P$$ in der Ebene können wir durch genau einen Pfeil (gerichtete strecke) $$p = \overrightarrwo{OP}$$ vom Ursprung $$O$$ zum Punkt $$P$$ beschreiben. Diese Strecke wird auch **Ortsvektor** genannt.
+Jeden **Punkt** $$P$$ in der Ebene können wir durch genau einen Pfeil (gerichtete strecke) $$p = \overrightarrow{OP}$$ vom Ursprung $$O$$ zum Punkt $$P$$ beschreiben. Diese Strecke wird auch **Ortsvektor** genannt.
 
 ## Vektoren
 
