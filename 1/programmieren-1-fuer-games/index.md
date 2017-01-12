@@ -821,6 +821,224 @@ int eineAndereZahl = stoi(einString); //42
 
 
 
+# Arithmetische Operatoren
+
+- Binären Operatoren -> 2 Operanden
+- Unärer Operatoren -> 1 Operand
+- Zusammengesetze Kombinationen
+- Vergleichsoperatoren
+- Boole'sche Operatoren -> Kontrolle von Programmen
+
+#### Hinweis
+
+Hinter jeder Operation muss hinterfragt werden, ob der Datentyp passt, d.h. wenn als Ergebnis einer Operation eine Gleitpunktzahl entsteht, muss der Datentyp der Variable auch passen.
+
+Variable können auch zum Rechnen benutzt werden.
+
+## Binäre arithmetische Operatoren
+
+|Linker Operand|Operator|Rechter Operand|
+|--:|:-:|:--|
+|A|+|B|
+
+|Operator|Bedeutung|Beispiel|
+|--:|:--|:--|
+|+|Addition|2 + 6 = 8|
+|-|Subtraktion| 2 - 6 = -4|
+|*|Mutiplikation|2 * 6 = 12|
+|/|Division|2 / 6 = 0.33333|
+|%|Modulodivision|2 % 6 = 2|
+
+#### Division
+
+Wie oben bereits erwähnt muss ein entsprechende Datentyp angegeben werden, damit man ein gewünschtes Ergebnis erzielt. 
+
+- Division mit ganzzahligen Operanden -> ganzzahliges Ergebnis (abgerundet)
+- Mind. ein Operand ist eine Gleitkommazahl -> Ergebnis als Gleitkommazahl
+- Erinnerung: .f um aus ganze Zahlen Gleitkommazahlen zu machen.
+
+```c++
+int var1 = 2 / 6; //= 0
+float var2 = 2 / 6: //= 2.00000
+
+int var3 = 2.f / 6; //= 0 
+float var4 = 2 / 6.f; //= 0.33333 
+
+//Am besten immer .f hinter allen ganzzahligen Zahlen bei Gleitkommazahlen-Berechnungen setzen!
+```
+
+#### Modulodivision
+
+Nur anwendbar auf ganzzahilge Operanden.
+
+Beispiel: x % 4 = erg
+
+|x|erg|
+|--:|:--|
+|0|0|
+|1|1|
+|2|2|
+|3|3|
+|4|0|
+|5|1|
+|6|2|
+|7|3|
+|8|0|
+|9|1|
+|10|2|
+
+Anwendung: Erzeugung von Zufallszahlen in einem bestimmten Wertebereich -> Thema später
+
+### Ausdrücke
+
+Natürlich können wir auch mehrere Operanden und deren Operatoren kombinieren.
+Dabei gelten die üblichen Rechenregeln -> Punkt vor Strich, etc.
+
+Eine übersicht welche Operatoren Priorität über andere haben wir zum Schluss des Kapitels gezeigt.
+
+
+
+
+
+## Unäre arithmetische Operatoren
+
+|Operator|Bedeutung|Beispiel|
+|--:|:--|:--|
+|+ und -|Vorzeichenoperator|x = 5; y = -x; //y = -5|
+|++|Inkrementoperator|x = 2; x++; //x = 3|
+|--|Dekrementoperator|x = 2; x--; //x = 1|
+
+#### Inkrement- und Dekrementoperatoren
+
+verändern den Wert um 1.
+
+Unterscheidung zwischen:
+
+- Präfix-Notation (i++): 
+1. Benutzung des alten Wertes 
+2. Erhöhung von i um 1
+- Postfix-Notation (++i): 
+1. Erhöhung von i um 1 
+2. Benutzung des alten Wertes 
+
+```c++
+int var1 = 2;
+int var2 = var1++; //var2 = 2
+int var3 = ++var1; //var3 = 4
+```
+
+
+
+
+
+## Zusammengesetze Zuweisungen
+
+Es besteht die Möglichkeit den Zuweisungsoperator "=" mit den binären Operatorn zu kombinieren.
+
+-> +=, -=, *=, /=, %=
+
+```c++
+int var1 = 2;
+
+var1 = var1 + var1; //var1 = 4
+var1 += var1; //var1 = 8
+```
+
+
+
+
+
+## Vergleichsoperatoren
+
+|Operator|Bedeutung|Bespiel|Ergebnis|
+|--:|:--|--:|:--|
+|<|Kleiner|4.5 < 5.623|true|
+|<=|Kleiner gleich|2 <= 1.98|false|
+|>|Größer|||
+|>=|Größer gleich|||
+|==|Gleich|2*2 == 5|false|
+|!=|Ungleich|2*2 != 5|true|
+
+#### Hinweis 
+
+Nicht die Zuweisung "=" mit dem Vergleichsoperator gleich "==" verwechseln!
+
+
+
+
+
+## Boole'sche Operatoren
+
+#### Konjunktion &&
+
+|&&|0|1|
+|:-:|:-:|:-:|
+|**0**|0|0|
+|**1**|0|1|
+
+-> Das Monster hat unter 50% seiner HP **und** hat keine MP **dann** heilt es sich.
+
+#### Disjunktion ||
+
+|oder|0|1|
+|:-:|:-:|:-:|
+|**0**|0|1|
+|**1**|1|1|
+
+-> Der Spieler ist verletzt **oder** setzt Block ein **dann** aktivieren sich die Invincibility-Frames.
+
+Konjunktionen haben Priorität über Disjunktionen.
+
+#### Negation !
+
+||!|
+|--:|:--|
+|0|1|
+|1|0|
+
+-> Der Spieler ist **nicht** im Empfohlenen Levelbereich **dann** greifen die Monster nicht an.
+
+Werden Boole'sche Operatoren in Kombination mit Integer/Float-Zahlen kombiniert, dann sind alle Zahlen >/< 0 -> 1 und 0 -> 0
+
+
+
+
+
+## Vorrang der Operatoren
+
+|Prioriät|Operator|
+|--:|:--|
+|9|Postfix ++|
+||Postfix --|
+|8|++ Präfix|
+||-- Präfix|
+||+ Vorzeichen|
+||- Vorzeichen|
+||!|
+|7|*|
+||/|
+||%|
+|6|+|
+||-|
+|5|<|
+||<=|
+||>|
+||>=|
+|4|==|
+||!=|
+|3|&&|
+|2|\mid\mid|
+|1|=|
+||*=, /=, +=, -=,|
+
+
+
+
+
+
+
+
+
 
 
 
