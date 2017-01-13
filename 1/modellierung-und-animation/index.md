@@ -23,15 +23,15 @@ Diese Aspekte sind nicht Ziel dieses Faches:
 - [x] Einführung
 - [x] Grundbegriffe
 - [x] Mathematische Grundlagen (*)
-- [ ] Modellieren
+- [x] Modellieren
 	- [x] Modellierungstechnik (*)
 		- [x] Basics
 		- [x] Tools
 		- [x] Modifiers
-	- [x] Kamera
-	- [ ] Polygonale Netze
-	- [ ] Parametrische Patches
-	- [ ] Einschub: Prozedurales Modellieren
+	- [x] Kamera (*)
+	- [x] Polygonale Netze (*)
+	- [x] Parametrische Patches (*)
+	- [x] Einschub: Prozedurales Modellieren (*)
 - [ ] Material und Licht
 	- [ ] Physikalische Grundlagen
 	- [ ] Begriffe für Licht
@@ -895,12 +895,20 @@ Lösung: **Switching**:
 - lineares Blending zwischen zwei LOD-Stufen
 - Alpha-LODs: Transparenz $$ \alpha $$ Abstand
 
-**Alpha-LODs**: Übergehender Übergang zwischen Zustand A zu Zustand B, indem Zustand A ausgeblendet wird, während Zustand B eingeblendet wird. 
+**Alpha-LODs**: Übergehender Übergang zwischen Zustan35,d A zu Zustand B, indem Zustand A ausgeblendet wird, während Zustand B eingeblendet wird. 
 
 ![Diagramm]()
 
 LOD: Culling -> Besprechung in Vorlesung "Computergrafik"
 
+### Nachteile von Polygon-Netzen
+
+- gekrümmte Flächen können nur durch Annäherung dargestellt werden
+- Änderung der Genauigkeit -> Aufwand steigt
+- Kein fließender Übergang zwischen verschiedenen Genauigkeiten
+- Genauigkeit ist nicht skalierungs-unabhängig
+
+Um die Nachteile von Polygon-Netzen zu umgehen wurden Parametrische Patches entwickelt.
 
 
 
@@ -911,6 +919,86 @@ LOD: Culling -> Besprechung in Vorlesung "Computergrafik"
 
 
 
+## Parametrische Patches
+
+sind ±±mathematisch beschriebene, gekrümmte Flächen**. Ein Objekt wird aus **mehreren Patches** zusammengesetzt.
+
+Aufgrund der Formel-Darstellung ist jeder Punkt des Patches exakt analytisch festgelegt, wodurch LOD einfacher umsetzbar ist.
+
+Eine mögliche Metapher im $$ R^2 $$: Pixelgrafik (Netze) vs. Vektorgrafik (Patches)
+
+
+### Mathematische Grundlage
+
+**Parametrische Kurve**: $$ Q(u) = (X(u), Y(u), Z(u)) $$ mit $$ 0 ≤ u ≤ 1 $$
+
+**Parametrische Fläche**: $$ Q(u,v) = (X(u,v), Y(u,v), Z(u,v)) $$ mit $$ 0 ≤ u ≤ 1 $$ und $$ 0 ≤ v ≤ 1 $$
+
+Dieses Flächenelement ist definiert als **Patch**.
+
+Mehr zu Patches und deren mathematische Grundlage gibt es in der VL Computergrafik.
+
+**Normalen**:
+
+- Jeder Punkt des Patches hat eine eigene Normale
+- Kreuzprodukt aus den Tangenten beider Richtungen $$ u, v $$
+
+Berechnung $$ N_{u,v} $$ einer param. Fläche $$ Q(u,v) $$:
+
+- Tangenten gegeben durch $$ \frac {\partial}{\partial u} Q(u,v) $$ und $$ \frac {\partial}{\partial v} Q(u,v) $$
+- (unnormierte) Normale $$ N_{u,v} $$ gegeben durch $$ N_{u,v} = \frac {\partial Q} {\partial u} \times \frac {\partial Q} {\partial v} $$
+
+### Bézier
+
+ist eine weit verbreite parametrische Kurve die von Paul de Caseljau und Pierre Bézier entwickelt wurde.
+
+Der Kurvenverlauf ist beeinflussbar durch Position und Anzahl der Kontrollpunkte, wobei der Grad dieser Bézierkurve $$ n = Kontrollpunkte_{Anzahl} -1 $$ ist. Steigt die Anzahl der Kontrollpunkte, so steigt auch der Rechenaufwand.
+
+![Beispiel Bézier]()
+
+Übertragen auf das $$ R^3 $$ sprechen wir von einem **Bézier-Patch**.
+
+#### Spline
+
+Verbindung mehrerer Kurven ist nicht zwingend stetig. **Stetigkeit** wird erricht, wenn zwei verbindenden Kontrollpunkte **kollinear** sind.
+
+Eine **Aneinanderreihung** wird als **Spline** bezeichnet. Hier: Bézier-Spline
+
+#### Eigenschaften von Bézier-Splines
+
+- Kurve bleibt in der Konvexen Hülle des Kontrollpolygons
+- Kontrollpunkte haben einen globalen Einfluss (in unterschiedlichen Maße)
+- Transformation durch Kontrollpunkte
+- Kurvenverlauf ist durch Transformation invariant (?)
+
+Störfaktoren:
+
+- Eingeschränkte lokale Editierbarkeit
+- Skalierender Aufwand mit Anzahl der Kontrollpunkte (Aneinanderreihung nötig)
+
+#### B-Splines
+
+Eigenschaften:
+
+- Einfluss ist lokal beschränkt
+- Grad unabhängig von der Anzahl der Kontrollpunkte
+- Kurve führt analog Bézier nicht zwingend durch die Kontrollpunkte
+- Gleiches gilt innerhalb der konvexen Hülle
+- Transformation analog zu Bézier
+- Ordnung bestimmt EInfluss der Kontrollpunkte
+
+Spezielle B-Splines:
+- **Uniformität**: Einfluss eines Kontrollpunktes ist konstant
+- **Rationalität**: Analytische Beschreibung ist als Verhältnis ausdrückbar
+
+=> **NURBS**: **N**on-**U**niform **R**ational **B**-**S**plines
+
+##### Anwendungsbeispiele von NURBS
+
+- Verbreitet in der Konstruktion (CAD)
+- NURBS-Modeler: Rhinocerus, Mol, nPower
+
+![Coole Bilder]()
 
 
 
@@ -918,6 +1006,32 @@ LOD: Culling -> Besprechung in Vorlesung "Computergrafik"
 
 
 
+
+
+
+## Prozedurales Modellieren
+
+Gemeotrie wird anhand einer oder mehreren Regeln generiert. Die Regeln können mathematische Funktionen oder beliebe Algorithmen sein. Prozedurale Methoden sind stark unterschiedlichen in deren Komplexitätsgrad und bieten ein intensiver Forschung.
+
+Parameter des Algorithmus schaffen Gestaltungsmöglichkeiten für den Artist.
+
+Allgemeine Beispiele:
+
+- Fraktale Formen
+- Geländegeneration
+- Städtegeneration
+- Architektur
+- Pflanzen, Wald, Gras
+- Biologische Strukturen, Neuronen, Korallen,...
+
+In Games:
+
+- Prozeduraler Levelaufbau -> Daggerfall, Diablo, Minecraft, Binding of Isaac
+- Pozedurale Animation -> Morrorwind, Spore
+- Pozedurale Eigenschaften -> Borderlands
+- Pozedurale Umgebungseffekte -> Left 4 Dead 2
+
+![Beispielbilder]()
 
 
 
