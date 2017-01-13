@@ -71,7 +71,7 @@ Die Skalarmultiplikation ist assoziativ und distributiv.
 
 - $$ (\lambda\mu)\overrightarrow{a} = \lambda(\mu\overrightarrow{a})$$
 - $$ (\lambda+\mu)\overrightarrow{a} = (\lambda\overrightarrow{a})+(\mu\overrightarrow{a})$$
-- $$ \lambda(\overrightarrow{a}+\overrightarrow{b}) = \lambda\overrightarrow{a} + \lambda\overrightarrow{b}
+- $$ \lambda(\overrightarrow{a}+\overrightarrow{b}) = \lambda\overrightarrow{a} + \lambda\overrightarrow{b}$$
 
 ## Elementare geometrische Objekte
 
