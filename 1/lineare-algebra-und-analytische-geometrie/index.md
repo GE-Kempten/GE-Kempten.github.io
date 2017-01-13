@@ -67,6 +67,12 @@ Analog zum Summenvektor wird das Ergebnis einer Vektorsubrtaktion Differenzvekto
 
 Durch Strecken und Stauchen von Vektoren wird aus einem Skalar $$\lambda$$ und einem Vektor $$\overrightarrow{a}$$ ein neuer Vektor: \$$\lambda\overrightarrow{a} = \begin{pmatrix}\lambda a_1\\\\\lambda a_2\end{pmatrix}$$
 
+Die Skalarmultiplikation ist assoziativ und distributiv.
+
+- $$ (\lambda\mu)\overrightarrow{a} = \lambda(\mu\overrightarrow{a})$$
+- $$ (\lambda+\mu)\overrightarrow{a} = (\lambda\overrightarrow{a})+(\mu\overrightarrow{a})$$
+- $$ \lambda(\overrightarrow{a}+\overrightarrow{b}) = \lambda\overrightarrow{a} + \lambda\overrightarrow{b}
+
 ## Elementare geometrische Objekte
 
 ### der Ebene
