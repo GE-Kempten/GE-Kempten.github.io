@@ -895,7 +895,7 @@ Lösung: **Switching**:
 - lineares Blending zwischen zwei LOD-Stufen
 - Alpha-LODs: Transparenz $$ \alpha $$ Abstand
 
-**Alpha-LODs**: Übergehender Übergang zwischen Zustan35,d A zu Zustand B, indem Zustand A ausgeblendet wird, während Zustand B eingeblendet wird. 
+**Alpha-LODs**: Übergehender Übergang zwischen Zustand A zu Zustand B, indem Zustand A ausgeblendet wird, während Zustand B eingeblendet wird. 
 
 ![Diagramm]()
 
