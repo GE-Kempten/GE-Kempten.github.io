@@ -28,7 +28,7 @@ Diese Aspekte sind nicht Ziel dieses Faches:
 		- [x] Basics
 		- [x] Tools
 		- [x] Modifiers
-	- [ ] Kamera
+	- [x] Kamera
 	- [ ] Polygonale Netze
 	- [ ] Parametrische Patches
 	- [ ] Einschub: Prozedurales Modellieren
@@ -778,19 +778,128 @@ Die Projektion ist nicht invertierbar, d.h. z-Werte gehen verloren $$\rightarrow
 
 
 
+## Polygonale Netze
+
+verschiedene Darstellungen eines 3D-Modells:
+
+- Polygonale Netze (Meshes)
+- Parametrische Kurven und Flächen (Patches)
+- Constructive Solid Geometry (CSG)
+- Implizit, prozedural
+
+**Hinweis**: Wir konzentrieren uns in nachfolgenden Themen primär auf Polygonnetze. Hier werden aber alle angeschnitten!
 
 
 
+### Grundlagen
 
+Ein Objekt besteht aus einer Mengen an Polygonen, wodurch **Krümmungen** durch Annäherung passiert. Je höher die Polygonanzahl, desto genauer ist die Annäherung.
 
+Allerdings besteht zwischen realer Fläche und Mesh kein fester Bezug. Der Artist muss das klarstellen! Außerdem sind Polygon im Programm leider begrenzt auf Form und Punktanzahl (viele Programme akzeptieren inzwischen Abweichungen von der "3-Punkt"-Regel).
 
+Praktischerweise existieren für Poly-Netze effiziente Schattierungsalgorithmen!
 
+Poly-Netze sind am gebräuchlichsten in CGI und Games, deswegen wird es auch hier primär besprochen.
 
+#### Anforderungen
 
+Einem Polygon können technische Anforderungen gestellt:
 
+- planar
+- Punktanzahl
+- Geschlossenheit
+- Überschneidungsfrei
+- Konvexität
+- Frei von Löchern
 
+![Bild mit Erklärung hinzufügen]()
 
+Sollte die Punkteanzahl > 3 sein, dann ist das Polygon nicht zwangsweise planer und konvex!
 
+Das Programm entscheidet letztendlich die Grenzen, trotzdem muss der Artist auf die Sauberkeit des Meshes achten!
+
+#### Topologie und Geometrie
+
+**Geometrie**: Koordinaten von Vertices
+
+d.h. exakte Position und Form der Topologie
+
+z.B. P1 (2, 4), P2 (3, 5)
+
+**Topologie**: Struktur des Netzes
+
+d.h. Information über Verbindungen zwischen Elementen unabhängig von Position und Form.
+
+z.B. E1 = P1 & P2
+
+### Normalen
+
+Ein Normalenvektor ist eine **wichtige Eigenschaft** eines Polygons.
+
+Dieser ist definiert als **senkrecht zur Polygonfläche** stehender Vektor und muss daher berechnet werden: Produkt zweier Vektoren, definiert durch drei nicht-kollineare Punkte.
+
+![Beispiel - Normalenvektor]()
+
+Die Normale wird i.d.R. als Einheitsvektor angegeben -> Normierung: $$ \overrightarrow{n_o} = \frac{\overrightarrow n}{\|\| \overrightarrow n \|\|} $$
+
+=> Eine Ebene kann definiert werden als einen Normalenvektor und einen Punkt auf der Ebene.
+
+Praktischerweise kann der Normalenvektor nun nur in **2 Orientierungen**** zeigen, also der **Ober- und Unterseite** des Polygons. Die Seiten sind abhängig von der **Repräsentation des Koordinatensystems** (RHS oder LHS).
+
+Ein Problem entsteht durch z.B. die Rotation. die Normalenvektoren können sich **willkürlich ändern**, wodurch der Artist dieser wieder richten muss. Glücklicherweise gibt es dazu Tools!
+
+##### Und warum aber nun Normalen?
+
+Sie werden benutzt für **Berechnungen** an verschiedenen Stellen der Pipeline z.B. Beleuchtung, Schattierung, Rendering,...
+
+Deswegen besitzen **Vertices, Edges und Faces** Normalen!
+
+Die **Vertex Normals** werden durch **Mittelung der umgebenden Polygonnormalen** bestimmt: $$ N_v = \frac{\sum N_i}{\|\| N_i \|\|} $$
+
+Normalen werden nochmal besprochen bei dem Thema "Materialien".
+
+### Level of Detail (LOD)
+
+Vor allem in Videospielen ist es oft gewollt **schöne Objekte** (besonders Charaktere) zu erstellen, wodurch aber die Polygonanzahl ansteigt.
+
+Aber:
+- **anspruchsvoller** für den Computer. 
+- **nicht jedes Objekt** ist in der Szene **sichtbar**
+- **weit entfernte Objekte** sind nicht aus der Entfernung nicht sehr wichtig 
+
+Lösung: Ein Mesh wird in **verschiedene Detailliserungsgrade** (Entfernung <-> Auflösung) erstellt.
+
+Also d.h. bei der Benutzung von LOD muss folgendes beachtet werden:
+
+- Modell muss in **unterschiedlichen Auflösungen** erstellt sein
+- Beim Rendern muss das **zur Entfernung passende Modell** herangezogen werden
+- LOD-Management (what exactly?)
+
+#### Umsetzung
+
+![4-Stufen Diagramm]()
+
+Automatisches Erstellen von simplerer Meshes -> **Edge Collapse** Methode:
+
+![Edge Collapse]()
+
+Problem: Manche Kanten kollabieren nicht optimal aneinander!
+
+![Edge Collapse - Problem]()
+
+Weiteres Problem: Bei dieser Form von LOD-Wechsel besteht das Makel, das die Sprünge sehr sichtbar sind -> **popping**
+
+Lösung: **Switching**:
+
+- Diskrete Geometrie -> popping
+- lineares Blending zwischen zwei LOD-Stufen
+- Alpha-LODs: Transparenz $$ \alpha $$ Abstand
+
+**Alpha-LODs**: Übergehender Übergang zwischen Zustand A zu Zustand B, indem Zustand A ausgeblendet wird, während Zustand B eingeblendet wird. 
+
+![Diagramm]()
+
+LOD: Culling -> Besprechung in Vorlesung "Computergrafik"
 
 
 
