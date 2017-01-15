@@ -22,16 +22,16 @@ Diese Aspekte sind nicht Ziel dieses Faches:
 
 - [x] Einführung
 - [x] Grundbegriffe
-- [x] Mathematische Grundlagen (*)
+- [x] Mathematische Grundlagen (* 2)
 - [x] Modellieren
-	- [x] Modellierungstechnik (*)
+	- [x] Modellierungstechnik (* 12)
 		- [x] Basics
 		- [x] Tools
 		- [x] Modifiers
-	- [x] Kamera (*)
-	- [x] Polygonale Netze (*)
-	- [x] Parametrische Patches (*)
-	- [x] Einschub: Prozedurales Modellieren (*)
+	- [x] Kamera (* 7)
+	- [x] Polygonale Netze (* 6)
+	- [x] Parametrische Patches (* 3)
+	- [x] Einschub: Prozedurales Modellieren (* 1)
 - [ ] Material und Licht
 	- [ ] Physikalische Grundlagen
 	- [ ] Begriffe für Licht
@@ -47,7 +47,14 @@ Diese Aspekte sind nicht Ziel dieses Faches:
 	- [ ] Texture Mapping
 
 
-(*) -> Todo's 
+Todo: (* Anzahl)
+
+
+
+
+
+
+
 
 
 
@@ -102,8 +109,6 @@ Diese Aspekte sind nicht Ziel dieses Faches:
 - Meilensteine: Aliens (Terminator II), Forrest Gump (Ping-Pong), Toy Story (komplett in CA), Titanic (künstliche Figuren, Wasser)
 - Kommerzielle Software z.B: Autodesk 3D Studio, Lightwave 3D
 
-
-
 ## CA in Games
 
 Bringt Nachteile mit:
@@ -133,6 +138,16 @@ Bringt Nachteile mit:
 
 
 
+
+
+
+
+
+
+
+
+
+
 # Grundbegriffe
 
 - Ein Objekt einer 3D-Szene ist i.d.R. letztendlich ein Polygon-Netzmodell - **Mesh**
@@ -141,6 +156,16 @@ Bringt Nachteile mit:
 - Ein Vertex ist ein Punkt im **R3** (3D-Kooridnatensystem)
 - Unterscheidung zwischen exakter Darstellung - z.B. ein Quader - und einer Näherung - z.B. Kugel
 - Anzahl der Polygone = Genauigkeit der Näherung => Speicherplatz, Redering, evtl. Erstellungszeit der Artist
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -207,8 +232,6 @@ Darstellung im Koordinatensystem: $$ x_k = x/\omega, y_k = y/\omega $$ und §§ 
 
 
 
-
-
 ### Translation
 
 Eine Translation $$ T(t) = T(t_x, t_y, t_z) $$ versetzt jeden Punkt eines Objektes um einen bestimmten Wert in einer Dimension:
@@ -220,8 +243,6 @@ $$ y' = y + t_y $$
 $$ z' = z + t_z $$
 
 ![Ein cooles Beispiel](https://puu.sh/tcboR/ae226ca5b2.png)
-
-
 
 Kombiniert mit **homogenen Koordinaten** können wir die Translation nun als einzige **Matrizenmultiplikation** darstellen:
 
@@ -245,8 +266,6 @@ $$ V' = (5, 3, 3, 1) $$
 
 
 
-
-
 ### Skalierung
 
 Eine Skalierung $$ S(s) = S(s_x, s_y, s_z) $$, streckt das Objekt entlang der Achsen. Für jeden Punkt wird die neue Position mit den Skalierungsfaktoren ermittelt:
@@ -258,8 +277,6 @@ $$ y' = x \cdot s_y $$
 $$ z' = x \cdot s_z $$
 
 ![Mega cooles Bild](https://puu.sh/tcrbe/891212728d.png)
-
-
 
 Darstellung als Matrixmultiplikation:
 
@@ -298,9 +315,6 @@ Gegeben: $$ O_1 = (0, 0), O_2 = (6, 4), S = 0.5 $$ , Pivot: Median
 3. Schritt - Skalierte Punkte berechnen: $$ O'_1 = P - D = (1.5, 1), O'_2 = P + D = (4.5, 3) $$  
 
 
-
-
-
 ### Rotation
 
 Um eine Rotation ausführbar zu machen, muss zunächst eine **Rotationsachse** definiert werden.
@@ -315,8 +329,6 @@ $$ y' = x \cos(\varphi) + y \sin(\varphi) $$
 $$ z' = z $$
 
 ![Super Mega cooles Bild](https://puu.sh/tdhOo/41a2a55671.png)
-
-
 
 Darstellung als Matrizenmultiplikation:
 
@@ -341,6 +353,7 @@ $$ V' = (0, \sqrt{2}, 0, 1)^T $$
 Bei der Rotation kann auch ein Pivotpunkt definiert werden, welcher dann die Rotationsachse(n) bestimmt.
 
 
+
 ### Kombination aus Matrizen
 
 Und ist es nun möglich einen Punkt bzw. ein Objekt im $$ R^3 $$ zu verschieben (Translation), vergrößern bzw. verkleiern (Skalierung) und zu drehen (Rotation). Diese können nun kombiniert werden, da wir diese als homogene Koordinaten (4x4 Matrix) mit Multiplikationen darstellbar gemacht haben.
@@ -360,9 +373,7 @@ $$ V'' = M_3 V $$
 * Insgesamt sollte man darauf achten, die richtige Reihenfolge zu benutzen
 
 
-![Cooles Picture](https://puu.sh/tdlrI/628ae1a950.png) (Bild von André Kettner)
-
-**Todo**: Veranschaulichung selbst malen
+![Cooles Picture](https://puu.sh/tnxwd/b2bff5a437.png)
 
 
 
@@ -400,15 +411,26 @@ Möchten wir nun eine Transformation durchführen, erwarten wir, dass sich unser
 
 1. Verschiebung des Objektes in den Ursprung des Welt-KS.
 2. Rotation (oder andere Transformationen)
-4. Verschiebung des Objektes zu seiner ursprünglichen Position. 
+3. Verschiebung des Objektes zu seiner ursprünglichen Position. 
 
 Veranschaulichung:
 
-Problem: ![Bild 1](https://puu.sh/tdoo0/22337ab93b.png)
+Problem: ![Bild 1](https://puu.sh/tdokP/4ac56dd41f.png)
 
 Lösung: ![Bild 2](https://puu.sh/tdoo0/22337ab93b.png)
 
 **Todo**: Ebenfalls selbst malen - Bilder von André Kettner
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -425,9 +447,15 @@ Beim Beginn eines Projekts sollte man sich überlegen, welches typische Grundobj
 
 Anschließend kann die Bearbeitung des Modells beginnen - Transformation von Faces, Edges und Vertices.
 
+
+
+
+
 ## Basics 
 
 sind Standard-Operationen auf bestimmte Elemente des Meshes.
+
+
 
 ### Origins
 
@@ -451,13 +479,15 @@ Erstellt einen Klon, dbaei wird zwischen einer normalen Duplikation, Links - als
 
 sind spezielle Modellierungswerkzeuge.
 
+
+
 ### Glättung
 
 ist eine **Sukzessive Angleichtung der Winkel benachbarter Flächen**, wodurch das Objekt runder und glatter wird, da die harten Kanten verändert werden.
 
 Die Gemeotrie wird transformiert, d.h. sie wird nicht unterteilt, woduch die Anzahl der Elemente nicht verändert werden.
 
-**Todo**: Beispiel hinzufügen
+![Beispiel]()
 
 
 
@@ -471,7 +501,7 @@ Durch **parallele Verschiebung** wird ein **höherdimensionales Elementes+* erze
 
 Im Regelfall findet die Extrusion **parallel zur Normalen** statt.
 
-**Todo**: Beispiel hinzufügen
+![Beispiel]()
 
 
 
@@ -479,7 +509,7 @@ Im Regelfall findet die Extrusion **parallel zur Normalen** statt.
 
 In ein bereits existierenden Polygon werden **Subpolygone nach innen eingefüt**.
 
-**Todo**: Beispiel hinzufügen
+![Beispiel]()
 
 
 
@@ -487,7 +517,7 @@ In ein bereits existierenden Polygon werden **Subpolygone nach innen eingefüt**
 
 Verfeinerung des Meshes, in dem **Kanten in der Mitte geteilt** werden und dadurch neue Vertices, Edges und Faces entstehen. Die Form bleibt gleich, aber die _Topologie ändert sich_.
 
-**Todo**: Beispiel hinzufügen
+![Beispiel]()
 
 
 
@@ -495,7 +525,7 @@ Verfeinerung des Meshes, in dem **Kanten in der Mitte geteilt** werden und dadur
 
 **Teilung eines Meshes** entlang einer Linie nach Angabe des Artists.
 
-**Todo**: Beispiel hinzufügen
+![Beispiel]()
 
 
 
@@ -503,7 +533,7 @@ Verfeinerung des Meshes, in dem **Kanten in der Mitte geteilt** werden und dadur
 
 Bearbeitung von harten Kanten, indem der Artist die Tiefe (**Offset**) und **Anzahl der Segmente** angibt und damit dem Objekt einen natürlicheren Look verleiht.
 
-**Todo**: Beispiel hinzufügen
+![Beispiel]()
 
 
 
@@ -585,7 +615,7 @@ Anwendungsbeispiele sind die Bereinigung der Auflösung importierter Objekte und
 
 Die Ebene ist frei wählbar, überlicherweise wird die **Hauptebene des lokalen Objektkoordinatessystems** gewählt. Optional können Punkte auf der Spiegelungsachse verbunden werden.
 
-Symmetrische Objekte sind das idealle Beispiel für diesen Modifier.
+Symmetrische Objekte sind das idealle Anwendungen für diesen Modifier.
 
 
 
@@ -604,7 +634,7 @@ Der weiteste Verbreitester Algorithmus ist der **Catmull-Clark** (1978) (Namen d
 3. Neuberechnug der alten Punkten - kleine Priorität auf die neuen Facettenpunkte, in denen $$ v $$ als Ecke enthalten ist und Kanten die $$ v $$ enthalten. 
 4. Verbinden der neuen Kantenpunkte mit den zugehörigen Facettenpunkten und der "alten" Eckpunkte mit den zugehörigen Kantenpunkten.
 
-**Todo**: Step-by-Step Referenzbilder hinzufügen
+![Step-by-Step]()
 
 Zusätzlich werden **n-Gons in n-Quads unterteilt**, wodurch am Ende ein reines Quad-Mesh übrig bleibt.
 
@@ -618,7 +648,7 @@ $$ c_e = 3 * 4^{n+1} $$
 
 $$ c_f = c_v - 2 $$
 
-**Todo**: Graphen einfügen
+![Graph]()
 
 **Quadrilateral*:
 
@@ -628,9 +658,9 @@ $$ c_e = 2^{2n+1} + 2^{n+1} $$
 
 $$ c_f = 4^n $$
 
-**Todo**: Graphen hinzufügen
+![Graph]()
 
-**Todo**: Vergleich hinzufügen
+![Vergleich]()
 
 
 
@@ -643,7 +673,7 @@ $$ c_f = 4^n $$
 - **Taper**: Verjüngung entlang einer Achse
 - **Stretch**: Streckung entlang einer Achse
 
-**Todo**: Einfügen von Referenzbildern
+![Referenzbilder]()
 
 
 
