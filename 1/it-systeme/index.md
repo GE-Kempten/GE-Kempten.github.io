@@ -207,7 +207,7 @@ Aus den Axiomen der Boole'schen Algebra lassen sich eine Reihe von Sätzen ablei
 |--:|---|---|
 |Idempotenz|$$ a \lor a = a $$|$$ a \land a = a$$|
 |deMorgan|$$ \lnot (a \lor b) = \lnot a \land \lnot b $$|$$ \lnot (a \land b) = \lnot a \lor \lnot b $$|
-|$$ Operation mit 0 bzw. 1 $$|$$ a \lor 1 = 1 $$|$$ a \land 0 = 0 $$|
+|Operation mit 0 bzw. 1|$$ a \lor 1 = 1 $$|$$ a \land 0 = 0 $$|
 |Doppeltes Kompliment|$$ \lnot \lnot a = a $$||
 |Negation|$$ \lnot 0 = 1 $$|$$ \lnot 1 = 0 $$|
 
@@ -240,7 +240,7 @@ Jede echte Boole'sche Funktion f lässt sich in einer der beiden folgenden einde
 - Die durch _Konjunktion verknüpfte Terme_ der _DNF_ heißen **Minterme**,
 - die _entsprechenden Disjunktionen_ der _KNF_ heißen **Maxterme**.
 - Aus jeder Schaltfunktion (als Tabelle) kann mit den Normalformen ein äquivalenter Boole'scher Term konstruiert werden.
-- *Umsetzung*: DNF -> wegen der Konjunktion muss man nur die Terme $$f(x1,...xn) = 1$$ betrachten | KNF -> wegen der Disjunktion können die Terme $$f(x1,...xn) = 1$$ ignoriert werden.
+- *Umsetzung*: DNF -> wegen der Konjunktion muss man nur die Terme $$f(x1, ..., xn) = 1$$ betrachten | KNF -> wegen der Disjunktion können die Terme $$f(x1, ..., xn) = 1$$ ignoriert werden.
 
 Zur Darstellung von Schaltfunktionen durch Boole'sche Terme genügen neben den Variablen xi die folgenden alternativen Operatormengen: {$$\lor$$, $$\lnot$$}, {$$\land$$, $$\lnot$$}, {$$NAND$$}, {$$NOR$$}.
 
