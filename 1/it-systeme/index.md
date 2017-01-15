@@ -50,7 +50,7 @@ Das **Eingangssignal** wird zu einem bestimmten _Taktzeitpunkt_ angelegt und die
 
 **Defintion Schaltfunktion**:
 
->Sei $$V=\{0, 1\}$$ die Menge der beiden Signale 0, 1. Die Funktion \$$f: v^n -> n^m$$ mit $$m,n ≥ 1$$ heißen *Boole'sche Funktionen* oder auch *Schaltfunktionen*.
+>Sei $$V=\{0, 1\}$$ die Menge der beiden Signale 0, 1. Die Funktion $$f: v^n -> n^m$$ mit $$m,n ≥ 1$$ heißen *Boole'sche Funktionen* oder auch *Schaltfunktionen*.
 
 Anmerkung:
 
