@@ -4,16 +4,16 @@
 
 Auf diesem Wiki werden Notizen zu Modulen des Studiengangs Informatik Game Engineering an der Hochschule Kempten gesammelt.
 
-|1. Semester                            |Prüfungstermin|-zeit|-raum|
-|---------------------------------------|--------------|-----|-----|
+|1. Semester                              |Prüfungstermin|-zeit|-raum|
+|:----------------------------------------|:-------------|:----|:----|
 |[Lineare Algebra und Analytische Geometrie](/1/lineare-algebra-und-analytische-geometrie)|26.01.2017|15:00 - 16:30|V307/V308|
 |[IT Systeme](/1/it-systeme)|02.02.2017|10:00 - 11:30|S0.12/20.13/S0.18|
 |[Einführung in die Informatik](/1/einfuehrung-in-die-informatik)|27.01.2017|10:00 - 11:30|S0.12/S0.13|
 |[Modellierung und Animation](/1/modellierung-und-animation)|31.01.2017|10:00 - 11:30|S0.12|
 |[Programmieren 1 (für Games)](/1/programmieren-1-fuer-games)|06.02.2017|12:00 - 14:00|S0.12|
 
-|2. Semester                            |Prüfungstermin|-zeit|-raum|
-|---------------------------------------|--------------|-----|-----|
+|2. Semester                              |Prüfungstermin|-zeit|-raum|
+|:----------------------------------------|:-------------|:----|:----|
 |Analysis|_TBA_|_TBA_|_TBA_|
 |Programmieren 2|_TBA_|_TBA_|_TBA_|
 |Theoretische Informatik|_TBA_|_TBA_|_TBA_|
@@ -21,8 +21,8 @@ Auf diesem Wiki werden Notizen zu Modulen des Studiengangs Informatik Game Engin
 |Game Design|_TBA_|_TBA_|_TBA_|
 |Gestaltung und Zeichnen|_TBA_|_TBA_|_TBA_|
 
-|3. Semester                            |Prüfungstermin|-zeit|-raum|
-|---------------------------------------|--------------|-----|-----|
+|3. Semester                              |Prüfungstermin|-zeit|-raum|
+|:----------------------------------------|:-------------|:----|:----|
 |Diskrete Mathematik|_TBA_|_TBA_|_TBA_|
 |Datenbanken|_TBA_|_TBA_|_TBA_|
 |Softwaretechnik 1|_TBA_|_TBA_|_TBA_|
@@ -30,8 +30,8 @@ Auf diesem Wiki werden Notizen zu Modulen des Studiengangs Informatik Game Engin
 |Betriebssysteme|_TBA_|_TBA_|_TBA_|
 |Computergrafik|_TBA_|_TBA_|_TBA_|
 
-|4. Semester                            |Prüfungstermin|-zeit|-raum|
-|---------------------------------------|--------------|-----|-----|
+|4. Semester                              |Prüfungstermin|-zeit|-raum|
+|:----------------------------------------|:-------------|:----|:----|
 |Wahrscheinlichkeitsrechnung & Numerik|_TBA_|_TBA_|_TBA_|
 |Verteilte Softwaresysteme|_TBA_|_TBA_|_TBA_|
 |Rechnernetze|_TBA_|_TBA_|_TBA_|
@@ -39,17 +39,17 @@ Auf diesem Wiki werden Notizen zu Modulen des Studiengangs Informatik Game Engin
 |Game Engineering|_TBA_|_TBA_|_TBA_|
 |Projektmanagement|_TBA_|_TBA_|_TBA_|
 
-|5. Semester (Praxissemester)           |Prüfungstermin|-zeit|-raum|
-|---------------------------------------|--------------|-----|-----|
+|5. Semester (Praxissemester)             |Prüfungstermin|-zeit|-raum|
+|:----------------------------------------|:-------------|:----|:----|
 |Praxisbegrleitende Lehrveranstaltung|_TBA_|_TBA_|_TBA_|
 
-|6. Semester                            |Prüfungstermin|-zeit|-raum|
-|---------------------------------------|--------------|-----|-----|
+|6. Semester                              |Prüfungstermin|-zeit|-raum|
+|:----------------------------------------|:-------------|:----|:----|
 |DV-Projektarbeit|_TBA_|_TBA_|_TBA_|
 |Game-Seminar|_TBA_|_TBA_|_TBA_|
 
-|7. Semester                            |Prüfungstermin|-zeit|-raum|
-|---------------------------------------|--------------|-----|-----|
+|7. Semester                              |Prüfungstermin|-zeit|-raum|
+|:----------------------------------------|:-------------|:----|:----|
 |Bachelorarbeit|_TBA_|_TBA_|_TBA_|
 
 Alle Beiträge stehen unter der [Creative Commons BY-NC-SA 4.0 International Lizenz](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de).
