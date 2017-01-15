@@ -25,7 +25,7 @@ Ein Rechner enthält viele digitale Schalter, welche jeweils den Zustand 0 = Off
 
 Man unterscheidet digitale Schaltungen zwischen Schaltnetzen und Schaltwerken:
 
-|             |Schaltnetze   |Schaltwerken     |
+|             |Schaltnetz    |Schaltwerk       |
 |------------:|--------------|-----------------|
 |Gedächtnis   |nein          |ja               |
 |Rückkoppelung|nein          |ja       	       |
@@ -33,18 +33,16 @@ Man unterscheidet digitale Schaltungen zwischen Schaltnetzen und Schaltwerken:
 
 Der Rechner ist ein Schaltwerk, welcher aber durch Schaltnetze realisiert wird.
 
-
 ### Synchronisation
 
-Jeder Schalter benötigt Zeit zum Umschalten (=**Schaltzeit**), so auch digitale Schalter. D.h. dass das Ausgangssignal erst betrachtet werden darf, wenn der _Umschaltvorgang fertig_ ist. 
+Jeder Schalter benötigt Zeit zum Umschalten (**Schaltzeit**), so auch digitale Schalter. D.h. dass das Ausgangssignal erst betrachtet werden darf, wenn der Umschaltvorgang abgeschlossen ist. 
 
-=> Nutzen von **Synchronisation** -> *Taktsignale*
+=> Nutzen von **Synchronisation** mithilfe von **Taktsignalen**
 
 ![Synchronisation](https://puu.sh/t2oUW/81acca0e05.png)
 
 Das **Eingangssignal** wird zu einem bestimmten _Taktzeitpunkt_ angelegt und die
 **Ausgangssignale** erst nach einer _festgelegten Anzahl von Takten_ gelesen.
-
 
 ## Schaltfunktionen
 
@@ -52,11 +50,7 @@ Das **Eingangssignal** wird zu einem bestimmten _Taktzeitpunkt_ angelegt und die
 
 **Defintion Schaltfunktion**:
 
->Sei V={0, 1} die Menge der beiden Signale 0, 1. Die Funktion
-
->![Funktion](https://puu.sh/t2oU3/803a519966.png)
-
->mit m,n ≥ 1 heißen *Boole'sche Funktionen* oder auch *Schaltfunktionen*.
+>Sei $$V=\{0, 1\}$$ die Menge der beiden Signale 0, 1. Die Funktion \$$f: v^n -> n^m$$ mit $$m,n ≥ 1$$ heißen *Boole'sche Funktionen* oder auch *Schaltfunktionen*.
 
 Anmerkung:
 
@@ -240,7 +234,7 @@ Jede echte Boole'sche Funktion f lässt sich in einer der beiden folgenden einde
 - Die durch _Konjunktion verknüpfte Terme_ der _DNF_ heißen **Minterme**,
 - die _entsprechenden Disjunktionen_ der _KNF_ heißen **Maxterme**.
 - Aus jeder Schaltfunktion (als Tabelle) kann mit den Normalformen ein äquivalenter Boole'scher Term konstruiert werden.
-- *Umsetzung*: DNF -> wegen der Konjunktion muss man nur die Terme $$f(x1, ..., xn) = 1$$ betrachten | KNF -> wegen der Disjunktion können die Terme $$f(x1, ..., xn) = 1$$ ignoriert werden.
+- *Umsetzung*: DNF -> wegen der Konjunktion muss man nur die Terme $$f(x_1, ..., x_n) = 1$$ betrachten | KNF -> wegen der Disjunktion können die Terme $$f(x_1, ..., x_n) = 1$$ ignoriert werden.
 
 Zur Darstellung von Schaltfunktionen durch Boole'sche Terme genügen neben den Variablen xi die folgenden alternativen Operatormengen: {$$\lor$$, $$\lnot$$}, {$$\land$$, $$\lnot$$}, {$$NAND$$}, {$$NOR$$}.
 
