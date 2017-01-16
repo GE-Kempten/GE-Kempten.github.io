@@ -231,6 +231,8 @@ Bsp: Finanzbereich: EUR in ct, d.h. Verschiebung um 2 Kommastellen
 
 ![ASCII-Tabelle]()
 
+#### Erweiterung
+
 - Erweiterter ASCII (8bit) 
 	- +128 Zeichen (Sonderzeichen und länderspezifische Ergänzungen)
 - ISO-8859-Normen(8bit)
@@ -239,6 +241,21 @@ Bsp: Finanzbereich: EUR in ct, d.h. Verschiebung um 2 Kommastellen
 - Unicode (> 16bit)
 	- > 100.000 Zeichen
 	- Organisation: 17 Ebenen zu je $$2^{16}$$ = 65536 Zeichen (momentan nur 3 Ebenen gebraucht)
+
+#### UTF-8
+
+Unicode-Zeichen werden eine Byte-Kette mit variabler Känge zugeordnet. 
+
+Dadurch soll Kompatibilität mit bisherigen Zeichensätzen erreicht werden und in Zukunft im Internet den ASCII-Standard und HMTL-Sonderzeichen ablösen.
+
+Code-Zuordnung:
+
+|Unicode|UTF-8|Bemerkung|
+|:-:|:-:|:--|
+|0000 0000 - 0000 007F|0xxx xxxx|Höchstens Bit 0, restliche Bits entsprechen ASCII Code|
+|0000 0080 - 0000 07FF|110x xxxx 10xx xxxx|Die x enthalten die Bitkombination des Unicode-Zeichens|
+|0000 0800 - 0000 FFFF|1110 xxxx 10xx xxxx 10xx xxxx|(rechtsbündig aufgefüllt), die Anzahl der 1en- zu Beginn|
+|0001 0000 - 0010 FFFF|1111 10xxx 10xx xxxx 10xx xxxx 10xx xxxx|steht für die Anzahl der Bytes|
 
 ## Einführung in Algorithmen und Datenstrukturen
 
