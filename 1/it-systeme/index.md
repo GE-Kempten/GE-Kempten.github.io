@@ -17,7 +17,7 @@
 
 ## Einführung
 
-### Schaltnetze und Schaltwerk
+### Schaltnetze und Schaltwerke
 
 Ein Rechner enthält viele digitale Schalter, welche jeweils den Zustand 0 = Off oder 1 = On haben. 
 
