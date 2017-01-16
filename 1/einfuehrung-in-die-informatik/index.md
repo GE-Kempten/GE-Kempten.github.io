@@ -157,9 +157,32 @@ $$ n = \sum^N_{i=0} b_i * B^i = (b_N b_{N-1} ... b_2 b_1 b_0)_B $$
 ![Multiplikation](https://puu.sh/toBXL/3db50e5474.png)
 
 #### Umrechnung
+
+##### Simple Umrechnung nach Dezimal
+
+Die n-te Stelle der Ziffer wird auf Basis des Zahlensystems (Anzahl an möglichen Werten) potenziert und anschließend mit dem Wert der Stelle multipliziert.
+
+> 0010 1010 =
+> 
+> $$ 2^7 * 0 + 2^6 * 0 + 2^5 * 1 + 2^4 * 0 + 2^3 * 1 + 2^2 * 0 + 2^1 * 1 + 2^0 * 0 = $$
+>
+> 32 + 8 + 2 =
+>
+> 42
+
+> DAB =
+>
+> $$ 16^2 * D + 16^1 * A + 16^0 * B = $$ 
+>
+> 3328 + 160 + 11 =
+>
+> 3499
+
 zwischen Zahlensystemen -> Horner-Schema:
 
 $$ n = ((...(b_N * B + b_{n-1})* B + b_{n-2})* B + ... + b_1) $$
+
+
 
 **Sukzessive Division**:
 
@@ -173,13 +196,20 @@ $$ q_{n-2} : B = q_{N-1} Rest b_{N-1} $$
 
 $$ q_{n-1} : B = 0 Rest b_N $$
 
-> $$ 0010 1010 = $$
-> 
-> $$ 2^7 * 0 + 2^6 * 0 + 2^5 * 1 + 2^4 * 0 + 2^3 * 1 + 2^2 * 0 + 2^1 * 1 + 2^0 * 0 = $$
+> $$ 1337 : 2 = 668 R 1 $$
+> $$ 668 : 2 = 334 R 0 $$
+> $$ 334 : 2 = 167 R 0 $$
+> $$ 167 : 2 = 83 R 1 $$
+> $$ 83 : 2 = 41 R 1 $$
+> $$ 41 : 2 = 20 R 1 $$
+> $$ 20 : 2 = 10 R 0 $$
+> $$ 10 : 2 = 5 R 0 $$
+> $$ 5 : 2 = 2 R 1 $$
+> $$ 2 : 2 = 1 R 0 $$
+> $$ 1 : 2 = 0 R 1 $$
 >
-> 32 + 8 + 2 =
->
-> 42
+> $$ 0101 0011 1001 $$
+
 
 **Sukzessive Multiplikation**:
 
@@ -195,7 +225,7 @@ $$ q_0 = q_1 * B + b_1 $$
 
 $$ n = q_0 * B + b_0 $$
 
-![Beispielrechnungen]()
+
 
 **Vereinfachtes Schema**: Konvertierung in n-große Blöcke -> Blöcke getrennt Konvertieren.
 
