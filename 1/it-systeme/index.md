@@ -352,18 +352,18 @@ Ein als Folge von Opcodes vorliegendes Programm wird in einer Datei gespeichert,
 
 ## Beispielprogramm
 
-Im Folgenden ein Beispielprogramm in Fake-Assembly, welches die Zahlen 1 bis 100 addiert. Alles hinter dem `#` ist ein Kommentar und wird ignoriert.
+Im Folgenden ein Beispielprogramm in Fake-Assembly, welches die Zahlen 1 bis 100 addiert. Alles hinter dem `;` ist ein Kommentar und wird ignoriert.
 
 ```assembly
-	mov	EAX,0		# Schreibe 0 in das Register EAX
-	mov	EBX,100		# Schreibe 100 in das Register EBX
+	mov	EAX,0		; Schreibe 0 in das Register EAX
+	mov	EBX,100		; Schreibe 100 in das Register EBX
 schleife:
-	add	EAX, EBX	# Addiere EAX und EBX und speichere das Ergebnis in EAX
-	dec	EBX		# Erniedrige EBX
-	jnz	schleife	# Spring zurück zu "schleife:" wenn EBX != Null (JUMP NOT ZERO)
-	mov	[403000h],EAX	# Schreibe den Inhalt von EAX nach 403000h
+	add	EAX, EBX	; Addiere EAX und EBX und speichere das Ergebnis in EAX
+	dec	EBX		; Erniedrige EBX
+	jnz	schleife	; Spring zurück zu "schleife:" wenn EBX != Null (JUMP NOT ZERO)
+	mov	[403000h],EAX	; Schreibe den Inhalt von EAX nach 403000h
 	push	0
-	call	ExitProcess	# Verlasse das Programm mit dem Code 0
+	call	ExitProcess	; Verlasse das Programm mit dem Code 0
 ```
 
 Zur Ausführung auf der CPU muss das Programm noch in eine Folge von Opcodes übersetzt werden, was normalerweise der _Assembler_ (ein Programm zum Schreiben von Assembly-Code) erledigt. Dabei wird jeder Befehl in eine ihm zugeordnete Kennnummer in Binär bzw. Hexadezimal umgewandelt, ebenso werden sonstige Werte konvertiert.
