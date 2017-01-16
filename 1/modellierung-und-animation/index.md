@@ -1069,5 +1069,58 @@ In Games:
 
 
 
+# Animation
+
+## Animationstechniken
+
+Man unterscheidet zwischen **High- und Lowleveltechniken** der Animation, der Übergang ist fließend.
+
+|Einordnung    |Technik                               |
+|:------------:|:-------------------------------------|
+|**Lowlevel**  |Parametrisches Keyframing             |
+|              |Pfadanimation (Splined Animation)     |
+|      $$\mid$$|Soft-Object Animation                 |
+|      $$\mid$$|Kinematik und inverse Kinematik       |
+|      $$\mid$$|Prozedurale Techniken                 |
+|      $$\mid$$|>Dynamik für Partikel                 |
+|      $$\mid$$|>Analytische Modelle (Simulation)     |
+|      V       |>Mimik und Gestik                     |
+|              |Stochastische Animation               |
+|**Highlevel** |Verhaltens-Animation (Pathfinding, AI)|
+
+### Parametrisches Keyframing
+
+Die Eigenschaften (_Parameter_, z.B. Pos, Rot, etc.) zu zwei Zeitpunkten (_Keyframes_) werden angegeben, dazwischen wird ein Übergang interpoliert oder approximiert. Bei der Interpolation liegen alle berechneten Punkte genau auf der Kurve, bei der Approximation wird eine _Boundingbox_ (eine Art Toleranzbereich) um die Kurve gelegt, in der alle Punkte liegen.
+
+**Problem: Arc Length**: Wenn die Punkte ungleich nah beieinander liegen, kann es passieren, dass die Änderungsgeschwindigkeit der Parameter auf der Kurve variiert. Die Meißten Programme (so auch Blender) gleichen diesen Effekt jedoch automatisch aus. Man spricht dabei von _Reparametrisierung_.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
