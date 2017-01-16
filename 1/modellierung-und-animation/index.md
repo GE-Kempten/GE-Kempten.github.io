@@ -1094,7 +1094,11 @@ Die Eigenschaften (_Parameter_, z.B. Pos, Rot, etc.) zu zwei Zeitpunkten (_Keyfr
 
 **Problem: Arc Length**: Wenn die Punkte ungleich nah beieinander liegen, kann es passieren, dass die Änderungsgeschwindigkeit der Parameter auf der Kurve variiert. Die Meißten Programme (so auch Blender) gleichen diesen Effekt jedoch automatisch aus. Man spricht dabei von _Reparametrisierung_.
 
+**Rigid Body Transformations**: Auf diese Weise ist es auch möglich, die Translation, Rotation und Skalierung des Objekts zu interpolieren. Irgendwas mit Rotation macht hier Probleme. Wieso ist 3D so kopliziert?
 
+whaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaat
+
+/me ist verwirrt
 
 
 
