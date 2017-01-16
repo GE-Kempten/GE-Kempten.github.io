@@ -317,7 +317,7 @@ Der **Haupt-** oder **Arbeitsspeicher** wird als Halbleiterspeicher mit wahlfrei
 
 **SRAM-Funktionsweise**
 
-Ein SRAM-Baustein besteht aus einem **MAR** (Memory Address Register), einem **MDR** (Memory Data Register**) und einer Schaltleitung für Schreib-, Lese-, oder Wartemodus.
+Ein SRAM-Baustein besteht aus einem **MAR** (Memory Address Register), einem **MDR** (Memory Data Register) und einer Schaltleitung für Schreib-, Lese-, oder Wartemodus.
 
 ### ROM
 
