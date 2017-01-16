@@ -281,12 +281,28 @@ Das Rechenwerk besteht aus mindestens einer [Arithmetisch-Logischen-Einheit](htt
 
 - Eine ALU hat drei **Daten**-Busse, zwei für die Eingabe von Operanden sowie einen für die Ausgabe des Ergebnisses.
 - Die Daten-Busse sind mit **Registern** verbunden, die gelesen und beschrieben werden können.
+- Um den Zugriff auf die Register zu regulieren, wird ein **Tristate-Buffer** verwendet, einem Schalter, der eine Verbindung über eine Steuerleitung unterberechen kann.
 - Über einen **OpCode** erfährt die ALU, welcher Operator angewand werden soll und ob es sich um eine arithmetische oder eine logsiche Operation handelt.
 - Die **Status**-Leitung enthält Informationen zu dem Ergebnis und wird verwendet um mehrere ALUs miteinander zu verketten.
 
+
 ## Steuerwerk
 
-**Todo**
+Damit Operationen hintereinander ausgeführt werden können, wird die Rechenzeit in _Takte_ aufgeteilt, die aus drei _Phasen_ bestehen:
+
+- In der **Holphase** werden die Daten aus den Registern geholt
+- In der **Rechenphase** werden Rechenoperationen durchgeführt
+- In der **Brignphase** wird das Ergebnis in die Mehrzweckregister zurückgeschrieben
+
+Die **Timing Unit** (auch _TU_) gibt den Takt vor, meißtens mithilfe eines Quarzes. _And yes, that is how you say it._
+
+Alle Operationen, die in einem Takt ausgeführt werden, werden **Mikrobefehl** genannt. Ein **Mikrobefehlswort** setzt sich zusammen aus
+
+- den Nummern der Steuerleitungen der **Quellregister**, in denen die Operanden liegen,
+- einem **OpCode**, der der ALU mitteilt, welcher Befehl ausgeführt werden soll,
+- sowie einer Steuerleitungsnummer für das **Zielregister**, in dem das Ergebnis gespeichert werden soll.
+
+Diese Steuersignale werden zu einer Binärzahl zusammengefasst und bilden ein **Mikrobefehlswort**. Eine `1` an einer Stelle bedeutet, dass die entsprechende Leitung eingeschaltet wird.
 
 ## Speicher
 
