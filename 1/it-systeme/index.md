@@ -285,7 +285,6 @@ Das Rechenwerk besteht aus mindestens einer [Arithmetisch-Logischen-Einheit](htt
 - Über einen **OpCode** erfährt die ALU, welcher Operator angewand werden soll und ob es sich um eine arithmetische oder eine logsiche Operation handelt.
 - Die **Status**-Leitung enthält Informationen zu dem Ergebnis und wird verwendet um mehrere ALUs miteinander zu verketten.
 
-
 ## Steuerwerk
 
 Damit Operationen hintereinander ausgeführt werden können, wird die Rechenzeit in _Takte_ aufgeteilt, die aus drei _Phasen_ bestehen:
@@ -298,15 +297,37 @@ Die **Timing Unit** (auch _TU_) gibt den Takt vor, meißtens mithilfe eines Quar
 
 Alle Operationen, die in einem Takt ausgeführt werden, werden **Mikrobefehl** genannt. Ein **Mikrobefehlswort** setzt sich zusammen aus
 
-- den Nummern der Steuerleitungen der **Quellregister**, in denen die Operanden liegen,
 - einem **OpCode**, der der ALU mitteilt, welcher Befehl ausgeführt werden soll,
+- den Nummern der Steuerleitungen der **Quellregister**, in denen die Operanden liegen,
 - sowie einer Steuerleitungsnummer für das **Zielregister**, in dem das Ergebnis gespeichert werden soll.
+- Außerdem enthält das Wort eine **Speicheraddresse**
+- und Informationen über den **RAM-IO-Modus**.
 
-Diese Steuersignale werden zu einer Binärzahl zusammengefasst und bilden ein **Mikrobefehlswort**. Eine `1` an einer Stelle bedeutet, dass die entsprechende Leitung eingeschaltet wird.
+|OpCode |Quellregister 1|Quellregister 2|Zielregister|Speicheraddresse|IO|
+|:-----:|:-------------:|:-------------:|:----------:|:--------------:|::|
+|0000 00|00 0000 00     |00 0000 00     |00 0000 00  |00 0000         |00|
+
+Diese Steuersignale werden zu einer Binärzahl zusammengefasst und bilden ein **Mikrobefehlswort**. Eine `1` an einer Stelle bedeutet, dass die entsprechende Leitung eingeschaltet wird; eine `0`, dass die Leitung aus ist.
 
 ## Speicher
 
-**Todo**
+### RAM
+
+Der **Haupt-** oder **Arbeitsspeicher** wird als Halbleiterspeicher mit wahlfreiem Zugriff realisiert (**R**andom **A**ccess **M**emory), in dem der Prozessor einzelne Bytes lesen und schreiben kann. Man unterscheidet zwischen statischem **SRAM**, der Informationen in _Flip-Flops_ speichert, und dynamischem **DRAM**, der _Kondensatoren_ verwendet. Beide Techniken haben gemein, dass der Speicher in kurzen Abständen aufgefrischt werden muss und die Daten nach dem lesen wieder in den Speicher zurückgeschrieben werden müssen. Da bei DRAM Verluste beim Lesen auftreten können und er langsamer und billiger ist, werden die beiden Techniken in der Praxis oft kombiniert: Zusätzslich zum DRAM-Arbeitsspeicher wird dann ein SRAM-Pufferspeicher verwendet (zB. DDR 4).
+
+**SRAM-Funktionsweise**
+
+Ein SRAM-Baustein besteht aus einem **MAR** (Memory Address Register), einem **MDR** (Memory Data Register**) und einer Schaltleitung für Schreib-, Lese-, oder Wartemodus.
+
+### ROM
+
+In Festwertspeichern (**R**ead **O**nly **M**emory) werden konstante Daten gespeichert. Er ist in folgenden Ausführungen möglich:
+
+- **ROM** Read Only Memory: Programmierung fest verdrahtet (Hardcoded, Hardwired)
+- **PROM** Programmable Read Only Memory: Ein mal programmierbar
+- **EPROM** Erasable Programmable Read Only Memory: Mit spezieller Hardware programmierbar
+- **EEPROM** Electrical Erasable Porgrammable Read Only Memory: Programmierung und Löschung einzelner Bytes durch Elektrische Spannung
+- **Flash-EPROM**: Programmierbar, Elektronische Löschung ganzer Sektoren durch Elektrische Spannung
 
 # Assemblerprogammierung
 
