@@ -45,6 +45,7 @@ Diese Aspekte sind nicht Ziel dieses Faches:
 	- [ ] Dispersion
 	- [ ] Coating
 	- [ ] Texture Mapping
+- [ ] Animation
 
 
 Todo: (* Anzahl)
