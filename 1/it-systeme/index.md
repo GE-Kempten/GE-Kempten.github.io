@@ -266,6 +266,8 @@ Beispiel (Übung 1 Aufgabe 8):
 
 # Assemblerprogammierung
 
+Die Aufgabe der CPU ist es, _Assembler-Befehle_ zu auszuführen, welche vom Hersteller definiert werden. Moderne CPUs haben einen Befehlssatz voneinigen hundert Befehlen für Datentransfer und Arithmetische oder logische Operationen. Zu den gängigen Befehlen zählt unter Anderem:
+
 |Befehl |Beschreibung                       |
 |-------|-----------------------------------|
 |`LOAD` |Laden eines CPU-Registers mit einem Wert aus dem Speicher|
@@ -274,9 +276,30 @@ Beispiel (Übung 1 Aufgabe 8):
 |`COMPARE`|Vergleich des Inhalts zweier Register|
 |`NOT`, `OR`, `AND`, `XOR`|Logische Befehle auf Registern|
 |`ADD`, `SUB`, `MUL`, `DIV`|Arithmetische Operationen auf Registern|
+|`INC`, `DEC`|Erhöhen oder Erniedrigen eines Werts um 1|
 |`CALL`, `RETURN`|Aufruf von Unterprogrammen, Rücksprung von dort|
 |`OUT`, `IN`|Ein- und Ausgabe von Daten an Register der Peripheriegeräte|
+|`BRANCH`, `JUMP`|Sprungbefehle|
 
+Diese Befehle werden in einer im Speicher vorliegenden Reihenfolge von **Opcodes** ausgeführt. Der **Befehlszähler** (eine Variable, die auf den auszuführenden Befehl zeigt) wird nach jeder Aktion _inkrementiert_ oder mittels _Sprungbefehlen_ auf einen anderen Wert gesetzt, um Schleifen, Funktionen, usw. umzusetzen.
+
+Ein als Folge von Opcodes vorliegendes Programm wird in einer Datei gespeichert, die zur Ausführung in den Speicher geladen wird. Dafür durchläuft die CPU den sogenannten _Load-Increment-Execute-Zyklus_. Der Opcode wird geladen, der Befehlszähler wird erhöht, der Befehl wird ausgeführt, Repeat.
+
+## Beispielprogramm
+
+Im Folgenden ein Beispielprogramm in Fake-Assembly, welches die Zahlen 1 bis 100 addiert. Alles hinter dem `#` ist ein Kommentar und wird ignoriert.
+
+```assembly
+	mov	EAX,0		# Schreibe 0 in das Register EAX
+	mov	EBX,100		# Schreibe 100 in das Register EBX
+schleife:
+	add	EAX, EBX	# Addiere EAX und EBX und speichere das Ergebnis in EAX
+	dec	EBX		# Erniedrige EBX
+	jnz	schleife	# Spring zurück zu "schleife:" wenn EBX != Null (JUMP NOT ZERO)
+	mov	[403000h],EAX	# Schreibe den Inhalt von EAX nach 403000h
+	push	0
+	call	ExitProcess	# Verlasse das Programm mit dem Code 0
+```
 # Peripherie
 
 **Todo**
