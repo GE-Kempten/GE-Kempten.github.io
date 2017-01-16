@@ -283,7 +283,7 @@ Die Aufgabe der CPU ist es, _Assembler-Befehle_ zu auszuführen, welche vom Hers
 
 Diese Befehle werden in einer im Speicher vorliegenden Reihenfolge von **Opcodes** ausgeführt. Der **Befehlszähler** (eine Variable, die auf den auszuführenden Befehl zeigt) wird nach jeder Aktion _inkrementiert_ oder mittels _Sprungbefehlen_ auf einen anderen Wert gesetzt, um Schleifen, Funktionen, usw. umzusetzen.
 
-Ein als Folge von Opcodes vorliegendes Programm wird in einer Datei gespeichert, die zur Ausführung in den Speicher geladen wird. Dafür durchläuft die CPU den sogenannten _Load-Increment-Execute-Zyklus_. Der Opcode wird geladen, der Befehlszähler wird erhöht, der Befehl wird ausgeführt, Repeat.
+Ein als Folge von Opcodes vorliegendes Programm wird in einer Datei gespeichert, die zur Ausführung in den Speicher geladen wird. Dafür durchläuft die CPU den sogenannten **Load-Increment-Execute-Zyklus**. Der Opcode wird geladen, der Befehlszähler wird erhöht, der Befehl wird ausgeführt, Repeat.
 
 ## Beispielprogramm
 
@@ -300,6 +300,9 @@ schleife:
 	push	0
 	call	ExitProcess	# Verlasse das Programm mit dem Code 0
 ```
+
+Zur Ausführung auf der CPU muss das Programm noch in eine Folge von Opcodes übersetzt werden, was normalerweise der _Assembler_ (ein Programm zum Schreiben von Assembly-Code) erledigt. Dabei wird jeder Befehl in eine ihm zugeordnete Kennnummer in Binär bzw. Hexadezimal umgewandelt, ebenso werden sonstige Werte konvertiert.
+
 # Peripherie
 
 **Todo**
