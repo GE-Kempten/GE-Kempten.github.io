@@ -262,7 +262,26 @@ Beispiel (Übung 1 Aufgabe 8):
 
 # Programmierbare Systeme
 
-**Todo**
+Ein **Universalrechner** nach J. von Neumann (1946/47) besteht aus folgenden essenziellen Bestandteilen:
+
+|Bestandteil|Funktion             |
+|-----------|---------------------|
+|Rechenwerk |Ausführung von Rechenoperationen und logischen Verknüpfungen|
+|Steuerwerk |Steuerung des Programmablaufs|
+|Speicher   |Speicherung von Programmen und Daten|
+|I/O        |Ein-/Ausgabe von Programmen und Daten|
+
+## Rechenwerk (ALU)
+
+Das Rechenwerk besteht aus mindestens einer [Arithmetisch-Logischen-Einheit](https://de.wikipedia.org/wiki/Arithmetisch-logische_Einheit) (**ALU**), also einem Bauteil, welches sowohl Arithmetische, als auch Logische Operationen ausführen kann.
+
+![ALU](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/ALU_block.gif/800px-ALU_block.gif)
+
+- Eine ALU hat drei **Daten**-Busse, zwei für die Eingabe von Operanden sowie einen für die Ausgabe des Ergebnisses.
+- Über einen **OpCode** erfährt die ALU, welcher Operator angewand werden soll und ob es sich um eine arithmetische oder eine logsiche Operation handelt.
+- Die **Status**-Leitung enthält Informationen zu dem Ergebnis und wird verwendet um mehrere ALUs miteinander zu verketten.
+
+![n-Bit ALU](https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Simplified-ALU.svg/330px-Simplified-ALU.svg.png)
 
 # Assemblerprogammierung
 
