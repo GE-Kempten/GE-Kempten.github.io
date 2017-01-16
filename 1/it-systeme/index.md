@@ -266,8 +266,50 @@ Beispiel (Übung 1 Aufgabe 8):
 
 # Assemblerprogammierung
 
-**Todo**
+|Befehl |Beschreibung                       |
+|-------|-----------------------------------|
+|`LOAD` |Laden eines CPU-Registers mit einem Wert aus dem Speicher|
+|`STORE`|Speichern eines Registerinhalts in einen Speicherplatz des Speichers|
+|`MOVE` |Verschiebung ganzer Datenblöcke im Speicher|
+|`COMPARE`|Vergleich des Inhalts zweier Register|
+|`NOT`, `OR`, `AND`, `XOR`|Logische Befehle auf Registern|
+|`ADD`, `SUB`, `MUL`, `DIV`|Arithmetische Operationen auf Registern|
+|`CALL`, `RETURN`|Aufruf von Unterprogrammen, Rücksprung von dort|
+|`OUT`, `IN`|Ein- und Ausgabe von Daten an Register der Peripheriegeräte|
 
 # Peripherie
 
 **Todo**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
