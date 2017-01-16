@@ -244,7 +244,7 @@ Bsp: Finanzbereich: EUR in ct, d.h. Verschiebung um 2 Kommastellen
 
 #### UTF-8
 
-Unicode-Zeichen werden eine Byte-Kette mit variabler Känge zugeordnet. 
+Unicode-Zeichen werden eine Byte-Kette mit variabler Länge zugeordnet. 
 
 Dadurch soll Kompatibilität mit bisherigen Zeichensätzen erreicht werden und in Zukunft im Internet den ASCII-Standard und HMTL-Sonderzeichen ablösen.
 
