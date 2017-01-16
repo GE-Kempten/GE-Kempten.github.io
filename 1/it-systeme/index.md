@@ -256,6 +256,8 @@ Beispiel (Übung 1 Aufgabe 8):
 
 ![1.8](https://puu.sh/t4y8x/349b4f1d27.png)
 
+
+
 # Logische Bausteine
 
 **Todo**
@@ -278,10 +280,17 @@ Das Rechenwerk besteht aus mindestens einer [Arithmetisch-Logischen-Einheit](htt
 ![ALU](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/ALU_block.gif/800px-ALU_block.gif)
 
 - Eine ALU hat drei **Daten**-Busse, zwei für die Eingabe von Operanden sowie einen für die Ausgabe des Ergebnisses.
+- Die Daten-Busse sind mit **Registern** verbunden, die gelesen und beschrieben werden können.
 - Über einen **OpCode** erfährt die ALU, welcher Operator angewand werden soll und ob es sich um eine arithmetische oder eine logsiche Operation handelt.
 - Die **Status**-Leitung enthält Informationen zu dem Ergebnis und wird verwendet um mehrere ALUs miteinander zu verketten.
 
-![n-Bit ALU](https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Simplified-ALU.svg/330px-Simplified-ALU.svg.png)
+## Steuerwerk
+
+**Todo**
+
+## Speicher
+
+**Todo**
 
 # Assemblerprogammierung
 
