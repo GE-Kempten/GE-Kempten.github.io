@@ -248,12 +248,9 @@ Prinzip:
 Vorgehensweise:
 
 1. Bestimmung der DNF
-
 2. Konstruktion des KV-Diagramms
-
 3. Eintragen der Minterme in das KV-Diagramm
-
-4. Verschmelzung benachbarter Minterme 
+4. Verschmelzung benachbarter Minterme
 
 Beispiel (Übung 1 Aufgabe 8):
 
