@@ -256,8 +256,6 @@ Beispiel (Übung 1 Aufgabe 8):
 
 ![1.8](https://puu.sh/t4y8x/349b4f1d27.png)
 
-
-
 # Logische Bausteine
 
 **Todo**
@@ -331,42 +329,31 @@ In Festwertspeichern (**R**ead **O**nly **M**emory) werden konstante Daten gespe
 
 # Assemblerprogammierung
 
-Die Aufgabe der CPU ist es, _Assembler-Befehle_ zu auszuführen, welche vom Hersteller definiert werden. Moderne CPUs haben einen Befehlssatz voneinigen hundert Befehlen für Datentransfer und Arithmetische oder logische Operationen. Zu den gängigen Befehlen zählt unter Anderem:
+Die Aufgabe der CPU ist es, _Assembler-Befehle_ zu auszuführen, welche vom Hersteller definiert werden. Moderne CPUs haben einen Befehlssatz voneinigen hundert Befehlen für Datentransfer und Arithmetische oder logische Operationen.
 
-|Befehl |Beschreibung                       |
-|-------|-----------------------------------|
-|`LOAD` |Laden eines CPU-Registers mit einem Wert aus dem Speicher|
-|`STORE`|Speichern eines Registerinhalts in einen Speicherplatz des Speichers|
-|`MOVE` |Verschiebung ganzer Datenblöcke im Speicher|
-|`COMPARE`|Vergleich des Inhalts zweier Register|
-|`NOT`, `OR`, `AND`, `XOR`|Logische Befehle auf Registern|
-|`ADD`, `SUB`, `MUL`, `DIV`|Arithmetische Operationen auf Registern|
-|`INC`, `DEC`|Erhöhen oder Erniedrigen eines Werts um 1|
-|`CALL`, `RETURN`|Aufruf von Unterprogrammen, Rücksprung von dort|
-|`OUT`, `IN`|Ein- und Ausgabe von Daten an Register der Peripheriegeräte|
-|`BRANCH`, `JUMP`|Sprungbefehle|
+### Syntax
+
+`Mnemonic [Arg1[,Arg2]] ; Kommentar`
+
+### Gängige Befehle
+
+```assembly
+ADD A,B     ; addiere Inhalt von B zu A und speichere das Ergebnis in A
+ADD A,[4FFH]; addiere Inhalt von Speicherzelle 4FFH zu A und speichere das Ergebnis in A
+ADD A,0101B ; addiere 101 (=5) zu A und speichere das Ergebnis in A
+ADD A,B     ; A = A + B
+SUB A,B     ; A = A - B
+CMP A,B     ; vergleicht Inhalt von A und B
+AND A,B     ; logisches UND der Register A und B
+OR A,B      ; logisches ODER der Register A und B
+TEST A,B    ; wie AND, allerdings wird A nicht überschrieben
+```
+
+### Programmablauf
 
 Diese Befehle werden in einer im Speicher vorliegenden Reihenfolge von **Opcodes** ausgeführt. Der **Befehlszähler** (eine Variable, die auf den auszuführenden Befehl zeigt) wird nach jeder Aktion _inkrementiert_ oder mittels _Sprungbefehlen_ auf einen anderen Wert gesetzt, um Schleifen, Funktionen, usw. umzusetzen.
 
 Ein als Folge von Opcodes vorliegendes Programm wird in einer Datei gespeichert, die zur Ausführung in den Speicher geladen wird. Dafür durchläuft die CPU den sogenannten **Load-Increment-Execute-Zyklus**. Der Opcode wird geladen, der Befehlszähler wird erhöht, der Befehl wird ausgeführt, Repeat.
-
-## Beispielprogramm
-
-Im Folgenden ein Beispielprogramm in Fake-Assembly, welches die Zahlen 1 bis 100 addiert. Alles hinter dem `;` ist ein Kommentar und wird ignoriert.
-
-```assembly
-	mov	EAX,0		; Schreibe 0 in das Register EAX
-	mov	EBX,100		; Schreibe 100 in das Register EBX
-schleife:
-	add	EAX, EBX	; Addiere EAX und EBX und speichere das Ergebnis in EAX
-	dec	EBX		; Erniedrige EBX
-	jnz	schleife	; Spring zurück zu "schleife:" wenn EBX != Null (JUMP NOT ZERO)
-	mov	[403000h],EAX	; Schreibe den Inhalt von EAX nach 403000h
-	push	0
-	call	ExitProcess	; Verlasse das Programm mit dem Code 0
-```
-
-Zur Ausführung auf der CPU muss das Programm noch in eine Folge von Opcodes übersetzt werden, was normalerweise der _Assembler_ (ein Programm zum Schreiben von Assembly-Code) erledigt. Dabei wird jeder Befehl in eine ihm zugeordnete Kennnummer in Binär bzw. Hexadezimal umgewandelt, ebenso werden sonstige Werte konvertiert.
 
 # Peripherie
 
