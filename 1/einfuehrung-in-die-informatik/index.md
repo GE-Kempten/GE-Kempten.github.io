@@ -164,7 +164,7 @@ Die n-te Stelle der Ziffer wird auf Basis des Zahlensystems (Anzahl an mögliche
 
 > 0010 1010 =
 > 
-> $$ 2^7 * 0 + 2^6 * 0 + 2^5 * 1 + 2^4 * 0 + 2^3 * 1 + 2^2 * 0 + 2^1 * 1 + 2^0 * 0 = $$
+> \$$ 2^7 * 0 + 2^6 * 0 + 2^5 * 1 + 2^4 * 0 + 2^3 * 1 + 2^2 * 0 + 2^1 * 1 + 2^0 * 0 = $$
 >
 > 32 + 8 + 2 =
 >
@@ -172,7 +172,7 @@ Die n-te Stelle der Ziffer wird auf Basis des Zahlensystems (Anzahl an mögliche
 
 > DAB =
 >
-> $$ 16^2 * D + 16^1 * A + 16^0 * B = $$ 
+> \$$ 16^2 * D + 16^1 * A + 16^0 * B = $$ 
 >
 > 3328 + 160 + 11 =
 >
@@ -196,19 +196,29 @@ $$ q_{n-2} : B = q_{N-1} Rest b_{N-1} $$
 
 $$ q_{n-1} : B = 0 Rest b_N $$
 
-> $$ 1337 : 2 = 668 R 1 $$
-> $$ 668 : 2 = 334 R 0 $$
-> $$ 334 : 2 = 167 R 0 $$
-> $$ 167 : 2 = 83 R 1 $$
-> $$ 83 : 2 = 41 R 1 $$
-> $$ 41 : 2 = 20 R 1 $$
-> $$ 20 : 2 = 10 R 0 $$
-> $$ 10 : 2 = 5 R 0 $$
-> $$ 5 : 2 = 2 R 1 $$
-> $$ 2 : 2 = 1 R 0 $$
-> $$ 1 : 2 = 0 R 1 $$
+> \$$ 1337 : 2 = 668 R 1 $$
 >
-> $$ 0101 0011 1001 $$
+> \$$ 668 : 2 = 334 R 0 $$
+>
+> \$$ 334 : 2 = 167 R 0 $$
+>
+> \$$ 167 : 2 = 83 R 1 $$
+>
+> \$$ 83 : 2 = 41 R 1 $$
+>
+> \$$ 41 : 2 = 20 R 1 $$
+>
+> \$$ 20 : 2 = 10 R 0 $$
+>
+> \$$ 10 : 2 = 5 R 0 $$
+>
+> \$$ 5 : 2 = 2 R 1 $$
+>
+> \$$ 2 : 2 = 1 R 0 $$
+>
+> \$$ 1 : 2 = 0 R 1 $$
+>
+> \$$ 0101 0011 1001 $$
 
 
 **Sukzessive Multiplikation**:
@@ -259,6 +269,7 @@ Bsp: Finanzbereich: EUR in ct, d.h. Verschiebung um 2 Kommastellen
 ![Grafik]()
 
 > Genormte Formate (IEEE):
+>
 > - Short Real: V (1bit), E(8bit), Mantisse (23 bit)
 > - Long Real: V(1bit), E(11bit), Mantisse (52 bit)
 
