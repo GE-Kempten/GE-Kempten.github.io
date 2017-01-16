@@ -91,14 +91,16 @@ Aber: Nicht alle Anforderungen können gleichzeitig erfüllt werden
 #### Informationsgehalt
 
 Informationsgehalt/Entscheidungsinformation $$ I $$ eines Zeichens $$ x_i $$ (in bit):
+
 $$ I(x_i) = log_2 \frac {1}{w(x_i)} $$
 
 > $$ w(x_i) $$ -> Auftretungswahrscheinlichkeit des Zeichens $$ x_i $$
+>
 > $$ I(x_i) $$ -> minimaler Anzahl von 0/1-Entscheidungen $$
 
 Entropie bzw. mittlerer Informationsgehalt $$ H $$:
 
-$$ H = \sum^n_{i=1} w(x_i) * I(x_i) * log_2 \frac {1}{w(x_i)} $$
+$$ H = \sum^n_{i=1} w(x_i) * I(x_i) = \sum^n_{i=1} w(x_i) * log_2 \frac {1}{w(x_i)} $$
 
 Mittlere Wortlänge einer Codierung:
 
@@ -106,11 +108,15 @@ $$ L = \sum^n_{i=1} w(x_i) * l(i) $$
 
 > $$ l(i) $$ -> Wortlänge des Codes des i-ten Zeichens 
 
-Shannon'sches Codierungstheorem: $$ L ≥ H $$
+Shannon'sches Codierungstheorem: 
 
-> wenn = -> dann Codierung kompakt
+$$ L ≥ H $$
 
-Code Redundanz: $$ R = L - H $$
+> wenn = -> Codierung kompakt
+
+Code Redundanz: 
+
+$$ R = L - H $$
 
 > Größe der Anteil einer Nachricht, die im statistischen Sinne keine Information trägt 
 
@@ -130,12 +136,13 @@ Darstellung von:
 
 |Name|Schreibweise|
 |--:|:--|
-|Negation|$$ \lnot $$|
+|Negation|$$ \lnot a$$|
 |Konjunktion|$$a \land b$$|
 |Disjunktion|$$a \lor b$$|
 
 ### Polyadische Zahlensysteme
 Polyadische Zahlensysteme unterscheiden sich in erster Linie durch ihre Basis, also durch die Anzahl der verwendeten Symbole.
+
 - Zehnersystem (Dezimalsystem): { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 }
 - Zweiersystem (Dualsystem): { 0, 1 }
 - Vierersystem (Quarternärsystem): { 0, 1, 2, 3 }
@@ -182,7 +189,9 @@ zwischen Zahlensystemen -> Horner-Schema:
 
 $$ n = ((...(b_N * B + b_{n-1})* B + b_{n-2})* B + ... + b_1) $$
 
+![Beispiel 1]()
 
+![Beispiel 2]()
 
 **Sukzessive Division**:
 
@@ -234,8 +243,6 @@ $$ q_{N-1} = q_{N-2} * B + b_{N-2} $$
 $$ q_0 = q_1 * B + b_1 $$
 
 $$ n = q_0 * B + b_0 $$
-
-
 
 **Vereinfachtes Schema**: Konvertierung in n-große Blöcke -> Blöcke getrennt Konvertieren.
 
@@ -292,7 +299,7 @@ Bsp: Finanzbereich: EUR in ct, d.h. Verschiebung um 2 Kommastellen
 	* Erweiterung für andere Alphabete (kyrillisch, griechisch, thai)
 	* ISO-8859-1 für West-Europa enthält ASCII
 * Unicode (> 16bit)
-	* >100.000 Zeichen
+	* 100.000+ Zeichen
 	* Organisation: 17 Ebenen zu je $$2^{16}$$ = 65536 Zeichen (momentan nur 3 Ebenen gebraucht)
 
 #### UTF-8
@@ -303,12 +310,12 @@ Dadurch soll Kompatibilität mit bisherigen Zeichensätzen erreicht werden und i
 
 Code-Zuordnung:
 
-|Unicode|UTF-8|
-|:-:|:-:|
-|0000 0000 - 0000 007F|0xxx xxxx|
-|0000 0080 - 0000 07FF|110x xxxx 10xx xxxx|
-|0000 0800 - 0000 FFFF|1110 xxxx 10xx xxxx 10xx xxxx|
-|0001 0000 - 0010 FFFF|1111 10xx 10xx xxxx 10xx xxxx 10xx xxxx|
+|Bsp.|Unicode|UTF-8|
+|:-:|:-:|:--|
+|1.|0000 0000 - 0000 007F|0xxx xxxx|
+|2.|0000 0080 - 0000 07FF|110x xxxx 10xx xxxx|
+|3.|0000 0800 - 0000 FFFF|1110 xxxx 10xx xxxx 10xx xxxx|
+|4.|0001 0000 - 0010 FFFF|1111 10xx 10xx xxxx 10xx xxxx 10xx xxxx|
 
 zu 1.: Höchstens Bit 0, restliche Bits entsprechen ASCII Code.
 
