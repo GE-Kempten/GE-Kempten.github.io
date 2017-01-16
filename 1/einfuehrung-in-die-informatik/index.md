@@ -98,7 +98,7 @@ $$ I(x_i) = log_2 \frac {1}{w(x_i)} $$
 
 Entropie bzw. mittlerer Informationsgehalt $$ H $$:
 
-$$ H = \sum^n_{i=1} w(x_i) * I(x_i) * log_2 \frac {1}{w(x_i)} 
+$$ H = \sum^n_{i=1} w(x_i) * I(x_i) * log_2 \frac {1}{w(x_i)} $$
 
 Mittlere Wortlänge einer Codierung:
 
@@ -152,10 +152,14 @@ $$ n = \sum^N_{i=0} b_i * B^i = (b_N b_{N-1} ... b_2 b_1 b_0)_B $$
 
 > Arithmetische Operationen funktionieren genauso wie im Dezimalsystem
 
+![Addition](https://puu.sh/toBWM/1d7df924ef.png)
+
+![Multiplikation](https://puu.sh/toBXL/3db50e5474.png)
+
 #### Umrechnung
 zwischen Zahlensystemen -> Horner-Schema:
 
-$$ n = ((...(b_N * B + b_{n-1})* B + b_{n-2})* B + ... + b_1)
+$$ n = ((...(b_N * B + b_{n-1})* B + b_{n-2})* B + ... + b_1) $$
 
 **Sukzessive Division**:
 
@@ -168,6 +172,14 @@ $$ ... $$
 $$ q_{n-2} : B = q_{N-1} Rest b_{N-1} $$
 
 $$ q_{n-1} : B = 0 Rest b_N $$
+
+> $$ 0010 1010 = $$
+> 
+> $$ 2^7 * 0 + 2^6 * 0 + 2^5 * 1 + 2^4 * 0 + 2^3 * 1 + 2^2 * 0 + 2^1 * 1 + 2^0 * 0 = $$
+>
+> 32 + 8 + 2 =
+>
+> 42
 
 **Sukzessive Multiplikation**:
 
@@ -189,7 +201,7 @@ $$ n = q_0 * B + b_0 $$
 
 ![Vereinfachtes Schema]()
 
-### Ganze Zahleb
+### Ganze Zahlen
 
 - Vorzeichendarstellung:
 	- 1. Bit -> Vorzeichen +(0) oder -(1)
@@ -233,14 +245,14 @@ Bsp: Finanzbereich: EUR in ct, d.h. Verschiebung um 2 Kommastellen
 
 #### Erweiterung
 
-- Erweiterter ASCII (8bit) 
-	- +128 Zeichen (Sonderzeichen und länderspezifische Ergänzungen)
-- ISO-8859-Normen(8bit)
-	- Erweiterung für andere Alphabete (kyrillisch, griechisch, thai)
-	- ISO-8859-1 für West-Europa enthält ASCII
-- Unicode (> 16bit)
-	- > 100.000 Zeichen
-	- Organisation: 17 Ebenen zu je $$2^{16}$$ = 65536 Zeichen (momentan nur 3 Ebenen gebraucht)
+* Erweiterter ASCII (8bit) 
+	* +128 Zeichen (Sonderzeichen und länderspezifische Ergänzungen)
+* ISO-8859-Normen(8bit)
+	* Erweiterung für andere Alphabete (kyrillisch, griechisch, thai)
+	* ISO-8859-1 für West-Europa enthält ASCII
+* Unicode (> 16bit)
+	* >100.000 Zeichen
+	* Organisation: 17 Ebenen zu je $$2^{16}$$ = 65536 Zeichen (momentan nur 3 Ebenen gebraucht)
 
 #### UTF-8
 
@@ -250,12 +262,16 @@ Dadurch soll Kompatibilität mit bisherigen Zeichensätzen erreicht werden und i
 
 Code-Zuordnung:
 
-|Unicode|UTF-8|Bemerkung|
-|:-:|:-:|:--|
-|0000 0000 - 0000 007F|0xxx xxxx|Höchstens Bit 0, restliche Bits entsprechen ASCII Code|
-|0000 0080 - 0000 07FF|110x xxxx 10xx xxxx|Die x enthalten die Bitkombination des Unicode-Zeichens|
-|0000 0800 - 0000 FFFF|1110 xxxx 10xx xxxx 10xx xxxx|(rechtsbündig aufgefüllt), die Anzahl der 1en- zu Beginn|
-|0001 0000 - 0010 FFFF|1111 10xxx 10xx xxxx 10xx xxxx 10xx xxxx|steht für die Anzahl der Bytes|
+|Unicode|UTF-8|
+|:-:|:-:|
+|0000 0000 - 0000 007F|0xxx xxxx|
+|0000 0080 - 0000 07FF|110x xxxx 10xx xxxx|
+|0000 0800 - 0000 FFFF|1110 xxxx 10xx xxxx 10xx xxxx|
+|0001 0000 - 0010 FFFF|1111 10xx 10xx xxxx 10xx xxxx 10xx xxxx|
+
+zu 1.: Höchstens Bit 0, restliche Bits entsprechen ASCII Code.
+
+ab 2.: Die x enthalten die Bitkombination des Unicode-Zeichens (rechtsbündig aufgefüllt), die Anzahl der 1en- zu Beginn steht für die Anzahl der Bytes.
 
 ## Einführung in Algorithmen und Datenstrukturen
 
