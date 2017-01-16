@@ -307,6 +307,30 @@ Zur Ausführung auf der CPU muss das Programm noch in eine Folge von Opcodes üb
 
 **Todo**
 
+# Der PC
+
+**Todo**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
