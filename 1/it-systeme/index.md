@@ -19,7 +19,7 @@
 
 ### Schaltnetze und Schaltwerke
 
-Ein Rechner enthält viele digitale Schalter, welche jeweils den Zustand 0 = Off oder 1 = On haben. 
+Ein Rechner enthält viele digitale Schalter, welche jeweils den Zustand 0 = Off oder 1 = On haben.
 
 **Digitale Schaltungen**: Je nach _Spannungspegel_ fließt 0 oder 5 Volt. Eine Digitale Schaltungen mir 2 Spannungspegel wird auch Binäre Schaltung genannt, d.h. man könnte auch Schalter mit 3 Zuständen erstellen.
 
@@ -35,7 +35,7 @@ Der Rechner ist ein Schaltwerk, welcher aber durch Schaltnetze realisiert wird.
 
 ### Synchronisation
 
-Jeder Schalter benötigt Zeit zum Umschalten (**Schaltzeit**), so auch digitale Schalter. D.h. dass das Ausgangssignal erst betrachtet werden darf, wenn der Umschaltvorgang abgeschlossen ist. 
+Jeder Schalter benötigt Zeit zum Umschalten (**Schaltzeit**), so auch digitale Schalter. D.h. dass das Ausgangssignal erst betrachtet werden darf, wenn der Umschaltvorgang abgeschlossen ist.
 
 => Nutzen von **Synchronisation** mithilfe von **Taktsignalen**
 
@@ -63,7 +63,6 @@ Diese Funktion kann auch verschiedene Arten dargestellt werden. Üblich sind:
 - Funktionstabellen
 - Mathematische Beschreibung mit Boole'schen Termen (Schaltalgebra)
 - Schaltbilder, Schaltungsdiagramma
-
 
 ### Funktionstabellen
 
@@ -124,7 +123,7 @@ a und b sind Schaltzustände.
 |f14|$$ \lnot (a \land b) $$|Nicht-Und (NAND)|
 |f15|$$ 1 $$|_Konstante 1_|
 
-### Sätze der Boole'schen Funktionen 
+### Sätze der Boole'schen Funktionen
 
 ![Sätze](https://puu.sh/t2NEW/3b5c50a19a.png)
 
@@ -331,23 +330,88 @@ In Festwertspeichern (**R**ead **O**nly **M**emory) werden konstante Daten gespe
 
 Die Aufgabe der CPU ist es, _Assembler-Befehle_ zu auszuführen, welche vom Hersteller definiert werden. Moderne CPUs haben einen Befehlssatz voneinigen hundert Befehlen für Datentransfer und Arithmetische oder logische Operationen.
 
+|Vorteile                       |Nachteile                      |
+|:------------------------------|:------------------------------|
+|unmittelbarer Hardwarezugang   |Hardwareabhängig               |
+|genauere Kontrolle             |Unübersichtlich                |
+
 ### Syntax
 
 `Mnemonic [Arg1[,Arg2]] ; Kommentar`
 
+- Speicheradressen werden in eckigen Klammern angegeben
+- Werte können in unterschiedlichen Zahlensystemen angegeben werden und werden durch in zusätzliches Zeichen am Ende gekennzeichnet (**b**inär, **h**ex, **d**ez)
+- Eine Hexadezimalzahl wird manchmal auch durch ein `$` vor der Zahl gekennzeichnet
+
 ### Gängige Befehle
 
+Jeder Prozessor hat seinen eigenen **Assembler-Befehlssatz**. Einige essenzielle Befehle, die in den meißten Befehlssätzen enthalten sind, sind im folgenden Aufgelistet.
+
 ```assembly
-ADD A,B     ; addiere Inhalt von B zu A und speichere das Ergebnis in A
-ADD A,[4FFH]; addiere Inhalt von Speicherzelle 4FFH zu A und speichere das Ergebnis in A
-ADD A,0101B ; addiere 101 (=5) zu A und speichere das Ergebnis in A
+; Arithmetik
 ADD A,B     ; A = A + B
 SUB A,B     ; A = A - B
+ADD A,[4FFH]; addiere Inhalt von Speicherzelle 4FFH zu A und speichere das Ergebnis in A
+ADD A,0101b ; addiere 101 (=5) zu A und speichere das Ergebnis in A
+INC B       ; erhöhe B um 1
+
+; Logik
 CMP A,B     ; vergleicht Inhalt von A und B
+TEST A,B    ; wie CMP, allerdings wird A nicht überschrieben
 AND A,B     ; logisches UND der Register A und B
 OR A,B      ; logisches ODER der Register A und B
-TEST A,B    ; wie AND, allerdings wird A nicht überschrieben
+
+
+; Speichermanagement
+LDA [FFH]   ; lade den Inhalt von Speicherzelle FFH
+STA [5FH]   ; speichern in Speicherzelle 5FH
+MOV A,[FFH] ; lade den Inhalt von FFH in Reg. A
+MOV [5FH],A ; speicher den Inhalt des Registers A in Speicherzelle 5FH
+
+; Indirekte Adressierung
+; Anstatt alle Speicherzellen direkt anzugeben, können Adressen auch in
+; Registern gespeichert werden (ähnlich wie Pointer in C++)
+MOV B, 110H   ; lade Startadresse des Feldes (110H) in B
+MOV A, [B]    ; lade erstes Feldelement in A
+ADD X, A      ; bilde Summe
+INC B         ; erhöhe B um 1
+MOV A, [B]    ; lade zweites Feldelement in A
+ADD X, A      ; bilde Summe
+              ; usw.
+
+; Stacks
+; Stacks transferieren Registerinhalte in den Speicher und legen einen
+; Stackpointer im Register an.
+PUSH A      ; speicher den Inhalt von A in der Speicherzelle, die im Pointer
+            ; angegeben ist und erhöhe den Pointer um 1
+POP A       ; lade den obersten Wert vom Stack in A und erniedrige den Pointer
+
+; Programmsteuerung
+; Unbedingte Sprünge
+JMP 4FDCh   ; springe an die Stelle 4FDC
+JMP loop    ; springe an die Stelle "loop:" im Programm
+; Bedingte Sprünge
+JZ ende     ; springe nach "ende", wenn die letzte Operation Null war
+JNZ ende    ; springe, wenn die letzte Operation nicht Null war
+JA weiter   ; (nach CMP) "jump above" vorzeichenloses >
+JB weiter   ; (nach CMP) "jump below" vorzeichenloses <
+JG weiter   ; (nach CMP) "jump greater" > mit Vorzeichen
+JL weiter   ; (nach CMP) "jump less" < mit Vorzeichen
+; Unterprogramme
+CALL Test   ; Springe in ein Unterprogramm
+RET         ; Rückkehr aus einem Unterprogramm (Rücksprungaddresse wird
+            ; automatisch im Stack gespeichert, Vorsicht bei Datenübergabe!)
 ```
+
+### Flagbits
+
+|Flagbit     |Bedeutung                                    |
+|:----------:|:--------------------------------------------|
+|**C**arry   |Bereichsüberschreitung (Zahl ohne Vorzeichen)|
+|**O**verflow|Bereichsüberschreitung (Zahl mit Vorzeichen) |
+|**S**ign    |Ergebnis ist negativ                         |
+|**Z**ero    |Ergebnis ist Null                            |
+|**P**arity  |Ergebnis hat eine gerade Anzahl von Nullen   |
 
 ### Programmablauf
 
@@ -362,56 +426,3 @@ Ein als Folge von Opcodes vorliegendes Programm wird in einer Datei gespeichert,
 # Der PC
 
 **Todo**
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
