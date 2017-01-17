@@ -17,9 +17,9 @@
 
 ## Einführung
 
-### Schaltnetze und Schaltwerk
+### Schaltnetze und Schaltwerke
 
-Ein Rechner enthält viele digitale Schalter, welche jeweils den Zustand 0 = Off oder 1 = On haben. 
+Ein Rechner enthält viele digitale Schalter, welche jeweils den Zustand 0 = Off oder 1 = On haben.
 
 **Digitale Schaltungen**: Je nach _Spannungspegel_ fließt 0 oder 5 Volt. Eine Digitale Schaltungen mir 2 Spannungspegel wird auch Binäre Schaltung genannt, d.h. man könnte auch Schalter mit 3 Zuständen erstellen.
 
@@ -35,7 +35,7 @@ Der Rechner ist ein Schaltwerk, welcher aber durch Schaltnetze realisiert wird.
 
 ### Synchronisation
 
-Jeder Schalter benötigt Zeit zum Umschalten (**Schaltzeit**), so auch digitale Schalter. D.h. dass das Ausgangssignal erst betrachtet werden darf, wenn der Umschaltvorgang abgeschlossen ist. 
+Jeder Schalter benötigt Zeit zum Umschalten (**Schaltzeit**), so auch digitale Schalter. D.h. dass das Ausgangssignal erst betrachtet werden darf, wenn der Umschaltvorgang abgeschlossen ist.
 
 => Nutzen von **Synchronisation** mithilfe von **Taktsignalen**
 
@@ -63,7 +63,6 @@ Diese Funktion kann auch verschiedene Arten dargestellt werden. Üblich sind:
 - Funktionstabellen
 - Mathematische Beschreibung mit Boole'schen Termen (Schaltalgebra)
 - Schaltbilder, Schaltungsdiagramma
-
 
 ### Funktionstabellen
 
@@ -124,7 +123,7 @@ a und b sind Schaltzustände.
 |f14|$$ \lnot (a \land b) $$|Nicht-Und (NAND)|
 |f15|$$ 1 $$|_Konstante 1_|
 
-### Sätze der Boole'schen Funktionen 
+### Sätze der Boole'schen Funktionen
 
 ![Sätze](https://puu.sh/t2NEW/3b5c50a19a.png)
 
@@ -248,12 +247,9 @@ Prinzip:
 Vorgehensweise:
 
 1. Bestimmung der DNF
-
 2. Konstruktion des KV-Diagramms
-
 3. Eintragen der Minterme in das KV-Diagramm
-
-4. Verschmelzung benachbarter Minterme 
+4. Verschmelzung benachbarter Minterme
 
 Beispiel (Übung 1 Aufgabe 8):
 
@@ -265,12 +261,179 @@ Beispiel (Übung 1 Aufgabe 8):
 
 # Programmierbare Systeme
 
-**Todo**
+Ein **Universalrechner** nach J. von Neumann (1946/47) besteht aus folgenden essenziellen Bestandteilen:
+
+|Bestandteil|Funktion             |
+|-----------|---------------------|
+|Rechenwerk |Ausführung von Rechenoperationen und logischen Verknüpfungen|
+|Steuerwerk |Steuerung des Programmablaufs|
+|Speicher   |Speicherung von Programmen und Daten|
+|I/O        |Ein-/Ausgabe von Programmen und Daten|
+
+## Rechenwerk (ALU)
+
+Das Rechenwerk besteht aus mindestens einer [Arithmetisch-Logischen-Einheit](https://de.wikipedia.org/wiki/Arithmetisch-logische_Einheit) (**ALU**), also einem Bauteil, welches sowohl Arithmetische, als auch Logische Operationen ausführen kann.
+
+![ALU](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/ALU_block.gif/800px-ALU_block.gif)
+
+- Eine ALU hat drei **Daten**-Busse, zwei für die Eingabe von Operanden sowie einen für die Ausgabe des Ergebnisses.
+- Die Daten-Busse sind mit **Registern** verbunden, die gelesen und beschrieben werden können.
+- Um den Zugriff auf die Register zu regulieren, wird ein **Tristate-Buffer** verwendet, einem Schalter, der eine Verbindung über eine Steuerleitung unterberechen kann.
+- Über einen **OpCode** erfährt die ALU, welcher Operator angewand werden soll und ob es sich um eine arithmetische oder eine logsiche Operation handelt.
+- Die **Status**-Leitung enthält Informationen zu dem Ergebnis und wird verwendet um mehrere ALUs miteinander zu verketten.
+
+## Steuerwerk
+
+Damit Operationen hintereinander ausgeführt werden können, wird die Rechenzeit in _Takte_ aufgeteilt, die aus drei _Phasen_ bestehen:
+
+- In der **Holphase** werden die Daten aus den Registern geholt
+- In der **Rechenphase** werden Rechenoperationen durchgeführt
+- In der **Brignphase** wird das Ergebnis in die Mehrzweckregister zurückgeschrieben
+
+Die **Timing Unit** (auch _TU_) gibt den Takt vor, meißtens mithilfe eines Quarzes. _And yes, that is how you say it._
+
+Alle Operationen, die in einem Takt ausgeführt werden, werden **Mikrobefehl** genannt. Ein **Mikrobefehlswort** setzt sich zusammen aus
+
+- einem **OpCode**, der der ALU mitteilt, welcher Befehl ausgeführt werden soll,
+- den Nummern der Steuerleitungen der **Quellregister**, in denen die Operanden liegen,
+- sowie einer Steuerleitungsnummer für das **Zielregister**, in dem das Ergebnis gespeichert werden soll.
+- Außerdem enthält das Wort eine **Speicheraddresse**
+- und Informationen über den **RAM-IO-Modus**.
+
+|OpCode |Quellregister 1|Quellregister 2|Zielregister|Speicheraddresse|IO|
+|:-----:|:-------------:|:-------------:|:----------:|:--------------:|::|
+|0000 00|00 0000 00     |00 0000 00     |00 0000 00  |00 0000         |00|
+
+Diese Steuersignale werden zu einer Binärzahl zusammengefasst und bilden ein **Mikrobefehlswort**. Eine `1` an einer Stelle bedeutet, dass die entsprechende Leitung eingeschaltet wird; eine `0`, dass die Leitung aus ist.
+
+## Speicher
+
+### RAM
+
+Der **Haupt-** oder **Arbeitsspeicher** wird als Halbleiterspeicher mit wahlfreiem Zugriff realisiert (**R**andom **A**ccess **M**emory), in dem der Prozessor einzelne Bytes lesen und schreiben kann. Man unterscheidet zwischen statischem **SRAM**, der Informationen in _Flip-Flops_ speichert, und dynamischem **DRAM**, der _Kondensatoren_ verwendet. Beide Techniken haben gemein, dass der Speicher in kurzen Abständen aufgefrischt werden muss und die Daten nach dem lesen wieder in den Speicher zurückgeschrieben werden müssen. Da bei DRAM Verluste beim Lesen auftreten können und er langsamer und billiger ist, werden die beiden Techniken in der Praxis oft kombiniert: Zusätzslich zum DRAM-Arbeitsspeicher wird dann ein SRAM-Pufferspeicher verwendet (zB. DDR 4).
+
+**SRAM-Funktionsweise**
+
+Ein SRAM-Baustein besteht aus einem **MAR** (Memory Address Register), einem **MDR** (Memory Data Register) und einer Schaltleitung für Schreib-, Lese-, oder Wartemodus.
+
+### ROM
+
+In Festwertspeichern (**R**ead **O**nly **M**emory) werden konstante Daten gespeichert. Er ist in folgenden Ausführungen möglich:
+
+- **ROM** Read Only Memory: Programmierung fest verdrahtet (Hardcoded, Hardwired)
+- **PROM** Programmable Read Only Memory: Ein mal programmierbar
+- **EPROM** Erasable Programmable Read Only Memory: Mit spezieller Hardware programmierbar
+- **EEPROM** Electrical Erasable Porgrammable Read Only Memory: Programmierung und Löschung einzelner Bytes durch Elektrische Spannung
+- **Flash-EPROM**: Programmierbar, Elektronische Löschung ganzer Sektoren durch Elektrische Spannung
 
 # Assemblerprogammierung
 
-**Todo**
+Die Aufgabe der CPU ist es, _Assembler-Befehle_ zu auszuführen, welche vom Hersteller definiert werden. Moderne CPUs haben einen Befehlssatz voneinigen hundert Befehlen für Datentransfer und Arithmetische oder logische Operationen.
+
+|Vorteile                       |Nachteile                      |
+|:------------------------------|:------------------------------|
+|unmittelbarer Hardwarezugang   |Hardwareabhängig               |
+|genauere Kontrolle             |Unübersichtlich                |
+
+### Syntax
+
+`Mnemonic [Arg1[,Arg2]] ; Kommentar`
+
+- Speicheradressen werden in eckigen Klammern angegeben
+- Werte können in unterschiedlichen Zahlensystemen angegeben werden und werden durch in zusätzliches Zeichen am Ende gekennzeichnet (**b**inär, **h**ex, **d**ez)
+- Eine Hexadezimalzahl wird manchmal auch durch ein `$` vor der Zahl gekennzeichnet
+
+### Gängige Befehle
+
+Jeder Prozessor hat seinen eigenen **Assembler-Befehlssatz**. Einige essenzielle Befehle, die in den meißten Befehlssätzen enthalten sind, sind im folgenden Aufgelistet.
+
+```assembly
+; Arithmetik
+ADD A,B     ; A = A + B
+SUB A,B     ; A = A - B
+ADD A,[4FFH]; addiere Inhalt von Speicherzelle 4FFH zu A und speichere das Ergebnis in A
+ADD A,0101b ; addiere 101 (=5) zu A und speichere das Ergebnis in A
+INC B       ; erhöhe B um 1
+
+; Logik
+CMP A,B     ; vergleicht Inhalt von A und B
+TEST A,B    ; wie CMP, allerdings wird A nicht überschrieben
+AND A,B     ; logisches UND der Register A und B
+OR A,B      ; logisches ODER der Register A und B
+```
+
+**Speichermanagement**
+
+```assembly
+LDA [FFH]   ; lade den Inhalt von Speicherzelle FFH
+STA [5FH]   ; speichern in Speicherzelle 5FH
+MOV A,[FFH] ; lade den Inhalt von FFH in Reg. A
+MOV [5FH],A ; speicher den Inhalt des Registers A in Speicherzelle 5FH
+```
+
+**Indirekte Adressierung**
+
+```assembly
+; Anstatt alle Speicherzellen direkt anzugeben, können Adressen auch in
+; Registern gespeichert werden (ähnlich wie Pointer in C++)
+MOV B, 110H   ; lade Startadresse des Feldes (110H) in B
+MOV A, [B]    ; lade erstes Feldelement in A
+ADD X, A      ; bilde Summe
+INC B         ; erhöhe B um 1
+MOV A, [B]    ; lade zweites Feldelement in A
+ADD X, A      ; bilde Summe
+              ; usw.
+```
+
+**Stacks**
+
+```assembly
+; Stacks transferieren Registerinhalte in den Speicher und legen einen
+; Stackpointer im Register an.
+PUSH A      ; speicher den Inhalt von A in der Speicherzelle, die im Pointer
+            ; angegeben ist und erhöhe den Pointer um 1
+POP A       ; lade den obersten Wert vom Stack in A und erniedrige den Pointer
+```
+
+**Programmsteuerung**
+
+```assembly
+; Unbedingte Sprünge
+JMP 4FDCh   ; springe an die Stelle 4FDC
+JMP loop    ; springe an die Stelle "loop:" im Programm
+; Bedingte Sprünge
+JZ ende     ; springe nach "ende", wenn die letzte Operation Null war
+JNZ ende    ; springe, wenn die letzte Operation nicht Null war
+JA weiter   ; (nach CMP) "jump above" vorzeichenloses >
+JB weiter   ; (nach CMP) "jump below" vorzeichenloses <
+JG weiter   ; (nach CMP) "jump greater" > mit Vorzeichen
+JL weiter   ; (nach CMP) "jump less" < mit Vorzeichen
+; Unterprogramme
+CALL Test   ; Springe in ein Unterprogramm
+RET         ; Rückkehr aus einem Unterprogramm (Rücksprungaddresse wird
+            ; automatisch im Stack gespeichert, Vorsicht bei Datenübergabe!)
+```
+
+### Flagbits
+
+|Flagbit     |Bedeutung                                    |
+|:----------:|:--------------------------------------------|
+|**C**arry   |Bereichsüberschreitung (Zahl ohne Vorzeichen)|
+|**O**verflow|Bereichsüberschreitung (Zahl mit Vorzeichen) |
+|**S**ign    |Ergebnis ist negativ                         |
+|**Z**ero    |Ergebnis ist Null                            |
+|**P**arity  |Ergebnis hat eine gerade Anzahl von Nullen   |
+
+### Programmablauf
+
+Diese Befehle werden in einer im Speicher vorliegenden Reihenfolge von **Opcodes** ausgeführt. Der **Befehlszähler** (eine Variable, die auf den auszuführenden Befehl zeigt) wird nach jeder Aktion _inkrementiert_ oder mittels _Sprungbefehlen_ auf einen anderen Wert gesetzt, um Schleifen, Funktionen, usw. umzusetzen.
+
+Ein als Folge von Opcodes vorliegendes Programm wird in einer Datei gespeichert, die zur Ausführung in den Speicher geladen wird. Dafür durchläuft die CPU den sogenannten **Load-Increment-Execute-Zyklus**. Der Opcode wird geladen, der Befehlszähler wird erhöht, der Befehl wird ausgeführt, Repeat.
 
 # Peripherie
+
+**Todo**
+
+# Der PC
 
 **Todo**
