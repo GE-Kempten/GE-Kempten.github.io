@@ -360,15 +360,20 @@ CMP A,B     ; vergleicht Inhalt von A und B
 TEST A,B    ; wie CMP, allerdings wird A nicht überschrieben
 AND A,B     ; logisches UND der Register A und B
 OR A,B      ; logisches ODER der Register A und B
+```
 
+**Speichermanagement**
 
-; Speichermanagement
+```assembly
 LDA [FFH]   ; lade den Inhalt von Speicherzelle FFH
 STA [5FH]   ; speichern in Speicherzelle 5FH
 MOV A,[FFH] ; lade den Inhalt von FFH in Reg. A
 MOV [5FH],A ; speicher den Inhalt des Registers A in Speicherzelle 5FH
+```
 
-; Indirekte Adressierung
+**Indirekte Adressierung**
+
+```assembly
 ; Anstatt alle Speicherzellen direkt anzugeben, können Adressen auch in
 ; Registern gespeichert werden (ähnlich wie Pointer in C++)
 MOV B, 110H   ; lade Startadresse des Feldes (110H) in B
@@ -378,15 +383,21 @@ INC B         ; erhöhe B um 1
 MOV A, [B]    ; lade zweites Feldelement in A
 ADD X, A      ; bilde Summe
               ; usw.
+```
 
-; Stacks
+**Stacks**
+
+```assembly
 ; Stacks transferieren Registerinhalte in den Speicher und legen einen
 ; Stackpointer im Register an.
 PUSH A      ; speicher den Inhalt von A in der Speicherzelle, die im Pointer
             ; angegeben ist und erhöhe den Pointer um 1
 POP A       ; lade den obersten Wert vom Stack in A und erniedrige den Pointer
+```
 
-; Programmsteuerung
+**Programmsteuerung**
+
+```assembly
 ; Unbedingte Sprünge
 JMP 4FDCh   ; springe an die Stelle 4FDC
 JMP loop    ; springe an die Stelle "loop:" im Programm
