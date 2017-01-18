@@ -237,7 +237,7 @@ $$ q_{n-1} : B = 0 Rest b_N $$
 
 **Beispiel 1**: Umwandlungs von $$(1337)_{10}$$ nach Binär/Dual
 
-\$$ 1337 : 2 = 668 $$ $$R 1$$
+$$ 1337 : 2 = 668 $$ R 1
 
 \$$ 668 : 2 = 334 $$ R 0
 
