@@ -262,14 +262,132 @@ Elementare Schaltglieder werden auch Gatter genannt.
 
 ## Gatter
 
-|Gatter|Symbol|Wahrheitstabelle|
-|:----:|------|----------------|
-|NOT   |![AND](https://upload.wikimedia.org/wikipedia/commons/3/31/IEC_NOT_label.svg)|<table style="width:100%"><tr><th>A</th><th>Y</th></tr> <tr><td>0</td><td>1</td></tr><tr><td>1</td><td>0</td></tr></table>|
-|AND   |![AND](https://upload.wikimedia.org/wikipedia/commons/c/c2/IEC_AND_label.svg)|<table style="width:100%"><tr><th>A</th><th>B</th><th>Y</th></tr> <tr><td>0</td><td>0</td><td>0</td></tr> <tr><td>0</td><td>1</td><td>0</td></tr> <tr><td>1</td><td>0</td><td>0</td></tr> <tr><td>1</td><td>1</td><td>1</td></tr> </table>|
-|OR    |![AND](https://upload.wikimedia.org/wikipedia/commons/4/40/IEC_OR_label.svg)|<table style="width:100%"><tr><th>A</th><th>B</th><th>Y</th></tr> <tr><td>0</td><td>0</td><td>0</td></tr> <tr><td>0</td><td>1</td><td>1</td></tr> <tr><td>1</td><td>0</td><td>1</td></tr> <tr><td>1</td><td>1</td><td>1</td></tr> </table>|
-|XOR   |![AND](https://upload.wikimedia.org/wikipedia/commons/6/6c/IEC_XOR_label.svg)|<table style="width:100%"><tr><th>A</th><th>B</th><th>Y</th></tr> <tr><td>0</td><td>0</td><td>0</td></tr> <tr><td>0</td><td>1</td><td>1</td></tr> <tr><td>1</td><td>0</td><td>1</td></tr> <tr><td>1</td><td>1</td><td>0</td></tr> </table>|
-|NAND  |![AND](https://upload.wikimedia.org/wikipedia/commons/b/b1/IEC_NAND_label.svg)|<table style="width:100%"><tr><th>A</th><th>B</th><th>Y</th></tr> <tr><td>0</td><td>0</td><td>1</td></tr> <tr><td>0</td><td>1</td><td>1</td></tr> <tr><td>1</td><td>0</td><td>1</td></tr> <tr><td>1</td><td>1</td><td>0</td></tr> </table>|
-|NOR   |![AND](https://upload.wikimedia.org/wikipedia/commons/3/37/IEC_NOR_label.svg)|<table style="width:100%"><tr><th>A</th><th>B</th><th>Y</th></tr> <tr><td>0</td><td>0</td><td>1</td></tr> <tr><td>0</td><td>1</td><td>0</td></tr> <tr><td>1</td><td>0</td><td>0</td></tr> <tr><td>1</td><td>1</td><td>0</td></tr> </table>|
+<table>
+<tr>
+	<th>Gatter</th>
+    <th>Symbol</th>
+    <th>Wahrheitstabelle</th>
+</tr>
+
+<tr>
+	<td>
+    	<ul style="list-style-type:none">
+        	<li>NOT</li>
+        	<li>\net</li>
+        </ul>
+    </td>
+    <td><img src="https://upload.wikimedia.org/wikipedia/commons/3/31/IEC_NOT_label.svg" alt="NOT" width="170" height="75"></td>
+
+  <td>
+  	<table style="width:100%">
+    	<tr><th>A</th><th>Y</th></tr>
+        <tr><td>0</td><td>1</td></tr>
+        <tr><td>1</td><td>0</td></tr>
+	</table>
+  </td>
+</tr>
+
+<tr>
+	<td>
+    	<ul style="list-style-type:none">
+        	<li>AND</li>
+        	<li>∧</li>
+        </ul>
+    </td>
+    <td><img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/IEC_AND_label.svg" alt="AND" width="170" height="75"></td>
+
+  <td>
+  	<table style="width:100%">
+    	<tr><th>A</th><th>B</th><th>Y</th></tr>
+        <tr><td>0</td><td>0</td><td>0</td></tr>
+        <tr><td>0</td><td>1</td><td>0</td></tr>
+        <tr><td>1</td><td>0</td><td>0</td></tr>
+        <tr><td>1</td><td>1</td><td>1</td></tr>
+	</table>
+  </td>
+</tr>
+
+<tr>
+	<td>
+    	<ul style="list-style-type:none">
+        	<li>OR</li>
+        	<li>∨</li>
+        </ul>
+    </td>
+    <td><img src="https://upload.wikimedia.org/wikipedia/commons/4/40/IEC_OR_label.svg" alt="OR" width="170" height="75"></td>
+
+  <td>
+  	<table style="width:100%">
+    	<tr><th>A</th><th>B</th><th>Y</th></tr>
+        <tr><td>0</td><td>0</td><td>0</td></tr>
+        <tr><td>0</td><td>1</td><td>1</td></tr>
+        <tr><td>1</td><td>0</td><td>1</td></tr>
+        <tr><td>1</td><td>1</td><td>1</td></tr>
+	</table>
+  </td>
+</tr>
+
+<tr>
+	<td>
+    	<ul style="list-style-type:none">
+        	<li>XOR</li>
+        	<li>⊻</li>
+        </ul>
+    </td>
+    <td><img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/IEC_XOR_label.svg" alt="OR" width="170" height="75"></td>
+
+  <td>
+  	<table style="width:100%">
+    	<tr><th>A</th><th>B</th><th>Y</th></tr>
+        <tr><td>0</td><td>0</td><td>0</td></tr>
+        <tr><td>0</td><td>1</td><td>1</td></tr>
+        <tr><td>1</td><td>0</td><td>1</td></tr>
+        <tr><td>1</td><td>1</td><td>0</td></tr>
+	</table>
+  </td>
+</tr>
+
+<tr>
+	<td>
+    	<ul style="list-style-type:none">
+        	<li>NAND</li>
+        	<li>⊼</li>
+        </ul>
+    </td>
+    <td><img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/IEC_NAND_label.svg" alt="OR" width="170" height="75"></td>
+
+  <td>
+  	<table style="width:100%">
+    	<tr><th>A</th><th>B</th><th>Y</th></tr>
+        <tr><td>0</td><td>0</td><td>1</td></tr>
+        <tr><td>0</td><td>1</td><td>1</td></tr>
+        <tr><td>1</td><td>0</td><td>1</td></tr>
+        <tr><td>1</td><td>1</td><td>0</td></tr>
+	</table>
+  </td>
+</tr>
+
+<tr>
+	<td>
+    	<ul style="list-style-type:none">
+        	<li>NOR</li>
+        	<li>⊽</li>
+        </ul>
+    </td>
+    <td><img src="https://upload.wikimedia.org/wikipedia/commons/3/37/IEC_NOR_label.svg" alt="OR" width="170" height="75"></td>
+
+  <td>
+  	<table style="width:100%">
+    	<tr><th>A</th><th>B</th><th>Y</th></tr>
+        <tr><td>0</td><td>0</td><td>1</td></tr>
+        <tr><td>0</td><td>1</td><td>0</td></tr>
+        <tr><td>1</td><td>0</td><td>0</td></tr>
+        <tr><td>1</td><td>1</td><td>0</td></tr>
+	</table>
+  </td>
+</tr>
+
+</table>
 
 ## Technische Realisierung mit Transistoren
 
