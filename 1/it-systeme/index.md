@@ -257,6 +257,24 @@ Beispiel (Übung 1 Aufgabe 8):
 
 # Logische Bausteine
 
+Schaltnetze/Schaltglieder sind digitale Schalteungen, die eine Schaltfunktion realisieren.
+Elementare Schaltglieder werden auch Gatter genannt.
+
+## Gatter
+
+|Gatter|Symbol|Wahrheitstabelle|
+|:----:|------|----------------|
+|NOT   |![AND](https://upload.wikimedia.org/wikipedia/commons/3/31/IEC_NOT_label.svg)|<table style="width:100%"><tr><th>A</th><th>Y</th></tr> <tr><td>0</td><td>1</td></tr><tr><td>1</td><td>0</td></tr></table>|
+|AND   |![AND](https://upload.wikimedia.org/wikipedia/commons/c/c2/IEC_AND_label.svg)|<table style="width:100%"><tr><th>A</th><th>B</th><th>Y</th></tr> <tr><td>0</td><td>0</td><td>0</td></tr> <tr><td>0</td><td>1</td><td>0</td></tr> <tr><td>1</td><td>0</td><td>0</td></tr> <tr><td>1</td><td>1</td><td>1</td></tr> </table>|
+|OR    |![AND](https://upload.wikimedia.org/wikipedia/commons/4/40/IEC_OR_label.svg)|<table style="width:100%"><tr><th>A</th><th>B</th><th>Y</th></tr> <tr><td>0</td><td>0</td><td>0</td></tr> <tr><td>0</td><td>1</td><td>1</td></tr> <tr><td>1</td><td>0</td><td>1</td></tr> <tr><td>1</td><td>1</td><td>1</td></tr> </table>|
+|XOR   |![AND](https://upload.wikimedia.org/wikipedia/commons/6/6c/IEC_XOR_label.svg)|<table style="width:100%"><tr><th>A</th><th>B</th><th>Y</th></tr> <tr><td>0</td><td>0</td><td>0</td></tr> <tr><td>0</td><td>1</td><td>1</td></tr> <tr><td>1</td><td>0</td><td>1</td></tr> <tr><td>1</td><td>1</td><td>0</td></tr> </table>|
+|NAND  |![AND](https://upload.wikimedia.org/wikipedia/commons/b/b1/IEC_NAND_label.svg)|<table style="width:100%"><tr><th>A</th><th>B</th><th>Y</th></tr> <tr><td>0</td><td>0</td><td>1</td></tr> <tr><td>0</td><td>1</td><td>1</td></tr> <tr><td>1</td><td>0</td><td>1</td></tr> <tr><td>1</td><td>1</td><td>0</td></tr> </table>|
+|NOR   |![AND](https://upload.wikimedia.org/wikipedia/commons/3/37/IEC_NOR_label.svg)|<table style="width:100%"><tr><th>A</th><th>B</th><th>Y</th></tr> <tr><td>0</td><td>0</td><td>1</td></tr> <tr><td>0</td><td>1</td><td>0</td></tr> <tr><td>1</td><td>0</td><td>0</td></tr> <tr><td>1</td><td>1</td><td>0</td></tr> </table>|
+
+## Technische Realisierung mit Transistoren
+
+Metalloxid-Halbleiter-Feldeffekt-Transistor (_**M**etal**O**xide-**S**emiconductor-**F**ield**E**ffect **T**ransistor_ -> **MOSFET**) wird in der Computertechnik am häufigsten verwendet.
+
 **Todo**
 
 # Programmierbare Systeme
