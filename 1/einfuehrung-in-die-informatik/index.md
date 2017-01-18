@@ -165,11 +165,13 @@ $$ n = \sum^N_{i=0} b_i * B^i = (b_N b_{N-1} ... b_2 b_1 b_0)_B $$
 
 #### Umrechnung
 
-##### Simple Umrechnung nach Dezimal
+##### Pozentrechnung
 
 Die n-te Stelle der Ziffer wird auf Basis des Zahlensystems (Anzahl an möglichen Werten) potenziert und anschließend mit dem Wert der Stelle multipliziert.
 
-> 0010 1010 =
+Ergebnis: Dezimalzahl
+
+> \$$ (0010 1010)_2 $$ =
 > 
 > \$$ 2^7 * 0 + 2^6 * 0 + 2^5 * 1 + 2^4 * 0 + 2^3 * 1 + 2^2 * 0 + 2^1 * 1 + 2^0 * 0 = $$
 >
@@ -177,7 +179,7 @@ Die n-te Stelle der Ziffer wird auf Basis des Zahlensystems (Anzahl an mögliche
 >
 > 42
 
-> DAB =
+> \$$ (DAB)_{16} $$ =
 >
 > \$$ 16^2 * D + 16^1 * A + 16^0 * B = $$ 
 >
@@ -185,15 +187,31 @@ Die n-te Stelle der Ziffer wird auf Basis des Zahlensystems (Anzahl an mögliche
 >
 > 3499
 
-zwischen Zahlensystemen -> Horner-Schema:
+##### Horner-Schema
 
-$$ n = ((...(b_N * B + b_{n-1})* B + b_{n-2})* B + ... + b_1) $$
+$$ N = ((...(b_n * B + b_{n-1})* B + b_{n-2})* B + ... + b_1)*B + b_0 $$
 
-![Beispiel 1]()
+> B = Basis des Zahlensystems (z.B. Hexadezimal: 16)
+>
+> b = Umwandelnde Ziffern; n = Stelle der Ziffer
+>
+> Ergebnis: Dezimalzahl
 
-![Beispiel 2]()
+**Beispiel 1**: \$$(1011)_2$$ in Dezimal
 
-**Sukzessive Division**:
+\$$(1011)_2 = (((1*2+0)*2+1)*2+1) $$
+
+\$$(1011)_2 = (11)_{10} $$
+
+**Beispiel 2**: \$$(345)_8$$ in Dezimal
+
+\$$(345)_8 = ((3*8+4)*8+5) $$
+
+\$$(345)_8 = 229 $$
+
+##### Sukzessive Division
+
+Wir nehmen eine beliebige Zahl und teilen diese durch die Basis des gewünschten Systems. Das Ergebnis wird ohne Kommazahl genommen (nicht Runden!) und der Rest neben dran geschrieben. Wenn das Ergebnis 0 erreicht, dann werden die Reste rückwärts aneinandergereiht.
 
 $$ n : B = q_0 Rest b_0 $$
 
@@ -205,30 +223,55 @@ $$ q_{n-2} : B = q_{N-1} Rest b_{N-1} $$
 
 $$ q_{n-1} : B = 0 Rest b_N $$
 
-> \$$ 1337 : 2 = 668 R 1 $$
+> n = Umwandelbare Zahl
 >
-> \$$ 668 : 2 = 334 R 0 $$
+> B = Basis des Zielzahlensystems
 >
-> \$$ 334 : 2 = 167 R 0 $$
+> q = Ergebnis ohne Rest (bzw. ohne Komma)
 >
-> \$$ 167 : 2 = 83 R 1 $$
+> b = Reste
 >
-> \$$ 83 : 2 = 41 R 1 $$
+> Anschließend die Reste (b) rückwärts zusammenzählen
 >
-> \$$ 41 : 2 = 20 R 1 $$
->
-> \$$ 20 : 2 = 10 R 0 $$
->
-> \$$ 10 : 2 = 5 R 0 $$
->
-> \$$ 5 : 2 = 2 R 1 $$
->
-> \$$ 2 : 2 = 1 R 0 $$
->
-> \$$ 1 : 2 = 0 R 1 $$
->
-> \$$ 0101 0011 1001 $$
+> Ergebnis: Zahlensystem von B
 
+**Beispiel 1**: Umwandlungs von \$$(1337)_{10}$$ nach Binär/Dual
+
+\$$ 1337 : 2 = 668 R 1 $$
+
+\$$ 668 : 2 = 334 R 0 $$
+
+\$$ 334 : 2 = 167 R 0 $$
+
+\$$ 167 : 2 = 83 R 1 $$
+
+\$$ 83 : 2 = 41 R 1 $$
+
+\$$ 41 : 2 = 20 R 1 $$
+
+\$$ 20 : 2 = 10 R 0 $$
+
+\$$ 10 : 2 = 5 R 0 $$
+
+\$$ 5 : 2 = 2 R 1 $$
+
+\$$ 2 : 2 = 1 R 0 $$
+
+\$$ 1 : 2 = 0 R 1 $$
+
+\$$ (1337)_{10} = (0101 0011 1001)_2 $$
+
+**Beispiel 2**: Umwandlung von \$$(525)_{10}$$ nach Hexadezimal
+
+\$$ 525 : 16 = 32 R D $$
+
+> **Tipp**: 32*16 = 512 -> 525 - 512 = 13 bzw. D
+
+\$$ 32 : 16 = 2 R 0 $$
+
+\$$ 2 : 16 = 0 R 2 $$
+
+\$$ (525)_{10} = (20D)_{16} $$
 
 **Sukzessive Multiplikation**:
 
@@ -244,9 +287,17 @@ $$ q_0 = q_1 * B + b_1 $$
 
 $$ n = q_0 * B + b_0 $$
 
-**Vereinfachtes Schema**: Konvertierung in n-große Blöcke -> Blöcke getrennt Konvertieren.
+> "Braucht niemand" - Jeb 2017
 
-![Vereinfachtes Schema]()
+##### Vereinfachtes Schema: 
+
+Konvertierung in n-große Blöcke -> Blöcke getrennt Konvertieren.
+
+Vorteil: Schneller und kürzere Umrechnung
+
+Nachteil: Nur Umwandlung zwischen 2er Potenzen möglich
+
+![Vereinfachtes Schema](https://puu.sh/tr0Mm/4053660bc8.png)
 
 ### Ganze Zahlen
 
@@ -262,6 +313,8 @@ $$ n = q_0 * B + b_0 $$
 - Verschieben des Zahlenbereichs
 	- Addition einer Konstante -> alle Zahlen positiv
 	- ![Beispielrechnung]()
+
+
 
 ### Reelle Zahlen
 
