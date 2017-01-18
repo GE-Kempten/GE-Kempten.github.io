@@ -273,7 +273,7 @@ Elementare Schaltglieder werden auch Gatter genannt.
 	<td>
     	<ul style="list-style-type:none">
         	<li>NOT</li>
-        	<li>\net</li>
+        	<li>¬</li>
         </ul>
     </td>
     <td><img src="https://upload.wikimedia.org/wikipedia/commons/3/31/IEC_NOT_label.svg" alt="NOT" width="170" height="75"></td>
