@@ -171,7 +171,7 @@ Die n-te Stelle der Ziffer wird auf Basis des Zahlensystems (Anzahl an mögliche
 
 Ergebnis: Dezimalzahl
 
-> \$$ (0010 1010)_2 $$ =
+> \$$ (0010 1010)_2 = $$
 > 
 > \$$ 2^7 * 0 + 2^6 * 0 + 2^5 * 1 + 2^4 * 0 + 2^3 * 1 + 2^2 * 0 + 2^1 * 1 + 2^0 * 0 = $$
 >
@@ -179,7 +179,7 @@ Ergebnis: Dezimalzahl
 >
 > 42
 
-> \$$ (DAB)_{16} $$ =
+> \$$ (DAB)_{16} = $$
 >
 > \$$ 16^2 * D + 16^1 * A + 16^0 * B = $$ 
 >
@@ -197,13 +197,13 @@ $$ N = ((...(b_n * B + b_{n-1})* B + b_{n-2})* B + ... + b_1)*B + b_0 $$
 >
 > Ergebnis: Dezimalzahl
 
-**Beispiel 1**: \$$(1011)_2$$ in Dezimal
+**Beispiel 1**: $$(1011)_2$$ in Dezimal
 
 \$$(1011)_2 = (((1*2+0)*2+1)*2+1) $$
 
 \$$(1011)_2 = (11)_{10} $$
 
-**Beispiel 2**: \$$(345)_8$$ in Dezimal
+**Beispiel 2**: $$(345)_8$$ in Dezimal
 
 \$$(345)_8 = ((3*8+4)*8+5) $$
 
@@ -235,7 +235,7 @@ $$ q_{n-1} : B = 0 Rest b_N $$
 >
 > Ergebnis: Zahlensystem von B
 
-**Beispiel 1**: Umwandlungs von \$$(1337)_{10}$$ nach Binär/Dual
+**Beispiel 1**: Umwandlungs von $$(1337)_{10}$$ nach Binär/Dual
 
 \$$ 1337 : 2 = 668 R 1 $$
 
@@ -261,7 +261,7 @@ $$ q_{n-1} : B = 0 Rest b_N $$
 
 \$$ (1337)_{10} = (0101 0011 1001)_2 $$
 
-**Beispiel 2**: Umwandlung von \$$(525)_{10}$$ nach Hexadezimal
+**Beispiel 2**: Umwandlung von $$(525)_{10}$$ nach Hexadezimal
 
 \$$ 525 : 16 = 32 R D $$
 
@@ -343,8 +343,6 @@ Bsp: Finanzbereich: EUR in ct, d.h. Verschiebung um 2 Kommastellen
 - 33-127 -> Druckbare Zeichen
 
 ![ASCII](http://www.jimprice.com/ascii-0-127.gif)
-
-![ANSI](http://www.jimprice.com/ascii-128-255.gif)
 
 #### Erweiterung
 
