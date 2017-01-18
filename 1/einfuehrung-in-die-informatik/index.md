@@ -289,7 +289,9 @@ Bsp: Finanzbereich: EUR in ct, d.h. Verschiebung um 2 Kommastellen
 - 0-32 -> Steuerzeichen
 - 33-127 -> Druckbare Zeichen
 
-![ASCII-Tabelle]()
+![ASCII](http://www.jimprice.com/ascii-0-127.gif)
+
+![ANSI](http://www.jimprice.com/ascii-128-255.gif)
 
 #### Erweiterung
 
@@ -328,5 +330,52 @@ ab 2.: Die x enthalten die Bitkombination des Unicode-Zeichens (rechtsbündig au
 ## Grundlagen der Softwareentwicklung
 
 ## Wirtschaftliche und gesellschaftliche Bedeutung der Informatik
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
