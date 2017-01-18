@@ -159,9 +159,9 @@ $$ n = \sum^N_{i=0} b_i * B^i = (b_N b_{N-1} ... b_2 b_1 b_0)_B $$
 
 > Arithmetische Operationen funktionieren genauso wie im Dezimalsystem
 
-![Addition](https://puu.sh/toBWM/1d7df924ef.png)
+![Addition](https://puu.sh/tr4w2/edf6089322.png)
 
-![Multiplikation](https://puu.sh/toBXL/3db50e5474.png)
+![Multiplikation](https://puu.sh/tr4vK/27dea8e6d4.png)
 
 #### Umrechnung
 
@@ -207,7 +207,7 @@ $$ N = ((...(b_n * B + b_{n-1})* B + b_{n-2})* B + ... + b_1)*B + b_0 $$
 
 \$$(345)_8 = ((3*8+4)*8+5) $$
 
-\$$(345)_8 = 229 $$
+\$$(345)_8 = (229)_{10} $$
 
 ##### Sukzessive Division
 
@@ -237,27 +237,27 @@ $$ q_{n-1} : B = 0 Rest b_N $$
 
 **Beispiel 1**: Umwandlungs von $$(1337)_{10}$$ nach Binär/Dual
 
-\$$ 1337 : 2 = 668 R 1 $$
+\$$ 1337 : 2 = 668 $$ R 1
 
-\$$ 668 : 2 = 334 R 0 $$
+\$$ 668 : 2 = 334 $$ R 0
 
-\$$ 334 : 2 = 167 R 0 $$
+\$$ 334 : 2 = 167 $$ R 0
 
-\$$ 167 : 2 = 83 R 1 $$
+\$$ 167 : 2 = 83 $$ R 1
 
-\$$ 83 : 2 = 41 R 1 $$
+\$$ 83 : 2 = 41 $$ R 1
 
-\$$ 41 : 2 = 20 R 1 $$
+\$$ 41 : 2 = 20 $$ R 1 
 
-\$$ 20 : 2 = 10 R 0 $$
+\$$ 20 : 2 = 10 $$ R 0
 
-\$$ 10 : 2 = 5 R 0 $$
+\$$ 10 : 2 = 5 $$ R 0 
 
-\$$ 5 : 2 = 2 R 1 $$
+\$$ 5 : 2 = 2 $$ R 1 
 
-\$$ 2 : 2 = 1 R 0 $$
+\$$ 2 : 2 = 1 $$ R 0
 
-\$$ 1 : 2 = 0 R 1 $$
+\$$ 1 : 2 = 0 $$ R 1
 
 \$$ (1337)_{10} = (0101 0011 1001)_2 $$
 
@@ -291,13 +291,17 @@ $$ n = q_0 * B + b_0 $$
 
 ##### Vereinfachtes Schema: 
 
-Konvertierung in n-große Blöcke -> Blöcke getrennt Konvertieren.
+1. Umrechnung ins Binärsystem
+2. Aufteilung jeder Ziffer in ein Block
+3. Umwandlung in Zahlensystem anhand Anzahl der Blöcke (2er Potenzen):
+	- Oktal: 3 Blöcke ($$2^3$$ = 8)
+	- Hexadezimal: 4 Blöcke ($$2^4$$ = 16) 
 
-Vorteil: Schneller und kürzere Umrechnung
+![Vereinfachtes Schema](https://puu.sh/tr4wd/966ea36969.png)
+
+Vorteil: Schnellere und kürzere Umrechnung
 
 Nachteil: Nur Umwandlung zwischen 2er Potenzen möglich
-
-![Vereinfachtes Schema](https://puu.sh/tr0Mm/4053660bc8.png)
 
 ### Ganze Zahlen
 
