@@ -237,7 +237,7 @@ $$ q_{n-1} : B = 0 Rest b_N $$
 
 **Beispiel 1**: Umwandlungs von $$(1337)_{10}$$ nach Binär/Dual
 
-\$$ 1337 : 2 = 668 $$ R 1
+\$$ 1337 : 2 = 668 $$ $$R 1$$
 
 \$$ 668 : 2 = 334 $$ R 0
 
@@ -299,9 +299,9 @@ $$ n = q_0 * B + b_0 $$
 
 ![Vereinfachtes Schema](https://puu.sh/tr4wd/966ea36969.png)
 
-Vorteil: Schnellere und kürzere Umrechnung
+**Vorteil**: Schnellere und kürzere Umrechnung
 
-Nachteil: Nur Umwandlung zwischen 2er Potenzen möglich
+**Nachteil**: Nur Umwandlung zwischen 2er Potenzen möglich
 
 ### Ganze Zahlen
 
