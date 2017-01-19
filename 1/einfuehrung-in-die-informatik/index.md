@@ -18,22 +18,10 @@
 
 Die Informatik ist die Wissenschaft der automatischen Verarbeitung von Informationen, insbesondere mit Hilfe von Digitalrechnern. Der Begriff setzt sich aus „Information“ und „Automatik“ Sie ist eine interdisziplinäre Wissenschaft mit Wurzeln im Elektroingenieurwesen und in der Mathematik und ist in folgende Teilbereiche unterteilt: 
 
-
-### Theoretische Informatik
-
-Erforschung der theoretischen Grundlagen, Informations- und Codierungstheorie, Formale Sprachen, Automatentheorie, Algorithmen, Datenstrukturen, Berechenbarkeit, etc.
-
-### Angewandte Informatik
-
-Praktische Anwendung des Rechners in verschiedenen Anwendungsbereichen, ethische und soziale Fragen der EDV, Datenschutz und -sicherheit
-
-### Technische Informatik
-
-Konstruktion von Rechnern, Speicherchips, Prozessoren und Peripheriegeräten, Erforschung und Anwendung Technischer Möglichkeiten
-
-### Praktische Informatik
-
-Konstruktion von System- und Anwendungssoftware, Compilerbau
+- Theoretische Informatik: Erforschung der theoretischen Grundlagen
+- Angewandte Informatik: Einsatz des Rechners in verschiedenen Anwendungsbereichen
+- Technische Informatik: Konstruktion von Rechnern
+- Praktische Informatik: Softwareentwicklung
 
 ## Geschichte der Datenverarbeitung
 
