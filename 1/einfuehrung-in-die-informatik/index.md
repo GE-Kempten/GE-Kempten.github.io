@@ -295,20 +295,42 @@ $$ n = q_0 * B + b_0 $$
 
 ### Ganze Zahlen
 
-- Vorzeichendarstellung:
-	- 1. Bit -> Vorzeichen +(0) oder -(1)
-	- Aber: Rechnung kompliziert
-	- ![Beispielrechnung]()
-- Zweierkompliment:
-	- Idee: Zahlen geordnet nach: modulo 2N
-	- 1. Bit -> Vorzeichen
-	- Erzeugen einer negativen Zahl im Zweierkompliment: bitweise Negation und Addition von 1 => einfach zu bilden und einfach Rechnen möglich
-	- ![Beispielrechnung]()
-- Verschieben des Zahlenbereichs
-	- Addition einer Konstante -> alle Zahlen positiv
-	- ![Beispielrechnung]()
+Bis hier können wir aber nur positive Zahlen darstellen. Folglich werden verschiedene Arten genannt, wie unser Zahlenbereich dargestellt werden kann.
 
+Die simpleste Art ist die **Vorzeichendarstellung**. Dabei entscheidet das 1. Bit - also das ganz links - über das Vorzeichen.
 
+![Darstellung](https://puu.sh/ts928/ee6e33f16b.png)
+
+**Nachteile**:
+
+	- 0 wird dargestellt als 0000 (+0) und 1000 (-0)
+	- Rechnungen werden verkompliziert
+
+Um diese Nachteile zu lösen wurde das **Zweierkompliment** entwickelt. 
+
+Nehme wir beispielweise 4 Bit wodruch wir $$ 2^4 = 16 $$ Zahlen darstellen können. Wir zählen nun von 0000 (0) rauf, bis wir die Obergrenze 0111 (7) erreicht haben. Nun fangen wir bei 1111 (-1) an rückwärts zu zählen und enden bei 1000 (-8).
+
+Darstellbarer Bereich: $$-2^{N-1}$$ bis $$2^{N-1}-1$$
+
+Der erste Nachteil ist gelöst - 0 (0000) ist nun einmal verfügbar. Und Rechnen?
+
+Kümmern wir uns erstmal um die Umwandlung einer positiven Zahl zum negativen Konterpart und andersrum:
+
+1. bitweise Negation
+2. Addition von 1
+
+![Umwandlung](https://puu.sh/ts93o/d03e7bd955.png)
+
+Jetzt können wir Rechnen. Zur Errinnerung: 
+
+- 0xxx positiv
+- 1xxx negativ
+
+\$$ (0010)_2 = (2)_{10} $$
+
+\$$ + (1010)_2 = (-6)_{10} $$
+
+\$$ (1100)_2 = (-4)_{10} $$
 
 ### Reelle Zahlen
 
@@ -367,6 +389,8 @@ Code-Zuordnung:
 zu 1.: Höchstens Bit 0, restliche Bits entsprechen ASCII Code.
 
 ab 2.: Die x enthalten die Bitkombination des Unicode-Zeichens (rechtsbündig aufgefüllt), die Anzahl der 1en- zu Beginn steht für die Anzahl der Bytes.
+
+---
 
 ## Einführung in Algorithmen und Datenstrukturen
 
