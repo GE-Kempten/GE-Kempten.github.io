@@ -2,6 +2,9 @@
 
 # IT-Systeme
 
+- [Hauptseite](https://ge-kempten.github.io)
+- [Übung 1](https://ge-kempten.github.io/1/it-systeme/uebung-1)
+
 ## Kompetenzen
 
 - Bauen eines funktionsfähigen Rechners, dazu werden

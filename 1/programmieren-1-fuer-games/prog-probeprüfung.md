@@ -2,6 +2,9 @@
 
 ### Probeklausur PROG 1
 
+- [Hauptseite](https://ge-kempten.github.io)
+- [PROG1](https://ge-kempten.github.io/1/programmieren-1-fuer-games/)
+
 #### Aufgabe 1
 
 Geben Sie die Ausgabe an.

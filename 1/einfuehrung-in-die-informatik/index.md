@@ -2,6 +2,8 @@
 
 # Einführung in die Informatik
 
+- [Hauptseite](https://ge-kempten.github.io)
+
 ## Kompetenzen
 
 - Informationsdarstellung im Rechner beschreiben

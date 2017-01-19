@@ -2,6 +2,9 @@
 
 ## Übung 1
 
+- [Hauptseite](https://ge-kempten.github.io)
+- [ITS](https://ge-kempten.github.io/1/it-systeme/)
+
 ### Aufgabe 1
 
 ![1](https://puu.sh/t4WnA/85861a5511.png)

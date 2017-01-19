@@ -2,6 +2,8 @@
 
 # Lineare Algebra und Analytische Geometrie
 
+- [Hauptseite](https://ge-kempten.github.io)
+
 ## Kompetenzen
 
 - Wesentliche Begriffe der Linearen Algebra und der Analytischen Geometrie wiedergeben
