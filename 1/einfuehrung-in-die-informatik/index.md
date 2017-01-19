@@ -303,8 +303,8 @@ Die simpleste Art ist die **Vorzeichendarstellung**. Dabei entscheidet das 1. Bi
 
 **Nachteile**:
 
-	- 0 wird dargestellt als 0000 (+0) und 1000 (-0)
-	- Rechnungen werden verkompliziert
+- 0 wird dargestellt als 0000 (+0) und 1000 (-0)
+- Rechnungen werden verkompliziert
 
 Um diese Nachteile zu lösen wurde das **Zweierkompliment** entwickelt. 
 
@@ -330,7 +330,7 @@ Jetzt können wir Rechnen. Zur Errinnerung:
 
 \$$ + (1010)_2 = (-6)_{10} $$
 
-\$$ (1100)_2 = (-4)_{10} $$
+\$$ => (1100)_2 = (-4)_{10} $$
 
 ### Reelle Zahlen
 
