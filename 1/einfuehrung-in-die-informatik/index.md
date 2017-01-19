@@ -299,7 +299,7 @@ Bis hier können wir aber nur positive Zahlen darstellen. Folglich werden versch
 
 Die simpleste Art ist die **Vorzeichendarstellung**. Dabei entscheidet das 1. Bit - also das ganz links - über das Vorzeichen.
 
-![Darstellung](https://puu.sh/ts928/ee6e33f16b.png)
+![Darstellung](https://puu.sh/tsblY/a70f2ad73a.png)
 
 **Nachteile**:
 
@@ -319,7 +319,7 @@ Kümmern wir uns erstmal um die Umwandlung einer positiven Zahl zum negativen Ko
 1. bitweise Negation
 2. Addition von 1
 
-![Umwandlung](https://puu.sh/ts93o/d03e7bd955.png)
+![Umwandlung](https://puu.sh/tsbml/29bb48ec72.png)
 
 Jetzt können wir Rechnen. Zur Errinnerung: 
 
