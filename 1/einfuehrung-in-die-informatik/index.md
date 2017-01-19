@@ -25,7 +25,7 @@ Die Informatik ist die Wissenschaft der automatischen Verarbeitung von Informati
 
 ## Geschichte der Datenverarbeitung
 
-### Konstruktion von Rechenhilfen und mechanischen Rechenmaschinen 
+### Konstruktion von Rechenhilfen und mechanischen Rechenmaschinen
 
 - 2000 v. Chr.: Abakus (Rechenhilfe für die vier Grundrechenarten mit beweglichen Kugeln)
 - 100 v. Chr.: Mechanismus von Antikythera (Mechanische Rechenmaschine, die mit Hilfe von Zahnrädern astronomische Berechnungen ermöglicht)
@@ -247,7 +247,7 @@ $$ 2 : 2 = 1 $$ R 0
 
 $$ 1 : 2 = 0 $$ R 1
 
-$$ (1337)_{10} = (0101 0011 1001)_2 $$
+$$ \implies (1337)_{10} = (0101 0011 1001)_2 $$
 
 **Beispiel 2**: Umwandlung von $$(525)_{10}$$ nach Hexadezimal
 

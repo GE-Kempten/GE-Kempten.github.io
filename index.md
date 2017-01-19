@@ -2,7 +2,7 @@
 
 # Willkommen
 
-Auf diesem Wiki werden Notizen zu Modulen des Studiengangs Informatik Game Engineering an der Hochschule Kempten gesammelt.
+Auf diesem Wiki werden Notizen zu [Modulen](http://www.hochschule-kempten.de/fileadmin/fh-kempten/E_I/inf-ge/pdf/161003_Modulhandbuch_IF-GE.PDF) des Studiengangs Informatik Game Engineering an der Hochschule Kempten gesammelt.
 
 |1. Semester                              |Prüfungstermin|-zeit|-raum|
 |:----------------------------------------|:-------------|:----|:----|
