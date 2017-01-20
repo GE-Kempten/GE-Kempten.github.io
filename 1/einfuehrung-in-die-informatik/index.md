@@ -156,7 +156,7 @@ $$ n = \sum^N_{i=0} b_i * B^i = (b_N b_{N-1} ... b_2 b_1 b_0)_B $$
 
 #### Umrechnung
 
-##### Pozentrechnung
+##### Potenzrechnung
 
 Die n-te Stelle der Ziffer wird auf Basis des Zahlensystems (Anzahl an möglichen Werten) potenziert und anschließend mit dem Wert der Stelle multipliziert.
 
@@ -302,6 +302,8 @@ Die simpleste Art ist die **Vorzeichendarstellung**. Dabei entscheidet das 1. Bi
 
 ![Darstellung](https://puu.sh/tsblY/a70f2ad73a.png)
 
+Anwendung bei Datentyp float.
+
 **Nachteile**:
 
 - 0 wird dargestellt als 0000 (+0) und 1000 (-0)
@@ -327,11 +329,39 @@ Jetzt können wir Rechnen. Zur Errinnerung:
 - 0xxx positiv
 - 1xxx negativ
 
+**Beispiel**:
+
 \$$ (0010)_2 = (2)_{10} $$
 
 \$$ + (1010)_2 = (-6)_{10} $$
 
-\$$ => (1100)_2 = (-4)_{10} $$
+\$$ => (1100)_2 $$
+
+bitweise Negation $$ (0011)_2 = (4)_{10} $$
+
+Information 1. bit -> Minus, also $$(1100)_2 = (-4)_{10} $$
+
+Anwendung: Datentyp signed int
+
+Spezielfall:
+
+$$(1000 0000)_{2} = -128)_{10}$$
+
+0 komplimentiert ist immer noch 0, da alle Bits zu 1 werden und anschließend die Addition von 1 alle wieder umdreht.
+
+Eine dritte Darstellungsmöglichkeit ist die **Verschiebung des Zahlenbereichs ins Positive (= Addition _Bias_)**. Dabei wird ein Bias festgelegt, welcher auf alle Zahlen draufaddiert wird. Dieser kann beispielweise durch den maximalen Wertebereich definiert werden (z.B. 2^4 = [-128, 127]).
+
+Beispiel: 
+
+Bias: $$(127)_{10} = (0111 1111)_2$$
+7 = 0000 0111 + BIAS = 1000 0110
+-7 = 1111 1001 + BIAS = 0111 1000 
+
+Anwendung: Exponentialdarstellung
+
+**Nachteil**: 
+	- Muss bekannt sein, dass jetzt das Bias-Verfahren angewendet wird.
+	- Wenn Bias nicht mehr bekannt, dann weiß man nicht mehr die Zahl
 
 ### Reelle Zahlen
 

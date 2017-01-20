@@ -109,3 +109,152 @@ b) Was dient als Grundlage für die Tests? (1P)
 c) Was passiert, wenn Tests nicht erfolgreich absolviert werden? (2P)
 
 d) Welche Phasen werden nach einem erfolgreichen Test durchlaufen? (3P)
+
+### Lösungen
+
+#### Aufgabe 1
+
+a) Praktische Informatik
+
+b) Computerbau, ...
+
+#### Aufgabe 2
+
+a) $$(145376)_8$$ und $$(CAFE)_{16}$$
+
+b) 0,1101
+
+c) 
+
+- Vorzeichendarstellung 
+	- 1. Bit -> Vorzeichen
+	- Bsp. 7 = 0000 0111, -7 = 1000 0111
+- Zweierkompliment
+	- Bitweise Negation, anschließend Addition von 1
+	- Bsp. 7 = 0000 0111 also 1111 0000
+	- 1111 1000 + 0000 0001 = 1111 1001 (-7)
+- Verschiebung des Zahlenbereichs ins Positive (= Addition eines Bias)
+	- Bsp. 7 = 0000 0111
+	- Auf negative Zahlen müssen 127 oder 128 drauf addiert werden
+	- -7 = 0111 1000 (= -7 + 127)
+	- 7 = 1000 0110 (= 7 + 127)
+
+#### Aufgabe 3
+
+a) 
+
+Viele Beteiligte 
+	- Eindeutigkeit (Missverständnisse möglich)
+	- Widersprüche (z.B. Verschiedene Abteilungen wollen dialoge anders sehen)
+Viele Anforderungen
+	- Widersprüche (Beispiel: Sprachen Deutsch und Englisch -> Standardsprache?)
+	- Vollständigkeit (Vergessen von Anforderungen / schwer einzuhalten)
+	- Detailiertheit leidet (nicht genaue Absprache von Anforderungen)
+
+b) Requirement Engineering
+
+c) Lastenheft / Pflichtenheft
+
+#### Aufgabe 4
+
+a) 2
+
+|x|s|y|r|
+|:-:|:-:|:-:|:-:|
+|525|0|52|5|
+|52|1|5|2|
+|5|1|0|5|
+|0|2|||
+
+> x > 0 ist Abbruchbedinung
+
+b) Liefert die Anzahl der Ziffer 5 in der eingegeben Zahl x
+
+c) r ist Rest, steht für aktuelle Ziffer (von x)
+
+d) Ersetzen von 
+
+```pseudo
+WENN r == 5
+DANN
+	s = s + 1
+ENDE
+```
+
+mit
+
+```pseudo
+s = s + r
+``` 
+
+#### Aufgabe 5
+
+a)
+
+|Maschinensprache|Problem-orientiert|
+|:--|:--|
+|- binär|- Prozessorunabhängig|
+|- für den Prozessor |- erleichtert Programmierung aus Sicht des Problems|
+
+> "Erstes Problem": Mathe -> FORTRAN (Formel Translator)
+
+b)
+
+|Compiler|Interpreter|
+|:--|:--|
+|- Übersetzt kompletten Quellcode vor Start|- Übersetzt Zeile für Zeile während der Ausführung|
+|- z.B. C++, C |- z.B. Phyton, Basic, PHP, LISP|
+
+(gemischt: Java, C# -> ganz Übersetzen)
+
+c)
+
+|Compiler|Interpreter|
+|:--|:--|
+|+ Fehler vor Ausführung erkennbar|- muss Fehler immer suchen|
+|- Prozessor-abhängig|+ Plattform-unabhängig|
+|+ schneller, da nur einmalige übersetzen|- langsamer, da Übersetzung Schritt für Schritt|
+
+#### Aufgabe 6
+
+a) succ (= Nachfolgezeichen)
+
+pred (= Vorgängerzeichen)
+
+oder chr() und ord()
+
+b) Relationen: =, !=, <, >
+
+a = b -> a und b sind der gleiche Buchstabe
+
+a < b -> a kommt vor b im Alphabet
+
+c) string, , structs mit char, Pointer auf char, enum 
+
+#### Aufgabe 7
+
+a) ![Binärbaum]()
+
+b) K S P Q, also 4 Knoten
+
+c) ja, nach X: links T U V W und rechts: Y Z
+
+Begründung: Maximale Tiefe des Baumes wird dadurch nicht erhöht und die Suche wird nicht länger.
+
+#### Aufgabe 8
+
+a) Nicht-deterministisch erkennender Automat (endlicher)
+
+b) L(A) = $$\{a^m b^n c \mid m, n > 0\} \cup \{a\}$$
+
+c) ![Ergänzung Automat]()
+
+#### Aufgabe 9
+
+a)
+
+b)
+
+c)
+
+d)
