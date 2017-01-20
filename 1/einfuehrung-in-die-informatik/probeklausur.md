@@ -96,7 +96,7 @@ a) Um welchen Typ von Automaten handelt es sich? (1P)
 
 b) Wie lautet die von diesem Automaten akzeptierte Sprache L(A)? (6P)
 
-c) Wie muss der Automat modifiziert werden, damit er die Wörter $$\{ab^n \| n \in \mathbb{N}\}$$ und $$\{ac^n \| n \in \mathbb{N}\}$$ ebenfalls erkennt? Geben Se die jeweiligen Kanten und deren Beschriftung an! (4P)
+c) Wie muss der Automat modifiziert werden, damit er die Wörter $$\{ab^n \mid n \in \mathbb{N}\}$$ und $$\{ac^n \mid n \in \mathbb{N}\}$$ ebenfalls erkennt? Geben Se die jeweiligen Kanten und deren Beschriftung an! (4P)
 
 #### Aufgabe 9 (10P)
 
