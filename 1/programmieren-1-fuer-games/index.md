@@ -1,9 +1,12 @@
 # Programmieren 1 für Games
 
+- [Hauptseite](https://ge-kempten.github.io)
+- [Probeklausur](https://ge-kempten.github.io/1/programmieren-1-fuer-games/prog-probeprüfung)
+
 - [ ] Verlinkung zu einzelnen Themen
 - [x] Einführung ("Programmieren", "C und C++", "Das erste Programm")
 - [x] Elementare Datentypen ("int", "float", "bool", "char", "string")
-- [ ] Arithmetische Operatoren
+- [x] Arithmetische Operatoren
 - [x] Tipps und Tricks mit der IDE -> unwichtig, da Visual Studio spezifisch
 - [ ] Ein- und Ausgabe aus der Konsole
 - [ ] Kontrollstrukturen

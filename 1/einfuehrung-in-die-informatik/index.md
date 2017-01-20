@@ -2,6 +2,9 @@
 
 # Einführung in die Informatik
 
+- [Hauptseite](https://ge-kempten.github.io)
+- [Probeklausur](https://ge-kempten.github.io/1/einfuehrung-in-die-informatik/probeklausur)
+
 ## Kompetenzen
 
 - Informationsdarstellung im Rechner beschreiben
@@ -18,26 +21,14 @@
 
 Die Informatik ist die Wissenschaft der automatischen Verarbeitung von Informationen, insbesondere mit Hilfe von Digitalrechnern. Der Begriff setzt sich aus „Information“ und „Automatik“ Sie ist eine interdisziplinäre Wissenschaft mit Wurzeln im Elektroingenieurwesen und in der Mathematik und ist in folgende Teilbereiche unterteilt: 
 
-
-### Theoretische Informatik
-
-Erforschung der theoretischen Grundlagen, Informations- und Codierungstheorie, Formale Sprachen, Automatentheorie, Algorithmen, Datenstrukturen, Berechenbarkeit, etc.
-
-### Angewandte Informatik
-
-Praktische Anwendung des Rechners in verschiedenen Anwendungsbereichen, ethische und soziale Fragen der EDV, Datenschutz und -sicherheit
-
-### Technische Informatik
-
-Konstruktion von Rechnern, Speicherchips, Prozessoren und Peripheriegeräten, Erforschung und Anwendung Technischer Möglichkeiten
-
-### Praktische Informatik
-
-Konstruktion von System- und Anwendungssoftware, Compilerbau
+- Theoretische Informatik: Erforschung der theoretischen Grundlagen
+- Angewandte Informatik: Einsatz des Rechners in verschiedenen Anwendungsbereichen
+- Technische Informatik: Konstruktion von Rechnern
+- Praktische Informatik: Softwareentwicklung
 
 ## Geschichte der Datenverarbeitung
 
-### Konstruktion von Rechenhilfen und mechanischen Rechenmaschinen 
+### Konstruktion von Rechenhilfen und mechanischen Rechenmaschinen
 
 - 2000 v. Chr.: Abakus (Rechenhilfe für die vier Grundrechenarten mit beweglichen Kugeln)
 - 100 v. Chr.: Mechanismus von Antikythera (Mechanische Rechenmaschine, die mit Hilfe von Zahnrädern astronomische Berechnungen ermöglicht)
@@ -159,17 +150,19 @@ $$ n = \sum^N_{i=0} b_i * B^i = (b_N b_{N-1} ... b_2 b_1 b_0)_B $$
 
 > Arithmetische Operationen funktionieren genauso wie im Dezimalsystem
 
-![Addition](https://puu.sh/toBWM/1d7df924ef.png)
+![Addition](https://puu.sh/tr4w2/edf6089322.png)
 
-![Multiplikation](https://puu.sh/toBXL/3db50e5474.png)
+![Multiplikation](https://puu.sh/tr4vK/27dea8e6d4.png)
 
 #### Umrechnung
 
-##### Simple Umrechnung nach Dezimal
+##### Pozentrechnung
 
 Die n-te Stelle der Ziffer wird auf Basis des Zahlensystems (Anzahl an möglichen Werten) potenziert und anschließend mit dem Wert der Stelle multipliziert.
 
-> 0010 1010 =
+Ergebnis: Dezimalzahl
+
+> \$$ (0010 1010)_2 = $$
 > 
 > \$$ 2^7 * 0 + 2^6 * 0 + 2^5 * 1 + 2^4 * 0 + 2^3 * 1 + 2^2 * 0 + 2^1 * 1 + 2^0 * 0 = $$
 >
@@ -177,7 +170,7 @@ Die n-te Stelle der Ziffer wird auf Basis des Zahlensystems (Anzahl an mögliche
 >
 > 42
 
-> DAB =
+> \$$ (DAB)_{16} = $$
 >
 > \$$ 16^2 * D + 16^1 * A + 16^0 * B = $$ 
 >
@@ -185,15 +178,31 @@ Die n-te Stelle der Ziffer wird auf Basis des Zahlensystems (Anzahl an mögliche
 >
 > 3499
 
-zwischen Zahlensystemen -> Horner-Schema:
+##### Horner-Schema
 
-$$ n = ((...(b_N * B + b_{n-1})* B + b_{n-2})* B + ... + b_1) $$
+$$ N = ((...(b_n * B + b_{n-1})* B + b_{n-2})* B + ... + b_1)*B + b_0 $$
 
-![Beispiel 1]()
+> B = Basis des Zahlensystems (z.B. Hexadezimal: 16)
+>
+> b = Umwandelnde Ziffern; n = Stelle der Ziffer
+>
+> Ergebnis: Dezimalzahl
 
-![Beispiel 2]()
+**Beispiel 1**: $$(1011)_2$$ in Dezimal
 
-**Sukzessive Division**:
+\$$(1011)_2 = (((1*2+0)*2+1)*2+1) $$
+
+\$$(1011)_2 = (11)_{10} $$
+
+**Beispiel 2**: $$(345)_8$$ in Dezimal
+
+\$$(345)_8 = ((3*8+4)*8+5) $$
+
+\$$(345)_8 = (229)_{10} $$
+
+##### Sukzessive Division
+
+Wir nehmen eine beliebige Zahl und teilen diese durch die Basis des gewünschten Systems. Das Ergebnis wird ohne Kommazahl genommen (nicht Runden!) und der Rest neben dran geschrieben. Wenn das Ergebnis 0 erreicht, dann werden die Reste rückwärts aneinandergereiht.
 
 $$ n : B = q_0 Rest b_0 $$
 
@@ -205,30 +214,55 @@ $$ q_{n-2} : B = q_{N-1} Rest b_{N-1} $$
 
 $$ q_{n-1} : B = 0 Rest b_N $$
 
-> \$$ 1337 : 2 = 668 R 1 $$
+> n = Umwandelbare Zahl
 >
-> \$$ 668 : 2 = 334 R 0 $$
+> B = Basis des Zielzahlensystems
 >
-> \$$ 334 : 2 = 167 R 0 $$
+> q = Ergebnis ohne Rest (bzw. ohne Komma)
 >
-> \$$ 167 : 2 = 83 R 1 $$
+> b = Reste
 >
-> \$$ 83 : 2 = 41 R 1 $$
+> Anschließend die Reste (b) rückwärts zusammenzählen
 >
-> \$$ 41 : 2 = 20 R 1 $$
->
-> \$$ 20 : 2 = 10 R 0 $$
->
-> \$$ 10 : 2 = 5 R 0 $$
->
-> \$$ 5 : 2 = 2 R 1 $$
->
-> \$$ 2 : 2 = 1 R 0 $$
->
-> \$$ 1 : 2 = 0 R 1 $$
->
-> \$$ 0101 0011 1001 $$
+> Ergebnis: Zahlensystem von B
 
+**Beispiel 1**: Umwandlungs von $$(1337)_{10}$$ nach Binär/Dual
+
+$$ 1337 : 2 = 668 $$ R 1
+
+$$ 668 : 2 = 334 $$ R 0
+
+$$ 334 : 2 = 167 $$ R 0
+
+$$ 167 : 2 = 83 $$ R 1
+
+$$ 83 : 2 = 41 $$ R 1
+
+$$ 41 : 2 = 20 $$ R 1 
+
+$$ 20 : 2 = 10 $$ R 0
+
+$$ 10 : 2 = 5 $$ R 0 
+
+$$ 5 : 2 = 2 $$ R 1 
+
+$$ 2 : 2 = 1 $$ R 0
+
+$$ 1 : 2 = 0 $$ R 1
+
+$$ \implies (1337)_{10} = (0101 0011 1001)_2 $$
+
+**Beispiel 2**: Umwandlung von $$(525)_{10}$$ nach Hexadezimal
+
+$$ 525 : 16 = 32 $$ R D
+
+> **Tipp**: 32*16 = 512 -> 525 - 512 = 13 bzw. D
+
+$$ 32 : 16 = 2 $$ R 0 
+
+$$ 2 : 16 = 0 $$ R 2 
+
+$$ (525)_{10} = (20D)_{16} $$
 
 **Sukzessive Multiplikation**:
 
@@ -244,24 +278,60 @@ $$ q_0 = q_1 * B + b_1 $$
 
 $$ n = q_0 * B + b_0 $$
 
-**Vereinfachtes Schema**: Konvertierung in n-große Blöcke -> Blöcke getrennt Konvertieren.
+> "Braucht niemand" - Jeb 2017
 
-![Vereinfachtes Schema]()
+##### Vereinfachtes Schema: 
+
+1. Umrechnung ins Binärsystem
+2. Aufteilung jeder Ziffer in ein Block
+3. Umwandlung in Zahlensystem anhand Anzahl der Blöcke (2er Potenzen):
+	- Oktal: 3 Blöcke ($$2^3$$ = 8)
+	- Hexadezimal: 4 Blöcke ($$2^4$$ = 16) 
+
+![Vereinfachtes Schema](https://puu.sh/tr4wd/966ea36969.png)
+
+**Vorteil**: Schnellere und kürzere Umrechnung
+
+**Nachteil**: Nur Umwandlung zwischen 2er Potenzen möglich
 
 ### Ganze Zahlen
 
-- Vorzeichendarstellung:
-	- 1. Bit -> Vorzeichen +(0) oder -(1)
-	- Aber: Rechnung kompliziert
-	- ![Beispielrechnung]()
-- Zweierkompliment:
-	- Idee: Zahlen geordnet nach: modulo 2N
-	- 1. Bit -> Vorzeichen
-	- Erzeugen einer negativen Zahl im Zweierkompliment: bitweise Negation und Addition von 1 => einfach zu bilden und einfach Rechnen möglich
-	- ![Beispielrechnung]()
-- Verschieben des Zahlenbereichs
-	- Addition einer Konstante -> alle Zahlen positiv
-	- ![Beispielrechnung]()
+Bis hier können wir aber nur positive Zahlen darstellen. Folglich werden verschiedene Arten genannt, wie unser Zahlenbereich dargestellt werden kann.
+
+Die simpleste Art ist die **Vorzeichendarstellung**. Dabei entscheidet das 1. Bit - also das ganz links - über das Vorzeichen.
+
+![Darstellung](https://puu.sh/tsblY/a70f2ad73a.png)
+
+**Nachteile**:
+
+- 0 wird dargestellt als 0000 (+0) und 1000 (-0)
+- Rechnungen werden verkompliziert
+
+Um diese Nachteile zu lösen wurde das **Zweierkompliment** entwickelt. 
+
+Nehme wir beispielweise 4 Bit wodruch wir $$ 2^4 = 16 $$ Zahlen darstellen können. Wir zählen nun von 0000 (0) rauf, bis wir die Obergrenze 0111 (7) erreicht haben. Nun fangen wir bei 1111 (-1) an rückwärts zu zählen und enden bei 1000 (-8).
+
+Darstellbarer Bereich: $$-2^{N-1}$$ bis $$2^{N-1}-1$$
+
+Der erste Nachteil ist gelöst - 0 (0000) ist nun einmal verfügbar. Und Rechnen?
+
+Kümmern wir uns erstmal um die Umwandlung einer positiven Zahl zum negativen Konterpart und andersrum:
+
+1. bitweise Negation
+2. Addition von 1
+
+![Umwandlung](https://puu.sh/tsbml/29bb48ec72.png)
+
+Jetzt können wir Rechnen. Zur Errinnerung: 
+
+- 0xxx positiv
+- 1xxx negativ
+
+\$$ (0010)_2 = (2)_{10} $$
+
+\$$ + (1010)_2 = (-6)_{10} $$
+
+\$$ => (1100)_2 = (-4)_{10} $$
 
 ### Reelle Zahlen
 
@@ -289,7 +359,7 @@ Bsp: Finanzbereich: EUR in ct, d.h. Verschiebung um 2 Kommastellen
 - 0-32 -> Steuerzeichen
 - 33-127 -> Druckbare Zeichen
 
-![ASCII-Tabelle]()
+![ASCII](http://www.jimprice.com/ascii-0-127.gif)
 
 #### Erweiterung
 
@@ -321,6 +391,8 @@ zu 1.: Höchstens Bit 0, restliche Bits entsprechen ASCII Code.
 
 ab 2.: Die x enthalten die Bitkombination des Unicode-Zeichens (rechtsbündig aufgefüllt), die Anzahl der 1en- zu Beginn steht für die Anzahl der Bytes.
 
+---
+
 ## Einführung in Algorithmen und Datenstrukturen
 
 ## Grundlagen der Automatentheorie und formaler Sprachen
@@ -328,5 +400,52 @@ ab 2.: Die x enthalten die Bitkombination des Unicode-Zeichens (rechtsbündig au
 ## Grundlagen der Softwareentwicklung
 
 ## Wirtschaftliche und gesellschaftliche Bedeutung der Informatik
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

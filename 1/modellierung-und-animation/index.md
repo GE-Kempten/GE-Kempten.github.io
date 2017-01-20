@@ -2,6 +2,8 @@
 
 # Modellierung und Animation 1
 
+- [Hauptseite](https://ge-kempten.github.io)
+
 ### Kompetenzen
 
 - Überblick über Methoden und Techniken der Modellierung und Animation

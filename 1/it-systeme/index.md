@@ -2,6 +2,9 @@
 
 # IT-Systeme
 
+- [Hauptseite](https://ge-kempten.github.io)
+- [Übung 1](https://ge-kempten.github.io/1/it-systeme/uebung-1)
+
 ## Kompetenzen
 
 - Bauen eines funktionsfähigen Rechners, dazu werden
@@ -256,6 +259,142 @@ Beispiel (Übung 1 Aufgabe 8):
 ![1.8](https://puu.sh/t4y8x/349b4f1d27.png)
 
 # Logische Bausteine
+
+Schaltnetze/Schaltglieder sind digitale Schalteungen, die eine Schaltfunktion realisieren.
+Elementare Schaltglieder werden auch Gatter genannt.
+
+## Gatter
+
+<table>
+<tr>
+	<th>Gatter</th>
+    <th>Symbol</th>
+    <th>Wahrheitstabelle</th>
+</tr>
+
+<tr>
+	<td>
+    	<ul style="list-style-type:none">
+        	<li>NOT</li>
+        	<li>¬</li>
+        </ul>
+    </td>
+    <td><img src="https://upload.wikimedia.org/wikipedia/commons/3/31/IEC_NOT_label.svg" alt="NOT" width="170" height="75"></td>
+
+  <td>
+  	<table style="width:100%">
+    	<tr><th>A</th><th>Y</th></tr>
+        <tr><td>0</td><td>1</td></tr>
+        <tr><td>1</td><td>0</td></tr>
+	</table>
+  </td>
+</tr>
+
+<tr>
+	<td>
+    	<ul style="list-style-type:none">
+        	<li>AND</li>
+        	<li>∧</li>
+        </ul>
+    </td>
+    <td><img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/IEC_AND_label.svg" alt="AND" width="170" height="75"></td>
+
+  <td>
+  	<table style="width:100%">
+    	<tr><th>A</th><th>B</th><th>Y</th></tr>
+        <tr><td>0</td><td>0</td><td>0</td></tr>
+        <tr><td>0</td><td>1</td><td>0</td></tr>
+        <tr><td>1</td><td>0</td><td>0</td></tr>
+        <tr><td>1</td><td>1</td><td>1</td></tr>
+	</table>
+  </td>
+</tr>
+
+<tr>
+	<td>
+    	<ul style="list-style-type:none">
+        	<li>OR</li>
+        	<li>∨</li>
+        </ul>
+    </td>
+    <td><img src="https://upload.wikimedia.org/wikipedia/commons/4/40/IEC_OR_label.svg" alt="OR" width="170" height="75"></td>
+
+  <td>
+  	<table style="width:100%">
+    	<tr><th>A</th><th>B</th><th>Y</th></tr>
+        <tr><td>0</td><td>0</td><td>0</td></tr>
+        <tr><td>0</td><td>1</td><td>1</td></tr>
+        <tr><td>1</td><td>0</td><td>1</td></tr>
+        <tr><td>1</td><td>1</td><td>1</td></tr>
+	</table>
+  </td>
+</tr>
+
+<tr>
+	<td>
+    	<ul style="list-style-type:none">
+        	<li>XOR</li>
+        	<li>⊻</li>
+        </ul>
+    </td>
+    <td><img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/IEC_XOR_label.svg" alt="OR" width="170" height="75"></td>
+
+  <td>
+  	<table style="width:100%">
+    	<tr><th>A</th><th>B</th><th>Y</th></tr>
+        <tr><td>0</td><td>0</td><td>0</td></tr>
+        <tr><td>0</td><td>1</td><td>1</td></tr>
+        <tr><td>1</td><td>0</td><td>1</td></tr>
+        <tr><td>1</td><td>1</td><td>0</td></tr>
+	</table>
+  </td>
+</tr>
+
+<tr>
+	<td>
+    	<ul style="list-style-type:none">
+        	<li>NAND</li>
+        	<li>⊼</li>
+        </ul>
+    </td>
+    <td><img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/IEC_NAND_label.svg" alt="OR" width="170" height="75"></td>
+
+  <td>
+  	<table style="width:100%">
+    	<tr><th>A</th><th>B</th><th>Y</th></tr>
+        <tr><td>0</td><td>0</td><td>1</td></tr>
+        <tr><td>0</td><td>1</td><td>1</td></tr>
+        <tr><td>1</td><td>0</td><td>1</td></tr>
+        <tr><td>1</td><td>1</td><td>0</td></tr>
+	</table>
+  </td>
+</tr>
+
+<tr>
+	<td>
+    	<ul style="list-style-type:none">
+        	<li>NOR</li>
+        	<li>⊽</li>
+        </ul>
+    </td>
+    <td><img src="https://upload.wikimedia.org/wikipedia/commons/3/37/IEC_NOR_label.svg" alt="OR" width="170" height="75"></td>
+
+  <td>
+  	<table style="width:100%">
+    	<tr><th>A</th><th>B</th><th>Y</th></tr>
+        <tr><td>0</td><td>0</td><td>1</td></tr>
+        <tr><td>0</td><td>1</td><td>0</td></tr>
+        <tr><td>1</td><td>0</td><td>0</td></tr>
+        <tr><td>1</td><td>1</td><td>0</td></tr>
+	</table>
+  </td>
+</tr>
+
+</table>
+
+## Technische Realisierung mit Transistoren
+
+Metalloxid-Halbleiter-Feldeffekt-Transistor (_**M**etal**O**xide-**S**emiconductor-**F**ield**E**ffect **T**ransistor_ -> **MOSFET**) wird in der Computertechnik am häufigsten verwendet.
 
 **Todo**
 

@@ -27,7 +27,7 @@ Real pros use Linux, also sind funktionieren einige Commands eventuell nicht auf
 |cd [ORDNER]                |Navigiere in einen Ordner                         |
 |cd ..                      |Übergeordneter Ordner                             |
 |ls                         |Liste den Inhalt des Ordners auf                  |
-|cat [Datei]                |Gib den Inhalt eier Textdatei aus                 |
+|cat [Datei]                |Gib den Inhalt einer Textdatei aus                 |
 |touch [Datei]              |Erstelle neue Datei oder aktualisiere das Datum   |
 |rm [Datei]                 |Datei löschen                                     |
 |rm -rf [Ordner]            |Ordner samt Inhalt löschen (Achtung!)             |
