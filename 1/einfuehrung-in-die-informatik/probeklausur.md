@@ -120,7 +120,7 @@ b) Computerbau, ...
 
 #### Aufgabe 2
 
-a) $$(145376)_8$$ und $$(CAFE)_16$$
+a) $$(145376)_8$$ und $$(CAFE)_{16}$$
 
 b) 0,1101
 
@@ -141,7 +141,9 @@ c)
 
 #### Aufgabe 3
 
-a) Viele Beteiligte 
+a) 
+
+Viele Beteiligte 
 	- Eindeutigkeit (Missverständnisse möglich)
 	- Widersprüche (z.B. Verschiedene Abteilungen wollen dialoge anders sehen)
 Viele Anforderungen
@@ -155,7 +157,7 @@ c) Lastenheft / Pflichtenheft
 
 #### Aufgabe 4
 
-a) 2 oder s = 2
+a) 2
 
 |x|s|y|r|
 |:-:|:-:|:-:|:-:|
