@@ -156,7 +156,7 @@ $$ n = \sum^N_{i=0} b_i * B^i = (b_N b_{N-1} ... b_2 b_1 b_0)_B $$
 
 #### Umrechnung
 
-##### Pozentrechnung
+##### Potenzrechnung
 
 Die n-te Stelle der Ziffer wird auf Basis des Zahlensystems (Anzahl an möglichen Werten) potenziert und anschließend mit dem Wert der Stelle multipliziert.
 
@@ -302,6 +302,8 @@ Die simpleste Art ist die **Vorzeichendarstellung**. Dabei entscheidet das 1. Bi
 
 ![Darstellung](https://puu.sh/tsblY/a70f2ad73a.png)
 
+Anwendung bei Datentyp float.
+
 **Nachteile**:
 
 - 0 wird dargestellt als 0000 (+0) und 1000 (-0)
@@ -331,19 +333,26 @@ Jetzt können wir Rechnen. Zur Errinnerung:
 
 \$$ + (1010)_2 = (-6)_{10} $$
 
-\$$ => (1100)_2 = (-4)_{10} $$
+\$$ => (1100)_2 $$
+
+bitweise Negation $$ (0011)_2 = (4)_{10} $$
+
+Information 1. bit -> Minus, also $$(1100)_2 = (-4)_{10} $$
+
+Anwendung: Datentyp signed int
 
 Spezielfall:
 
-$$ (-128)_{10} = (1000 0000)_{2} $$
+$$(1000 0000)_{2} = -128)_{10}$$
 
 0 komplimentiert ist immer noch 0, da alle Bits zu 1 werden und anschließend die Addition von 1 alle wieder umdreht.
 
 - Verschiebung des Zahlenbereichs ins Positive (= Addition eines Bias)
-	- Bsp. 7 = 0000 0111
+	- Bsp. 7 = 0000 0111s
 	- Auf negative Zahlen müssen 127 oder 128 drauf addiert werden
 	- -7 = 0111 1000 (= -7 + 127)
 	- 7 = 1000 0110 (= 7 + 127)
+	- Anwendung: Exponentialdarstellung
 	- Nachteil: 
 		- Muss bekannt sein, dass jetzt das Bias-Verfahren angewendet wird.
 		- Wenn Bias nicht mehr bekannt, dann weiß man nicht mehr die Zahl
