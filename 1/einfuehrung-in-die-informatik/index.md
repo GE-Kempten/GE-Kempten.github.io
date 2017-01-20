@@ -329,6 +329,8 @@ Jetzt können wir Rechnen. Zur Errinnerung:
 - 0xxx positiv
 - 1xxx negativ
 
+**Beispiel**:
+
 \$$ (0010)_2 = (2)_{10} $$
 
 \$$ + (1010)_2 = (-6)_{10} $$
@@ -347,15 +349,19 @@ $$(1000 0000)_{2} = -128)_{10}$$
 
 0 komplimentiert ist immer noch 0, da alle Bits zu 1 werden und anschließend die Addition von 1 alle wieder umdreht.
 
-- Verschiebung des Zahlenbereichs ins Positive (= Addition eines Bias)
-	- Bsp. 7 = 0000 0111s
-	- Auf negative Zahlen müssen 127 oder 128 drauf addiert werden
-	- -7 = 0111 1000 (= -7 + 127)
-	- 7 = 1000 0110 (= 7 + 127)
-	- Anwendung: Exponentialdarstellung
-	- Nachteil: 
-		- Muss bekannt sein, dass jetzt das Bias-Verfahren angewendet wird.
-		- Wenn Bias nicht mehr bekannt, dann weiß man nicht mehr die Zahl
+Eine dritte Darstellungsmöglichkeit ist die **Verschiebung des Zahlenbereichs ins Positive (= Addition _Bias_)**. Dabei wird ein Bias festgelegt, welcher auf alle Zahlen draufaddiert wird. Dieser kann beispielweise durch den maximalen Wertebereich definiert werden (z.B. 2^4 = [-128, 127]).
+
+Beispiel: 
+
+Bias: $$(127)_{10} = (0111 1111)_2$$
+7 = 0000 0111 + BIAS = 1000 0110
+-7 = 1111 1001 + BIAS = 0111 1000 
+
+Anwendung: Exponentialdarstellung
+
+**Nachteil**: 
+	- Muss bekannt sein, dass jetzt das Bias-Verfahren angewendet wird.
+	- Wenn Bias nicht mehr bekannt, dann weiß man nicht mehr die Zahl
 
 ### Reelle Zahlen
 
