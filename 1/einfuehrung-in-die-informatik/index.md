@@ -333,6 +333,21 @@ Jetzt können wir Rechnen. Zur Errinnerung:
 
 \$$ => (1100)_2 = (-4)_{10} $$
 
+Spezielfall:
+
+$$ (-128)_{10} = (1000 0000)_{2} $$
+
+0 komplimentiert ist immer noch 0, da alle Bits zu 1 werden und anschließend die Addition von 1 alle wieder umdreht.
+
+- Verschiebung des Zahlenbereichs ins Positive (= Addition eines Bias)
+	- Bsp. 7 = 0000 0111
+	- Auf negative Zahlen müssen 127 oder 128 drauf addiert werden
+	- -7 = 0111 1000 (= -7 + 127)
+	- 7 = 1000 0110 (= 7 + 127)
+	- Nachteil: 
+		- Muss bekannt sein, dass jetzt das Bias-Verfahren angewendet wird.
+		- Wenn Bias nicht mehr bekannt, dann weiß man nicht mehr die Zahl
+
 ### Reelle Zahlen
 
 **Festpunktdarstellung**: Komma immer an vorher festgelegten Stelle
