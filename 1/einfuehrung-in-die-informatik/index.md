@@ -3,6 +3,7 @@
 # Einführung in die Informatik
 
 - [Hauptseite](https://ge-kempten.github.io)
+- [Probeklausur](https://ge-kempten.github.io/1/einfuehrung-in-die-informatik/probeklausur)
 
 ## Kompetenzen
 
