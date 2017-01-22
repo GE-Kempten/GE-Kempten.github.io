@@ -116,13 +116,25 @@ d) Welche Phasen werden nach einem erfolgreichen Test durchlaufen? (3P)
 
 a) Praktische Informatik
 
-b) Computerbau, ...
+b) Rechnerorganisation, Grundlagen und Schaltungstechnik, Architekturkonzepte, Vernetzung von Rechnensystemen
 
 #### Aufgabe 2
 
 a) $$(145376)_8$$ und $$(CAFE)_{16}$$
 
 b) 0,1101
+
+0,8 * 2 = 1.6 R 1
+
+0,6 * 2 = 1.2 R 1
+
+0.2 * 2 = 0.4 R 0
+
+0.4 * 2 = 0.8 R 0
+
+! 0.8 * 2 = 1.6 R 1
+
+0,11001 -> 0,1101
 
 c) 
 
