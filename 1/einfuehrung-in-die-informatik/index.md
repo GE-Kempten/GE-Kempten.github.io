@@ -19,12 +19,29 @@
 
 ## Einführung
 
-Die Informatik ist die Wissenschaft der automatischen Verarbeitung von Informationen, insbesondere mit Hilfe von Digitalrechnern. Der Begriff setzt sich aus „Information“ und „Automatik“ Sie ist eine interdisziplinäre Wissenschaft mit Wurzeln im Elektroingenieurwesen und in der Mathematik und ist in folgende Teilbereiche unterteilt: 
+Die Informatik ist die Wissenschaft der automatischen Verarbeitung von Informationen, insbesondere mit Hilfe von Digitalrechnern. Der Begriff setzt sich aus „Information“ und „Automatik“ Sie ist eine interdisziplinäre Wissenschaft mit Wurzeln im Elektroingenieurwesen und in der Mathematik und ist in folgende Teilbereiche unterteilt:
 
 - Theoretische Informatik: Erforschung der theoretischen Grundlagen
+	- Algorithmen
+	- Ersetzungsysteme und Kalküle
+	- Theorie der Programmierung
+	- Kommunikationstheorie
 - Angewandte Informatik: Einsatz des Rechners in verschiedenen Anwendungsbereichen
+	- Wirtschaftsinformatik
+	- Medizininformatik
+	- Ingenieurinformatik
+	- Informatik in Natur- und Geisteswissenschaften
 - Technische Informatik: Konstruktion von Rechnern
+	- Rechnerorganisation
+	- Grundlagen und Schaltungstechnik
+	- Architekturkonzepte
+	- Vernetzung von Rechensystemen
 - Praktische Informatik: Softwareentwicklung
+	- Programmiersprachen und Programmiertechnik
+	- Informationssysteme
+	- Systemsoftware und Systeme mit besonderen Anforderungen
+	- Dialogsysteme und Computergrafik
+	- Künstliche Intelligenz
 
 ## Geschichte der Datenverarbeitung
 
@@ -97,19 +114,19 @@ Mittlere Wortlänge einer Codierung:
 
 $$ L = \sum^n_{i=1} w(x_i) * l(i) $$
 
-> $$ l(i) $$ -> Wortlänge des Codes des i-ten Zeichens 
+> $$ l(i) $$ -> Wortlänge des Codes des i-ten Zeichens
 
-Shannon'sches Codierungstheorem: 
+Shannon'sches Codierungstheorem:
 
 $$ L ≥ H $$
 
 > wenn = -> Codierung kompakt
 
-Code Redundanz: 
+Code Redundanz:
 
 $$ R = L - H $$
 
-> Größe der Anteil einer Nachricht, die im statistischen Sinne keine Information trägt 
+> Größe der Anteil einer Nachricht, die im statistischen Sinne keine Information trägt
 
 #### Umsetzung
 
@@ -163,7 +180,7 @@ Die n-te Stelle der Ziffer wird auf Basis des Zahlensystems (Anzahl an mögliche
 Ergebnis: Dezimalzahl
 
 > \$$ (0010 1010)_2 = $$
-> 
+>
 > \$$ 2^7 * 0 + 2^6 * 0 + 2^5 * 1 + 2^4 * 0 + 2^3 * 1 + 2^2 * 0 + 2^1 * 1 + 2^0 * 0 = $$
 >
 > 32 + 8 + 2 =
@@ -172,7 +189,7 @@ Ergebnis: Dezimalzahl
 
 > \$$ (DAB)_{16} = $$
 >
-> \$$ 16^2 * D + 16^1 * A + 16^0 * B = $$ 
+> \$$ 16^2 * D + 16^1 * A + 16^0 * B = $$
 >
 > 3328 + 160 + 11 =
 >
@@ -238,13 +255,13 @@ $$ 167 : 2 = 83 $$ R 1
 
 $$ 83 : 2 = 41 $$ R 1
 
-$$ 41 : 2 = 20 $$ R 1 
+$$ 41 : 2 = 20 $$ R 1
 
 $$ 20 : 2 = 10 $$ R 0
 
-$$ 10 : 2 = 5 $$ R 0 
+$$ 10 : 2 = 5 $$ R 0
 
-$$ 5 : 2 = 2 $$ R 1 
+$$ 5 : 2 = 2 $$ R 1
 
 $$ 2 : 2 = 1 $$ R 0
 
@@ -258,9 +275,9 @@ $$ 525 : 16 = 32 $$ R D
 
 > **Tipp**: 32*16 = 512 -> 525 - 512 = 13 bzw. D
 
-$$ 32 : 16 = 2 $$ R 0 
+$$ 32 : 16 = 2 $$ R 0
 
-$$ 2 : 16 = 0 $$ R 2 
+$$ 2 : 16 = 0 $$ R 2
 
 $$ (525)_{10} = (20D)_{16} $$
 
@@ -280,13 +297,13 @@ $$ n = q_0 * B + b_0 $$
 
 > "Braucht niemand" - Jeb 2017
 
-##### Vereinfachtes Schema: 
+##### Vereinfachtes Schema:
 
 1. Umrechnung ins Binärsystem
 2. Aufteilung jeder Ziffer in ein Block
 3. Umwandlung in Zahlensystem anhand Anzahl der Blöcke (2er Potenzen):
 	- Oktal: 3 Blöcke ($$2^3$$ = 8)
-	- Hexadezimal: 4 Blöcke ($$2^4$$ = 16) 
+	- Hexadezimal: 4 Blöcke ($$2^4$$ = 16)
 
 ![Vereinfachtes Schema](https://puu.sh/tr4wd/966ea36969.png)
 
@@ -309,7 +326,7 @@ Anwendung bei Datentyp float.
 - 0 wird dargestellt als 0000 (+0) und 1000 (-0)
 - Rechnungen werden verkompliziert
 
-Um diese Nachteile zu lösen wurde das **Zweierkompliment** entwickelt. 
+Um diese Nachteile zu lösen wurde das **Zweierkompliment** entwickelt.
 
 Nehme wir beispielweise 4 Bit wodruch wir $$ 2^4 = 16 $$ Zahlen darstellen können. Wir zählen nun von 0000 (0) rauf, bis wir die Obergrenze 0111 (7) erreicht haben. Nun fangen wir bei 1111 (-1) an rückwärts zu zählen und enden bei 1000 (-8).
 
@@ -324,7 +341,7 @@ Kümmern wir uns erstmal um die Umwandlung einer positiven Zahl zum negativen Ko
 
 ![Umwandlung](https://puu.sh/tsbml/29bb48ec72.png)
 
-Jetzt können wir Rechnen. Zur Errinnerung: 
+Jetzt können wir Rechnen. Zur Errinnerung:
 
 - 0xxx positiv
 - 1xxx negativ
@@ -351,29 +368,29 @@ $$(1000 0000)_{2} = -128)_{10}$$
 
 Eine dritte Darstellungsmöglichkeit ist die **Verschiebung des Zahlenbereichs ins Positive (= Addition _Bias_)**. Dabei wird ein Bias festgelegt, welcher auf alle Zahlen draufaddiert wird. Dieser kann beispielweise durch den maximalen Wertebereich definiert werden (z.B. 2^4 = [-128, 127]).
 
-Beispiel: 
+Beispiel:
 
-Bias: $$(127)_{10} = (0111 1111)_2$$
+Bias: $$(127)_{10} = (0111 1111)_{2}$$
 7 = 0000 0111 + BIAS = 1000 0110
--7 = 1111 1001 + BIAS = 0111 1000 
+-7 = 1111 1001 + BIAS = 0111 1000
 
 Anwendung: Exponentialdarstellung
 
-**Nachteil**: 
+**Nachteil**:
 	- Muss bekannt sein, dass jetzt das Bias-Verfahren angewendet wird.
 	- Wenn Bias nicht mehr bekannt, dann weiß man nicht mehr die Zahl
 
 ### Reelle Zahlen
 
-**Festpunktdarstellung**: Komma immer an vorher festgelegten Stelle
+**Festpunktdarstellung**: Komma immer an vorher festgelegter Stelle
 
-![Grafik]()
+$$ b_{N} \mid b_{N-1} \mid ... \mid b_{0} \mid b_{-1} \mid ... \mid b_{-M+1} \mid b_{-M} $$
 
 Bsp: Finanzbereich: EUR in ct, d.h. Verschiebung um 2 Kommastellen
 
 **Gleitpunktdarstellung**: Fest Anzahl von Bits für Vorzeichen (V), Exponent(E) ud Mantisse (M)
 
-![Grafik]()
+$$ V \mid E \mid ... \mid M \mid ... $$
 
 > Genormte Formate (IEEE):
 >
@@ -393,7 +410,7 @@ Bsp: Finanzbereich: EUR in ct, d.h. Verschiebung um 2 Kommastellen
 
 #### Erweiterung
 
-* Erweiterter ASCII (8bit) 
+* Erweiterter ASCII (8bit)
 	* +128 Zeichen (Sonderzeichen und länderspezifische Ergänzungen)
 * ISO-8859-Normen(8bit)
 	* Erweiterung für andere Alphabete (kyrillisch, griechisch, thai)
@@ -404,7 +421,7 @@ Bsp: Finanzbereich: EUR in ct, d.h. Verschiebung um 2 Kommastellen
 
 #### UTF-8
 
-Unicode-Zeichen werden eine Byte-Kette mit variabler Länge zugeordnet. 
+Unicode-Zeichen werden eine Byte-Kette mit variabler Länge zugeordnet.
 
 Dadurch soll Kompatibilität mit bisherigen Zeichensätzen erreicht werden und in Zukunft im Internet den ASCII-Standard und HMTL-Sonderzeichen ablösen.
 
@@ -430,52 +447,3 @@ ab 2.: Die x enthalten die Bitkombination des Unicode-Zeichens (rechtsbündig au
 ## Grundlagen der Softwareentwicklung
 
 ## Wirtschaftliche und gesellschaftliche Bedeutung der Informatik
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
