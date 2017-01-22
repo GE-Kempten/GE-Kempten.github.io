@@ -4,12 +4,12 @@
 
 - [Hauptseite](/)
 - [Übung 1](/1/it-systeme/uebung-1)
-- [Selbsttest Logische Bausteine](/1/it-systeme/selbsttest-schaltfunktionen)
+- [Selbsttest Schaltfunktionen](/1/it-systeme/selbsttest-schaltfunktionen)
 - [Selbsttest Logische Bausteine](/1/it-systeme/selbsttest-logische-bausteine)
-- [Selbsttest Logische Bausteine](/1/it-systeme/selbsttest-programmierbare-systeme)
-- [Selbsttest Logische Bausteine](/1/it-systeme/selbsttest-assembler)
-- [Selbsttest Logische Bausteine](/1/it-systeme/selbsttest-peripherie)
-- [Selbsttest Logische Bausteine](/1/it-systeme/selbsttest-pc)
+- [Selbsttest Programmierbare Systeme](/1/it-systeme/selbsttest-programmierbare-systeme)
+- [Selbsttest Assembler](/1/it-systeme/selbsttest-assembler)
+- [Selbsttest Peripherie](/1/it-systeme/selbsttest-peripherie)
+- [Selbsttest PC](/1/it-systeme/selbsttest-pc)
 
 ## Kompetenzen
 
