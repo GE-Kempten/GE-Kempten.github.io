@@ -2,8 +2,14 @@
 
 # IT-Systeme
 
-- [Hauptseite](https://ge-kempten.github.io)
-- [Übung 1](https://ge-kempten.github.io/1/it-systeme/uebung-1)
+- [Hauptseite](/)
+- [Übung 1](/1/it-systeme/uebung-1)
+- [Selbsttest Logische Bausteine](/1/it-systeme/selbsttest-schaltfunktionen)
+- [Selbsttest Logische Bausteine](/1/it-systeme/selbsttest-logische-bausteine)
+- [Selbsttest Logische Bausteine](/1/it-systeme/selbsttest-programmierbare-systeme)
+- [Selbsttest Logische Bausteine](/1/it-systeme/selbsttest-assembler)
+- [Selbsttest Logische Bausteine](/1/it-systeme/selbsttest-peripherie)
+- [Selbsttest Logische Bausteine](/1/it-systeme/selbsttest-pc)
 
 ## Kompetenzen
 
