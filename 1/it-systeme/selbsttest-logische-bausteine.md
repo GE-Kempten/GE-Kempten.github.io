@@ -20,9 +20,20 @@ Die Ausgänge eines Halbaddierers sind...
 
 ## Aufgabe 3
 
-- Ein Volladdierer besteht aus zwei Halbaddierern.
-- Ein Volladdierer hat zwei Ausgänge.
+Ein Volladdierer besteht aus zwei Halbaddierern.
 
 ## Aufgabe 4
 
-![Schaltung]()
+Ein Volladdierer hat zwei Ausgänge.
+
+## Aufgabe 5
+
+![Schaltung](/1/it-systeme/logische-bausteine-aufgabe-5.png)
+
+- Ein Flip-Flop wechselt den Zustand, wenn das Eingangssignal von 0 auf 1 wechselt.
+- Es handelt sich um eine asynchrone Schaltung
+- Die Flip-Flops sind flankengesteuert
+
+## Aufgabe 6
+
+Mit einem Schieberegister kann eine Multiplikation mit 2 oder eine Division durch 2 durchgeführt werden.
