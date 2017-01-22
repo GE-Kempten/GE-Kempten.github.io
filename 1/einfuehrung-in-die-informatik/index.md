@@ -72,7 +72,7 @@ Die Informatik ist die Wissenschaft der automatischen Verarbeitung von Informati
 
 ## Grundbegriffe der Informatik
 
-## Information
+### Information
 
 **Information** ist eine Mitteilung, die sich aus einer Räumichen oder Zeitlichen Folge physikalischer Signale zusammensetzt, die beim Empfänger ein bestimmtes Verhalten bewirkt und Kenntnis über bestimmte Sachverhalte und Vorgänge in einem Teil der wahrgenommenen Realität vermittelt. Information ist immateriell und kann nur in Form von Daten im Rechner verarbeitet werden.
 
@@ -440,7 +440,88 @@ ab 2.: Die x enthalten die Bitkombination des Unicode-Zeichens (rechtsbündig au
 
 ---
 
-## Einführung in Algorithmen und Datenstrukturen
+## Softwarelösung - Spezifikation, Algorithmus, Programm, Test/Verifikation
+
+Die Informaitk beschäftigt sich damit, für ein **Problem der reallen Welt** eine **effektive Lösung** durch Einsatz von **informationsverarbeitenden Systeme** zu finden.
+
+Dabei hat sich folgende Vorgehensweise eingebürgert:
+
+- **Spezifikation** \| Problembeschreibung
+- **Algorithmus** \| Lösungsweg
+- **Programm** \| Umsetzung
+- **Test, Verifikation** \| Überprüfung
+
+Kann jedes Problem durch einen Algorithmus beschrieben und gelöst werden? => **Logik- und Berechenbarkeitstheorie**
+
+Formulierung des Algorithmus des Programms - Wie muss eine formelle Sprache aussehen? => **Theorie der Programmiersprachen**
+
+Kann der Computer ein Programm - also den Algorithmus - ausführen? => **Komplexitätstheorie**
+
+### Spezifikation
+
+=> vollständige, detaillierte, unmissverständliche und widerspruchsfreie Problembeschreibung
+
+#### Eigenschaften
+
+**Vollständigkeit**: Alle Anforderungen und relevanten Vorraussetzungen/Rahmenbedinungen sind angegebene
+
+**Detailliertheit**: Alle zur Lösung zugelassenen Hilfsmittel sind erwähnt
+
+**Unmissverständlichkeit**: klare Kriterien, wann eine Lösung zulässig ist - klare Anforderungen, die auf unterschiedliche Weise interpretiert werden können
+
+**Widerspruchsfreiheit**: keine miteinander unverträglichen Anforderungen
+
+#### Inhalt
+
+**Standardzustand**:
+
+- **Eingabedaten** + Wertebereich
+- Beziehung zwischen Daten
+
+**Zielzustand**:
+
+- **Ausgabedaten** + Wertebereich
+- Bedingungen für **Zulässigkeit** der Lösung
+- funktionaler Zusammenhang zwischen Ein- und Ausgabedaten
+
+**Rahmenbedingungen**: zulässige **Operationen**
+
+#### Beschreibungsformen
+
+**Umgangssprache** + "Wortschatz" aus dem Anwendungsbereich
+
+- _Vorteil_: geringerer Aufwand
+- _Nachteil_: Gefahr auf Mehrdeutigkeit, Ungenauigkeit
+
+**formale Sprache** + "Wortschatz" aus dem Anwendungsbereich + Regeln
+
+- festgelegte bedeutung von Aussagen
+- Aussagen definiert durch mathematisches Modell
+- _Vorteil_: höhere Präzision
+- _Nachteil_: höhrerer Aufwand, schlechter verständlich
+- Bsp: (Prädikaten-)Logik, Spezifikationssprachen (VDM, Z, Lotos, SDL)
+
+#### Vor- und Nachbedingungen
+
+Formulierung von logischen Bedingungen umgangssprachlich oder formal. Ergebnis ist entweder _true_ oder _false_.
+
+**Pre**: relevante Eigenschaften, die _vor_ Beginn der Problemlösung gelten müssen
+
+**Post**: relevante Eigenschaften, die _nach_ Abschluss der Problemlösung gelten sollen
+
+#### komplexe Problemstellungen
+
+_Viele Einzelanforderungen_:
+
+- Vergessen von einzelnen Anforderungen
+- Detailierungsgrad schwer bestimmbar
+
+_Viele unterschiedliche Beteiligte_:
+
+- Formalierung der Anforderungen durch Auftraggeber evtl. unklar und nicht vollständig
+- Anforderungen verschiedener Beteiligten können im Widerspruch stehen
+
+systematische Ermittlung und Behandlung von Anforderungen bei komplexen Problemen => **Requirement Engineering**
 
 ## Grundlagen der Automatentheorie und formaler Sprachen
 
