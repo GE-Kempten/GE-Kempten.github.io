@@ -119,4 +119,184 @@ Splines sind Pfade
 
 ### Aufgabe 3: Mesh-Qualität
 
+**a)**
+
 ![Renderfehler](aufgabe-3.png)
+
+## Übung 7
+
+### Aufgabe 1: Topologie und Geometrie
+
+**a)**
+
+Topologie:
+
+beschreibt welche Punkte jeweils Flächen und Kanten definieren
+
+Geometrie:
+
+beschreibt wo die Punkte im Raum liegen
+
+**b)**
+
+- selbe Topologie, unterschiedliche Geometrie: Würfel und Quader
+- beides unterschiedlich: Würfel und Raumschiff
+- selbe Geometrie, unterschiedliche Topologie: Quadrat und gleiches Quadrat nur ohne Face, Lichtquelle
+
+### Aufgabe 2: Normalenvektoren
+
+**a)**
+
+Berechnen sie die Normalenvektoren für $$F_{1}$$ und $$F_{2}$$
+
+```  
+geg: 	P1(1,-2,0)  P2(1,0,2)  P3(-1,0,2)  P4(-1,-2,0)  P5(1,2,0)  P6(-1,2,0)
+	 	F1 = P1,P2,P3,P4   F2 = P2,P5,P6,P3
+
+	--->   ( 0)   --->   (-2)         ->   --->   --->   (-2* 0 - -2* 0)   ( 0)     ( 0)
+	P2P1 = (-2)   P2P3 = ( 0)	   a*n1 = P2P1 x P2P3 = (-2*-2 -  0* 0) = ( 4) = 4*( 1)
+	       (-2)          ( 0)                            ( 0* 0 - -2*-2)   (-4)     (-1)
+
+	--->   ( 0)   --->   (-2)         ->   --->   --->   (-2* 0 -  2* 0)   ( 0)     ( 0)
+	P5P2 = (-2)   P5P6 = ( 0)	   b*n1 = P5P2 x P5P6 = ( 2*-2 -  0* 0) = (-4) = 4*(-1)
+	       ( 2)          ( 0)                            ( 0* 0 - -2*-2)   (-4)     (-1)
+```
+
+**b)**
+
+Geben sie die Vertexnormalen an den Punkten &&P_{1}$$ bis $$P_{6}$$ an
+
+Für jeden Punkt werden die Normalenvektoren der anliegenden Faces addiert und der resultierende Vektor dann normiert.
+
+### Aufgabe 3: LOD
+
+**a)**
+
+- Auflösung von gestreamten Videos
+- selektive AI (Aggro Range)
+- Level Unterteilung
+
+**b)**
+
+Je nachdem wie leistungsstark die Hardware ist, sind unterschiedliche Varianten sinnvoll.
+
+Popping ist am performantesten, Alpha Fading sieht am besten aus.
+
+## Übung 8
+
+### Aufgabe 1:Modellierung mit NURBS
+
+### Aufgabe 2: Lokale vs globale Beleuchtung
+
+**a)**
+
+Begründen sie anhand passender Stellen ob die Beleuchtung lokal oder globals ist
+
+![Beleuchtungsmodell](uebung8.png)
+
+Beide: links ist lokale, rechts ist globale Beleuchtung
+
+oben: Ecke oben links und Sessel sind heller
+
+unten: Die Arme werden von dem Telefonhörer angeleuchtet
+
+**b)**
+
+kleine Lichtquellen mit genau dieser Farbe direkt vor das Objekt stellen
+
+### Aufgabe 3: Lichtquellen
+
+**b)**
+
+für schwarze Löcher
+
+für dunkle Höhlen
+
+## Übung 9
+
+### Aufgabe 1: Lichtquellen und Schatten
+
+### Aufgabe 2: Shadow Mapping
+
+![Shadow-Mapping](uebung-9.png)
+
+**a)**
+
+|ShadowMap|x , y|z|
+|:-:|:-:|:-:|
+|$$S_{1}$$|0 , 0|4|
+||1 , 0|2|
+||3 , 0|4|
+|$$S_{2}$$|-2 , 0|4|
+||0 , 0|3|
+||3 , 0|3|
+
+**b)**
+
+Vorteil: Performance
+
+Nachteil: keine physikalische Korrektheit
+
+**c)**
+
+in Blender heißt Shadow-Mapping "Buffer Shadow"
+
+**d)**
+
+weil die z-Werte nur bei Spotlights nicht negativ werden können
+
+## Übung 10
+
+### Aufgabe 1: Interpolative Schattierungsverfahren
+
+**a)**
+
+Phong, da es rund erscheint (-> bei Phong wird zwischen den Vertexnormalen interpoliert)
+
+## Übung 12
+
+### Aufgabe 1: Texture Mapping - Bilineares Filtering
+
+Angabe:
+
+T(0,0)=(1,0,0)
+
+T(1,0)=(0,0,0)
+
+T(0,1)=(1,0,0)
+
+T(1,1)=(1,1,1)
+
+Welchen Farbwert erhalten wir an der Stelle T($$\frac{1}{2},\frac{2}{3}$$) wenn wir mit bilinearer Interpolation filtern?
+
+- rot:  (1+0+1+1)/4 = $$\frac{3}{4}$$
+- grün: (0+0+0+1)/4 = $$\frac{1}{4}$$
+- blau: (0+0+0+1)/4 = $$\frac{1}{4}$$
+
+=> T($$\frac{1}{2},\frac{2}{3}$$) = ($$\frac{3}{4},\frac{1}{4},\frac{1}{4}$$)
+
+### Aufgabe 2: Environment Mapping
+
+**a)**
+
+2
+
+### Aufgabe 3: Bump Mapping
+
+**a)**
+
+Es geht Information der Bump-Map verloren, da nur immer die Normalenvektoren der Vertices der Fläche berechnet und dann interpoliert werden.
+
+**b)**
+
+gar nicht
+
+## Übung 13
+
+### Aufgabe 1: Pfadanimation
+
+### Aufgabe 2: Kamera-Animation
+
+### Aufgabe 3: Animation nichtgeometrischer Parameter
+
+### Aufgabe 4: Soft Body Animation
