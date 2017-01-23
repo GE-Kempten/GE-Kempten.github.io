@@ -734,7 +734,55 @@ Bestimmte Formen rekursiver Probleme lassen sich einfach nicht-rekursiv (iterati
 
 Rekursive Algorithmus sind oft eleganter und kürzer als nicht-rekursiver, aber nicht zwangsläufig effizienter!
 
-## Grundlagen der Automatentheorie und formaler Sprachen
+## Programmiersprachen
+
+Nach der Spezifikation und Algorithmisierung eines Problems der realer Welt können nun die Anweisungen an den Computer übermittelt werden - Programmierung.
+
+##### Compiler und Interpreter
+
+### Imperative Sprachen
+
+### Deklarative Sprachen
+
+### Grundelementen
+
+#### Datentyp
+
+![ZusammenhangStandarddatentypen]()
+
+##### Boolean
+
+##### Integer
+
+##### Real
+
+##### Char
+
+##### Neue Datentypen
+
+#### Datenstrukturen
+
+##### Array (Feld)
+
+##### Record (Verbund)
+
+##### Pointer, Reference (Zeiger, Referenzen)
+
+##### Verwendung von Datentypen
+
++ Elementare Aktionen
+
+#### Kontrolstrukturen
+
+##### Sequenz
+
+##### Alternativen
+
+##### Integration
+
+##### Unterprogramme
+
+#### Objektorientierte Programmierung
 
 ## Grundlagen der Softwareentwicklung
 
