@@ -71,42 +71,44 @@ M_{321} = $$ \begin{pmatrix} 0 & -1 & 0 & 3 \\ 1 & 0 & 0 & -1 \\ 0 & 0 & 1 & 0 \
 
 $$ \implies $$ Dann die alten Punkte mit der Matrix multiplizieren.
 
+## Übung 5
 
+### Aufgabe 1
 
+**a)**
 
+Modifier verändern das Mesh nicht
 
+**b)**
 
+Wenn man den Sub-Surf Modifier anwenden würde, wäre es später sehr viel schwieriger das Mesh nochmals zu verändern
 
+Wenn man etwas animieren möchte, ist es leichter mit Modifiern zu arbeiten
 
+### Aufgabe 2
 
+Beschreiben sie die Modifier
 
+**a) Array Modifier**
 
+Erstellt ein Feld von Objekten
 
+**b) Bevel Modifier**
 
+rundet Kanten ab
 
+**c) Boolean Modifier oder alternativ Knife Project**
 
+kombiniert mehrere Objekte nach boolschen Funktionen
 
+**d) Mirror Modifier**
 
+spiegelt das Mesh
 
+### Aufgabe 3: Modellierung mit Lattices
 
+Lattices sind diese Käfige
 
+## Übung 6
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### Aufgabe 1
