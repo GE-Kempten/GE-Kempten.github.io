@@ -784,6 +784,10 @@ Nach der Spezifikation und Algorithmisierung eines Problems der realer Welt kön
 
 #### Objektorientierte Programmierung
 
-## Grundlagen der Softwareentwicklung
+## Elementare Algorithmen
 
-## Wirtschaftliche und gesellschaftliche Bedeutung der Informatik
+## Elemenatre Datensturkturen
+
+## Autometentheorie, Sprachen und Compiler
+
+## Grundlagen der Softwareentwicklung
