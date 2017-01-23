@@ -73,7 +73,7 @@ $$ \implies $$ Dann die alten Punkte mit der Matrix multiplizieren.
 
 ## Übung 5
 
-### Aufgabe 1
+### Aufgabe 1: Modifiers - Theorie
 
 **a)**
 
@@ -85,7 +85,7 @@ Wenn man den Sub-Surf Modifier anwenden würde, wäre es später sehr viel schwi
 
 Wenn man etwas animieren möchte, ist es leichter mit Modifiern zu arbeiten
 
-### Aufgabe 2
+### Aufgabe 2: Modifiers - Praxis
 
 Beschreiben sie die Modifier
 
