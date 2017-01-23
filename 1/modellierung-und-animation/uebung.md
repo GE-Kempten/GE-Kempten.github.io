@@ -111,4 +111,12 @@ Lattices sind diese Käfige
 
 ## Übung 6
 
-### Aufgabe 1
+### Aufgabe 1: Modellierung mit Splines
+
+Splines sind Pfade
+
+### Aufgabe 2: View Space Transformations
+
+### Aufgabe 3: Mesh-Qualität
+
+![Renderfehler](aufgabe-3.png)
