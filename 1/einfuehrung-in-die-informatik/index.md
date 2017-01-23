@@ -388,6 +388,12 @@ $$ b_{N} \mid b_{N-1} \mid ... \mid b_{0} \mid b_{-1} \mid ... \mid b_{-M+1} \mi
 
 Bsp: Finanzbereich: EUR in ct, d.h. Verschiebung um 2 Kommastellen
 
+Gewünschter Wert = 192,27 (analog: €)
+
+Gespeichert wird: $$ 192,27 * 100 = 19227 $$ (analog: ct)
+
+Zurückwandeln: $$ 19227 / 100 = 192 $$ und $$ 19927 % 100 = 27 $$
+
 **Gleitpunktdarstellung**: Fest Anzahl von Bits für Vorzeichen (V), Exponent(E) ud Mantisse (M)
 
 $$ V \mid E \mid ... \mid M \mid ... $$
@@ -396,6 +402,68 @@ $$ V \mid E \mid ... \mid M \mid ... $$
 >
 > - Short Real: V (1bit), E(8bit), Mantisse (23 bit)
 > - Long Real: V(1bit), E(11bit), Mantisse (52 bit)
+
+_Vorgehen_ am Beispiel 18,4:
+
+1. Umwandlung des vorderen Teils (vor Komma):
+
+$$ 18 : 2 = 9$$ R 0
+
+$$ 9 : 2 = 4,5$$ R 1
+
+$$ 4 : 2 = 2$$ R 0
+
+$$ 2 : 2 = 1$$ R 0
+
+§§ 1 : 2 = 0,5$$ R 1
+
+=> 10010
+
+2. Umwandlung des hinteren Teils (hinter Komma):
+
+$$0,4 * 2 = 0,8$$ R 0
+
+$$0,8 * 2 = 1,6$$ R 1
+
+$$0,6 * 2 = 1,2$$ R 1
+
+$$0,2 * 2 = 0,4$$ R 0
+
+$$0,4 * 2 = 0,8$$ R 0
+
+$$0,8 * 2 = 1,6$$ R 1
+
+$$...$$
+
+=> 0110011001100110011001100...
+
+3. Normalisieren \| Verschiebung des Kommas
+
+\$$10010,01100110011001100... * 2^0$$
+
+\$$1,001001100110011001100... * 2^4$$
+
+=> Exponent: 4
+
+4. Charakteristik = Exponent + Bias
+
+Bias = 127
+
+=> $$4 + 127 = 131_{10} = 10000011_{2} $$
+
+5. Vorzeichen
+
+\+ -> 0
+
+\- -> 1
+
+6. Gleitkommzahl
+
+V = 0 (1 bit)
+
+E = 10000011 (8 bit)
+
+M = 00100110011001100110011 (23 bit)
 
 ### Einzelzeichen
 
