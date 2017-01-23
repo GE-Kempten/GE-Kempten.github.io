@@ -523,6 +523,217 @@ _Viele unterschiedliche Beteiligte_:
 
 systematische Ermittlung und Behandlung von Anforderungen bei komplexen Problemen => **Requirement Engineering**
 
+### Algorithmus
+
+Ein **Algorithmus** ist eine vollständige, eindeutige, und explizite Vorschrift zur schrittweisen Lösung eines Problems.
+
+Ausgangszustand -> **Algorithmus** -> Zielzustand
+
+##### Bestandteile
+
+- **Objekte** - abstrakt oder konkreter Natur - auf denen Veränderungen ausgeführt werden
+- **Aktionen** - mit Reihenfolge - die die gewünschte Änderung auf Objekte bewirken
+
+##### Aufbau
+
+- besteht aus mehreren einzelnen Schritte
+- einzelne Schritte:
+	- einfache, offensichtliche Grundaktionen
+	- müssen ausgeführt werden
+- Ausführorgan braucht bestimmte elementare Fähigkeiten:
+
+##### Anwendung in der Informatik
+
+Ausführorgan ist der **Computer**, welche Algorithmen nur in einer _computerverständlichen Formulierung_ versteht. Diese Formulierung muss unabhängig von Rechner/Programmiersprache sein.
+
+**Objekte** können oft _nicht direkt durch den Compiter beeinflusst_ werden.
+
+- Abbildung der relevanten Eigenschaften in **Daten**
+- Zusammenfassung von zusammengehörigen Daten in **Datentypen/Datenstrukturen**  
+
+#### Eigenschaften
+
+**Plicht**:
+
+- _Endlichkeit der Beschreibung_ \| Lösungsweg hat endliche Länge
+- _Effektivität_ \| Ausführung in endlicher Zeit
+
+**Optional**:
+
+- **Terminierung**: Lösungsweg endet nach einer bestimmten Anzahl an Schritten
+- **Determinismus**: Bei wiederholten Ausführung mit gleichen Eingabewerten wird die gleiche Folge an Schritten ausgeführt, d.h. zu jedem Zeitpunkt ist festgelegt, welche Anweisung als nächstes ausgeführt wird.
+	- Beispiele _ohne Determinismus_:
+	- "Raten": willkürliche Auswahl des nächst auszuführenden Schritts aus einer vorgegebenen Menge von Alternativen => **Nicht-deterministischer Algorithmus**
+	- "Würfeln": zieht Zufallszahlen mit vorgegebener Wahrscheinlichkeitsverteilung => **probabilistischer Algorithmus**
+- **Effizienz**: benötigt wenig Ressourcen zur Berechnung (_Rechenzeit & Speicher_)
+	- **Zeitkomplexität**: Größenordnung nach Anzahl elementarer Schritte zur Durchführung des Algorithmus
+		- ggf. nach Best Case - Average Case) oder Worst Case
+	- **Speicherkomplexität**: Größenordnung nach Anzahl der benötigen Speicherzellen bei der Durchführung
+- **Universlität**: löst allgemeine Problemklassen (kein konkreter Fall)
+
+
+#### Darstellung
+
+Algorithmen werden i.d.R. durch eine der 3 folgenden Formen dargestellt:
+
+##### Flussdiagramm / Programmablauf (DIN 66001)
+
+![Flussdiagramm - Allgemein](https://puu.sh/twBDi/4ae0cfb9d4.png)
+
+**Vorteile**:
+
+- Anschaulichkeit durch grafische Darstellung
+- hierarchischer Aufbau, Schachtelung von Diagrammen
+- ausreichende Ausdrucksfähigkeit
+
+**Nachteile**:
+
+- größere Diagramme unübersichtlich
+- keine Einschränkung - Kombination von Verzweisung und Zusammenführung
+- Beschreibung unstrukturierter (und unlesbarer) Algorithmen
+
+##### Struktogramm / Nassi-Shneidermann-Diagramm
+
+Beschreibung der Einzelschritte in Strukturblöcken. Verschachtelung und Wiederholungen möglich.
+
+![Struktogramm - Allgemein](https://puu.sh/twEYk/4b10bcc0cc.png)
+
+##### Pseudo-Code
+
+Nutzung von programmiersprachlichen Grundelementen in Kombination mit eigenen Anmerkungen.
+
+**Zuweisung**: -> oder =
+
+**Verzweigung**: IF _Bedingung_ THEN ... ELSE ... END
+
+**Wiederholung**: WHILE _Bedingung_ DO ... END
+
+> Überprüfung der Bedingung **vor** dem Ausführen
+
+**Wiederholung**: REPEAT ... UNTIL _Bedingung_
+
+> Überprüfung der Bedingung **nach** dem Ausführen
+
+#### Entwurf
+
+Eine systematische Vorgehensweise ist notwendig, da i.d.R. die Entwicklung eines Algorithmus nachvollziehbar und Arbeitsteilung möglich sein soll.
+
+**Entwurfsprinzipien** sind allgemein gültige, universell einsetzbare und anerkannte Konzepte und Richtlinien des Entwurfs, z.B. Schrittweise Verfeinerung, Modularisierung und Strukturierung.
+
+**Entwurfstechniken** sind im speziellen Fall anwendbare Verfahren und Vorgehensweisen für den Entwurf.
+
+##### Top-Down-Entwurf / Schrittweise Verfeinerung
+
+1. Entwurf eines groben Algorithmus \| abstrakte Operationen, manipulierte Objekte
+2. Verfeierung des 1. Schritts
+3. Wiederholung des 2. Schritts bis der Algorithmus nur noch aus elementaren Operationen des Ausführungsorgans besteht
+
+Durch die Verfeinerung werden gleichzeitig auch Operationen, Ablaufstrukturen und Datenstrukturen verfeinert.
+
+**Beispiel**: Eine Folge von Werten $$w_n$$ soll nach ≤ sortiert werden. $$a_i$$ soll das Element an der Position i bereichnen.
+
+_Version 1_
+
+```pseudo
+Sortiere (w_1, w_2, ... w_n)
+```
+
+_Version 2.1_
+
+```pseudo
+Initialsiere w_1 mit a_1
+i = 2
+WHILE Element w_i noch nicht einsortert AND i <= n
+DO füge w_1 an der richtigen Position a_1 ... a_i ein
+i = i+1
+END
+```
+
+_Version 2.2_
+
+```pseudo
+a_1 = w_1
+i = 2
+WHILE i <= n
+DO j = i-1
+	WHILE (j != 0) AND (w_i < a_j)
+	DO j = j-1
+	END
+	füge w_i an (j+1)-ter Position in a_1 ... a_n ein
+	i = i + 1
+END
+```
+
+_Version 3_
+
+```pseudo
+a_1 = w_1
+i = 2
+WHILE i <= n
+DO j = i-1
+	WHILE (j != 0) AND (w_i < a_j)
+	DO a_j+1 = a_j
+	j = j-1
+	END
+	a_j+1 = w_i
+	i = i + 1
+END
+```
+
+Zusätzlich ist eine **schrittweise Vergröberung** bzw. der Bottom-Up-Ansatz möglich. Dabei werden Lösungen von Teilproblemen zu größeren Einheiten zusammengefasst. Diese Vorgehensweise ist i.d.R. weniger zielgerichtet.
+
+z.B. arithmetische Operationen: zuerst einfach Operationen (Addition, Subtraktion), dann Bilden komplexer Operationen bis zu Matrizenrechnung, numerische Integration.
+
+##### Modularisierung
+
+Zerlegung von Problemen in **Teilprobleme**. Teillösungen entsprechen dann sog. _Modulen_.
+
+**Prinzip**: Aufteilung des Problems in folgende Schritte:
+
+1. Klare Abgrenzung unabhängiger Teilprobleme
+2. Weitgehend voneinander unabhängige Teilprobleme
+3. Getrennt bearbeitbare Teilprobleme
+4. Lösungen ohne Beeinträchtigung von anderen Teilproblemen gegen Alternativ-Lösungen austauschen
+
+**Vorteile**:
+
+- Komplexitätsreduktion \| Zerlegung in einfache Teilprobleme
+- Unabhängigkeit der Module \| Austauschbarkeit und Erweiterbarkeit
+
+**Strategien zur Modulbildung**:
+
+- **problem-orientierte** Modularisierung: abgeschlossene Verarbeitungsabschnitte z.B. zeitliche Reihenfolge der Bearbeitung
+- **daten-orientierte** Modularisierung: Bearbeitung gemeinsamer Daten, Operationen auf denselben Daten in einem Modul
+- **funktions-orientierte** Modularisierung: verwandte Funktionalität, analoge Vorgehensweise auf unterschiedlichen Daten in einem Modul
+
+##### Strukturierung
+
+**Prinzip**: sinnvolle Darstellung der logischen Eigenschaften von Daten, Abläufen und Verdeutlichung der Zusammenhänge.
+
+- **algorithmische Strukturierung**: Darstellung des Ablaufs der Problemlösung mit Hilfe von Standardkonstrukten Sequenz, Verzweigung und Wiederholung
+- **Datenstrukturierung**: Zusammenfassung logisch zusammengehöriger Einzelobjekte in geeigneter größerer Datenstruktur
+
+##### Rekursion
+
+Rekursion ist die **Rückführung eines Problems** auf einfacherer Exemplare desselben Problems.
+
+- Algorithmus zur Lösung eines solchen Problems kann sich selbst benutzen (-> rekursiver Algorithmus)
+- Formen:
+	- direkte Rekursion: Algorithmus verwendet sich unmittelbar selbst
+	- indirekte Rekursion: mehrere Algorithmen $$A_1$, ..., $$A_n$$ mit n > 1, wobei gilt: $$A_1$$ benutzt $$A_2$$, $$A_2$$ benutzt $$A_3$$, ..., $$A_n$ benutzt $$A_1$$.
+
+**Rekursive Problemlösung**:
+
+1. Originalproblem wird in einfachere Exemplare desselben Problems zerlegt (Teilprobleme)
+2. Lösung der Teilprobleme
+3. Zusammensetzen der Lösung des Ausgangsproblems aus den Lösungen der Teilprobleme
+
+Vorraussetzung für rekursive Lösung: irgendwann müssen bei Zerlegung Teilprobleme entstehen, die sich _ohne weitere Rekursion_ direkt lösen.
+
+Bestimmte Formen rekursiver Probleme lassen sich einfach nicht-rekursiv (iterativ) lösen.
+
+Rekursive Algorithmus sind oft eleganter und kürzer als nicht-rekursiver, aber nicht zwangsläufig effizienter!
+
 ## Grundlagen der Automatentheorie und formaler Sprachen
 
 ## Grundlagen der Softwareentwicklung
