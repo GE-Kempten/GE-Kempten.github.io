@@ -577,6 +577,14 @@ Formulierung von logischen Bedingungen umgangssprachlich oder formal. Ergebnis i
 
 **Post**: relevante Eigenschaften, die _nach_ Abschluss der Problemlösung gelten sollen
 
+**Beispiel**: größter gemieinsamer Teiler (ggT)
+
+Pre P: M, N sind ganze Zahlen mit 0 < M, N < 32768 ($$2^{15}$$)
+
+Post Q: Z = ggT(M, N) d.h. Z ist ein Teiler (Zahl ohne Rest) von M, N und für jede Zahl Z', die auch M, N teilt, gilt Z' ≤ Z
+
+Zwischen {P} und {Q} findet dann ein Ablauf ab.
+
 #### komplexe Problemstellungen
 
 _Viele Einzelanforderungen_:
@@ -596,6 +604,8 @@ systematische Ermittlung und Behandlung von Anforderungen bei komplexen Probleme
 Ein **Algorithmus** ist eine vollständige, eindeutige, und explizite Vorschrift zur schrittweisen Lösung eines Problems.
 
 Ausgangszustand -> **Algorithmus** -> Zielzustand
+
+Bsp: Eine Kochanleitung ist auch ein Algorithmus
 
 ##### Bestandteile
 
@@ -644,6 +654,8 @@ Ausführorgan ist der **Computer**, welche Algorithmen nur in einer _computerver
 
 Algorithmen werden i.d.R. durch eine der 3 folgenden Formen dargestellt:
 
+Beispiel hier wird der ggT sein. Der Algorithmus bzw. Ablauf A befindet sich zwischen {P} A {Q}.
+
 ##### Flussdiagramm / Programmablauf (DIN 66001)
 
 ![Flussdiagramm - Allgemein](https://puu.sh/twBDi/4ae0cfb9d4.png)
@@ -660,11 +672,29 @@ Algorithmen werden i.d.R. durch eine der 3 folgenden Formen dargestellt:
 - keine Einschränkung - Kombination von Verzweisung und Zusammenführung
 - Beschreibung unstrukturierter (und unlesbarer) Algorithmen
 
+**Beispiel**: Größter gemeinsamer Teiler (ggT)
+
+![ggT - FD](https://puu.sh/txXwB/3ddc409683.png)
+
+M = 6, N = 8
+
+N = 8 - 6 = 2
+
+M = 6 - 2 = 4
+
+M = 4 - 2 = 2
+
+M = N = Z
+
 ##### Struktogramm / Nassi-Shneidermann-Diagramm
 
 Beschreibung der Einzelschritte in Strukturblöcken. Verschachtelung und Wiederholungen möglich.
 
 ![Struktogramm - Allgemein](https://puu.sh/twEYk/4b10bcc0cc.png)
+
+**Beispiel**: ggT
+
+![ggT - SD](https://puu.sh/txY41/ec1bce436a.png)
 
 ##### Pseudo-Code
 
@@ -681,6 +711,22 @@ Nutzung von programmiersprachlichen Grundelementen in Kombination mit eigenen An
 **Wiederholung**: REPEAT ... UNTIL _Bedingung_
 
 > Überprüfung der Bedingung **nach** dem Ausführen
+
+**Beispiel**: ggT
+
+```pseudo
+Lese 2 Zahlen M und N ein
+WHILE M != N
+	DO
+	IF M > N
+	 	THEN M = M - N
+		ELSE N = N - M
+	END
+END
+Z = M
+```
+
+In der C++-Programmierung kann der Pseudo-Code mit Kommentaren verwirklicht werden.
 
 #### Entwurf
 
@@ -801,6 +847,16 @@ Vorraussetzung für rekursive Lösung: irgendwann müssen bei Zerlegung Teilprob
 Bestimmte Formen rekursiver Probleme lassen sich einfach nicht-rekursiv (iterativ) lösen.
 
 Rekursive Algorithmus sind oft eleganter und kürzer als nicht-rekursiver, aber nicht zwangsläufig effizienter!
+
+**Beispiel**: Fakultät n! = n * (n-1)
+
+```pseudo
+fak(n) =
+IF n < 2
+	THEN return 1
+	ELSE return n * fak(n-1)
+END
+```
 
 ## Programmiersprachen
 
