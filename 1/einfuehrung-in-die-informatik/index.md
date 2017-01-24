@@ -508,16 +508,16 @@ ab 2.: Die x enthalten die Bitkombination des Unicode-Zeichens (rechtsbündig au
 
 ---
 
-## Softwarelösung - Spezifikation, Algorithmus, Programm, Test/Verifikation
+## Softwarelösung
 
 Die Informaitk beschäftigt sich damit, für ein **Problem der reallen Welt** eine **effektive Lösung** durch Einsatz von **informationsverarbeitenden Systeme** zu finden.
 
 Dabei hat sich folgende Vorgehensweise eingebürgert:
 
-- **Spezifikation** \| Problembeschreibung
-- **Algorithmus** \| Lösungsweg
-- **Programm** \| Umsetzung
-- **Test, Verifikation** \| Überprüfung
+- **Spezifikation** \| Problembeschreibung \| Dieses Kapitel
+- **Algorithmus** \| Lösungsweg \| Dieses Kapitel
+- **Programm** \| Umsetzung \| Kapitel: Programmiersprachen
+- **Test, Verifikation** \| Überprüfung \| Selbstverständlich
 
 Kann jedes Problem durch einen Algorithmus beschrieben und gelöst werden? => **Logik- und Berechenbarkeitstheorie**
 
@@ -645,7 +645,7 @@ Ausführorgan ist der **Computer**, welche Algorithmen nur in einer _computerver
 	- "Würfeln": zieht Zufallszahlen mit vorgegebener Wahrscheinlichkeitsverteilung => **probabilistischer Algorithmus**
 - **Effizienz**: benötigt wenig Ressourcen zur Berechnung (_Rechenzeit & Speicher_)
 	- **Zeitkomplexität**: Größenordnung nach Anzahl elementarer Schritte zur Durchführung des Algorithmus
-		- ggf. nach Best Case - Average Case) oder Worst Case
+		- ggf. nach Best Case - Average Case oder Worst Case
 	- **Speicherkomplexität**: Größenordnung nach Anzahl der benötigen Speicherzellen bei der Durchführung
 - **Universlität**: löst allgemeine Problemklassen (kein konkreter Fall)
 
@@ -858,15 +858,60 @@ IF n < 2
 END
 ```
 
+---
+
 ## Programmiersprachen
 
-Nach der Spezifikation und Algorithmisierung eines Problems der realer Welt können nun die Anweisungen an den Computer übermittelt werden - Programmierung.
+Nach der Spezifikation und Algorithmisierung eines Problems der realer Welt können nun die Anweisungen an den Computer übermittelt werden - **Programm**. Damit dies aber möglich wird, muss dem Computer erklärt werden, wie er das Programm lesen muss - **Programmiersprache**.
+
+Programmiersprachen -> Spezialfall **algorithmische Sprachen** -> Spezial **formale Sprachen**
+
+**Formale Sprachen**: Eine formale Sprache _L_ ist eine Teilmenge einer Menge _T_*
+
+- T ist eine Menge von terminalen Symbolen
+- T* ist die Menge, die aus beliebigen Ketten von T besteht
+
+Aber:
+
+- Syntax \| Welche Ketten sollen zu L gehören?
+- Semantik \| Welche Bedeutung hat eine Kette?
+- Pragmatik \| Welche Festlegung soll man für Syntax und Semantik treffen?
+
+#### Arten von Sprachen
+
+**Problemorientierte Sprache (Hochsprache)**: Formulierung von Algorithmen aus der Sicht der Probleme, welche z.T. spezifisch für einen bestimmten Problembereich sind. Die Programme sind unabhängig von Rechner-/Prozessortyp
+
+**Maschinenorientierte Sprache**: maschinelle Verarbeitung von Algorithmen. Aber: Programme sind spezifisch für einen Rechner-/Prozessortyp, d.h. dies ist die Zielsprache für Compiler.
+
+##### Maschinenorientierte Programmiersprachen
+
+**Maschinensprache**: Anweisungen binär codiert, wodurch der Rechner/Prozessor diese direkt interpretieren kann. Das sorgt dafür, dass man das dies schwer lesbar ist. Zusätzlich ist dies schwer zu programmieren, da Interna des Rechners/Prozessors sowie die Darstellung aller Informationen exakt bekannt sein müssen. Auérdem sind nur einfache Operatonen möglich.
+
+Zusätzlich gibt es noch eine _optionale Schicht_ namens **Mikroprogramme** in welcher Maschinenbefehle interpretiert werden, d.h. Elementaraktionen. Diese Schicht ist für den Programmierer nicht frei zugänglich.
+
+**Assembler-Sprache**: Anweisungen haben gleiche oder ähnliche Struktur wie Befehlswörter eines bestimmten Rechner-/Prozessortyps. Durch die Nutzung von mnemotechnischen Abkürzungen wird die Programmierung angenehmer.
+
+**Umsetzung**: Assembler \| ADD -> Assembilierung -> Maschinensprache \| 1001 1100
 
 ##### Compiler und Interpreter
 
-### Imperative Sprachen
+Wie man von oben entnehmen kann, ist die Programmierung durch eine Maschinenorientierte Programmiersprache komplizierter, wodurch man eher auf Problemorientierte Programmiersprachen ausweichen möchte. Trotzdem muss diese noch für den Prozessor umformuliert werden. Dazu gibt es 2 Mittel:
 
-### Deklarative Sprachen
+**Compiler**: Übersetzt den Programmtext der Quellsprache in eine Zielsprache, d.h. in die Maschinensprache. Vor Ausführung wird das Maschinenprogramm im Hauptspeicher durch ein spezielles Ladeprogramm bereit gestellt.
+
+Quellprogramm (Eingabe) -> _Compiler_ -> Zielprogramm (Ausgabe)
+
+**Interpreter**: Übersetzung und Ausführung den Programmtext schrittweise, d.h. Übersetzung und Ausführung einer Anweisung und anschließend das gleiche für die nächste Anweisung.
+
+Quellprogramm (Eingabe) -> _Interpreter_ -> direkte Ausführung
+
+**Umsetzung**: Problemorientierte Sprache \| + -> Compilierung, Interpretierung -> Maschinensprache \| 1001 1100
+
+### Übersicht
+
+#### Imperative Sprachen
+
+#### Deklarative Sprachen
 
 ### Grundelementen
 
