@@ -388,6 +388,12 @@ $$ b_{N} \mid b_{N-1} \mid ... \mid b_{0} \mid b_{-1} \mid ... \mid b_{-M+1} \mi
 
 Bsp: Finanzbereich: EUR in ct, d.h. Verschiebung um 2 Kommastellen
 
+Gewünschter Wert = 192,27 (analog: €)
+
+Gespeichert wird: $$ 192,27 * 100 = 19227 $$ (analog: ct)
+
+Zurückwandeln: $$ 19227 / 100 = 192 $$ und $$ 19927 % 100 = 27 $$
+
 **Gleitpunktdarstellung**: Fest Anzahl von Bits für Vorzeichen (V), Exponent(E) ud Mantisse (M)
 
 $$ V \mid E \mid ... \mid M \mid ... $$
@@ -396,6 +402,68 @@ $$ V \mid E \mid ... \mid M \mid ... $$
 >
 > - Short Real: V (1bit), E(8bit), Mantisse (23 bit)
 > - Long Real: V(1bit), E(11bit), Mantisse (52 bit)
+
+_Vorgehen_ am Beispiel 18,4:
+
+1. Umwandlung des vorderen Teils (vor Komma):
+
+$$ 18 : 2 = 9$$ R 0
+
+$$ 9 : 2 = 4,5$$ R 1
+
+$$ 4 : 2 = 2$$ R 0
+
+$$ 2 : 2 = 1$$ R 0
+
+§§ 1 : 2 = 0,5$$ R 1
+
+=> 10010
+
+2. Umwandlung des hinteren Teils (hinter Komma):
+
+$$0,4 * 2 = 0,8$$ R 0
+
+$$0,8 * 2 = 1,6$$ R 1
+
+$$0,6 * 2 = 1,2$$ R 1
+
+$$0,2 * 2 = 0,4$$ R 0
+
+$$0,4 * 2 = 0,8$$ R 0
+
+$$0,8 * 2 = 1,6$$ R 1
+
+$$...$$
+
+=> 0110011001100110011001100...
+
+3. Normalisieren \| Verschiebung des Kommas
+
+\$$10010,01100110011001100... * 2^0$$
+
+\$$1,001001100110011001100... * 2^4$$
+
+=> Exponent: 4
+
+4. Charakteristik = Exponent + Bias
+
+Bias = 127
+
+=> $$4 + 127 = 131_{10} = 10000011_{2} $$
+
+5. Vorzeichen
+
+\+ -> 0
+
+\- -> 1
+
+6. Gleitkommzahl
+
+V = 0 (1 bit)
+
+E = 10000011 (8 bit)
+
+M = 00100110011001100110011 (23 bit)
 
 ### Einzelzeichen
 
@@ -440,16 +508,16 @@ ab 2.: Die x enthalten die Bitkombination des Unicode-Zeichens (rechtsbündig au
 
 ---
 
-## Softwarelösung - Spezifikation, Algorithmus, Programm, Test/Verifikation
+## Softwarelösung
 
 Die Informaitk beschäftigt sich damit, für ein **Problem der reallen Welt** eine **effektive Lösung** durch Einsatz von **informationsverarbeitenden Systeme** zu finden.
 
 Dabei hat sich folgende Vorgehensweise eingebürgert:
 
-- **Spezifikation** \| Problembeschreibung
-- **Algorithmus** \| Lösungsweg
-- **Programm** \| Umsetzung
-- **Test, Verifikation** \| Überprüfung
+- **Spezifikation** \| Problembeschreibung \| Dieses Kapitel
+- **Algorithmus** \| Lösungsweg \| Dieses Kapitel
+- **Programm** \| Umsetzung \| Kapitel: Programmiersprachen
+- **Test, Verifikation** \| Überprüfung \| Selbstverständlich
 
 Kann jedes Problem durch einen Algorithmus beschrieben und gelöst werden? => **Logik- und Berechenbarkeitstheorie**
 
@@ -509,6 +577,14 @@ Formulierung von logischen Bedingungen umgangssprachlich oder formal. Ergebnis i
 
 **Post**: relevante Eigenschaften, die _nach_ Abschluss der Problemlösung gelten sollen
 
+**Beispiel**: größter gemieinsamer Teiler (ggT)
+
+Pre P: M, N sind ganze Zahlen mit 0 < M, N < 32768 ($$2^{15}$$)
+
+Post Q: Z = ggT(M, N) d.h. Z ist ein Teiler (Zahl ohne Rest) von M, N und für jede Zahl Z', die auch M, N teilt, gilt Z' ≤ Z
+
+Zwischen {P} und {Q} findet dann ein Ablauf ab.
+
 #### komplexe Problemstellungen
 
 _Viele Einzelanforderungen_:
@@ -528,6 +604,8 @@ systematische Ermittlung und Behandlung von Anforderungen bei komplexen Probleme
 Ein **Algorithmus** ist eine vollständige, eindeutige, und explizite Vorschrift zur schrittweisen Lösung eines Problems.
 
 Ausgangszustand -> **Algorithmus** -> Zielzustand
+
+Bsp: Eine Kochanleitung ist auch ein Algorithmus
 
 ##### Bestandteile
 
@@ -567,7 +645,7 @@ Ausführorgan ist der **Computer**, welche Algorithmen nur in einer _computerver
 	- "Würfeln": zieht Zufallszahlen mit vorgegebener Wahrscheinlichkeitsverteilung => **probabilistischer Algorithmus**
 - **Effizienz**: benötigt wenig Ressourcen zur Berechnung (_Rechenzeit & Speicher_)
 	- **Zeitkomplexität**: Größenordnung nach Anzahl elementarer Schritte zur Durchführung des Algorithmus
-		- ggf. nach Best Case - Average Case) oder Worst Case
+		- ggf. nach Best Case - Average Case oder Worst Case
 	- **Speicherkomplexität**: Größenordnung nach Anzahl der benötigen Speicherzellen bei der Durchführung
 - **Universlität**: löst allgemeine Problemklassen (kein konkreter Fall)
 
@@ -575,6 +653,8 @@ Ausführorgan ist der **Computer**, welche Algorithmen nur in einer _computerver
 #### Darstellung
 
 Algorithmen werden i.d.R. durch eine der 3 folgenden Formen dargestellt:
+
+Beispiel hier wird der ggT sein. Der Algorithmus bzw. Ablauf A befindet sich zwischen {P} A {Q}.
 
 ##### Flussdiagramm / Programmablauf (DIN 66001)
 
@@ -592,11 +672,29 @@ Algorithmen werden i.d.R. durch eine der 3 folgenden Formen dargestellt:
 - keine Einschränkung - Kombination von Verzweisung und Zusammenführung
 - Beschreibung unstrukturierter (und unlesbarer) Algorithmen
 
+**Beispiel**: Größter gemeinsamer Teiler (ggT)
+
+![ggT - FD](https://puu.sh/txXwB/3ddc409683.png)
+
+M = 6, N = 8
+
+N = 8 - 6 = 2
+
+M = 6 - 2 = 4
+
+M = 4 - 2 = 2
+
+M = N = Z
+
 ##### Struktogramm / Nassi-Shneidermann-Diagramm
 
 Beschreibung der Einzelschritte in Strukturblöcken. Verschachtelung und Wiederholungen möglich.
 
 ![Struktogramm - Allgemein](https://puu.sh/twEYk/4b10bcc0cc.png)
+
+**Beispiel**: ggT
+
+![ggT - SD](https://puu.sh/txY41/ec1bce436a.png)
 
 ##### Pseudo-Code
 
@@ -613,6 +711,22 @@ Nutzung von programmiersprachlichen Grundelementen in Kombination mit eigenen An
 **Wiederholung**: REPEAT ... UNTIL _Bedingung_
 
 > Überprüfung der Bedingung **nach** dem Ausführen
+
+**Beispiel**: ggT
+
+```pseudo
+Lese 2 Zahlen M und N ein
+WHILE M != N
+	DO
+	IF M > N
+	 	THEN M = M - N
+		ELSE N = N - M
+	END
+END
+Z = M
+```
+
+In der C++-Programmierung kann der Pseudo-Code mit Kommentaren verwirklicht werden.
 
 #### Entwurf
 
@@ -734,17 +848,92 @@ Bestimmte Formen rekursiver Probleme lassen sich einfach nicht-rekursiv (iterati
 
 Rekursive Algorithmus sind oft eleganter und kürzer als nicht-rekursiver, aber nicht zwangsläufig effizienter!
 
+**Beispiel**: Fakultät n! = n * (n-1)
+
+```pseudo
+fak(n) =
+IF n < 2
+	THEN return 1
+	ELSE return n * fak(n-1)
+END
+```
+
+---
+
 ## Programmiersprachen
 
-Nach der Spezifikation und Algorithmisierung eines Problems der realer Welt können nun die Anweisungen an den Computer übermittelt werden - Programmierung.
+Nach der Spezifikation und Algorithmisierung eines Problems der realer Welt können nun die Anweisungen an den Computer übermittelt werden - **Programm**. Damit dies aber möglich wird, muss dem Computer erklärt werden, wie er das Programm lesen muss - **Programmiersprache**.
+
+Programmiersprachen -> Spezialfall **algorithmische Sprachen** -> Spezial **formale Sprachen**
+
+**Formale Sprachen**: Eine formale Sprache _L_ ist eine Teilmenge einer Menge _T_*
+
+- T ist eine Menge von terminalen Symbolen
+- T* ist die Menge, die aus beliebigen Ketten von T besteht
+
+Aber:
+
+- Syntax \| Welche Ketten sollen zu L gehören?
+- Semantik \| Welche Bedeutung hat eine Kette?
+- Pragmatik \| Welche Festlegung soll man für Syntax und Semantik treffen?
+
+#### Arten von Sprachen
+
+**Problemorientierte Sprache (Hochsprache)**: Formulierung von Algorithmen aus der Sicht der Probleme, welche z.T. spezifisch für einen bestimmten Problembereich sind. Die Programme sind unabhängig von Rechner-/Prozessortyp
+
+**Maschinenorientierte Sprache**: maschinelle Verarbeitung von Algorithmen. Aber: Programme sind spezifisch für einen Rechner-/Prozessortyp, d.h. dies ist die Zielsprache für Compiler.
+
+##### Maschinenorientierte Programmiersprachen
+
+**Maschinensprache**: Anweisungen binär codiert, wodurch der Rechner/Prozessor diese direkt interpretieren kann. Das sorgt dafür, dass man das dies schwer lesbar ist. Zusätzlich ist dies schwer zu programmieren, da Interna des Rechners/Prozessors sowie die Darstellung aller Informationen exakt bekannt sein müssen. Auérdem sind nur einfache Operatonen möglich.
+
+Zusätzlich gibt es noch eine _optionale Schicht_ namens **Mikroprogramme** in welcher Maschinenbefehle interpretiert werden, d.h. Elementaraktionen. Diese Schicht ist für den Programmierer nicht frei zugänglich.
+
+**Assembler-Sprache**: Anweisungen haben gleiche oder ähnliche Struktur wie Befehlswörter eines bestimmten Rechner-/Prozessortyps. Durch die Nutzung von mnemotechnischen Abkürzungen wird die Programmierung angenehmer.
+
+**Umsetzung**: Assembler \| ADD -> Assembilierung -> Maschinensprache \| 1001 1100
 
 ##### Compiler und Interpreter
 
-### Imperative Sprachen
+Wie man von oben entnehmen kann, ist die Programmierung durch eine Maschinenorientierte Programmiersprache komplizierter, wodurch man eher auf Problemorientierte Programmiersprachen ausweichen möchte. Trotzdem muss diese noch für den Prozessor umformuliert werden. Dazu gibt es 2 Mittel:
 
-### Deklarative Sprachen
+**Compiler**: Übersetzt den Programmtext der Quellsprache in eine Zielsprache, d.h. in die Maschinensprache. Vor Ausführung wird das Maschinenprogramm im Hauptspeicher durch ein spezielles Ladeprogramm bereit gestellt.
+
+Quellprogramm (Eingabe) -> _Compiler_ -> Zielprogramm (Ausgabe)
+
+**Interpreter**: Übersetzung und Ausführung den Programmtext schrittweise, d.h. Übersetzung und Ausführung einer Anweisung und anschließend das gleiche für die nächste Anweisung.
+
+Quellprogramm (Eingabe) -> _Interpreter_ -> direkte Ausführung
+
+**Umsetzung**: Problemorientierte Sprache \| + -> Compilierung, Interpretierung -> Maschinensprache \| 1001 1100
+
+### Übersicht
+
+![Programiersprachen - Übersicht]()
+
+**TODO**: Bereits gemacht, nur noch hochladen (puush)
+
+#### Imperative Sprachen
+
+Programme sind schrittweise ablaufende Folgen von Befehlen auf bestimmten Datenelementen. Die Reihenfolge der Operationen wird weitesgehend durch den Programmierer bestimmt.
+
+**Prozedurale Sprachen**: explizite Beschreibung des Ablaufs innerhalb eines Programmes. Dabei sind einzelne Datenelemente als _Variablen_ (symbolische Bezeichnung eines Speicherbereichs) ansprechbar.
+
+**Objektorientierte Sprachen**: Programme sind Sammlung miteinander kommunizierende Objekte, dabei ist der innere Aufbau der Objekt nach außen hin verboren (_Datenkapselung_). Der Zugriff auf den inneren Zustand ist nur über vorgesehene Operationen möglich. Die Reaktion des Programmes ist dann eine Folge bestimmter Aktionen, die auch zwischen Objekten stattfinden kann. Gleicharige Objekte werden zu _Klassen_ zusammengefasst, welche in einer Generalisierungshierachie angeordnet werden. Bestimmte Klassen bauen auf andere Klasen auf (_Vererbung_).
+
+#### Deklarative Sprachen
+
+Ein Problem wird auf einer Grundlage eines bestimmten mathematischen Modells formuliert. Die Programmierumgebung schreibt automatisch den konkreten Algorithmus um.
+
+**Logiksprachen**: Problem wird in einer mathematische Logik als Sammlung von Fakten und Regeln formuliert. Die Programmabarbeitung entspricht dem Versuch, logische Aussagen zu beweisen oder zu widerlegen.
+
+**Funktionale Sprachen**: Das Program entspricht einer mathematischen Funktion. Aufbau durch verschachtelte Anwendung aus elementaren Funktionen. Zusammensetzungmöglichkeiten sind die Kompisition (Hintereinanderausführung)zu, Fallunterscheidung und Rekursion. _Aber_: _Rein_ funktionale Sprachen verfügen nicht über Wertzuweisung und Wiederholungsanweisung.
 
 ### Grundelementen
+
+**Daten**: Arbeitsmaterial des Programmes, dabei haben diese Daten bestimmte "Sorten", d.h. sie kommen aus einem _Datentyp/Datenstruktur_, welche unterschiedlich viel Speicherplatz benötigen.
+
+**Anweisung**: Befehle aus dem das Programm besteht. Die Abarbeitung erfolgt nach einer bestimmten Reihenfolge, der _Kontrollstruktur_.
 
 #### Datentyp
 
@@ -752,9 +941,56 @@ Nach der Spezifikation und Algorithmisierung eines Problems der realer Welt kön
 
 ##### Boolean
 
+Trägermenge: Wahrheitswerten {false = 0, true = 1.
+
+Funktionen: or, and, not - \|\|, &&, !
+
+Relationen: Gleichtheit, Ungleichheit - =, !=
+
+Verhaltensbeschreibung:
+
+\$$ x \lor y = y \lor x $$
+
+true $$ \lor x = true $$
+
+false $$ \lor x = x $$
+
+
 ##### Integer
 
+Trägermenge: Ausschnitt [Min, Max] der Ganze Zahlen
+
+Funktionen: +, -, \*, / (div), % (mod), succ, pred
+
+> succ und pred sind in C/JAVA nicht vorhanden. Alternativ: **Inkrement ++** und **Dekerement --**. Diese Verändern den Wert der Variablen, im Gegensatz zu den oben genannten.
+
+Relationen: =, !=, >, <
+
+ausgezeichnetes Element = 0
+
+Verhaltensbeschreibung:
+
+\$$ 0 + x = x $$
+
+succ($$x$$) $$+ y = $$ succ($$x + y$$)
+
+pred($$x$$) $$+ y = $$ pred($$x + y$$)
+
+\$$ 0 * y = 0 $$
+
+($$x$$ div $$y$$) $$* y + x $$ mod $$ y = x $$
+
+succ(pred($$x$$)) = $$x$$
+
+pred(succ($$x$$)) = $$x$$
+
+**Anmerkung**: Unterschiedliche Programmiersprachen stellen unterschiedliche Länge des reservierten Speicherbereichs und somit unterschiedlich große Zahlenbereiche dar. In C++ siehe VL [Programmieren 1]().
+
+**TODO**: Verlinkung
+
 ##### Real
+
+
 
 ##### Char
 
