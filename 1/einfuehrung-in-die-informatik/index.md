@@ -909,9 +909,7 @@ Quellprogramm (Eingabe) -> _Interpreter_ -> direkte Ausführung
 
 ### Übersicht
 
-![Programiersprachen - Übersicht]()
-
-**TODO**: Bereits gemacht, nur noch hochladen (puush)
+![Programiersprachen - Übersicht](https://puu.sh/tzWmu/a75ac4eb39.png)
 
 #### Imperative Sprachen
 
@@ -937,11 +935,19 @@ Ein Problem wird auf einer Grundlage eines bestimmten mathematischen Modells for
 
 #### Datentyp
 
-![ZusammenhangStandarddatentypen]()
-
-**TODO**: Einfügen
+![ZusammenhangStandarddatentypen](https://puu.sh/tzWgG/1e41e1537e.png)
 
 ##### Neue Datentypen
+
+Neue Datentypen können erstellt werden, indem die _Trägermenge beeinflusst_ wird. Auch hier können die Funktionen succ und pred benutzt werden.
+
+**Unterbereichstypen**: Trägermenge wird durch eine vom Programmierer angegebenen Minimalwert und Maximalwert definiert.
+
+> Nicht verwendtbar in C/Java
+
+**Aufzählungstypen**: Jedes Element der Trägermenge wird angegeben.
+
+> C/Java Variante: **enum name {x_1, x_2, ... ,x_n}**
 
 #### Datenstrukturen
 
