@@ -939,60 +939,7 @@ Ein Problem wird auf einer Grundlage eines bestimmten mathematischen Modells for
 
 ![ZusammenhangStandarddatentypen]()
 
-##### Boolean
-
-Trägermenge: Wahrheitswerten {false = 0, true = 1.
-
-Funktionen: or, and, not - \|\|, &&, !
-
-Relationen: Gleichtheit, Ungleichheit - =, !=
-
-Verhaltensbeschreibung:
-
-\$$ x \lor y = y \lor x $$
-
-true $$ \lor x = true $$
-
-false $$ \lor x = x $$
-
-
-##### Integer
-
-Trägermenge: Ausschnitt [Min, Max] der Ganze Zahlen
-
-Funktionen: +, -, \*, / (div), % (mod), succ, pred
-
-> succ und pred sind in C/JAVA nicht vorhanden. Alternativ: **Inkrement ++** und **Dekerement --**. Diese Verändern den Wert der Variablen, im Gegensatz zu den oben genannten.
-
-Relationen: =, !=, >, <
-
-ausgezeichnetes Element = 0
-
-Verhaltensbeschreibung:
-
-\$$ 0 + x = x $$
-
-succ($$x$$) $$+ y = $$ succ($$x + y$$)
-
-pred($$x$$) $$+ y = $$ pred($$x + y$$)
-
-\$$ 0 * y = 0 $$
-
-($$x$$ div $$y$$) $$* y + x $$ mod $$ y = x $$
-
-succ(pred($$x$$)) = $$x$$
-
-pred(succ($$x$$)) = $$x$$
-
-**Anmerkung**: Unterschiedliche Programmiersprachen stellen unterschiedliche Länge des reservierten Speicherbereichs und somit unterschiedlich große Zahlenbereiche dar. In C++ siehe VL [Programmieren 1]().
-
-**TODO**: Verlinkung
-
-##### Real
-
-
-
-##### Char
+**TODO**: Einfügen
 
 ##### Neue Datentypen
 
