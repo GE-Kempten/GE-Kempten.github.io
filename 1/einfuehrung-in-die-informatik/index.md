@@ -909,11 +909,31 @@ Quellprogramm (Eingabe) -> _Interpreter_ -> direkte Ausführung
 
 ### Übersicht
 
+![Programiersprachen - Übersicht]()
+
+**TODO**: Bereits gemacht, nur noch hochladen (puush)
+
 #### Imperative Sprachen
+
+Programme sind schrittweise ablaufende Folgen von Befehlen auf bestimmten Datenelementen. Die Reihenfolge der Operationen wird weitesgehend durch den Programmierer bestimmt.
+
+**Prozedurale Sprachen**: explizite Beschreibung des Ablaufs innerhalb eines Programmes. Dabei sind einzelne Datenelemente als _Variablen_ (symbolische Bezeichnung eines Speicherbereichs) ansprechbar.
+
+**Objektorientierte Sprachen**: Programme sind Sammlung miteinander kommunizierende Objekte, dabei ist der innere Aufbau der Objekt nach außen hin verboren (_Datenkapselung_). Der Zugriff auf den inneren Zustand ist nur über vorgesehene Operationen möglich. Die Reaktion des Programmes ist dann eine Folge bestimmter Aktionen, die auch zwischen Objekten stattfinden kann. Gleicharige Objekte werden zu _Klassen_ zusammengefasst, welche in einer Generalisierungshierachie angeordnet werden. Bestimmte Klassen bauen auf andere Klasen auf (_Vererbung_).
 
 #### Deklarative Sprachen
 
+Ein Problem wird auf einer Grundlage eines bestimmten mathematischen Modells formuliert. Die Programmierumgebung schreibt automatisch den konkreten Algorithmus um.
+
+**Logiksprachen**: Problem wird in einer mathematische Logik als Sammlung von Fakten und Regeln formuliert. Die Programmabarbeitung entspricht dem Versuch, logische Aussagen zu beweisen oder zu widerlegen.
+
+**Funktionale Sprachen**: Das Program entspricht einer mathematischen Funktion. Aufbau durch verschachtelte Anwendung aus elementaren Funktionen. Zusammensetzungmöglichkeiten sind die Kompisition (Hintereinanderausführung)zu, Fallunterscheidung und Rekursion. _Aber_: _Rein_ funktionale Sprachen verfügen nicht über Wertzuweisung und Wiederholungsanweisung.
+
 ### Grundelementen
+
+**Daten**: Arbeitsmaterial des Programmes, dabei haben diese Daten bestimmte "Sorten", d.h. sie kommen aus einem _Datentyp/Datenstruktur_, welche unterschiedlich viel Speicherplatz benötigen.
+
+**Anweisung**: Befehle aus dem das Programm besteht. Die Abarbeitung erfolgt nach einer bestimmten Reihenfolge, der _Kontrollstruktur_.
 
 #### Datentyp
 
@@ -921,9 +941,56 @@ Quellprogramm (Eingabe) -> _Interpreter_ -> direkte Ausführung
 
 ##### Boolean
 
+Trägermenge: Wahrheitswerten {false = 0, true = 1.
+
+Funktionen: or, and, not - \|\|, &&, !
+
+Relationen: Gleichtheit, Ungleichheit - =, !=
+
+Verhaltensbeschreibung:
+
+\$$ x \lor y = y \lor x $$
+
+true $$ \lor x = true $$
+
+false $$ \lor x = x $$
+
+
 ##### Integer
 
+Trägermenge: Ausschnitt [Min, Max] der Ganze Zahlen
+
+Funktionen: +, -, \*, / (div), % (mod), succ, pred
+
+> succ und pred sind in C/JAVA nicht vorhanden. Alternativ: **Inkrement ++** und **Dekerement --**. Diese Verändern den Wert der Variablen, im Gegensatz zu den oben genannten.
+
+Relationen: =, !=, >, <
+
+ausgezeichnetes Element = 0
+
+Verhaltensbeschreibung:
+
+\$$ 0 + x = x $$
+
+succ($$x$$) $$+ y = $$ succ($$x + y$$)
+
+pred($$x$$) $$+ y = $$ pred($$x + y$$)
+
+\$$ 0 * y = 0 $$
+
+($$x$$ div $$y$$) $$* y + x $$ mod $$ y = x $$
+
+succ(pred($$x$$)) = $$x$$
+
+pred(succ($$x$$)) = $$x$$
+
+**Anmerkung**: Unterschiedliche Programmiersprachen stellen unterschiedliche Länge des reservierten Speicherbereichs und somit unterschiedlich große Zahlenbereiche dar. In C++ siehe VL [Programmieren 1]().
+
+**TODO**: Verlinkung
+
 ##### Real
+
+
 
 ##### Char
 
