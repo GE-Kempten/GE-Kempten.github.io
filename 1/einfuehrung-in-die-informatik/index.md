@@ -937,6 +937,18 @@ Ein Problem wird auf einer Grundlage eines bestimmten mathematischen Modells for
 
 ![ZusammenhangStandarddatentypen](https://puu.sh/tzWgG/1e41e1537e.png)
 
+Nun wissen wir, welche elementaren Datentypen es gibt. Kombiniert mit Variablen können wir nun Daten speichern.
+
+##### Deklaration und Defintion
+
+**Deklaration**: Einer Variable (symbolischer Name) wird ein Datentyp zugeschrieben. Dadurch kann nun genügend _Speicherplatz_ vorbereitet werden und fehlerhafte Operationen (_Typfehler_) werden vor dem Übersetzen ersichtlich.
+
+> C++: **datentyp variablenname**
+
+**Definition** Durch Nutzung der elementarsten Operation - die **Zuweisung** - können Variablen bestimmte Werte übergeben werden, d.h. sie werden in die dazu passende Speicherzelle eingefügt.
+
+> C++: **=**, Bsp. _int eineVariable = 2_ (Kombination aus Deklaration und Definition)
+
 ##### Eigene Datentypen
 
 Neue Datentypen können erstellt werden, indem die _Trägermenge beeinflusst_ wird. Auch hier können die Funktionen succ und pred benutzt werden.
@@ -977,17 +989,43 @@ Mit der **Deferenzierung** kann man dann auf eine Referenz weisen, welche dann a
 
 > C++: Pointer - **\*var**, Reference - **&var**
 
-##### Verwendung von Datentypen
-
-+ Elementare Aktionen
-
 #### Kontrolstrukturen
+
+Unser Programm besteht bisher aus Operationen und Datentypen. Damit kann man aber nur simple Programme schreiben. Mit Kontrollstrukturen möchten wir **Vorgaben zur Reihenfolge** einbauen.
+
+3 elementare Kontrollstrukturen: Sequenz, Alternativen, Iteration
 
 ##### Sequenz
 
+Darunter versteht man eine sequentielle Aneinanderreihung bzw. eine Reihenfolge von Anweisung und deren Ausführung - _Block_.
+
+> C++: **{Anweisung1; Anweisung2; ... AnweisungN;}**, **;** kennzeichnet das Ende einer Anweisung
+
 ##### Alternativen
 
-##### Integration
+Durch Nutzung von Boole'schen Ausdrücken verwirklichen wir **Fallunterscheidung**.
+
+Ist eine **Bedingung** wahr, so wird eine Anweisung ausgeführt. Ist die Bedingung falsch, so wird eine andere Anweisung ausgeführt.
+
+> C++: **if(Bedingung){Anweisung} else {Anweisung}**, man kann auch einen dritten Fall mit **else if** einbauen
+
+##### Interation
+
+sind Wiederholung von Anweisungen im sog. **Schleifenrumpf**, solange eine **Bedingung** wahr ist.
+
+**abweisende** Iteration: 1. Überprüfung der Bedingung 2. Ausführung \| mind. 0 Ausführung
+
+> C++: **while(Bedingung){Anweisung}**
+
+**nicht abweisende** Iteration: 1. Ausführung 2. Überprüfen der Bedingung \| mind. 1 Ausführung
+
+> C++: **do {Anweisung} while (Bedingung)**
+
+**Sonderfall**: Zählschleife
+
+Prinzip: Eine Schleife wird mit einer Laufvariablen versehen, welche bei jedem Durchlauf verändert wird (i.d.R. Inkrement). Sobald die Laufvariable die Bedingung nicht mehr erfüllt, bricht die Schleife ab.
+
+> C++: **for(laufvariable; bedingung; inkrement)**; Die Laufvariable wird oft mit datentyp i oder j deklariert und definiert. Es sind auch auch Variablen von außerhalb möglich.
 
 ##### Unterprogramme
 
