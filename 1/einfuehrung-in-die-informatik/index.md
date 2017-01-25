@@ -937,7 +937,7 @@ Ein Problem wird auf einer Grundlage eines bestimmten mathematischen Modells for
 
 ![ZusammenhangStandarddatentypen](https://puu.sh/tzWgG/1e41e1537e.png)
 
-##### Neue Datentypen
+##### Eigene Datentypen
 
 Neue Datentypen können erstellt werden, indem die _Trägermenge beeinflusst_ wird. Auch hier können die Funktionen succ und pred benutzt werden.
 
@@ -947,15 +947,35 @@ Neue Datentypen können erstellt werden, indem die _Trägermenge beeinflusst_ wi
 
 **Aufzählungstypen**: Jedes Element der Trägermenge wird angegeben.
 
-> C/Java Variante: **enum name {x_1, x_2, ... ,x_n}**
+> C/Java Variante: **enum name {$$x_1, x_2, ... ,x_n$$}**
 
 #### Datenstrukturen
 
+Neue Datentypen können erstellt werden, indem bereits _vorhandene Typen kombiniert_ werden. Oft haben diese neuen Datentypen neue Funktionen.
+
+Im Folgenden werden 3 sehr praktische Datenstrukturen erklärt. Aber es gibt noch viel mehr.
+
 ##### Array (Feld)
+
+Verkettung mehrere Variablen _eines_ Datentyps. Ein Element in dieser Kette kann mit der Selektions-Funktion **[]** visiert werden.
+
+> C++: **datentyp arrayname[größe]**, **arrayname[position] = inhalt**
 
 ##### Record (Verbund)
 
+In einem Verbund können nun Elemente - meistens Variablen - verschiedener Datentypen zusammengefasst werden. Aufgrund der **Teil-Ganzes-Beziehung** müssen jedem Element ein Name gegeben werden, wodruch diese auch unterscheidbar werden.
+
+> C++: **struct name {variablen}**, Zugriff: **name::eineVariable**
+
 ##### Pointer, Reference (Zeiger, Referenzen)
+
+**Pointer**: indirekter Zugriff auf die Speicherposition einer Variablen
+
+Über die **Referenzierung** kann einer Variablen und somit auch der Speicheradresse ein alternative Name übergeben werden.
+
+Mit der **Deferenzierung** kann man dann auf eine Referenz weisen, welche dann auf die entsprechende Variable zeigt.
+
+> C++: Pointer - **\*var**, Reference - **&var**
 
 ##### Verwendung von Datentypen
 
