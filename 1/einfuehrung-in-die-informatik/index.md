@@ -1029,7 +1029,47 @@ Prinzip: Eine Schleife wird mit einer Laufvariablen versehen, welche bei jedem D
 
 ##### Unterprogramme
 
+Wie oben bereits angemerkt, besteht unser Problem aus mehreren Teilproblemen, welche wir in Algorithmen aufgeteilt haben. Ein Weg Algorithmen in unser Programm zu integrieren sind Unterprogramme, welche aus weiteren Unterprogrammen bestehen können.
+
+Formal ausgedrückt heißt das, dass ein Unterprogramm eine **Sequenz** ist, welche im Quellcode definiert ist. Über die Festlegung einer **Schittstelle** kann dann das Unterprogramm jederzeit aufgerufen werden.
+
+Wir Unterscheiden zwischen einer **Prozedur**, primär ein Vorgang, und einer **Funktion**, welche ein Ergebnis liefert z.B. Addition mit dem Ergebnis Summe.
+
+In der Schnittstelle müssen verschiedene **Übergabeparameter** definiert werden. Dazu wird eine Parameterliste mit Typ und Bezeichner erstellt. Die übergebenen Werte, also auch Variablen, sind dann unter dem Bezeichner wiederzugeben (**formale Parameter**), d.h. Wenn ich eine var1 und var2 habe, dann sind sie in der Funktion Addition unter Summand1 und Summand2 wiederzuerkennen.
+
+Die Parameter können über zwei verschiedene Arten übergeben werden:
+
+**Call-by-Value**: Bei der Übergabe werden _Kopien_ von den Parametern erstellt, wodurch die Operationen mit den formalen Parameter nicht den Wert der originalen Parameter beeinflusst.
+
+_Vorteil_: Nebeneffekte können vermieden werden
+
+_Nachteil_: Aufwendigkeit, da Parameter kopiert werden. z.B. Bei einer Kopie von einem 3D-Modell
+
+> C++: Standard
+
+**Call-by-Reference**: Bei der Übergabe werden _Verweise_ die Parameter erstellt, d.h. bei Operationen mit formalen Parametern ändert sich auch die Werte der übergebenen Parameter.
+
+_Vorteil_: Weniger Rechenaufwand
+
+_Nachteil_: ungewollte Nebeneffekte können entstehen
+
+>C++: Nachstellung über **Pointer**
+
+Bei Aufruf eines Unterprogrammes wird eine **laufende Sequenz unterbrochen**, dann zum Anfang des Unterprogrammes gesprungen und diese ausgeführt und anschließend die unterbrochene Sequenz fortgeführt. Dadurch können Unterprogramme beliebig oft aufgerufen werden und sogar weiter Verschachtelt werden.
+
+> C**: **datentypDesRückgabewertes name (Parameterliste){...}**; Nutzung von **void** wenn kein Rückgabewert erwünscht ist.
+
 #### Objektorientierte Programmierung
+
+Problem ist, dass Unterprogramme öfters bestimmte Datenstrukturen benötigen und zugleich diese auch nur bestimmte Operationen zulassen. Indem man Unterprogramme und Datenstrukturen vereint, können Überprüfungen von zulässigen Operationen bei der Übersetzung möglich gemacht werden und es können Zugriffsrechte für interne Datenstrukturen mit eigens definierten Funktionen möglich gemacht werden.
+
+**object**: _gekapselte Strukten_ in Form von abstraken Datentypen. Besitzen Datenkomponenten oder verwendbare Funktionen.
+
+**class**: Beschreibung des Aufbau von Objekten in einem _Schema_. Legt Typ des Objektes fest.
+
+> C++: **class Name {Zugriffsrechte}**; Zugriffsrechte: public, protected, private
+
+---
 
 ## Elementare Algorithmen
 
