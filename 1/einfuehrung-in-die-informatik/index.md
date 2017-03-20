@@ -909,9 +909,7 @@ Quellprogramm (Eingabe) -> _Interpreter_ -> direkte Ausführung
 
 ### Übersicht
 
-![Programiersprachen - Übersicht]()
-
-**TODO**: Bereits gemacht, nur noch hochladen (puush)
+![Programiersprachen - Übersicht](https://puu.sh/tzWmu/a75ac4eb39.png)
 
 #### Imperative Sprachen
 
@@ -937,88 +935,141 @@ Ein Problem wird auf einer Grundlage eines bestimmten mathematischen Modells for
 
 #### Datentyp
 
-![ZusammenhangStandarddatentypen]()
+![ZusammenhangStandarddatentypen](https://puu.sh/tzWgG/1e41e1537e.png)
 
-##### Boolean
+Nun wissen wir, welche elementaren Datentypen es gibt. Kombiniert mit Variablen können wir nun Daten speichern.
 
-Trägermenge: Wahrheitswerten {false = 0, true = 1.
+##### Deklaration und Defintion
 
-Funktionen: or, and, not - \|\|, &&, !
+**Deklaration**: Einer Variable (symbolischer Name) wird ein Datentyp zugeschrieben. Dadurch kann nun genügend _Speicherplatz_ vorbereitet werden und fehlerhafte Operationen (_Typfehler_) werden vor dem Übersetzen ersichtlich.
 
-Relationen: Gleichtheit, Ungleichheit - =, !=
+> C++: **datentyp variablenname**
 
-Verhaltensbeschreibung:
+**Definition** Durch Nutzung der elementarsten Operation - die **Zuweisung** - können Variablen bestimmte Werte übergeben werden, d.h. sie werden in die dazu passende Speicherzelle eingefügt.
 
-\$$ x \lor y = y \lor x $$
+> C++: **=**, Bsp. _int eineVariable = 2_ (Kombination aus Deklaration und Definition)
 
-true $$ \lor x = true $$
+##### Eigene Datentypen
 
-false $$ \lor x = x $$
+Neue Datentypen können erstellt werden, indem die _Trägermenge beeinflusst_ wird. Auch hier können die Funktionen succ und pred benutzt werden.
 
+**Unterbereichstypen**: Trägermenge wird durch eine vom Programmierer angegebenen Minimalwert und Maximalwert definiert.
 
-##### Integer
+> Nicht verwendtbar in C/Java
 
-Trägermenge: Ausschnitt [Min, Max] der Ganze Zahlen
+**Aufzählungstypen**: Jedes Element der Trägermenge wird angegeben.
 
-Funktionen: +, -, \*, / (div), % (mod), succ, pred
-
-> succ und pred sind in C/JAVA nicht vorhanden. Alternativ: **Inkrement ++** und **Dekerement --**. Diese Verändern den Wert der Variablen, im Gegensatz zu den oben genannten.
-
-Relationen: =, !=, >, <
-
-ausgezeichnetes Element = 0
-
-Verhaltensbeschreibung:
-
-\$$ 0 + x = x $$
-
-succ($$x$$) $$+ y = $$ succ($$x + y$$)
-
-pred($$x$$) $$+ y = $$ pred($$x + y$$)
-
-\$$ 0 * y = 0 $$
-
-($$x$$ div $$y$$) $$* y + x $$ mod $$ y = x $$
-
-succ(pred($$x$$)) = $$x$$
-
-pred(succ($$x$$)) = $$x$$
-
-**Anmerkung**: Unterschiedliche Programmiersprachen stellen unterschiedliche Länge des reservierten Speicherbereichs und somit unterschiedlich große Zahlenbereiche dar. In C++ siehe VL [Programmieren 1]().
-
-**TODO**: Verlinkung
-
-##### Real
-
-
-
-##### Char
-
-##### Neue Datentypen
+> C/Java Variante: **enum name {$$x_1, x_2, ... ,x_n$$}**
 
 #### Datenstrukturen
 
+Neue Datentypen können erstellt werden, indem bereits _vorhandene Typen kombiniert_ werden. Oft haben diese neuen Datentypen neue Funktionen.
+
+Im Folgenden werden 3 sehr praktische Datenstrukturen erklärt. Aber es gibt noch viel mehr.
+
 ##### Array (Feld)
+
+Verkettung mehrere Variablen _eines_ Datentyps. Ein Element in dieser Kette kann mit der Selektions-Funktion **[]** visiert werden.
+
+> C++: **datentyp arrayname[größe]**, **arrayname[position] = inhalt**
 
 ##### Record (Verbund)
 
+In einem Verbund können nun Elemente - meistens Variablen - verschiedener Datentypen zusammengefasst werden. Aufgrund der **Teil-Ganzes-Beziehung** müssen jedem Element ein Name gegeben werden, wodruch diese auch unterscheidbar werden.
+
+> C++: **struct name {variablen}**, Zugriff: **name::eineVariable**
+
 ##### Pointer, Reference (Zeiger, Referenzen)
 
-##### Verwendung von Datentypen
+**Pointer**: indirekter Zugriff auf die Speicherposition einer Variablen
 
-+ Elementare Aktionen
+Über die **Referenzierung** kann einer Variablen und somit auch der Speicheradresse ein alternative Name übergeben werden.
+
+Mit der **Deferenzierung** kann man dann auf eine Referenz weisen, welche dann auf die entsprechende Variable zeigt.
+
+> C++: Pointer - **\*var**, Reference - **&var**
 
 #### Kontrolstrukturen
 
+Unser Programm besteht bisher aus Operationen und Datentypen. Damit kann man aber nur simple Programme schreiben. Mit Kontrollstrukturen möchten wir **Vorgaben zur Reihenfolge** einbauen.
+
+3 elementare Kontrollstrukturen: Sequenz, Alternativen, Iteration
+
 ##### Sequenz
+
+Darunter versteht man eine sequentielle Aneinanderreihung bzw. eine Reihenfolge von Anweisung und deren Ausführung - _Block_.
+
+> C++: **{Anweisung1; Anweisung2; ... AnweisungN;}**, **;** kennzeichnet das Ende einer Anweisung
 
 ##### Alternativen
 
-##### Integration
+Durch Nutzung von Boole'schen Ausdrücken verwirklichen wir **Fallunterscheidung**.
+
+Ist eine **Bedingung** wahr, so wird eine Anweisung ausgeführt. Ist die Bedingung falsch, so wird eine andere Anweisung ausgeführt.
+
+> C++: **if(Bedingung){Anweisung} else {Anweisung}**, man kann auch einen dritten Fall mit **else if** einbauen
+
+##### Interation
+
+sind Wiederholung von Anweisungen im sog. **Schleifenrumpf**, solange eine **Bedingung** wahr ist.
+
+**abweisende** Iteration: 1. Überprüfung der Bedingung 2. Ausführung \| mind. 0 Ausführung
+
+> C++: **while(Bedingung){Anweisung}**
+
+**nicht abweisende** Iteration: 1. Ausführung 2. Überprüfen der Bedingung \| mind. 1 Ausführung
+
+> C++: **do {Anweisung} while (Bedingung)**
+
+**Sonderfall**: Zählschleife
+
+Prinzip: Eine Schleife wird mit einer Laufvariablen versehen, welche bei jedem Durchlauf verändert wird (i.d.R. Inkrement). Sobald die Laufvariable die Bedingung nicht mehr erfüllt, bricht die Schleife ab.
+
+> C++: **for(laufvariable; bedingung; inkrement)**; Die Laufvariable wird oft mit datentyp i oder j deklariert und definiert. Es sind auch auch Variablen von außerhalb möglich.
 
 ##### Unterprogramme
 
+Wie oben bereits angemerkt, besteht unser Problem aus mehreren Teilproblemen, welche wir in Algorithmen aufgeteilt haben. Ein Weg Algorithmen in unser Programm zu integrieren sind Unterprogramme, welche aus weiteren Unterprogrammen bestehen können.
+
+Formal ausgedrückt heißt das, dass ein Unterprogramm eine **Sequenz** ist, welche im Quellcode definiert ist. Über die Festlegung einer **Schittstelle** kann dann das Unterprogramm jederzeit aufgerufen werden.
+
+Wir Unterscheiden zwischen einer **Prozedur**, primär ein Vorgang, und einer **Funktion**, welche ein Ergebnis liefert z.B. Addition mit dem Ergebnis Summe.
+
+In der Schnittstelle müssen verschiedene **Übergabeparameter** definiert werden. Dazu wird eine Parameterliste mit Typ und Bezeichner erstellt. Die übergebenen Werte, also auch Variablen, sind dann unter dem Bezeichner wiederzugeben (**formale Parameter**), d.h. Wenn ich eine var1 und var2 habe, dann sind sie in der Funktion Addition unter Summand1 und Summand2 wiederzuerkennen.
+
+Die Parameter können über zwei verschiedene Arten übergeben werden:
+
+**Call-by-Value**: Bei der Übergabe werden _Kopien_ von den Parametern erstellt, wodurch die Operationen mit den formalen Parameter nicht den Wert der originalen Parameter beeinflusst.
+
+_Vorteil_: Nebeneffekte können vermieden werden
+
+_Nachteil_: Aufwendigkeit, da Parameter kopiert werden. z.B. Bei einer Kopie von einem 3D-Modell
+
+> C++: Standard
+
+**Call-by-Reference**: Bei der Übergabe werden _Verweise_ die Parameter erstellt, d.h. bei Operationen mit formalen Parametern ändert sich auch die Werte der übergebenen Parameter.
+
+_Vorteil_: Weniger Rechenaufwand
+
+_Nachteil_: ungewollte Nebeneffekte können entstehen
+
+>C++: Nachstellung über **Pointer**
+
+Bei Aufruf eines Unterprogrammes wird eine **laufende Sequenz unterbrochen**, dann zum Anfang des Unterprogrammes gesprungen und diese ausgeführt und anschließend die unterbrochene Sequenz fortgeführt. Dadurch können Unterprogramme beliebig oft aufgerufen werden und sogar weiter Verschachtelt werden.
+
+> C**: **datentypDesRückgabewertes name (Parameterliste){...}**; Nutzung von **void** wenn kein Rückgabewert erwünscht ist.
+
 #### Objektorientierte Programmierung
+
+Problem ist, dass Unterprogramme öfters bestimmte Datenstrukturen benötigen und zugleich diese auch nur bestimmte Operationen zulassen. Indem man Unterprogramme und Datenstrukturen vereint, können Überprüfungen von zulässigen Operationen bei der Übersetzung möglich gemacht werden und es können Zugriffsrechte für interne Datenstrukturen mit eigens definierten Funktionen möglich gemacht werden.
+
+**object**: _gekapselte Strukten_ in Form von abstraken Datentypen. Besitzen Datenkomponenten oder verwendbare Funktionen.
+
+**class**: Beschreibung des Aufbau von Objekten in einem _Schema_. Legt Typ des Objektes fest.
+
+> C++: **class Name {Zugriffsrechte}**; Zugriffsrechte: public, protected, private
+
+---
 
 ## Elementare Algorithmen
 

@@ -78,7 +78,7 @@ c) Nennen Sie zwei Datentypen, die sich aus diesem Datentyp ableiten lassen. (2P
 
 #### Aufgabe 7 (12P)
 
-Gegeben sei die Buchstabenfolge: K E G S C X A P D F Q H L 
+Gegeben sei die Buchstabenfolge: K E G S C X A P D F Q H L
 
 a) Zeichnen Sie den binären Suchbaum, der sich ergibt, wenn die Buchstaben in der obengenannten Reihenfolge in den Baum eingefügt werden. (5P)
 
@@ -136,9 +136,9 @@ b) 0,1101
 
 0,11001 -> 0,1101
 
-c) 
+c)
 
-- Vorzeichendarstellung 
+- Vorzeichendarstellung
 	- 1. Bit -> Vorzeichen
 	- Bsp. 7 = 0000 0111, -7 = 1000 0111
 - Zweierkompliment
@@ -153,9 +153,9 @@ c)
 
 #### Aufgabe 3
 
-a) 
+a)
 
-Viele Beteiligte 
+Viele Beteiligte
 	- Eindeutigkeit (Missverständnisse möglich)
 	- Widersprüche (z.B. Verschiedene Abteilungen wollen dialoge anders sehen)
 Viele Anforderungen
@@ -184,7 +184,7 @@ b) Liefert die Anzahl der Ziffer 5 in der eingegeben Zahl x
 
 c) r ist Rest, steht für aktuelle Ziffer (von x)
 
-d) Ersetzen von 
+d) Ersetzen von
 
 ```pseudo
 WENN r == 5
@@ -197,7 +197,7 @@ mit
 
 ```pseudo
 s = s + r
-``` 
+```
 
 #### Aufgabe 5
 
@@ -241,7 +241,7 @@ a = b -> a und b sind der gleiche Buchstabe
 
 a < b -> a kommt vor b im Alphabet
 
-c) string, , structs mit char, Pointer auf char, enum 
+c) string, , structs mit char, Pointer auf char, enum
 
 #### Aufgabe 7
 
@@ -263,10 +263,16 @@ c) ![Ergänzung Automat]()
 
 #### Aufgabe 9
 
-a)
+a) Systemintegration -> Zusammenbau von Modulen
 
-b)
+Systemtest -> Alle Module zusammen testen
 
-c)
+b) Plichtenheft
+
+c) Fehlerkorrektur, Nacharbeit
 
 d)
+
+1. In Betriebnahme, Installation
+2. Betrieb
+3. Wartung, Weiterentwicklung
