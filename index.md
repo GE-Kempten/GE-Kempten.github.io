@@ -14,12 +14,12 @@ Auf diesem Wiki werden Notizen zu [Modulen](http://www.hochschule-kempten.de/fil
 
 |2. Semester                              |Prüfungstermin|-zeit|-raum|
 |:----------------------------------------|:-------------|:----|:----|
-|Analysis|_TBA_|_TBA_|_TBA_|
-|Programmieren 2|_TBA_|_TBA_|_TBA_|
-|Theoretische Informatik|_TBA_|_TBA_|_TBA_|
-|Algorithmen und Datenstrukturen|_TBA_|_TBA_|_TBA_|
-|Game Design|_TBA_|_TBA_|_TBA_|
-|Gestaltung und Zeichnen|_TBA_|_TBA_|_TBA_|
+|[Analysis](2/analysis)|_TBA_|_TBA_|_TBA_|
+|[Programmieren 2](2/programmieren-2)|_TBA_|_TBA_|_TBA_|
+|[Theoretische Informatik](2/theoretische-informatik)|_TBA_|_TBA_|_TBA_|
+|[Algorithmen und Datenstrukturen](2/algorithmen-und-datenstrukturen)|_TBA_|_TBA_|_TBA_|
+|[Game Design](2/game-design)|_TBA_|_TBA_|_TBA_|
+|[Gestaltung und Zeichnen](2/gestaltung-und-zeichnen)|_TBA_|_TBA_|_TBA_|
 
 |3. Semester                              |Prüfungstermin|-zeit|-raum|
 |:----------------------------------------|:-------------|:----|:----|
